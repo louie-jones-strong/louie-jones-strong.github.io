@@ -1,0 +1,110 @@
+/*Shared-------------------------------------*/
+body{
+	color: var(--DefaultText);
+}
+
+h1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+h2{
+	font-family: 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+h3{
+	font-family: 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+p{
+	font-family: 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+label{
+	font-family: 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+/*Mobile-------------------------------------*/
+@media only screen and (max-width: 570px){
+	h1{
+		font-size: 25px;
+	}
+
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 15px;
+	}
+
+	p{
+		font-size: 15px;
+	}
+
+	label{
+		font-size: 15px;
+	}
+}
+
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+	h1{
+		font-size: 30px;
+	}
+
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 15px;
+	}
+
+	p{
+		font-size: 20px;
+	}
+
+	label{
+		font-size: 20px;
+	}
+}
+
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1011px){
+	h1{
+		font-size: 40px;
+	}
+
+	h2{
+		font-size: 30px;
+	}
+
+	h3{
+		font-size: 25px;
+	}
+
+	p{
+		font-size: 20px;
+	}
+
+	label{
+		font-size: 25px;
+	}
+}

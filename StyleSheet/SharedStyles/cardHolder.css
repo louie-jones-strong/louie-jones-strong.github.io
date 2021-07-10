@@ -1,0 +1,42 @@
+/* cardHolder */
+.cardHolder{
+	margin: 10px;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+/* card */
+.card {
+	background-color: var(--CardBackground);
+	padding-bottom: 5px;
+	margin: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.card img{
+	transition-duration: 0.5s;
+	width: 100%;
+	height: auto;
+}
+
+.card:hover img{
+	transform: scale(1.05);
+}
+
+.card p{
+	color: var(--CardText);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.card h2{
+	color: var(--CardText);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.cardButton{
+	min-width: 50%;
+	max-width: 90%;
+}
