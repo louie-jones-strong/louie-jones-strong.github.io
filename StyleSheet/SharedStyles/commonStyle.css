@@ -8,42 +8,22 @@ body{
 	background: var(--BackGround);
 	height: 100%;
 	margin: 0px;
-
-	--LightText: white;
-	--DarkText: black;
-	--CallToActionBackground: #FF1F31;
-	--CallToActionText: var(--LightText);
+	--Colour-neutral: rgb(60, 60, 60);
 	--ShadowColor: rgba(0,0,0,0.3);
 	--DarkenBackground: rgba(0,0,0,0.75);
 
-	--BackGround: #85FBFF;
+	--Colour-Accent1: rgb(0, 255, 13);
+	--Colour-Accent2: rgb(240, 53, 178);
+	--Colour-Accent3: rgb(197, 102, 226);
+	--Colour-Accent4: rgb(230, 227, 98);
+
+
+
+	--LightText: white;
+	--DarkText: black;
+
+	--BackGround: var(--Colour-neutral);
 	--DefaultText: var(--DarkText);
-	--slideText: var(--LightText);
-
-	--ToolTipBackGround: black;
-	--ToolTipBackText: LightText;
-
-	--DarkButtonBackground: #003175;
-	--DarkButtonText: var(--LightText);
-
-	--LightButtonBackground: #85FBFF;
-	--LightButtonText: var(--DarkText);
-
-	--ActiveDot: #F0FFEB;
-	--InactiveDot: #008AE0;
-
-	--CardBackground: #F0FFEB;
-	--CardText: var(--DarkText);
-
-	--HeaderBackground: #003175;
-	--HeaderText: var(--LightText);
-	--StickyHeaderBackground: #85FBFF;
-	--StickyHeaderText: var(--DarkText);
-
-	--FooterBackground: #008AE0;
-	--FooterText: var(--LightText);
-	--StickyFooterBackground: #003175;
-	--StickyFooterText: var(--LightText);
 
 	font-family: 'Times New Roman', Times, serif;
 	font-style: normal;
@@ -53,39 +33,8 @@ body{
 }
 
 body.dark{
-	--BackGround: #003175;
-	--DefaultText: var(--LightText);
 
-	--CardBackground: #008AE0;
-	--CardText: var(--LightText);
-
-	--StickyHeaderBackground: #008AE0;
-
-	--LightButtonBackground: #008AE0;
-	--LightButtonText: var(--DarkText);
 }
-
-/* lists */
-ul{
-	list-style:none;
-}
-
-ol{
-	list-style:none;
-	margin-block-start: 0px;
-	margin-block-end: 0px;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	padding-inline-start: 0px;
-}
-
-li{
-	display: inline-block;
-	padding-left: 10px;
-	padding-right: 10px;
-	height: 30px;
-}
-
 
 .left {
 	text-align: left;
@@ -121,25 +70,6 @@ button:disabled {
 
 button:disabled:hover {
 	box-shadow: 0px 0px 0px 0px var(--ShadowColor);
-}
-
-/* CallToAction buttons */
-@keyframes CallToAction {
-	0%   {transform: scale(1);}
-	25%  {transform: scale(1.2);}
-	50% {transform: scale(1);}
-	100% {transform: scale(1);}
-}
-
-.CallToActionButton {
-	border: none;
-	background-color: var(--CallToActionBackground);
-	color: var(--CallToActionText);
-	border-radius: 5px;
-	font-size: 25px;
-	animation-name: CallToAction;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
 }
 
 /* image buttons */

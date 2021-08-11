@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<title></title>
+	<link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="refresh" content="600">
+	<link rel="stylesheet" type="text/css" href="StyleSheet/attractionStyle.css">
+</head>
+
+
+<body class="light">
+	<script src="JavaScript/ToggleTheme.js"></script>
+	<header>
+		<div class="top-header">
+			<div class="right">
+				<ol>
+					<li>Accessibility:</li>
+					<li><button class="themeToggle" onclick="ToggleTheme()" type="button">Toggle Theme</button></li>
+				</ol>
+			</div>
+		</div>
+
+		<!-- sticky header that is always shown at the top of the view port; containing:
+			logo, title and link to booking screen button-->
+		<div class="stickyHeader">
+			<a href="index.html" class="imageButton"><img src="Assets/Images/themeparklogo.png" width="80" height="60" alt="Theme Park Logo"></a>
+			<h1 class="center">Attractions</h1>
+			<div class="right">
+				<button onclick="location.href='booking.html'" class="CallToActionButton" type="button">Book</button>
+			</div>
+		</div>
+	</header>
+
+	<!-- cover image slide show -->
+	<div class="slide-holder">
+		<div class="slide">
+			<img src="Assets/Images/CoverImages/rc.jpg" alt="Roller Coaster">
+			<div class="slide-caption">
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+		</div>
+		<div class="slide">
+			<img src="Assets/Images/CoverImages/rc.jpg" alt="Roller Coaster">
+			<div class="slide-caption">
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+		</div>
+		<span class="slide-dot"></span>
+		<span class="slide-dot"></span>
+	</div>
+	<script src="JavaScript/Carousel.js"></script>
+
+	<iframe frameborder="0" src="https://itch.io/embed/970490?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="552" height="167">
+		<a href="https://louie-js.itch.io/office-egg-hunt">Office Egg Hunt by Louie Jones-Strong</a>
+	</iframe>
+</body>
+</html>
