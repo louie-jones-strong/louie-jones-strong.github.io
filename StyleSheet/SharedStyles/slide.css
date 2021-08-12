@@ -60,12 +60,12 @@
 }
 
 .activeDot{
-	background-color: var(--ActiveDot);
+	background-color: var(--Colour-Accent2);
 }
 
 
 .inactiveDot{
-	background-color: var(--InactiveDot);
+	background-color: var(--DarkenBackground);
 }
 
 
@@ -82,8 +82,8 @@
 }
 
 .slide-caption h3{
-	color: var(--slideText);
+	color: var(--LightText);
 }
 .slide-caption p{
-	color: var(--slideText);
+	color: var(--LightText);
 }
