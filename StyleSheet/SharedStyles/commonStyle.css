@@ -8,7 +8,9 @@ body{
 	background: var(--BackGround);
 	height: 100%;
 	margin: 0px;
-	--Colour-neutral: rgb(60, 60, 60);
+	--Colour-neutral: rgb(50, 50, 50);
+	--Colour-neutral2: rgb(75, 75, 75);
+	--Colour-neutral3: rgb(100, 100, 100);
 	--ShadowColor: rgba(0,0,0,0.3);
 	--DarkenBackground: rgba(0,0,0,0.75);
 

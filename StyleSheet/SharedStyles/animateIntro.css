@@ -1,0 +1,23 @@
+.reveal{
+	position: relative;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.reveal.Left{
+	transform: translateX(-15vw);
+}
+
+.reveal.Right{
+	transform: translateX(15vw);
+}
+
+.reveal.Bottom{
+	transform: translateY(5vh);
+}
+
+.reveal.shown{
+	transform: translateY(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}

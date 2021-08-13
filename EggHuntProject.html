@@ -4,19 +4,24 @@
 
 <!-- Metadata about the page itself for search engines -->
 <head>
-	<title></title>
+	<title>Louie J-S: Office Egg Hunt</title>
 	<link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon">
 	<meta charset="UTF-8">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="refresh" content="600">
-	<link rel="stylesheet" type="text/css" href="StyleSheet/attractionStyle.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/commonStyle.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/item.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/animateIntro.css">
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<script src="JavaScript/AnimateOnAppear.js"></script>
+
 </head>
 
 
 <body class="light">
+	<!-- Shared common header -->
 	<header id="Header">
 		<script>$("#Header").load("SharedHtml/Header.html");</script>
 	</header>
@@ -50,12 +55,36 @@
 	</div>
 	<script src="JavaScript/Carousel.js"></script>
 
+	<!-- Link to play the game on itch -->
 	<div class="center">
 		<iframe frameborder="0" src="https://itch.io/embed/970490?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="552" height="167">
 			<a href="https://louie-js.itch.io/office-egg-hunt">Office Egg Hunt by Louie Jones-Strong</a>
 		</iframe>
 	</div>
 
+	<div class="itemsHolder">
+		<div class="itemContainer_Left reveal Left">
+			<div>
+				<!-- <img src="Assets/Images/EggHuntGame/GamePlay/yPzUzd.png" alt=""> -->
+			</div>
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+		</div>
+		<div class="itemContainer_Right reveal Right">
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+			<div>
+				<img src="Assets/Images/EggHuntGame/GamePlay/yPzUzd.png" alt="" height="500" width="600">
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Shared common footer -->
 	<footer id="footer">
 		<script>$("#footer").load("SharedHtml/Footer.html");</script>
 	</footer>
