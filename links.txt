@@ -3,3 +3,7 @@ https://stackoverflow.com/questions/22666063/how-to-fade-the-edge-of-a-div-with-
 https://www.youtube.com/watch?v=6xNcXwC6ikQ
 
 https://codepen.io/kevinpowell
+
+https://www.codingsnow.com/2021/01/reveal-webpage-elements-on-scroll-on.html
+
+https://www.youtube.com/watch?v=huVJW23JHKQ

@@ -1,4 +1,5 @@
 window.addEventListener("scroll", Reveal);
+Reveal();
 
 function Reveal()
 {

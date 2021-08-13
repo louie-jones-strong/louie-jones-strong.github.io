@@ -5,13 +5,15 @@
 <!-- Metadata about the page itself for search engines -->
 <head>
 	<title>Louie J-S: 24 Hour Blender Projects"</title>
-	<link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="Assets/Logo/favicon.ico" type="image/x-icon">
 	<meta charset="UTF-8">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="refresh" content="600">
 	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/commonStyle.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/item.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/animateIntro.css">
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 
@@ -21,8 +23,72 @@
 		<script>$("#Header").load("SharedHtml/Header.html");</script>
 	</header>
 
+	<div class="itemsHolder">
+		<div class="itemContainer reveal Left">
+			<video autoplay muted loop>
+				<source src="Assets/BlenderProjects/Videos/blender_1.mp4" type="video/mp4">
+			</video>
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+		</div>
+		<div class="itemContainer reveal Right">
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+			<video autoplay muted loop>
+				<source src="Assets/BlenderProjects/Videos/blender_2.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="itemContainer reveal Left">
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+			<video autoplay muted loop>
+				<source src="Assets/BlenderProjects/Videos/blender_3.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="itemContainer reveal Right">
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+			<video autoplay muted loop>
+				<source src="Assets/BlenderProjects/Videos/blender_4.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="itemContainer reveal Left">
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+			<img src="Assets/BlenderProjects/Images/blender_5.png" alt="">
+		</div>
+		<div class="itemContainer reveal Right">
+			<img src="Assets/BlenderProjects/Images/blender_6.png" alt="">
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+
+		</div>
+		<div class="itemContainer reveal Left">
+			<div>
+				<h3>Looper</h3>
+				<p>Feel like looping around the sunset?</p>
+			</div>
+			<video autoplay muted loop>
+				<source src="Assets/BlenderProjects/Videos/blender_7.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+
 	<footer id="footer">
 		<script>$("#footer").load("SharedHtml/Footer.html");</script>
 	</footer>
 </body>
+<script src="JavaScript/AnimateOnAppear.js"></script>
 </html>
