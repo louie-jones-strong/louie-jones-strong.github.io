@@ -1,14 +1,17 @@
+#Header{
+	width:100%;
+	position: sticky;
+	top: 0;
+}
+
+
 .stickyHeader{
 	background-color: var(--Colour-neutral3);
 	position: sticky;
-	padding-left: 10px;
-	padding-right: 10px;
 	padding-top: 10px;
 
 	height: max-content;
 	display: grid;
 	grid-template-columns: 0.25fr 1fr 0.25fr;
-	width:100%;
-	position: sticky;
-	top: -65px;
+	width: 100%;
 }
