@@ -1,6 +1,8 @@
 /* cardHolder */
 .cardHolder{
-	margin: 10px;
+	margin: 50px;
+	margin-left: 15%;
+	margin-right: 15%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
