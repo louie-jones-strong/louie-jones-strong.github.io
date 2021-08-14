@@ -54,6 +54,11 @@ body.dark{
 	text-align: center;
 }
 
+.centeredFrame{
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
 /* buttons */
 
 button {
@@ -90,4 +95,20 @@ button:disabled:hover {
 
 .imageButton img:hover{
 	transform: scale(1.05);
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	text-align: center;
+}
+
+th, td {
+	border: 1px solid black;
+	background-color: var(--Colour-neutral);
+	padding: 0.5em;
+}
+
+th{
+	background-color: var(--Colour-Accent2);
 }

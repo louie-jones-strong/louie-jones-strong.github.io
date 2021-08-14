@@ -2,9 +2,6 @@
 .itemsHolder{
 	align-items: center;
 	background-color: var(--Colour-neutral2);
-	margin: 5em;
-	margin-left: 15%;
-	margin-right: 15%;
 	overflow: hidden;
 }
 
@@ -49,6 +46,6 @@
 	height: auto;
 }
 
-.itemContainer div{
+/* .itemContainer div{
 	margin: 2em;
-}
+} */
