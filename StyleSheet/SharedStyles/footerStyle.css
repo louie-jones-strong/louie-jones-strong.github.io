@@ -2,5 +2,23 @@ footer{
 	background-color: var(--Colour-neutral3);
 	text-align: center;
 	width:100%;
-	padding-top: 100px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.ContactLinkHolder{
+	text-align: center;
+	align-content: center;
+	align-self: center;
+}
+
+.ContactLinkHolder img{
+	width: 2.5em;
+	height: 2.5em;
+	margin: 1em;
+	transition: 0.3s;
+}
+
+.ContactLinkHolder img:hover{
+	transform: scale(1.25);
 }
