@@ -11,6 +11,8 @@ body{
 	--Colour-neutral: rgb(175, 175, 175);
 	--Colour-neutral2: rgb(150, 150, 150);
 	--Colour-neutral3: rgb(225, 225, 225);
+
+	--Glass-Colour:rgb(225, 225, 225, 0.1);
 	--ShadowColor: rgba(0,0,0,0.3);
 	--DarkenBackground: rgba(0,0,0,0.75);
 

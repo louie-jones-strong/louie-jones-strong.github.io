@@ -29,28 +29,28 @@
 
 	<div class="cardHolder">
 
-		<div class="card imageButton" onclick="location.href='BlenderProjects.html'">
+		<div class="card reveal" onclick="location.href='BlenderProjects.html'">
 			<img src="Assets/BlenderProjects/Images/blender_6.png" alt="dodgem">
 			<h1>24 Hour Blender Challenge</h1>
 			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 			<button class="cardButton" type="button">More Info</button>
 		</div>
 
-		<div class="card imageButton" onclick="location.href='EggHuntProject.html'">
+		<div class="card reveal" onclick="location.href='EggHuntProject.html'">
 			<img src="Assets/EggHuntGame/thumbnail.png" alt="dodgem">
 			<h1>Office Egg Hunt</h1>
 			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 			<button class="cardButton" type="button">More Info</button>
 		</div>
 
-		<div class="card imageButton" onclick="location.href='EPQProject.html'">
+		<div class="card reveal" onclick="location.href='EPQProject.html'">
 			<img src="Assets/EPQ/thumbnail.png" alt="dodgem">
 			<h1>EPQ</h1>
 			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 			<button class="cardButton" type="button">More Info</button>
 		</div>
 
-		<div class="card imageButton" onclick="location.href='CubePuzzleProject.html'">
+		<div class="card reveal" onclick="location.href='CubePuzzleProject.html'">
 			<img src="Assets/Cube Puzzle/Alhambra2.jpg" alt="dodgem">
 			<h1>Cube Puzzle</h1>
 			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
@@ -64,4 +64,15 @@
 	</footer>
 </body>
 <script src="JavaScript/AnimateOnAppear.js"></script>
+<script src="JavaScript/vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 10,
+		speed: 1000,
+		glare: true,
+		"max-glare": 1,
+		reverse: true,
+		scale: 1.1,
+	});
+</script>
 </html>

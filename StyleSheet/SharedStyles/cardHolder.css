@@ -7,21 +7,26 @@
 
 /* card */
 .card {
-	background-color: var(--Colour-neutral2);
+	background-color: var(--Glass-Colour);
 	padding-bottom: 5px;
-	margin: 10px;
+	margin: 3em;
 	text-align: center;
 	border-radius: 2em;
+	backdrop-filter: blur(5px);
+	box-shadow: -0.125em -0.125em 0.125em 0 hsla(190, 100%, 50%),
+				0 0 2em 0 rgb(0, 132, 255),
+				0.5em 1em 1em 0 rgba(0,0,0,75%);
+
+	overflow: hidden;
 }
 
 .card img{
 	transition-duration: 0.5s;
 	width: 100%;
 	height: auto;
-}
-
-.card:hover img{
-	transform: scale(1.05);
+	max-height: 50%;
+	overflow: hidden;
+	object-fit: cover;
 }
 
 .card p{
