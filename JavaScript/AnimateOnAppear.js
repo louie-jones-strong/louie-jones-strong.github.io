@@ -15,10 +15,12 @@ function Reveal()
 		if(revealTop < windowHeight - revealPoint)
 		{
 			reveals[i].classList.add("shown");
+			reveals[i].classList.remove("hidden");
 		}
 		else
 		{
 			reveals[i].classList.remove("shown");
+			reveals[i].classList.add("hidden");
 		}
 	}
 }

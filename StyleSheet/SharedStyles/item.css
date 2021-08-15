@@ -17,10 +17,22 @@
 	overflow: hidden;
 
 	text-align: left;
+	transition: all 0.5s ease-out;
 
 	box-shadow: -0.125em -0.125em 0.125em 0 hsla(190, 100%, 50%),
 				0 0 2em 0 rgb(0, 132, 255),
 				0.5em 1em 1em 0 rgba(0,0,0,75%);
+}
+
+.itemContainer.Left:hover, .itemContainer.Right:hover{
+	margin-right: 0px;
+	margin-left: 0px;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	z-index: 1;
+	position: relative;
 }
 
 /* Left */

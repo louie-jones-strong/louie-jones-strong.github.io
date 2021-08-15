@@ -1,23 +1,24 @@
 .reveal{
-	position: relative;
-	opacity: 0;
-	transition: all 1s ease-out;
+	/* transition: all 1s ease-out; */
 }
 
-.reveal.Left{
+.reveal.hidden{
+	transition: all 1s ease-out;
+	opacity: 0;
+}
+
+.reveal.hidden.Left{
 	transform: translateX(-15vw);
 }
 
-.reveal.Right{
+.reveal.hidden.Right{
 	transform: translateX(15vw);
 }
 
-.reveal.Bottom{
+.reveal.hidden.Bottom{
 	transform: translateY(5vh);
 }
 
 .reveal.shown{
-	transform: translateY(0px);
-	transform: translateX(0px);
-	opacity: 1;
+	/* opacity: 1; */
 }
