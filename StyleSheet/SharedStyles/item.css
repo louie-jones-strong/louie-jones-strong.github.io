@@ -7,6 +7,9 @@
 
 /* container */
 .itemContainer{
+
+	--FarSidePadding: 25%;
+
 	background-color: var(--Colour-neutral3);
 	border-radius: 5em;
 	display: grid;
@@ -24,6 +27,37 @@
 				0.5em 1em 1em 0 rgba(0,0,0,75%);
 }
 
+/*Mobile and Tablet-------------------------------------*/
+@media only screen and (max-width: 1010px){
+	.itemContainer{
+		grid-template-columns: 1fr;
+		--FarSidePadding: 0px;
+		border-radius: 0px;
+	}
+}
+
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 1011px) and (max-width: 1500px){
+	.itemContainer{
+		grid-template-columns: 1fr 1fr;
+		--FarSidePadding: 0px;
+		border-radius: 0px;
+	}
+}
+
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1501px) and (max-width: 1900px){
+	.itemContainer{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 1901px){
+	.itemContainer{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
 .itemContainer.Left:hover, .itemContainer.Right:hover{
 	margin-right: 0px;
 	margin-left: 0px;
@@ -37,7 +71,7 @@
 
 /* Left */
 .itemContainer.Left{
-	margin-right: 25%;
+	margin-right: var(--FarSidePadding);
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 	border-left: 0;
@@ -45,7 +79,7 @@
 
 /* Right */
 .itemContainer.Right{
-	margin-left: 25%;
+	margin-left: var(--FarSidePadding);
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
 	border-right: 0;

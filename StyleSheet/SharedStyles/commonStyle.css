@@ -54,9 +54,21 @@ body.dark{
 	text-align: center;
 }
 
-.centeredFrame{
-	margin-left: 15%;
-	margin-right: 15%;
+
+/*Phone and Tablet -------------------------------------*/
+@media only screen and (max-width: 1010px){
+	.centeredFrame{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1011px){
+	.centeredFrame{
+		margin-left: 15%;
+		margin-right: 15%;
+	}
 }
 
 /* buttons */

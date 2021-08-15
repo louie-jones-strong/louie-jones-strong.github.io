@@ -1,6 +1,11 @@
 /*Shared-------------------------------------*/
 body{
 	color: var(--Colour-Accent4);
+	color: var(--Colour-Accent4);
+	font-family: 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
 }
 
 h1{
@@ -47,6 +52,10 @@ label{
 
 /*Mobile-------------------------------------*/
 @media only screen and (max-width: 570px){
+	body{
+		font-size: 15px;
+	}
+
 	h1{
 		font-size: 25px;
 	}
@@ -70,6 +79,11 @@ label{
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){
+
+	body{
+		font-size: 20px;
+	}
+
 	h1{
 		font-size: 30px;
 	}
@@ -93,6 +107,10 @@ label{
 
 /*Desktop-------------------------------------*/
 @media only screen and (min-width: 1011px){
+	body{
+		font-size: 20px;
+	}
+
 	h1{
 		font-size: 40px;
 	}
