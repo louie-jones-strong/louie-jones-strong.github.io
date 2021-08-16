@@ -1,9 +1,8 @@
 .reveal{
-	/* transition: all 1s ease-out; */
+	transition: all 1s ease-out;
 }
 
 .reveal.hidden{
-	transition: all 1s ease-out;
 	opacity: 0;
 }
 
@@ -20,5 +19,5 @@
 }
 
 .reveal.shown{
-	/* opacity: 1; */
+	opacity: 1;
 }

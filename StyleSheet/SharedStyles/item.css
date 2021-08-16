@@ -28,6 +28,8 @@
 		grid-template-columns: 1fr;
 		--FarSidePadding: 0px;
 		border-radius: 0px;
+		margin-top: 5em;
+		margin-bottom: 5em;
 	}
 }
 
@@ -37,6 +39,8 @@
 		grid-template-columns: 1fr 1fr;
 		--FarSidePadding: 0px;
 		border-radius: 0px;
+		margin-top: 5em;
+		margin-bottom: 5em;
 	}
 }
 

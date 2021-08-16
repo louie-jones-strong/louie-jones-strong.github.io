@@ -80,15 +80,15 @@ body.dark{
 }
 
 /*Tablet -------------------------------------*/
-@media only screen and (min-width: 701px) and (max-width: 1350px){
+@media only screen and (min-width: 1001px) and (max-width: 1350px){
 	.centeredFrame{
-		margin-left: 5%;
-		margin-right: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
 	}
 }
 
 /*Phone -------------------------------------*/
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1000px){
 	.centeredFrame{
 		margin-left: 0px;
 		margin-right: 0px;
