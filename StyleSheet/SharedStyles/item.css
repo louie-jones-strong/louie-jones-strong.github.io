@@ -1,7 +1,6 @@
 
 .itemsHolder{
 	align-items: center;
-	background-color: var(--Colour-neutral2);
 	overflow: hidden;
 }
 
@@ -10,7 +9,6 @@
 
 	--FarSidePadding: 25%;
 
-	background-color: var(--Colour-neutral3);
 	border-radius: 5em;
 	display: grid;
 	grid-template-columns: 50% 50%;
@@ -22,9 +20,6 @@
 	text-align: left;
 	transition: all 0.5s ease-out;
 
-	box-shadow: -0.125em -0.125em 0.125em 0 hsla(190, 100%, 50%),
-				0 0 2em 0 rgb(0, 132, 255),
-				0.5em 1em 1em 0 rgba(0,0,0,75%);
 }
 
 /*Mobile and Tablet-------------------------------------*/

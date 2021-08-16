@@ -12,7 +12,6 @@ body{
 	--Colour-neutral2: rgb(150, 150, 150);
 	--Colour-neutral3: rgb(225, 225, 225);
 
-	--Glass-Colour:rgb(225, 225, 225, 0.1);
 	--ShadowColor: rgba(0,0,0,0.3);
 	--DarkenBackground: rgba(0,0,0,0.75);
 
@@ -54,6 +53,22 @@ body.dark{
 	text-align: center;
 }
 
+.neonOutline{
+	box-shadow: -0.125em -0.125em 0.125em 0 hsla(190, 100%, 50%),
+				0 0 2em 0 rgb(0, 132, 255),
+				0.5em 1em 1em 0 rgba(0,0,0,75%);
+}
+
+.glass{
+	background: linear-gradient(135deg, rgba(200, 240, 255, 0.1), rgba(30, 50, 50, 0.1));
+	backdrop-filter: blur(15px);
+	border-style: solid;
+	border-width: 1px;
+	border-top-color: rgba(255, 255, 255, 0.3);
+	border-left-color: rgba(255, 255, 255, 0.3);
+	border-bottom-color: rgba(0, 0, 0, 0.3);
+	border-right-color: rgba(0, 0, 0, 0.3);
+}
 
 /*Phone and Tablet -------------------------------------*/
 @media only screen and (max-width: 1010px){
