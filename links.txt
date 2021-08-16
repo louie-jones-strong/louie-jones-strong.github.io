@@ -15,3 +15,5 @@ https://fonts.google.com/icons?preview.size=19
 https://analytics.google.com/
 
 https://codepen.io/vince4513/pen/PomxOzg
+
+https://redstapler.co/add-loading-animation-to-website/

@@ -4,9 +4,13 @@
 @import "textStyle.css";
 
 /* const colors to allow easy editing of colour schemes over the website */
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
 body{
 	background: var(--BackGround);
-	height: 100%;
 	margin: 0px;
 	--Colour-neutral: rgb(175, 175, 175);
 	--Colour-neutral2: rgb(150, 150, 150);
@@ -18,7 +22,6 @@ body{
 	--Colour-Accent1: rgb(0, 255, 13);
 	--Colour-Accent2: rgb(240, 53, 178);
 	--Colour-Accent3: rgb(197, 102, 226);
-	--Colour-Accent4: rgb(230, 227, 98);
 
 
 
@@ -70,19 +73,25 @@ body.dark{
 	border-right-color: rgba(0, 0, 0, 0.3);
 }
 
-/*Phone and Tablet -------------------------------------*/
-@media only screen and (max-width: 1010px){
+
+.centeredFrame{
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+/*Tablet -------------------------------------*/
+@media only screen and (min-width: 701px) and (max-width: 1350px){
 	.centeredFrame{
-		margin-left: 0px;
-		margin-right: 0px;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 }
 
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px){
+/*Phone -------------------------------------*/
+@media only screen and (max-width: 700px){
 	.centeredFrame{
-		margin-left: 15%;
-		margin-right: 15%;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 }
 
