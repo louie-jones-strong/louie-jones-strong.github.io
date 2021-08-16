@@ -6,7 +6,7 @@
 var currentTheme = localStorage.getItem("theme");
 if (currentTheme === null)
 {
-	currentTheme = "light";
+	currentTheme = "dark";
 }
 
 SetTheme(currentTheme == "dark")
