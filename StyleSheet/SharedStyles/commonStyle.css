@@ -28,7 +28,6 @@ body{
 	--BackGround: var(--Colour-neutral);
 	--DefaultText: var(--DarkText);
 
-	font-family: 'Times New Roman', Times, serif;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
@@ -39,6 +38,7 @@ body.dark{
 	--Colour-neutral: rgb(50, 50, 50);
 	--Colour-neutral2: rgb(75, 75, 75);
 	--Colour-neutral3: rgb(100, 100, 100);
+	--DefaultText: var(--LightText);
 }
 
 .left {
