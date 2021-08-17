@@ -12,36 +12,32 @@ html, body{
 body{
 	background: var(--BackGround);
 	margin: 0px;
-	--Colour-neutral: rgb(175, 175, 175);
-	--Colour-neutral2: rgb(150, 150, 150);
-	--Colour-neutral3: rgb(225, 225, 225);
-
 	--ShadowColor: rgba(0,0,0,0.3);
 	--DarkenBackground: rgba(0,0,0,0.75);
-
-	--Colour-Accent1: rgb(0, 255, 13);
-	--Colour-Accent2: rgb(240, 53, 178);
-	--Colour-Accent3: rgb(197, 102, 226);
-
-
-
-	--LightText: white;
-	--DarkText: black;
-
+	--Colour-Accent: rgb(240, 53, 178);
 	--BackGround: var(--Colour-neutral);
-	--DefaultText: var(--DarkText);
-
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
 	font-size: 18px;
-}
 
-body.dark{
+/* dark mode */
 	--Colour-neutral: rgb(50, 50, 50);
 	--Colour-neutral2: rgb(75, 75, 75);
 	--Colour-neutral3: rgb(100, 100, 100);
-	--DefaultText: var(--LightText);
+	--Colour-Text1: rgb(255, 255, 255);
+	--Colour-Text2: rgb(205, 205, 205);
+	--Colour-Text3: rgb(155, 155, 155);
+}
+
+/* light mode */
+body.light{
+	--Colour-neutral: rgb(175, 175, 175);
+	--Colour-neutral2: rgb(150, 150, 150);
+	--Colour-neutral3: rgb(225, 225, 225);
+	--Colour-Text1: rgb(0, 0, 0);
+	--Colour-Text2: rgb(50, 50, 50);
+	--Colour-Text3: rgb(100, 100, 100);
 }
 
 .left {
@@ -63,7 +59,7 @@ body.dark{
 }
 
 .glass{
-	background: linear-gradient(135deg, rgba(200, 240, 255, 0.1), rgba(30, 50, 50, 0.1));
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
 	backdrop-filter: blur(15px);
 	border-style: solid;
 	border-width: 1px;
@@ -142,7 +138,7 @@ table {
 th, td {
 	border: 2px solid black;
 	background-color: var(--Colour-neutral);
-	padding: 0.5em;
+	padding: 0.35em;
 }
 
 td.Invalid{

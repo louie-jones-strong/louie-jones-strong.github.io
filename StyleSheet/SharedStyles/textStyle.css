@@ -2,59 +2,59 @@
 
 /*Shared-------------------------------------*/
 *{
+	color: var(--Colour-Text3);
 	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased;
-	font-family: sans-serif;
 
-	color: var(--DefaultText);
+	font-family: 'Roboto';
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
+	line-height: 125%;
 }
 
 h1{
-	color: var(--Colour-Accent1);
+	color: var(--Colour-Text1);
 	font-family: 'Roboto';
 	font-style: normal;
 	font-variant: normal;
-	font-weight: normal;
+	font-weight: bolder;
 	margin-block-start: 0;
 	margin-block-end: 0;
+	line-height: 95%;
+	margin-top: 2.5em;
+	margin-bottom: 1em;
+
+	margin-left: 0.05em;
+	margin-right: 0.05em;
+	letter-spacing: 0.025em;
 }
 
 h2{
-	color: var(--Colour-Accent2);
+	color: var(--Colour-Text2);
 	font-family: 'Roboto';
 	font-style: normal;
 	font-variant: normal;
-	font-weight: normal;
+	font-weight: bold;
+	letter-spacing: 0.0125em;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 }
 
 h3{
-	color: var(--Colour-Accent3);
+	color: var(--Colour-Text2);
 	font-family: 'Roboto';
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
+	line-height: 90%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 h4{
-	color: var(--DefaultText);
+	color: var(--Colour-Text2);
 	font-family: 'Roboto';
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-}
-
-p{
-	font-family: sans-serif;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-}
-
-label{
-	font-family: sans-serif;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
@@ -62,82 +62,69 @@ label{
 
 /*Mobile-------------------------------------*/
 @media only screen and (max-width: 570px){
-	body{
-		font-size: 15px;
-	}
-
 	h1{
-		font-size: 25px;
+		font-size: 50px;
 	}
 
 	h2{
+		font-size: 35px;
+	}
+
+	h3{
+		font-size: 35px;
+	}
+
+	h4{
 		font-size: 20px;
 	}
 
-	h3, h4{
-		font-size: 15px;
-	}
-
-	p{
-		font-size: 15px;
-	}
-
-	label{
+	*{
 		font-size: 15px;
 	}
 }
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){
-
-	body{
-		font-size: 20px;
-	}
-
 	h1{
-		font-size: 30px;
+		font-size: 70px;
 	}
 
 	h2{
-		font-size: 20px;
+		font-size: 40px;
 	}
 
-	h3, h4{
-		font-size: 15px;
+	h3{
+		font-size: 40px;
 	}
 
-	p{
-		font-size: 20px;
+	h4{
+		font-size: 25px;
 	}
 
-	label{
+	*{
 		font-size: 20px;
 	}
 }
 
 /*Desktop-------------------------------------*/
 @media only screen and (min-width: 1011px){
-	body{
-		font-size: 20px;
-	}
-
 	h1{
-		font-size: 40px;
+		font-size: 80px;
 	}
 
 	h2{
-		font-size: 30px;
+		font-size: 40px;
 	}
 
-	h3, h4{
+	h3{
+		font-size: 40px;
+	}
+
+	h4{
 		font-size: 25px;
 	}
 
-	p{
+	*{
 		font-size: 20px;
-	}
-
-	label{
-		font-size: 25px;
 	}
 }

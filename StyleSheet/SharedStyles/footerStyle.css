@@ -3,11 +3,14 @@ footer{
 	text-align: center;
 	width:100%;
 	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-bottom: 0px;
 }
 
 #copyRight{
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
 	padding-left: 1em;
+	margin: 0px;
 }
 
 .ContactLinkHolder{
