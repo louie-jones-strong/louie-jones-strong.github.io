@@ -1,0 +1,48 @@
+
+.gallery{
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 1em;
+}
+
+.gallery > *{
+	border-radius: 2em;
+
+	margin: 1em;
+	overflow: hidden;
+
+	text-align: left;
+	transition: all 0.5s ease-out;
+}
+
+.gallery > * video, .gallery > * img{
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+
+/*Mobile and Tablet-------------------------------------*/
+@media only screen and (max-width: 1010px){
+	.gallery{
+		grid-template-columns: 1fr;
+	}
+}
+
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 1011px) and (max-width: 1500px){
+	.gallery{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1501px){
+	.gallery{
+		grid-template-columns: 1fr 1fr;
+	}
+}

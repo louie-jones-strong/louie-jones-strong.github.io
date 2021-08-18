@@ -11,7 +11,7 @@
 
 	border-radius: 5em;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 1fr 1fr;
 
 	margin-top: 4.25em;
 	margin-bottom: 3.25em;
