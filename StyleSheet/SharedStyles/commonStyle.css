@@ -25,19 +25,23 @@ body{
 	--Colour-neutral: rgb(50, 50, 50);
 	--Colour-neutral2: rgb(75, 75, 75);
 	--Colour-neutral3: rgb(100, 100, 100);
+
 	--Colour-Text1: rgb(255, 255, 255);
-	--Colour-Text2: rgb(205, 205, 205);
-	--Colour-Text3: rgb(155, 155, 155);
+	--Colour-Text2: rgb(255, 255, 255);
+	--Colour-Text3: rgb(205, 205, 205);
+	--Colour-Text4: rgb(175, 175, 175);
 }
 
 /* light mode */
 body.light{
-	--Colour-neutral: rgb(175, 175, 175);
+	--Colour-neutral: rgb(225, 225, 225);
 	--Colour-neutral2: rgb(150, 150, 150);
-	--Colour-neutral3: rgb(225, 225, 225);
+	--Colour-neutral3: rgb(175, 175, 175);
+
 	--Colour-Text1: rgb(0, 0, 0);
-	--Colour-Text2: rgb(50, 50, 50);
-	--Colour-Text3: rgb(100, 100, 100);
+	--Colour-Text2: rgb(0, 0, 0);
+	--Colour-Text3: rgb(50, 50, 50);
+	--Colour-Text4: rgb(75, 75, 75);
 }
 
 .left {

@@ -2,7 +2,7 @@
 
 /*Shared-------------------------------------*/
 *{
-	color: var(--Colour-Text3);
+	color: var(--Colour-Text4);
 	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased;
 
@@ -42,7 +42,7 @@ h2{
 }
 
 h3{
-	color: var(--Colour-Text2);
+	color: var(--Colour-Text3);
 	font-family: 'Roboto';
 	font-style: normal;
 	font-variant: normal;
@@ -53,7 +53,7 @@ h3{
 }
 
 h4{
-	color: var(--Colour-Text2);
+	color: var(--Colour-Text3);
 	font-family: 'Roboto';
 	font-style: normal;
 	font-variant: normal;
