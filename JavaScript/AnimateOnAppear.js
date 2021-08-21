@@ -10,7 +10,7 @@ function Reveal()
 
 		var windowHeight = window.innerHeight;
 		var revealTop = reveals[i].getBoundingClientRect().top;
-		var revealPoint = 150;
+		var revealPoint = 0;
 
 		if(revealTop < windowHeight - revealPoint)
 		{

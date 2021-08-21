@@ -6,7 +6,6 @@
 
 .stickyHeader{
 	background-color: var(--Colour-neutral3);
-	position: sticky;
 	padding-top: 10px;
 
 	height: max-content;
@@ -17,4 +16,9 @@
 
 .themeIcon > .material-icons{
 	font-size: 2em;
+}
+
+.mainTitle {
+	margin-top: 0.2em;
+	margin-bottom: 0.1em;
 }
