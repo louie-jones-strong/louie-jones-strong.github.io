@@ -29,119 +29,124 @@
 
 
 <body class="dark">
-	<!-- Shared common header -->
-	<header id="Header">
-		<script>$("#Header").load("SharedHtml/Header.html");</script>
-	</header>
 
-	<div class="centeredFrame">
-		<h1>Extended Project Qualification (EPQ)</h1>
-		<p>During my A levels I completed an <abbr title="Extended Project Qualification">EPQ</abbr>, this is a dissertation equivalent to half an A level.
-			For the topic of my <abbr title="Extended Project Qualification">EPQ</abbr>, I Choose to continue my personal project learning machine learning
-		</p>
+	<div class="content">
+		<!-- Shared common header -->
+		<header id="Header">
+			<script>$("#Header").load("SharedHtml/Header.html");</script>
+		</header>
 
-		<h2>An AI that uses a combination of multiple learning techniques, is better than an AI that uses only one learning technique.</h2>
+		<div class="centeredFrame">
+			<h1>Extended Project Qualification (EPQ)</h1>
+			<p>During my A levels I completed an <abbr title="Extended Project Qualification">EPQ</abbr>, this is a dissertation equivalent to half an A level.
+				For the topic of my <abbr title="Extended Project Qualification">EPQ</abbr>, I Choose to continue my personal project learning machine learning
+			</p>
 
-		<p>I developed a multi-technique learning AI agent for supervised learning that works on Reinforcement tasks.
-			This works by either watching humans play each other or a existing data-set or from creating its own data-set using brute force.
-			Once a data-set is created it then uses stochastic gradient descent to train a neural network.
-			Once the error of the data-set is low enough, evolution then takes over the learning of the network to allow the agent to improve beyond the starting data-set.
-			This learned all the tasks I tested it on faster with more accuracy and reliability than the other AI agents at the time. </p>
-	</div>
+			<h2>An AI that uses a combination of multiple learning techniques, is better than an AI that uses only one learning technique.</h2>
 
-	<div class="itemsHolder glass centeredFrame">
-		<div class="itemContainer glass neonOutline reveal Left">
-			<div>
-				<h3>Cart Pole</h3>
-				<p></p>
-			</div>
-			<!-- cover image slide show -->
-			<div class="slide-holder">
-				<div class="slide">
-					<video autoplay muted loop>
-						<source src="Assets/EPQ/videos/worst.mp4" type="video/mp4">
-					</video>
-					<div class="slide-caption">
-						<h3>No Training</h3>
-					</div>
-				</div>
-				<div class="slide">
-					<video autoplay muted loop>
-						<source src="Assets/EPQ/videos/middle.mp4" type="video/mp4">
-					</video>
-					<div class="slide-caption">
-						<h3>Training mid point</h3>
-					</div>
-				</div>
-				<div class="slide">
-					<video autoplay muted loop>
-						<source src="Assets/EPQ/videos/best.mp4" type="video/mp4">
-					</video>
-					<div class="slide-caption">
-						<h3>End of Training</h3>
-					</div>
-				</div>
-				<span class="slide-dot"></span>
-				<span class="slide-dot"></span>
-				<span class="slide-dot"></span>
-			</div>
-			<script src="JavaScript/Carousel.js"></script>
+			<p>I developed a multi-technique learning AI agent for supervised learning that works on Reinforcement tasks.
+				This works by either watching humans play each other or a existing data-set or from creating its own data-set using brute force.
+				Once a data-set is created it then uses stochastic gradient descent to train a neural network.
+				Once the error of the data-set is low enough, evolution then takes over the learning of the network to allow the agent to improve beyond the starting data-set.
+				This learned all the tasks I tested it on faster with more accuracy and reliability than the other AI agents at the time. </p>
 		</div>
-		<div class="itemContainer glass neonOutline reveal Right">
-			<img src="Assets/EPQ/Graphs/TimeToLearn.png" alt="">
-			<div>
-				<h3>Time To Learn</h3>
-				<table style="width:100%">
-					<tr>
-						<th></th>
-						<th>Evolution</th>
-						<th>Brute Force</th>
-						<th>Combined</th>
-						<th>Random</th>
-					</tr>
-					<tr>
-						<th>CardPole</th>
-						<td>20</td>
-						<td class="Invalid">N/A</td>
-						<td>5</td>
-						<td class="Invalid">N/A</td>
-					</tr>
-					<tr>
-						<th>Simple Dataset</th>
-						<td>3.5</td>
-						<td>6.5</td>
-						<td>2.5</td>
-						<td class="Invalid">N/A</td>
-					</tr>
-					<tr>
-						<th>Complex Dataset</th>
-						<td class="Invalid">N/A</td>
-						<td>46</td>
-						<td>28</td>
-						<td class="Invalid">N/A</td>
-					</tr>
-					<tr>
-						<th>Tic Tac Toe</th>
-						<td class="Invalid">N/A</td>
-						<td>240</td>
-						<td>150</td>
-						<td class="Invalid">N/A</td>
-					</tr>
-				</table>
+
+		<div class="itemsHolder glass centeredFrame">
+			<div class="itemContainer glass neonOutline reveal Left">
+				<div>
+					<h3>Cart Pole</h3>
+					<p></p>
+				</div>
+				<!-- cover image slide show -->
+				<div class="slide-holder">
+					<div class="slide">
+						<video autoplay muted loop>
+							<source src="Assets/EPQ/videos/worst.mp4" type="video/mp4">
+						</video>
+						<div class="slide-caption">
+							<h3>No Training</h3>
+						</div>
+					</div>
+					<div class="slide">
+						<video autoplay muted loop>
+							<source src="Assets/EPQ/videos/middle.mp4" type="video/mp4">
+						</video>
+						<div class="slide-caption">
+							<h3>Training mid point</h3>
+						</div>
+					</div>
+					<div class="slide">
+						<video autoplay muted loop>
+							<source src="Assets/EPQ/videos/best.mp4" type="video/mp4">
+						</video>
+						<div class="slide-caption">
+							<h3>End of Training</h3>
+						</div>
+					</div>
+					<span class="slide-dot"></span>
+					<span class="slide-dot"></span>
+					<span class="slide-dot"></span>
+				</div>
+				<script src="JavaScript/Carousel.js"></script>
+			</div>
+			<div class="itemContainer glass neonOutline reveal Right">
+				<img src="Assets/EPQ/Graphs/TimeToLearn.png" alt="">
+				<div>
+					<h3>Time To Learn</h3>
+					<table style="width:100%">
+						<tr>
+							<th></th>
+							<th>Evolution</th>
+							<th>Brute Force</th>
+							<th>Combined</th>
+							<th>Random</th>
+						</tr>
+						<tr>
+							<th>CardPole</th>
+							<td>20</td>
+							<td class="Invalid">N/A</td>
+							<td>5</td>
+							<td class="Invalid">N/A</td>
+						</tr>
+						<tr>
+							<th>Simple Dataset</th>
+							<td>3.5</td>
+							<td>6.5</td>
+							<td>2.5</td>
+							<td class="Invalid">N/A</td>
+						</tr>
+						<tr>
+							<th>Complex Dataset</th>
+							<td class="Invalid">N/A</td>
+							<td>46</td>
+							<td>28</td>
+							<td class="Invalid">N/A</td>
+						</tr>
+						<tr>
+							<th>Tic Tac Toe</th>
+							<td class="Invalid">N/A</td>
+							<td>240</td>
+							<td>150</td>
+							<td class="Invalid">N/A</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
+
+
+		<!-- Shared common footer -->
+		<footer id="footer">
+			<script>$("#footer").load("SharedHtml/Footer.html");</script>
+		</footer>
+
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+
 	</div>
-
-
-	<!-- Shared common footer -->
-	<footer id="footer">
-		<script>$("#footer").load("SharedHtml/Footer.html");</script>
-	</footer>
 
 	<!-- Shared common loader -->
 	<div id="loaderHolder">
 		<script>$("#loaderHolder").load("SharedHtml/Loader.html");</script>
 	</div>
 </body>
-<script src="JavaScript/AnimateOnAppear.js"></script>
 </html>

@@ -30,78 +30,83 @@
 <html lang="en">
 
 <body class="dark">
-	<div class="CoverPage">
-	</div>
 
-	<div id="background">
-		<script>$("#background").load("SharedHtml/Background.html");</script>
-	</div>
+	<div class="content">
 
-	<div id="Header">
-		<script>$("#Header").load("SharedHtml/Header.html");</script>
-	</div>
+		<div class="CoverPage">
+		</div>
 
-	<div class="centeredFrame">
-		<h1 class="center reveal Bottom">Who Am I?</h1>
-		<p class="center reveal Bottom"> I am working full time at TT Games as a Junior programmer.</p>
-		<p class="center reveal Bottom">I am also a full time student at Goldsmiths, University of London studying machine learning.</p>
+		<div id="background">
+			<script>$("#background").load("SharedHtml/Background.html");</script>
+		</div>
 
-		<h1 class="center reveal Bottom">What Have I Done?</h1>
-		<h2 class="center reveal Bottom">Projects:</h2>
-		<div class="cardHolder">
+		<div id="Header">
+			<script>$("#Header").load("SharedHtml/Header.html");</script>
+		</div>
 
-			<div class="card neonOutline glass reveal" onclick="location.href='BlenderProjects.html'">
-				<img src="Assets/BlenderProjects/Images/blender_6.png" alt="dodgem">
-				<h3>24 Hour Blender Challenges</h3>
-				<p>This is a collection of renders I completed from when I challenged myself to learn different Blender skills,
-					where I only gave myself 24 hours for each one. </p>
-				<h4 class="moreInfo">More Info</h4>
-			</div>
+		<div class="centeredFrame">
+			<h1 class="center reveal Bottom">Who Am I?</h1>
+			<p class="center reveal Bottom"> I am working full time at TT Games as a Junior programmer.</p>
+			<p class="center reveal Bottom">I am also a full time student at Goldsmiths, University of London studying machine learning.</p>
 
-			<div class="card neonOutline glass reveal" onclick="location.href='EggHuntProject.html'">
-				<img src="Assets/EggHuntGame/thumbnail.png" alt="dodgem">
-				<h3>Office Egg Hunt</h3>
-				<p>This is a 3D Easter themed game that I made for my colleagues to play during lockdown.
-					It is a Easter egg hunt set in a model of our office that I also made. </p>
-				<h4 class="moreInfo">More Info</h4>
-			</div>
+			<h1 class="center reveal Bottom">What Have I Done?</h1>
+			<h2 class="center reveal Bottom">Projects:</h2>
+			<div class="cardHolder">
 
-			<div class="card neonOutline glass reveal" onclick="location.href='EPQProject.html'">
-				<img src="Assets/EPQ/thumbnail.png" alt="dodgem">
-				<h3>EPQ</h3>
-				<p></p>
-				<h4 class="moreInfo">More Info</h4>
-			</div>
+				<div class="card neonOutline glass reveal" onclick="location.href='BlenderProjects.html'">
+					<img src="Assets/BlenderProjects/Images/blender_6.png" alt="dodgem">
+					<h3>24 Hour Blender Challenges</h3>
+					<p>This is a collection of renders I completed from when I challenged myself to learn different Blender skills,
+						where I only gave myself 24 hours for each one. </p>
+					<h4 class="moreInfo">More Info</h4>
+				</div>
 
-			<div class="card neonOutline glass reveal" onclick="location.href='CubePuzzleProject.html'">
-				<img src="Assets/Cube Puzzle/Thumbnail.jpg" alt="dodgem">
-				<h3>Alhambra 4D Cube Puzzle</h3>
-				<p>This is my algorithm I used to be the first to discover the solutions to the Alhambra Cube Puzzle.</p>
-				<h4 class="moreInfo">More Info</h4>
+				<div class="card neonOutline glass reveal" onclick="location.href='EggHuntProject.html'">
+					<img src="Assets/EggHuntGame/thumbnail.png" alt="dodgem">
+					<h3>Office Egg Hunt</h3>
+					<p>This is a 3D Easter themed game that I made for my colleagues to play during lockdown.
+						It is a Easter egg hunt set in a model of our office that I also made. </p>
+					<h4 class="moreInfo">More Info</h4>
+				</div>
+
+				<div class="card neonOutline glass reveal" onclick="location.href='EPQProject.html'">
+					<img src="Assets/EPQ/thumbnail.png" alt="dodgem">
+					<h3>EPQ</h3>
+					<p></p>
+					<h4 class="moreInfo">More Info</h4>
+				</div>
+
+				<div class="card neonOutline glass reveal" onclick="location.href='CubePuzzleProject.html'">
+					<img src="Assets/Cube Puzzle/Thumbnail.jpg" alt="dodgem">
+					<h3>Alhambra 4D Cube Puzzle</h3>
+					<p>This is my algorithm I used to be the first to discover the solutions to the Alhambra Cube Puzzle.</p>
+					<h4 class="moreInfo">More Info</h4>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- Shared common footer -->
-	<footer id="footer">
-		<script>$("#footer").load("SharedHtml/Footer.html");</script>
-	</footer>
+		<!-- Shared common footer -->
+		<footer id="footer">
+			<script>$("#footer").load("SharedHtml/Footer.html");</script>
+		</footer>
+
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+		<script src="JavaScript/vanilla-tilt.js"></script>
+		<script type="text/javascript">
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 10,
+				speed: 1000,
+				glare: true,
+				"max-glare": 0.75,
+				reverse: true,
+				scale: 1.1,
+			});
+		</script>
+		</html>
+	</div>
 
 	<!-- Shared common loader -->
 	<div id="loaderHolder">
 		<script>$("#loaderHolder").load("SharedHtml/Loader.html");</script>
 	</div>
 </body>
-<script src="JavaScript/AnimateOnAppear.js"></script>
-<script src="JavaScript/vanilla-tilt.js"></script>
-<script type="text/javascript">
-	VanillaTilt.init(document.querySelectorAll(".card"), {
-		max: 10,
-		speed: 1000,
-		glare: true,
-		"max-glare": 0.75,
-		reverse: true,
-		scale: 1.1,
-	});
-</script>
-</html>
