@@ -56,6 +56,10 @@ body.light{
 	text-align: center;
 }
 
+.hide {
+	display: none;
+}
+
 .neonOutline{
 	box-shadow: -0.125em -0.125em 0.125em 0 hsla(190, 100%, 50%),
 				0 0 2em 0 rgb(0, 132, 255),
@@ -105,19 +109,11 @@ button {
 	color: var(--DarkButtonText);
 }
 
-button:hover {
-	transition-duration: 0.5s;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px 5px var(--ShadowColor);
-}
 
 button:disabled {
 	cursor:not-allowed;
 }
 
-button:disabled:hover {
-	box-shadow: 0px 0px 0px 0px var(--ShadowColor);
-}
 
 /* image buttons */
 .imageButton{
