@@ -24,14 +24,9 @@
 }
 
 /* slide  Content */
-.slide img{
-	max-height: 66vh;
-	object-fit: cover;
-	width: 100%;
-	height: auto;
-}
-
-.slide video{
+.slide > img,
+.slide > picture,
+.slide > video{
 	max-height: 66vh;
 	object-fit: cover;
 	width: 100%;

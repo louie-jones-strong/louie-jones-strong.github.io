@@ -83,6 +83,11 @@ body.light{
 	margin-right: 15%;
 }
 
+picture > img{
+	width: 100%;
+	height: 100%;
+}
+
 /*Tablet -------------------------------------*/
 @media only screen and (min-width: 1001px) and (max-width: 1350px){
 	.centeredFrame{
@@ -120,12 +125,15 @@ button:disabled {
 	display: inline-block;
 	overflow: hidden;
 }
-.imageButton img{
+
+.imageButton > img,
+.imageButton > picture{
 	display: block;
 	transition: .25s ease-in-out;
 }
 
-.imageButton img:hover{
+.imageButton > img:hover,
+.imageButton > picture:hover{
 	transform: scale(1.05);
 }
 

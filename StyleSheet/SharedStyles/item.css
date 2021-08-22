@@ -85,12 +85,10 @@
 }
 
 /* Content */
-.itemContainer video, .itemContainer img{
+.itemContainer > video,
+.itemContainer > img,
+.itemContainer > picture{
 	object-fit: cover;
 	width: 100%;
 	height: auto;
 }
-
-/* .itemContainer div{
-	margin: 2em;
-} */
