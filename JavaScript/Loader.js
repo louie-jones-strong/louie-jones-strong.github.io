@@ -1,12 +1,7 @@
-$(window).on("load", Loaded);
+$(window).on("load", ShowContent);
 
 HideContent();
 
-
-function Loaded()
-{
-	setTimeout(ShowContent, 500);
-}
 
 function HideContent()
 {
