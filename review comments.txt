@@ -1,6 +1,6 @@
 - Header isn't working when launched from index.html
 - A little padding/border/margin for lower reslutions would look nicer
-	e.g. Blender projects
+	e.g. Text on Item class (Blender projects, etc)
 - In blender projects there are many instances of "in this render".
 - In office egg game the gallery causes horizontal scroll bar
 
@@ -15,4 +15,5 @@
 [ ] check use of class="reveal Bottom"
 	[ ] blender
 	[ ] epq
+[ ] test / format for 1080p
 	
