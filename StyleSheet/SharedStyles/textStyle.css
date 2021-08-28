@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 /*Shared-------------------------------------*/
-* :not(abbr){
+
+h1, h2, h3, h4, p{
+	max-width: 60ch;
+}
+
+* :not(abbr, u){
 	color: var(--Colour-Text4);
 	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased;
@@ -12,11 +17,6 @@
 	font-weight: lighter;
 	line-height: 125%;
 }
-
-h1, h2, h3, h4, p{
-	max-width: 60ch;
-}
-
 
 h1{
 	color: var(--Colour-Text1);
@@ -65,12 +65,13 @@ h4{
 	font-weight: normal;
 }
 
-.underLined{
-	text-decoration: underline;
-}
-
 /*Mobile-------------------------------------*/
 @media only screen and (max-width: 570px){
+
+	* :not(abbr, u){
+		font-size: 15px;
+	}
+
 	h1{
 		font-size: 50px;
 	}
@@ -86,14 +87,15 @@ h4{
 	h4{
 		font-size: 20px;
 	}
-
-	* :not(abbr){
-		font-size: 15px;
-	}
 }
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){
+
+	* :not(abbr, u){
+		font-size: 20px;
+	}
+
 	h1{
 		font-size: 70px;
 	}
@@ -109,14 +111,15 @@ h4{
 	h4{
 		font-size: 25px;
 	}
-
-	* :not(abbr){
-		font-size: 20px;
-	}
 }
 
 /*Desktop-------------------------------------*/
 @media only screen and (min-width: 1011px){
+
+	* :not(abbr, u){
+		font-size: 20px;
+	}
+
 	h1{
 		font-size: 80px;
 	}
@@ -131,9 +134,5 @@ h4{
 
 	h4{
 		font-size: 25px;
-	}
-
-	* :not(abbr){
-		font-size: 20px;
 	}
 }
