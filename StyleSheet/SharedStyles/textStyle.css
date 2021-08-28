@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 /*Shared-------------------------------------*/
-*{
+* :not(abbr){
 	color: var(--Colour-Text4);
 	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased;
@@ -87,7 +87,7 @@ h4{
 		font-size: 20px;
 	}
 
-	*{
+	* :not(abbr){
 		font-size: 15px;
 	}
 }
@@ -110,7 +110,7 @@ h4{
 		font-size: 25px;
 	}
 
-	*{
+	* :not(abbr){
 		font-size: 20px;
 	}
 }
@@ -133,7 +133,7 @@ h4{
 		font-size: 25px;
 	}
 
-	*{
+	* :not(abbr){
 		font-size: 20px;
 	}
 }
