@@ -127,10 +127,8 @@ picture > img{
 
 button {
 	border: none;
-	padding: 10px 10px;
-	font-size: 25px;
-	background-color: var(--DarkButtonBackground);
-	color: var(--DarkButtonText);
+	padding: 0px 0px;
+	background-color: transparent;
 }
 
 
