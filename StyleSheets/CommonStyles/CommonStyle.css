@@ -13,13 +13,10 @@ body{
 	background-size: cover;
 
 	margin: 0px;
+	overflow-x: hidden;
 	--ShadowColor: rgba(0,0,0,0.3);
 	--DarkenBackground: rgba(0,0,0,0.75);
 	--Colour-Accent: rgb(240, 53, 178);
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	font-size: 18px;
 
 /* dark mode */
 	background-image: url("BackgroundDark.svg");
