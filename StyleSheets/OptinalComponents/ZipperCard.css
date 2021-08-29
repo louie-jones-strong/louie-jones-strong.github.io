@@ -23,7 +23,7 @@
 }
 
 /*Mobile and Tablet-------------------------------------*/
-@media only screen and (max-width: 1010px){
+@media only screen and (max-width: 700px){
 	.ZipperCard{
 		grid-template-columns: 1fr;
 		--FarSidePadding: 0px;
@@ -34,7 +34,7 @@
 }
 
 /*Tablet-------------------------------------*/
-@media only screen and (min-width: 1011px) and (max-width: 1500px){
+@media only screen and (min-width: 701px) and (max-width: 1200px){
 	.ZipperCard{
 		grid-template-columns: 1fr 1fr;
 		--FarSidePadding: 0px;
@@ -45,13 +45,14 @@
 }
 
 /*Desktop-------------------------------------*/
-@media only screen and (min-width: 1501px) and (max-width: 1900px){
+@media only screen and (min-width: 1201px) and (max-width: 1600px){
 	.ZipperCard{
 		grid-template-columns: 1fr 1fr;
+		--FarSidePadding: 10%;
 	}
 }
 
-@media only screen and (min-width: 1901px){
+@media only screen and (min-width: 1601px){
 	.ZipperCard{
 		grid-template-columns: 1fr 1fr;
 	}
