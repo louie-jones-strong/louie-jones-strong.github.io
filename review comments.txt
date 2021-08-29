@@ -22,3 +22,4 @@
 [ ] back to top button in footer
 [ ] check direction of reveals
 [ ] remove yellow text
+[] fix cookies
