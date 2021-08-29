@@ -1,138 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@400;500;700;900&display=swap');
 
-/*Shared-------------------------------------*/
 
-h1, h2, h3, h4, p{
+p, h1, h2, h3, h4{
 	max-width: 60ch;
+	padding-left:  clamp(0px, 0.25em, 30px);
+	padding-right: clamp(0px, 0.25em, 30px);
 }
 
 * :not(abbr, u){
-	color: var(--Colour-Text4);
 	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased;
-
-	font-family: 'Roboto';
 	font-style: normal;
 	font-variant: normal;
-	font-weight: lighter;
-	line-height: 125%;
-}
 
-h1{
-	color: var(--Colour-Text1);
-	font-family: 'Roboto';
-	font-style: normal;
-	font-variant: normal;
-	font-weight: bolder;
-	margin-block-start: 0;
-	margin-block-end: 0;
-	line-height: 95%;
-	margin-top: 2.5em;
-	margin-bottom: 1em;
-
-	margin-left: 0.05em;
-	margin-right: 0.05em;
-	letter-spacing: 0.025em;
-}
-
-h2{
-	color: var(--Colour-Text2);
-	font-family: 'Roboto';
-	font-style: normal;
-	font-variant: normal;
-	font-weight: bold;
-	letter-spacing: 0.0125em;
-	margin-top: 1.5em;
-	margin-bottom: 1em;
-}
-
-h3{
-	color: var(--Colour-Text3);
-	font-family: 'Roboto';
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 90%;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	color: var(--Colour-Text4);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
 }
 
 h4{
 	color: var(--Colour-Text3);
-	font-family: 'Roboto';
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
 }
 
-/*Mobile-------------------------------------*/
-@media only screen and (max-width: 570px){
+h3{
+	color: var(--Colour-Text3);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
 
-	* :not(abbr, u){
-		font-size: 15px;
-	}
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	line-height: 95%;
+}
 
-	h1{
-		font-size: 50px;
-	}
+h2{
+	color: var(--Colour-Text2);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 
-	h2{
-		font-size: 35px;
-	}
+	margin-top: 1.5em;
+	margin-bottom: 0.75em;
+	line-height: 95%;
+}
 
-	h3{
-		font-size: 35px;
-	}
+h1{
+	/* center Text */
+	margin-block-start: 0;
+	margin-block-end: 0;
 
-	h4{
-		font-size: 20px;
+	color: var(--Colour-Text1);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+
+	margin-top: 2em;
+	margin-bottom: 1em;
+	line-height: 95%;
+}
+
+
+/* Font Sizes */
+
+:root{
+	font-size: calc(var(--BaseFontSize) * var(--FontScale));
+	--FontScale: 1;
+	--BaseFontSize: 20px;
+}
+
+/*Tablet -------------------------------------*/
+@media only screen and (min-width: 1001px) and (max-width: 1350px){
+	:root{
+		--BaseFontSize: 18px;
 	}
 }
 
-/*Tablet-------------------------------------*/
-@media only screen and (min-width: 571px) and (max-width: 1010px){
-
-	* :not(abbr, u){
-		font-size: 20px;
-	}
-
-	h1{
-		font-size: 70px;
-	}
-
-	h2{
-		font-size: 40px;
-	}
-
-	h3{
-		font-size: 40px;
-	}
-
-	h4{
-		font-size: 25px;
+/*Phone -------------------------------------*/
+@media only screen and (min-width: 651px) and (max-width: 1000px){
+	:root{
+		--BaseFontSize: 16px;
 	}
 }
 
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px){
-
-	* :not(abbr, u){
-		font-size: 20px;
+@media only screen and (max-width: 650px){
+	:root{
+		--BaseFontSize: 14px;
 	}
+}
 
-	h1{
-		font-size: 80px;
-	}
+* :not(abbr, u){
+	font-size: 1rem;
+}
 
-	h2{
-		font-size: 40px;
-	}
+h4{
+	font-size: 1.5em;
+}
 
-	h3{
-		font-size: 40px;
-	}
+h3{
+	font-size: 2rem;
+}
 
-	h4{
-		font-size: 25px;
-	}
+h2{
+	font-size: 3rem;
+}
+
+h1{
+	font-size: 4rem;
 }
