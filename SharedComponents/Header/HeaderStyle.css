@@ -5,7 +5,6 @@
 }
 
 .stickyHeader{
-	background-color: var(--Colour-neutral3);
 	padding-top: 10px;
 
 	height: max-content;

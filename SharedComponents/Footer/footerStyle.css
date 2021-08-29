@@ -1,15 +1,12 @@
 footer{
-	background-color: var(--Colour-neutral3);
 	width:100%;
-	padding-top: 25px;
-	padding-bottom: 0px;
+	padding-top: 100px;
 }
 
-#copyRight{
-	padding-top: 0.25em;
-	padding-bottom: 0.25em;
-	padding-left: 1em;
-	margin: 0px;
+.footerHolder{
+	width:100%;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 .ContactLinkHolder a{
@@ -27,4 +24,11 @@ footer{
 .ContactLinkHolder img:hover,
 .ContactLinkHolder picture:hover{
 	transform: scale(1.25);
+}
+
+#copyRight{
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-left: 1em;
+	margin: 0px;
 }
