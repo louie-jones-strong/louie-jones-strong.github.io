@@ -1,11 +1,11 @@
 
-.itemsHolder{
+.ZipperCardsHolder{
 	align-items: center;
 	overflow: hidden;
 }
 
 /* container */
-.itemContainer{
+.ZipperCard{
 
 	--FarSidePadding: 25%;
 
@@ -24,7 +24,7 @@
 
 /*Mobile and Tablet-------------------------------------*/
 @media only screen and (max-width: 1010px){
-	.itemContainer{
+	.ZipperCard{
 		grid-template-columns: 1fr;
 		--FarSidePadding: 0px;
 		border-radius: 0px;
@@ -35,7 +35,7 @@
 
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 1011px) and (max-width: 1500px){
-	.itemContainer{
+	.ZipperCard{
 		grid-template-columns: 1fr 1fr;
 		--FarSidePadding: 0px;
 		border-radius: 0px;
@@ -46,18 +46,18 @@
 
 /*Desktop-------------------------------------*/
 @media only screen and (min-width: 1501px) and (max-width: 1900px){
-	.itemContainer{
+	.ZipperCard{
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
 @media only screen and (min-width: 1901px){
-	.itemContainer{
+	.ZipperCard{
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
-.itemContainer.Left:hover, .itemContainer.Right:hover{
+.ZipperCard.Left:hover, .ZipperCard.Right:hover{
 	margin-right: 0px;
 	margin-left: 0px;
 	border-bottom-left-radius: 0;
@@ -69,7 +69,7 @@
 }
 
 /* Left */
-.itemContainer.Left{
+.ZipperCard.Left{
 	margin-right: var(--FarSidePadding);
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
@@ -77,7 +77,7 @@
 }
 
 /* Right */
-.itemContainer.Right{
+.ZipperCard.Right{
 	margin-left: var(--FarSidePadding);
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
@@ -85,9 +85,9 @@
 }
 
 /* Content */
-.itemContainer > video,
-.itemContainer > img,
-.itemContainer > picture{
+.ZipperCard > video,
+.ZipperCard > img,
+.ZipperCard > picture{
 	object-fit: cover;
 	width: 100%;
 	height: auto;

@@ -1,7 +1,5 @@
-@import "footerStyle.css";
-@import "headerStyle.css";
-@import "slide.css";
-@import "textStyle.css";
+@import "TextStyle.css";
+@import "Reveal.css";
 
 /* const colors to allow easy editing of colour schemes over the website */
 html, body{
@@ -11,7 +9,6 @@ html, body{
 
 body{
 	 /* background by SVGBackgrounds.com */
-	background-image: url("backgroundDark.svg");
 	background-attachment: fixed;
 	background-size: cover;
 
@@ -25,6 +22,7 @@ body{
 	font-size: 18px;
 
 /* dark mode */
+	background-image: url("BackgroundDark.svg");
 	--Colour-neutral: rgb(50, 50, 50);
 	--Colour-neutral2: rgb(75, 75, 75);
 	--Colour-neutral3: rgb(100, 100, 100);
@@ -37,7 +35,7 @@ body{
 
 /* light mode */
 body.light{
-	background-image: url("backgroundLight.svg");
+	background-image: url("BackgroundLight.svg");
 
 	--Colour-neutral: rgb(225, 225, 225);
 	--Colour-neutral2: rgb(150, 150, 150);

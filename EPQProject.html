@@ -12,9 +12,9 @@
 	<meta name="author" content="Louie Jones-Strong">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="refresh" content="600">
-	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/commonStyle.css">
-	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/item.css">
-	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/reveal.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/CommonStyles/CommonStyle.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/ZipperCard.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/Carousel.css">
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6MK7D2H38"></script>
@@ -33,7 +33,7 @@
 	<div class="content">
 		<!-- Shared common header -->
 		<header id="Header">
-			<script>$("#Header").load("SharedHtml/Header.html");</script>
+			<script>$("#Header").load("SharedComponents/Header/Header.html");</script>
 		</header>
 
 		<div class="centeredFrame">
@@ -63,8 +63,8 @@
 			</p>
 		</div>
 
-		<div class="itemsHolder glass centeredFrame">
-			<div class="itemContainer glass neonOutline reveal Left">
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard glass neonOutline reveal Left">
 				<div>
 					<h3>Cart Pole</h3>
 					<p>This is one of many refinforcement learning environments I used from <a href="https://gym.openai.com" target="_blank">OpenAI's Gym</a></p>
@@ -101,7 +101,7 @@
 				</div>
 				<script src="JavaScript/Carousel.js"></script>
 			</div>
-			<div class="itemContainer glass neonOutline reveal Right">
+			<div class="ZipperCard glass neonOutline reveal Right">
 				<img src="Assets/EPQ/Graphs/TimeToLearn.png" alt="">
 				<div>
 					<h3>Time To Learn</h3>
@@ -149,7 +149,7 @@
 
 		<!-- Shared common footer -->
 		<footer id="footer">
-			<script>$("#footer").load("SharedHtml/Footer.html");</script>
+			<script>$("#footer").load("SharedComponents/Footer/Footer.html");</script>
 		</footer>
 
 		<script src="JavaScript/AnimateOnAppear.js"></script>
@@ -158,7 +158,7 @@
 
 	<!-- Shared common loader -->
 	<div id="loaderHolder">
-		<script>$("#loaderHolder").load("SharedHtml/Loader.html");</script>
+		<script>$("#loaderHolder").load("SharedComponents/Loader/Loader.html");</script>
 	</div>
 </body>
 </html>

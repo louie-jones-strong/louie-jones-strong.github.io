@@ -12,9 +12,8 @@
 	<meta name="author" content="Louie Jones-Strong">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="refresh" content="600">
-	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/commonStyle.css">
-	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/item.css">
-	<link rel="stylesheet" type="text/css" href="StyleSheet/SharedStyles/reveal.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/CommonStyles/CommonStyle.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/ZipperCard.css">
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6MK7D2H38"></script>
@@ -36,7 +35,7 @@
 		</div>
 
 		<header id="Header">
-			<script>$("#Header").load("SharedHtml/Header.html");</script>
+			<script>$("#Header").load("SharedComponents/Header/Header.html");</script>
 		</header>
 
 		<div class="centeredFrame">
@@ -56,8 +55,8 @@
 		</div>
 
 
-		<div class="itemsHolder glass centeredFrame">
-			<div class="itemContainer neonOutline glass reveal Left">
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard neonOutline glass reveal Left">
 				<div>
 					<h3>Neon Wave</h3>
 					<p>This was the first render I did in Blender. My goal was just to learn how the interface worked.
@@ -70,7 +69,7 @@
 					<source src="Assets/BlenderProjects/Videos/blender_1_480x270.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Right">
+			<div class="ZipperCard neonOutline glass reveal Right">
 				<video autoplay muted loop>
 					<source src="Assets/BlenderProjects/Videos/blender_4.mp4" type="video/mp4">
 				</video>
@@ -85,7 +84,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Left">
+			<div class="ZipperCard neonOutline glass reveal Left">
 				<div>
 					<h3>Cup of tea</h3>
 					<p>My goal in this render was to learn how to model complex shapes. I also created some other tea-set models. </p>
@@ -96,7 +95,7 @@
 					<img src="Assets/BlenderProjects/Images/blender_5_480x270.png" alt="A render of a cup of tea">
 				</picture>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Right">
+			<div class="ZipperCard neonOutline glass reveal Right">
 				<video autoplay muted loop>
 					<source src="Assets/BlenderProjects/Videos/blender_36_1920x1080.mp4" type="video/mp4" media="(min-width: 961px)">
 					<source src="Assets/BlenderProjects/Videos/blender_36_960x540.mp4" type="video/mp4" media="(min-width: 481px)">
@@ -107,7 +106,7 @@
 					<p>In this render my goal was to learn about Blender's new FLIP fluid simulation. </p>
 				</div>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Left">
+			<div class="ZipperCard neonOutline glass reveal Left">
 				<div>
 					<h3><abbr title="Augmented Reality">AR</abbr></h3>
 					<p>In this render I learnt about: </p>
@@ -124,7 +123,7 @@
 					<source src="Assets/BlenderProjects/Videos/blender_35_480x270.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Right">
+			<div class="ZipperCard neonOutline glass reveal Right">
 				<picture>
 					<source srcset="Assets/BlenderProjects/Images/blender_13_1920x1080.png" media="(min-width: 961px)">
 					<source srcset="Assets/BlenderProjects/Images/blender_13_960x540.png" media="(min-width: 481px)">
@@ -135,7 +134,7 @@
 					<p>My goal in this render was to learn about glass shaders. </p>
 				</div>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Left">
+			<div class="ZipperCard neonOutline glass reveal Left">
 				<div>
 					<h3>IPhone</h3>
 					<p>My goal in this render was to learn about adding textures to materials. In this example I started with a screenshot and modelled everything else.</p>
@@ -146,7 +145,7 @@
 					<source src="Assets/BlenderProjects/Videos/blender_14_480x270.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Right">
+			<div class="ZipperCard neonOutline glass reveal Right">
 				<picture>
 					<source srcset="Assets/BlenderProjects/Images/blender_16_1920x1080.png" media="(min-width: 961px)">
 					<source srcset="Assets/BlenderProjects/Images/blender_16_960x540.png" media="(min-width: 481px)">
@@ -164,7 +163,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Left">
+			<div class="ZipperCard neonOutline glass reveal Left">
 				<div>
 					<h3>Rusting Chain</h3>
 					<p>In this render my goal was to learn about animating material properties.</p>
@@ -175,7 +174,7 @@
 					<source src="Assets/BlenderProjects/Videos/blender_17_480x270.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Right">
+			<div class="ZipperCard neonOutline glass reveal Right">
 				<picture>
 					<source srcset="Assets/BlenderProjects/Images/blender_25_1920x1080.png" media="(min-width: 961px)">
 					<source srcset="Assets/BlenderProjects/Images/blender_25_960x540.png" media="(min-width: 481px)">
@@ -186,7 +185,7 @@
 					<p>In this render I was trying to learn how to model a large number of assets in the limited amount of time. </p>
 				</div>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Left">
+			<div class="ZipperCard neonOutline glass reveal Left">
 				<div>
 					<h3>Pool Table</h3>
 					<p>In this render my goal was to learn more about Blender's physics.</p>
@@ -197,7 +196,7 @@
 					<source src="Assets/BlenderProjects/Videos/blender_30_480x270.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Right">
+			<div class="ZipperCard neonOutline glass reveal Right">
 				<picture>
 					<source srcset="Assets/BlenderProjects/Images/blender_32_1920x1080.png" media="(min-width: 961px)">
 					<source srcset="Assets/BlenderProjects/Images/blender_32_960x540.png" media="(min-width: 481px)">
@@ -208,7 +207,7 @@
 					<p>In this render my goal was to learn about non destructive modelling by using modifiers. </p>
 				</div>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Left">
+			<div class="ZipperCard neonOutline glass reveal Left">
 				<div>
 					<h3>Magic Monkey</h3>
 					<p>My goal in this render was to learn about Blender's cloth simulation. </p>
@@ -219,7 +218,7 @@
 					<source src="Assets/BlenderProjects/Videos/blender_7_480x270.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="itemContainer neonOutline glass reveal Right">
+			<div class="ZipperCard neonOutline glass reveal Right">
 				<picture>
 					<source srcset="Assets/BlenderProjects/Images/blender_34_1920x1080.png" media="(min-width: 961px)">
 					<source srcset="Assets/BlenderProjects/Images/blender_34_960x540.png" media="(min-width: 481px)">
@@ -233,14 +232,14 @@
 		</div>
 
 		<footer id="footer">
-			<script>$("#footer").load("SharedHtml/Footer.html");</script>
+			<script>$("#footer").load("SharedComponents/Footer/Footer.html");</script>
 		</footer>
 		<script src="JavaScript/AnimateOnAppear.js"></script>
 	</div>
 
 	<!-- Shared common loader -->
 	<div id="loaderHolder">
-		<script>$("#loaderHolder").load("SharedHtml/Loader.html");</script>
+		<script>$("#loaderHolder").load("SharedComponents/Loader/Loader.html");</script>
 	</div>
 </body>
 </html>
