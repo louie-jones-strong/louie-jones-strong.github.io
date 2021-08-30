@@ -1,6 +1,6 @@
 // this code has was originally from this website:
 // https://www.w3schools.com/howto/howto_js_slideshow.asp
-// but I modified the code for use in our website
+// but I modified the code for use in this website
 
 
 //Starting cover image index
