@@ -84,7 +84,8 @@ abbr, u, a{
 	transition: text-decoration-color ease 0.25s;
 }
 
-abbr:hover, u:hover, a:hover{
+abbr:hover, u:hover, a:hover,
+abbr:focus, u:focus, a:focus{
 	text-decoration-color: var(--ColourMain);
 }
 
