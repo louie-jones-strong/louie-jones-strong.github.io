@@ -40,6 +40,7 @@
 	border-radius: 2em;
 	overflow: hidden;
 	position: relative;
+	text-decoration: none;
 }
 
 .card > img,
