@@ -1,23 +1,62 @@
+body{
+	--HeaderHeight: 100px;
+}
+
+
 #Header{
+	z-index:1000;
 	width:100%;
 	position: sticky;
 	top: 0;
 }
 
 Header{
-	padding-top: 10px;
-
-	height: max-content;
-	display: grid;
-	grid-template-columns: 0.25fr 1fr 0.25fr;
 	width: 100%;
+
+	height: var(--HeaderHeight);
+
+	display: flex;
+	justify-content: space-between;
 }
 
-.themeIcon > .material-icons{
-	font-size: 36px;
+Header .material-icons{
+	font-size: 50px;
+}
+
+.headerCenter{
+	justify-self: center;
+	display: flex;
+}
+
+#headerLogo{
+	height: var(--HeaderHeight);
 }
 
 .mainTitle{
-	margin-top: 0.2em;
+	margin-top: 0.1em;
 	margin-bottom: 0.1em;
+	justify-self: center;
+}
+
+
+/*Tablet -------------------------------------*/
+@media only screen and (min-width: 701px) and (max-width: 900px){
+	body{
+		--HeaderHeight: 75px;
+	}
+
+	.mainTitle{
+		display: none;
+	}
+}
+
+/*Phone -------------------------------------*/
+@media only screen and (max-width: 700px){
+
+	body{
+		--HeaderHeight: 50px;
+	}
+	.headerCenter{
+		display: none;
+	}
 }

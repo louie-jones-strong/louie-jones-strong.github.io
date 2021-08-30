@@ -56,16 +56,19 @@ section{
 
 .left{
 	text-align: left;
+	justify-self: left;
 }
 
 .right{
 	text-align: right;
+	justify-self: right;
 }
 
 .center{
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	justify-self: center;
 }
 
 .bottom{
@@ -194,4 +197,33 @@ ul li::before{
 	display: inline-block;
 	width: 0.75em;
 	margin-left: -0em;
+}
+
+
+/* nav */
+
+nav{
+	z-index:1000;
+	padding-block: 0.5em;
+	display: flex;
+	position: sticky;
+	top: calc(var(--HeaderHeight) + 2px);
+	justify-content: space-around;
+	flex-flow: row wrap;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 2em;
+}
+
+nav a{
+	text-transform: capitalize;
+	margin-block: 0.25em;
+	margin-inline: 0.5em;
+	font-weight: 700;
+
+	border-radius: 0.25em;
+
+	padding-block: 0.25em;
+	padding-inline: 0.5em;
+	/* background-color: var(--ColourMain);
+	color: var(--ColourMain-Contrast); */
 }
