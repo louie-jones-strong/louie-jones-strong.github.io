@@ -1,7 +1,7 @@
 @import "TextStyle.css";
 @import "Reveal.css";
 
-/* const colors to allow easy editing of colour schemes over the website */
+/* const colours to allow easy editing of colour schemes over the website */
 html, body{
 	height: 100%;
 	width: 100%;
@@ -78,7 +78,6 @@ body.light{
 .neonOutline{
 	box-shadow:
 	-0.125em -0.125em 0.125em 0 var(--ColourAccent),
-				/* 0 0 2em 0 var(--ColourAccent), */
 				0.5em 1em 1em 0 rgba(0,0,0,75%);
 }
 
