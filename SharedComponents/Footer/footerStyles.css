@@ -22,7 +22,9 @@ footer{
 }
 
 .ContactLinkHolder img:hover,
-.ContactLinkHolder picture:hover{
+.ContactLinkHolder picture:hover,
+.ContactLinkHolder img:focus,
+.ContactLinkHolder picture:focus{
 	transform: scale(1.25);
 }
 
