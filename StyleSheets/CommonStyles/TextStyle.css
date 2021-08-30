@@ -77,7 +77,7 @@ h1{
 /* text decoration */
 
 /* underlines */
-abbr, u, a {
+abbr, u, a{
 	text-decoration-color: var(--ColourAccent);
 	text-decoration-thickness: 0.1em;
 

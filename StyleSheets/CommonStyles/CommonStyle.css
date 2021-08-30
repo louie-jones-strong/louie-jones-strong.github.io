@@ -54,15 +54,15 @@ section{
 	padding: 1em;
 }
 
-.left {
+.left{
 	text-align: left;
 }
 
-.right {
+.right{
 	text-align: right;
 }
 
-.center {
+.center{
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -78,7 +78,7 @@ section{
 	height: 1.5em;
 }
 
-.hide {
+.hide{
 	display: none;
 }
 
@@ -150,23 +150,23 @@ picture > img{
 	cursor:not-allowed;
 }
 
-button {
+button{
 	border: none;
 	padding: 0px 0px;
 	background-color: transparent;
 }
 
-button:disabled {
+button:disabled{
 	cursor:not-allowed;
 }
 
 /* Tables */
-table {
+table{
 	border-collapse: collapse;
 	text-align: center;
 }
 
-th, td {
+th, td{
 	border: 2px solid black;
 	padding: 0.35em;
 }
@@ -188,7 +188,7 @@ ul{
 	padding-left: 1.5em;
 }
 
-ul li::before {
+ul li::before{
 	content: "\25A0";  /* Add content: \25A0 is the CSS Code/unicode for a SQUARE bullet */
 	color: var(--ColourAccent);
 	display: inline-block;
