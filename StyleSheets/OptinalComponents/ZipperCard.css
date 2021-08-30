@@ -58,7 +58,7 @@
 	}
 }
 
-.ZipperCard.Left:hover, .ZipperCard.Right:hover{
+.ZipperCard.fromLeft:hover, .ZipperCard.fromRight:hover{
 	margin-right: 0px;
 	margin-left: 0px;
 	border-bottom-left-radius: 0;
@@ -69,16 +69,16 @@
 	position: relative;
 }
 
-/* Left */
-.ZipperCard.Left{
+/* fromLeft */
+.ZipperCard.fromLeft{
 	margin-right: var(--FarSidePadding);
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 	border-left: 0;
 }
 
-/* Right */
-.ZipperCard.Right{
+/* fromRight */
+.ZipperCard.fromRight{
 	margin-left: var(--FarSidePadding);
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
