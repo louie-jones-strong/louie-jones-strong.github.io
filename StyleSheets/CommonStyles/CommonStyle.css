@@ -31,6 +31,7 @@ body{
 /* dark mode */
 	background-image: url("BackgroundDark.svg");
 
+	--BackgroundColour: black;
 	--Colour-Text1: rgb(255, 255, 255);
 	--Colour-Text2: rgb(255, 255, 255);
 	--Colour-Text3: rgb(225, 225, 225);
@@ -41,6 +42,7 @@ body{
 body.light{
 	background-image: url("BackgroundLight.svg");
 
+	--BackgroundColour: white;
 	--Colour-Text1: rgb(0, 0, 0);
 	--Colour-Text2: rgb(0, 0, 0);
 	--Colour-Text3: rgb(25, 25, 25);
@@ -86,16 +88,16 @@ section{
 }
 
 .neonOutline{
-	box-shadow:	-0.125em -0.125em 0.125em 0 var(--ColourAccent),
-				0 0 3px 0 var(--ColourAccent),
-				0.5em 1em 1em 0 rgba(0,0,0,75%);
+	box-shadow:	0.125em 0.125em 0.25em 0 rgba(0,0,0,50%),
+				-0.125em -0.125em 0.125em 0 var(--ColourAccent),
+				0 0 3px 0 var(--ColourAccent);
 }
 
 .neonOutline:hover, .neonOutline:focus{
-	box-shadow: -0.125em -0.125em 0.125em 0 var(--ColourAccent),
-				0 0 3px 0 var(--ColourAccent),
+	box-shadow: 0.125em 0.125em 0.25em 0 rgba(0,0,0,50%),
 				0 0 2em 0 var(--ColourAccent),
-				0.5em 1em 1em 0 rgba(0,0,0,75%);
+				-0.125em -0.125em 0.125em 0 var(--ColourAccent),
+				0 0 3px 0 var(--ColourAccent);
 }
 
 .glass{
@@ -225,6 +227,6 @@ nav a{
 
 	padding-block: 0.25em;
 	padding-inline: 0.5em;
-	/* background-color: var(--ColourMain);
-	color: var(--ColourMain-Contrast); */
+	background-color: var(--BackgroundColour);
+	text-decoration: none;
 }
