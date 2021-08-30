@@ -23,6 +23,7 @@ p, h1, h2, h3, h4{
 
 h4{
 	font-size: 1.5rem;
+	text-transform: capitalize;
 	color: var(--Colour-Text3);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
@@ -34,6 +35,7 @@ h4{
 
 h3{
 	font-size: 2rem;
+	text-transform: capitalize;
 	color: var(--Colour-Text3);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
@@ -45,6 +47,7 @@ h3{
 
 h2{
 	font-size: 3rem;
+	text-transform: capitalize;
 	color: var(--Colour-Text2);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
@@ -60,6 +63,7 @@ h1{
 	margin-block-end: 0;
 
 	font-size: 4rem;
+	text-transform: capitalize;
 	color: var(--Colour-Text1);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 900;
