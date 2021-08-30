@@ -15,9 +15,18 @@ body{
 
 	margin: 0px;
 	overflow-x: hidden;
+	--HighlightColor: rgba(255,255,255,0.3);
 	--ShadowColor: rgba(0,0,0,0.3);
 	--DarkenBackground: rgba(0,0,0,0.75);
-	--Colour-Accent: rgb(240, 53, 178);
+
+	--InvalidColour: #FF6961;
+	--InvalidColour-Contrast: black;
+
+	--ColourMain: #0085FF;
+	--ColourMain-Contrast: black;
+
+	--ColourAccent: #FF9E00;
+	--ColourAccent-Contrast: black;
 
 /* dark mode */
 	background-image: url("BackgroundDark.svg");
@@ -25,7 +34,7 @@ body{
 	--Colour-Text1: rgb(255, 255, 255);
 	--Colour-Text2: rgb(255, 255, 255);
 	--Colour-Text3: rgb(225, 225, 225);
-	--Colour-Text4: rgb(205, 205, 205);
+	--Colour-Text4: rgb(215, 215, 215);
 }
 
 /* light mode */
@@ -34,8 +43,8 @@ body.light{
 
 	--Colour-Text1: rgb(0, 0, 0);
 	--Colour-Text2: rgb(0, 0, 0);
-	--Colour-Text3: rgb(50, 50, 50);
-	--Colour-Text4: rgb(75, 75, 75);
+	--Colour-Text3: rgb(25, 25, 25);
+	--Colour-Text4: rgb(40, 40, 40);
 }
 
 .left {
@@ -67,8 +76,15 @@ body.light{
 }
 
 .neonOutline{
-	box-shadow: -0.125em -0.125em 0.125em 0 hsla(190, 100%, 50%),
-				0 0 2em 0 rgb(0, 132, 255),
+	box-shadow:
+	-0.125em -0.125em 0.125em 0 var(--ColourAccent),
+				/* 0 0 2em 0 var(--ColourAccent), */
+				0.5em 1em 1em 0 rgba(0,0,0,75%);
+}
+
+.neonOutline:hover{
+	box-shadow: -0.125em -0.125em 0.125em 0 var(--ColourAccent),
+				0 0 2em 0 var(--ColourAccent),
 				0.5em 1em 1em 0 rgba(0,0,0,75%);
 }
 
@@ -77,10 +93,10 @@ body.light{
 	backdrop-filter: blur(10px);
 	border-style: solid;
 	border-width: 1px;
-	border-top-color: rgba(255, 255, 255, 0.3);
-	border-left-color: rgba(255, 255, 255, 0.3);
-	border-bottom-color: rgba(0, 0, 0, 0.3);
-	border-right-color: rgba(0, 0, 0, 0.3);
+	border-top-color: var(--HighlightColor);
+	border-left-color: var(--HighlightColor);
+	border-bottom-color: var(--ShadowColor);
+	border-right-color: var(--ShadowColor);
 }
 
 
@@ -165,9 +181,11 @@ th, td {
 }
 
 td.Invalid{
-	background-color: red;
+	background-color: var(--InvalidColour);
+	color: var(--InvalidColour-Contrast);
 }
 
 th{
-	background-color: var(--Colour-Accent2);
+	background-color: var(--ColourAccent);
+	color: var(--ColourAccent-Contrast);
 }

@@ -56,7 +56,7 @@
 }
 
 .activeDot{
-	background-color: var(--Colour-Accent);
+	background-color: var(--ColourAccent);
 }
 
 
@@ -73,7 +73,6 @@
 	margin-right: 50%;
 	background-color: var(--DarkenBackground);
 	border-radius: 10px;
-	padding: 5px;
 	text-align: left;
 }
 
