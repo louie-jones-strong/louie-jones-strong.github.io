@@ -145,27 +145,8 @@ button {
 	background-color: transparent;
 }
 
-
 button:disabled {
 	cursor:not-allowed;
-}
-
-
-/* image buttons */
-.imageButton{
-	display: inline-block;
-	overflow: hidden;
-}
-
-.imageButton > img,
-.imageButton > picture{
-	display: block;
-	transition: .25s ease-in-out;
-}
-
-.imageButton > img:hover,
-.imageButton > picture:hover{
-	transform: scale(1.05);
 }
 
 /* Tables */
