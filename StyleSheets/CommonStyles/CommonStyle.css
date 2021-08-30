@@ -188,3 +188,18 @@ th{
 	background-color: var(--ColourAccent);
 	color: var(--ColourAccent-Contrast);
 }
+
+/* lists */
+
+ul{
+	list-style: none;
+	padding-left: 1.5em;
+}
+
+ul li::before {
+	content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: var(--ColourAccent);
+	display: inline-block;
+	width: 0.75em;
+	margin-left: -0em;
+}
