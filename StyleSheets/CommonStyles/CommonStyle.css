@@ -47,6 +47,12 @@ body.light{
 	--Colour-Text4: rgb(40, 40, 40);
 }
 
+
+section{
+	margin-top: 10rem;
+	margin-bottom: 5rem;
+}
+
 .left {
 	text-align: left;
 }
@@ -96,6 +102,10 @@ body.light{
 	border-left-color: var(--HighlightColor);
 	border-bottom-color: var(--ShadowColor);
 	border-right-color: var(--ShadowColor);
+}
+
+.rounded{
+	border-radius: 1.5em;
 }
 
 
