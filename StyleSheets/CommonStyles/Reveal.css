@@ -6,16 +6,20 @@
 	opacity: 0;
 }
 
-.reveal.hidden.Left{
+.reveal.hidden.fromLeft{
 	transform: translateX(-15vw);
 }
 
-.reveal.hidden.Right{
+.reveal.hidden.fromRight{
 	transform: translateX(15vw);
 }
 
-.reveal.hidden.Bottom{
+.reveal.hidden.fromBottom{
 	transform: translateY(5vh);
+}
+
+.reveal.hidden.fromTop{
+	transform: translateY(-5vh);
 }
 
 .reveal.shown{
