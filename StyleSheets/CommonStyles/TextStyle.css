@@ -84,7 +84,8 @@ abbr, u, a{
 	transition: text-decoration-color ease 0.25s;
 }
 
-abbr:hover, u:hover, a:hover{
+abbr:hover, u:hover, a:hover,
+abbr:focus, u:focus, a:focus{
 	text-decoration-color: var(--ColourMain);
 }
 
@@ -119,8 +120,22 @@ abbr:hover, u:hover, a:hover{
 }
 
 /*small screen -------------------------------------*/
-@media only screen and (max-width: 350px){
+@media only screen and (min-width: 251px) and (max-width: 350px){
 	:root{
 		--BaseFontSize: 12px;
+	}
+}
+
+/*small screen -------------------------------------*/
+@media only screen and (min-width: 201px) and (max-width: 250px){
+	:root{
+		--BaseFontSize: 10px;
+	}
+}
+
+/*small screen -------------------------------------*/
+@media only screen and (max-width: 200px){
+	:root{
+		--BaseFontSize: 8px;
 	}
 }

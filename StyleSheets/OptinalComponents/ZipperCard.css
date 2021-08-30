@@ -58,7 +58,8 @@
 	}
 }
 
-.ZipperCard.fromLeft:hover, .ZipperCard.fromRight:hover{
+.ZipperCard.fromLeft:hover, .ZipperCard.fromRight:hover,
+.ZipperCard.fromLeft:focus, .ZipperCard.fromRight:focus{
 	margin-right: 0px;
 	margin-left: 0px;
 	border-bottom-left-radius: 0;
