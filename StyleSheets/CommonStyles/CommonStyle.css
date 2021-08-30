@@ -86,13 +86,14 @@ section{
 }
 
 .neonOutline{
-	box-shadow:
-	-0.125em -0.125em 0.125em 0 var(--ColourAccent),
+	box-shadow:	-0.125em -0.125em 0.125em 0 var(--ColourAccent),
+				0 0 3px 0 var(--ColourAccent),
 				0.5em 1em 1em 0 rgba(0,0,0,75%);
 }
 
 .neonOutline:hover, .neonOutline:focus{
 	box-shadow: -0.125em -0.125em 0.125em 0 var(--ColourAccent),
+				0 0 3px 0 var(--ColourAccent),
 				0 0 2em 0 var(--ColourAccent),
 				0.5em 1em 1em 0 rgba(0,0,0,75%);
 }
