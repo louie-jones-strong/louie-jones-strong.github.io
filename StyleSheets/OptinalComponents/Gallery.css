@@ -5,8 +5,8 @@
 	align-items: center;
 	overflow: hidden;
 	border-radius: 1.5em;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .gallery > *{
@@ -19,31 +19,10 @@
 	transition: all 0.5s ease-out;
 }
 
-.gallery > * > video,
-.gallery > * > img,
-.gallery > * > picture{
+.gallery video,
+.gallery img,
+.gallery picture{
 	object-fit: cover;
 	width: 100%;
 	height: auto;
-}
-
-/*Mobile and Tablet-------------------------------------*/
-@media only screen and (max-width: 1010px){
-	.gallery{
-		grid-template-columns: 1fr;
-	}
-}
-
-/*Tablet-------------------------------------*/
-@media only screen and (min-width: 1011px) and (max-width: 1500px){
-	.gallery{
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1501px){
-	.gallery{
-		grid-template-columns: 1fr 1fr 1fr;
-	}
 }
