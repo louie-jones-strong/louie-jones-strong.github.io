@@ -1,6 +1,6 @@
-$(window).on("load", ShowContent);
-
 HideContent();
+
+$(window).on("load", ShowContent);
 
 
 function HideContent()

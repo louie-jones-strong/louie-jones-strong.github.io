@@ -1,25 +1,3 @@
-- Header isn't working when launched from index.html
-- A little padding/border/margin for lower resolutions would look nicer
-	e.g. Text on ZipperCard class (Blender projects, etc)
-- In blender projects there are many instances of "in this render".
-- In office egg game the gallery causes horizontal scroll bar
-
-[ ] check abbreviations
-	[Y] AI
-	[Y] EPQ
-	[Y] AR
-[ ] check tabs/spaces
-[ ] check word wrap (~120 chars)
 [ ] sufficient commenting
-[ ] check all links work
-	[ ] to a separate window
-[ ] check use of class="reveal Bottom"
-	[ ] blender
-	[ ] epq
-[ ] test / format for 1080p
-[ ] limit header height for low resolutions
-[ ] excessive border/padding above footer
 [ ] back to top button in footer
-[ ] check direction of reveals
-[ ] remove yellow text
 [] fix cookies
