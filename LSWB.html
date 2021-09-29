@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared for all pages -->
+	<meta charset="UTF-8">
+	<link rel="icon" href="Assets/Logo/favicon.ico" type="image/x-icon">
+	<meta name="keywords" content="Louie, Jones-Strong, portfolio, cv, code, game, dev, gameplay, mobile, desktop,
+		coding, programmer, c#, python, sql, java, aws, html, css, JavaScript, asp.net, git, c, arduino, json, unity,
+		blender, ai, machine learning, first aid, itch, epq, Alhambra, 4d puzzle, egg hunt">
+
+	<meta property="og:type" content="website"/>
+	<meta property="og:site_name" content="Louie Jones-Strong"/>
+	<meta name="author" content="Louie Jones-Strong">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="refresh" content="600">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/CommonStyles/CommonStyle.css">
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6MK7D2H38"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-B6MK7D2H38');
+	</script>
+
+	<!-- just this page -->
+	<title>Louie J-S: LEGO Star Wars Battles</title>
+	<meta property="og:title" content="Louie Jones-Strong: LEGO Star Wars Battles"/>
+
+	<meta name="description" content="Louie Jones-Strong's portfolio. My time at TT Odyssey working on LEGO® Star Wars™ Battles.">
+	<meta name="og:description " content="Louie Jones-Strong's portfolio. My time at TT Odyssey working on LEGO® Star Wars™ Battles.">
+
+	<meta property="og:url" content="https://louie-jones-strong.github.io/LSWB.html"/>
+	<meta property="og:image" content="https://louie-jones-strong.github.io/Assets/LSWB/Thumbnail.png" />
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/ZipperCard.css">
+</head>
+
+
+<body class="dark">
+
+	<div class="content">
+		<!-- Shared common header -->
+		<header id="Header">
+			<script>$("#Header").load("SharedComponents/Header/Header.html");</script>
+		</header>
+
+		<!-- cover image slide show -->
+		<div class="slide-holder">
+			<div class="slide">
+				<video autoplay muted loop>
+					<source src="Assets/LSWB/LaunchTrailer.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+			</div>
+			<!-- <div class="slide">
+				<img src="Assets/LSWB/key-art.jpg" alt="LSWB key art">
+				<div class="slide-caption">
+					<h4>Key Art</h4>
+				</div>
+			</div>
+			<span class="slide-dot"></span>
+			<span class="slide-dot"></span> -->
+		</div>
+		<script src="JavaScript/Carousel.js"></script>
+
+		<div class="centeredFrame">
+			<h1 class="center reveal fromBottom">LEGO® Star Wars™ Battles</h1>
+
+		</div>
+
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard glass neonOutline reveal fromLeft">
+				<div>
+					<h3>Audio</h3>
+					<p></p>
+				</div>
+			</div>
+			<div class="ZipperCard glass neonOutline reveal fromRight">
+				<div>
+					<h3><abbr title="User Interface">UI</abbr></h3>
+					<p></p>
+				</div>
+			</div>
+			<div class="ZipperCard glass neonOutline reveal fromLeft">
+				<div>
+					<h3>Server Tools</h3>
+					<p></p>
+				</div>
+			</div>
+			<div class="ZipperCard glass neonOutline reveal fromRight">
+				<div>
+					<h3>New Unit Creation</h3>
+					<p></p>
+				</div>
+			</div>
+			<div class="ZipperCard glass neonOutline reveal fromLeft">
+				<div>
+					<h3>Matchmaking</h3>
+					<p></p>
+				</div>
+			</div>
+			<div class="ZipperCard glass neonOutline reveal fromRight">
+				<div>
+					<h3>Localisation</h3>
+					<p></p>
+				</div>
+			</div>
+			<div class="ZipperCard glass neonOutline reveal fromLeft">
+				<div>
+					<h3>Optimisation</h3>
+					<p></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Shared common footer -->
+		<footer id="footer">
+			<script>$("#footer").load("SharedComponents/Footer/Footer.html");</script>
+		</footer>
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+
+	</div>
+
+	<!-- Shared common loader -->
+	<div id="loaderHolder">
+		<script>$("#loaderHolder").load("SharedComponents/Loader/Loader.html");</script>
+	</div>
+	<script src="JavaScript/Loader.js"></script>
+</body>
+</html>

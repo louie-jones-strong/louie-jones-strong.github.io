@@ -45,7 +45,10 @@ function showSlides()
 	slideIndex++;
 
 	// Change cover image every 5 seconds
-	setTimeout(showSlides, 5000);
+	if (slides > 1)
+	{
+		setTimeout(showSlides, 5000);
+	}
 }
 
 function ResetVideos(dicObject)
