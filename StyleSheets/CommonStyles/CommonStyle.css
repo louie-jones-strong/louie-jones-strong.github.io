@@ -36,6 +36,7 @@ body{
 	--Colour-Text2: rgb(255, 255, 255);
 	--Colour-Text3: rgb(225, 225, 225);
 	--Colour-Text4: rgb(215, 215, 215);
+	--Colour-Contrast-Filter: saturate(0%) brightness(0%) invert(100%);
 }
 
 /* light mode */
@@ -47,6 +48,7 @@ body.light{
 	--Colour-Text2: rgb(0, 0, 0);
 	--Colour-Text3: rgb(25, 25, 25);
 	--Colour-Text4: rgb(40, 40, 40);
+	--Colour-Contrast-Filter: saturate(0%) brightness(0%);
 }
 
 

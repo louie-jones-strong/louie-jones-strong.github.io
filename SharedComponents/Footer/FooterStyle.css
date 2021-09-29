@@ -13,18 +13,18 @@ footer{
 	text-decoration: none;
 }
 
-.ContactLinkHolder img,
-.ContactLinkHolder picture{
+
+.brandLogo{
 	width: 2.5em;
 	height: 2.5em;
-	margin: 1em;
+	padding: 0.5em;
+	margin: 0.5em;
 	transition: 0.3s;
+	filter: var(--Colour-Contrast-Filter)
 }
 
-.ContactLinkHolder img:hover,
-.ContactLinkHolder picture:hover,
-.ContactLinkHolder img:focus,
-.ContactLinkHolder picture:focus{
+.brandLogo:hover,
+.brandLogo:focus{
 	transform: scale(1.25);
 }
 
