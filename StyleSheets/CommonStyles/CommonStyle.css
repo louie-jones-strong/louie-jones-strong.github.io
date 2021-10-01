@@ -52,6 +52,10 @@ body.light{
 	--Colour-Contrast-Filter: saturate(0%) brightness(0%);
 }
 
+.material-icons{
+	color: var(--Colour-Text1);
+}
+
 
 section{
 	margin-top: 10rem;
@@ -95,14 +99,13 @@ section{
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 
-	border-width: 1px;
-	border-style: solid;
-	border-color: var(--HighlightColor);
+	border: 1px solid var(--HighlightColor);
 
 	box-shadow: 0em 0em 0.5em 0.125em rgba(0,0,0,50%);
 }
 
 .neonOutline{
+	border: 1px solid var(--ColourAccent);
 	box-shadow:	0.125em 0.125em 0.25em 0 rgba(0,0,0,50%),
 				-0.125em -0.125em 0.125em 0 var(--ColourAccent),
 				0 0 3px 0 var(--ColourAccent);
