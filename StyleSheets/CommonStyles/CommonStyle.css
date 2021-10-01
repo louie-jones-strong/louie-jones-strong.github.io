@@ -1,5 +1,6 @@
 @import "TextStyle.css";
 @import "Reveal.css";
+@import "QuickInfo.css";
 
 /* const colours to allow easy editing of colour schemes over the website */
 html, body{
@@ -117,7 +118,6 @@ section{
 .rounded{
 	border-radius: 1.5em;
 }
-
 
 .centeredFrame{
 	margin-left: 15%;

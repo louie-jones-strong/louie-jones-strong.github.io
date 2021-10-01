@@ -43,6 +43,7 @@
 	text-decoration: none;
 }
 
+.card > .cardImage,
 .card > img,
 .card > picture{
 	transition-duration: 0.5s;
@@ -51,6 +52,18 @@
 	max-height: 20em;
 	overflow: hidden;
 	object-fit: cover;
+	position: relative;
+}
+
+.cardImage > img,
+.cardImage > picture{
+	transition-duration: 0.5s;
+	width: 100%;
+	height: auto;
+	max-height: 20em;
+	overflow: hidden;
+	object-fit: cover;
+	position: relative;
 }
 
 .card p{
@@ -61,4 +74,22 @@
 .card h3{
 	margin-top: 0.1em;
 	margin-bottom: 0.1em;
+}
+
+
+.card .quickInfoHolder{
+	margin-top: 5px;
+	margin-bottom: 0px;
+	position: absolute;
+	top: 0px;
+
+	transform: translateY(-5em);
+	opacity: 0;
+	transition: opacity, transform 0.3s;
+}
+
+.card:hover .quickInfoHolder,
+.card:focus .quickInfoHolder{
+	opacity: 1;
+	transform: translateY(0px);
 }
