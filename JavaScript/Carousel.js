@@ -5,9 +5,9 @@
 
 //Starting cover image index
 var slideIndex = 0;
-showSlides();
+ShowSlides();
 
-function showSlides()
+function ShowSlides()
 {
 	var i;
 	var slides = document.getElementsByClassName("slide");
@@ -45,9 +45,9 @@ function showSlides()
 	slideIndex++;
 
 	// Change cover image every 5 seconds
-	if (slides > 1)
+	if (slides.length > 1)
 	{
-		setTimeout(showSlides, 5000);
+		setTimeout(ShowSlides, 5000);
 	}
 }
 
