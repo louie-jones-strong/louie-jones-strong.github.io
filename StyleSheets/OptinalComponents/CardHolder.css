@@ -76,16 +76,22 @@
 	margin-bottom: 0.1em;
 }
 
+/* quick info */
 
 .card .quickInfoHolder{
 	margin-top: 5px;
 	margin-bottom: 0px;
 	position: absolute;
 	top: 0px;
+}
 
-	transform: translateY(-5em);
-	opacity: 0;
-	transition: opacity, transform 0.3s;
+/* only hide when not being hovered if this device supports hover state */
+@media (hover: hover) {
+	.card .quickInfoHolder {
+		transform: translateY(-5em);
+		opacity: 0;
+		transition: opacity, transform 0.3s;
+	}
 }
 
 .card:hover .quickInfoHolder,
