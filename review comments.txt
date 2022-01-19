@@ -1,3 +1,0 @@
-[ ] sufficient commenting
-[ ] back to top button in footer
-[] fix cookies
