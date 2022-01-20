@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: Minesweeper",
+			Description: "Louie Jones-Strong's portfolio. My Minesweeper Project to prepare for my University courses, I learnt: JS, HTML and CSS",
+			Url: "https://louie-jones-strong.github.io/Minesweeper.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Assets/MineSweeper/Thumbnail.png",
+		}
+	}); %>
+</head>
+
+
+<body class="dark">
+
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+
+		<div class="centeredFrame">
+			<h1 class="center reveal fromBottom">Minesweeper</h1>
+
+			<div class="quickInfoHolder">
+				<div class="quickInfo">
+					<i class="material-icons">date_range</i>
+					<h5>1 Week</h5>
+				</div>
+				<div class="quickInfo">
+					<i class="material-icons">person</i>
+					<h5>Solo</h5>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+
+	</div>
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+</body>
+</html>
