@@ -35,6 +35,19 @@
 
 	<!-- todo add skills / tools learn-->
 	<!-- todo add tools used for example unity c# -->
-	<!-- todo add where to play/see it -->
 
+	<!-- where to play/see it -->
+	<% if (QuickInfoData.GithubLink) { %>
+		<a class="quickInfo link" href="<%= QuickInfoData.GithubLink %>" target="_blank">
+			<img class="icon" src="Assets/Icons/github.svg" alt="Github Logo">
+			<h5>Code</h5>
+		</a>
+	<% }%>
+
+	<% if (QuickInfoData.ItchLink) { %>
+		<a class="quickInfo link" href="<%= QuickInfoData.ItchLink %>" target="_blank">
+			<img class="icon" src="Assets/Icons/itch-dot-io.svg" alt="Itch Log">
+			<h5>Play Here</h5>
+		</a>
+	<% }%>
 </div>
