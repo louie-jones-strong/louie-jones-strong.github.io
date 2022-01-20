@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: Office Egg Hunt",
+			Description: "Louie Jones-Strong's portfolio. A 3D game for my colleagues to play in lockdown, set within my model of our office.",
+			Url: "https://louie-jones-strong.github.io/EggHuntProject.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Assets/EggHuntGame/thumbnail.png",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/Gallery.css">
+</head>
+
+
+<body class="dark">
+
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+		<!-- cover image slide show -->
+		<div class="slide-holder">
+			<div class="slide">
+				<img src="Assets/EggHuntGame/GamePlay/yPzUzd.png" alt="In game lower floor screen shot">
+				<div class="slide-caption">
+					<h4>Game Play Screenshots</h4>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="Assets/EggHuntGame/GamePlay/NPihBC.png" alt="In game upper floor screen shot">
+				<div class="slide-caption">
+					<h4>Game Play Screenshots</h4>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="Assets/EggHuntGame/GamePlay/mgAzdG.png" alt="In game Menu screen shot">
+				<div class="slide-caption">
+					<h4>Game Play Screenshots</h4>
+				</div>
+			</div>
+			<span class="slide-dot"></span>
+			<span class="slide-dot"></span>
+			<span class="slide-dot"></span>
+		</div>
+		<script src="JavaScript/Carousel.js"></script>
+
+		<!-- Link to play the game on itch -->
+		<div class="center">
+			<a href="https://louie-js.itch.io/office-egg-hunt">Play On: itch.io</a>
+		</div>
+
+		<div class="centeredFrame">
+			<h1 class="center reveal fromBottom">Office Egg Hunt</h1>
+
+			<div class="quickInfoHolder">
+				<div class="quickInfo">
+					<i class="material-icons">date_range</i>
+					<h5>2 Weeks</h5>
+				</div>
+				<div class="quickInfo">
+					<i class="material-icons">person</i>
+					<h5>Solo</h5>
+				</div>
+			</div>
+
+			<h2 class="reveal fromBottom">Starting Point</h2>
+			<p class="reveal fromBottom">At the start of lockdown and working from home, I created a model of our office in blender.
+				My goal of making this model was to make some custom zoom backgrounds for people at work, as well as reminding them about the office.
+			</p>
+
+			<h3 class="reveal fromBottom">Blender Renders</h3>
+
+
+			<div class="gallery glass">
+				<div class="glass reveal">
+					<picture>
+						<source srcset="Assets/EggHuntGame/Blender/ray0001_1920x1080.png" media="(min-width: 961px)">
+						<source srcset="Assets/EggHuntGame/Blender/ray0001_960x540.png" media="(min-width: 481px)">
+						<img src="Assets/EggHuntGame/Blender/ray0001_480x270.png" alt="A render of the upper floor of the office">
+					</picture>
+				</div>
+				<div class="glass reveal">
+					<picture>
+						<source srcset="Assets/EggHuntGame/Blender/ray0002_1920x1080.png" media="(min-width: 961px)">
+						<source srcset="Assets/EggHuntGame/Blender/ray0002_960x540.png" media="(min-width: 481px)">
+						<img src="Assets/EggHuntGame/Blender/ray0002_480x270.png" alt="A render of main meeting room">
+					</picture>
+				</div>
+				<div class="glass reveal">
+					<picture>
+						<source srcset="Assets/EggHuntGame/Blender/ray0003_1920x1080.png" media="(min-width: 961px)">
+						<source srcset="Assets/EggHuntGame/Blender/ray0003_960x540.png" media="(min-width: 481px)">
+						<img src="Assets/EggHuntGame/Blender/ray0003_480x270.png" alt="A render of the lower floor of the office">
+					</picture>
+				</div>
+				<div class="glass reveal">
+					<picture>
+						<source srcset="Assets/EggHuntGame/Blender/ray0004_1920x1080.png" media="(min-width: 961px)">
+						<source srcset="Assets/EggHuntGame/Blender/ray0004_960x540.png" media="(min-width: 481px)">
+						<img src="Assets/EggHuntGame/Blender/ray0004_480x270.png" alt="A render of my desk">
+					</picture>
+				</div>
+				<div class="glass reveal">
+					<picture>
+						<source srcset="Assets/EggHuntGame/Blender/ray0005_1920x1080.png" media="(min-width: 961px)">
+						<source srcset="Assets/EggHuntGame/Blender/ray0005_960x540.png" media="(min-width: 481px)">
+						<img src="Assets/EggHuntGame/Blender/ray0005_480x270.png" alt="A render of the kitchen">
+					</picture>
+				</div>
+			</div>
+
+			<h2 class="reveal fromBottom">Making the Game</h2>
+			<p class="reveal fromBottom">At the start of 2021 I wanted to improve my unity skills further.</p>
+			<ul class="reveal fromBottom">
+				<li>Working on a project by myself to release quality</li>
+				<li>Learn how to make a 3D Game</li>
+				<li>Lighting</li>
+				<li>How to create 3D assets for games</li>
+				<li>Optimization</li>
+			</ul>
+ </div>
+
+
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+
+	</div>
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+</body>
+</html>

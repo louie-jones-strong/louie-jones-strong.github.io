@@ -1,6 +1,8 @@
 HideContent();
 
-$(window).on("load", ShowContent);
+window.addEventListener('load', function () {
+	ShowContent();
+});
 
 
 function HideContent()
@@ -16,7 +18,8 @@ function HideContent()
 
 function ShowContent()
 {
-	$("#loaderHolder").fadeOut("slow");
+	var loaderHolder = document.getElementById("loaderHolder");
+	loaderHolder.classList.add("loaded");
 
 	var contents = document.getElementsByClassName("content");
 

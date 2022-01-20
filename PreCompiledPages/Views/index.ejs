@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie Jones-Strong",
+			Description: "Louie Jones-Strong's portfolio. I am a Brighton based hard working, creative, programmer. I work full time as a programmer at TT Games and full time as machine learning student",
+			Url: "https://louie-jones-strong.github.io/",
+			Thumbnail: "https://louie-jones-strong.github.io/Assets/PortfolioProject/Thumbnail.png",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/CardHolder.css">
+</head>
+
+<body class="dark">
+
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+		<div class="centeredFrame">
+			<h1 class="center reveal fromBottom">Who Am I?</h1>
+			<p class="center reveal fromBottom">I am a <a href="https://goo.gl/maps/uww4cWv48GgdQC719" target="_blank">Brighton, England</a> based
+				 hard working, creative, programmer with a passion for developing tools, games and machine learning.</p>
+			<p class="center reveal fromBottom"> I am working full time at TT Games as a Junior programmer.</p>
+			<p class="center reveal fromBottom">I am also a full time student at Goldsmiths, University of London studying machine learning.</p>
+
+			<h1 class="center reveal fromBottom">What Have I Done?</h1>
+
+			<h2 class="center reveal fromBottom">Work Experience:</h2>
+			<div class="cardHolder">
+
+				<a class="card glass neonOutline reveal" href="LSWB.html">
+					<div class="cardImage">
+						<img src="Assets/LSWB/Thumbnail.png" alt="LEGO® Star Wars™ Battles">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">date_range</i>
+								<h5>April 2018 - Present</h5>
+							</div>
+						</div>
+					</div>
+					<h3>LEGO® Star Wars™ Battles</h3>
+					<p>My time at TT Odyssey working on LEGO® Star Wars™ Battles.</p>
+					<h4 class="bottom"><u>More Info</u></h4>
+				</a>
+			</div>
+
+			<h2 class="center reveal fromBottom">Projects:</h2>
+			<div class="cardHolder">
+
+				<a class="card glass neonOutline reveal" href="BlenderProjects.html">
+					<div class="cardImage">
+						<img src="Assets/BlenderProjects/Images/blender_6_480x270.png" alt="Blender rendered of tea set">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">person</i>
+								<h5>Solo</h5>
+							</div>
+						</div>
+					</div>
+					<h3>24 Hour Blender Challenge</h3>
+					<p> I challenged myself to learn different Blender skills,
+						giving myself only 24 hours for each one.</p>
+					<h4 class="bottom"><u>More Info</u></h4>
+				</a>
+
+				<a class="card glass neonOutline reveal" href="EggHuntProject.html">
+					<div class="cardImage">
+						<img src="Assets/EggHuntGame/thumbnail.png" alt="Office Egg Hunt cover image">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">date_range</i>
+								<h5>2 Weeks</h5>
+							</div>
+							<div class="quickInfo">
+								<i class="material-icons">person</i>
+								<h5>Solo</h5>
+							</div>
+						</div>
+					</div>
+					<h3>Office Egg Hunt</h3>
+					<p>A 3D game for my colleagues to play in lockdown, set within my model of our office.</p>
+					<h4 class="bottom"><u>More Info</u></h4>
+				</a>
+
+				<a class="card glass neonOutline reveal" href="EPQProject.html">
+					<div class="cardImage">
+						<img src="Assets/EPQ/thumbnail.png" alt="Machine learning">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">date_range</i>
+								<h5>6 months</h5>
+							</div>
+							<div class="quickInfo">
+								<i class="material-icons">person</i>
+								<h5>Solo</h5>
+							</div>
+						</div>
+					</div>
+					<h3><abbr title="Extended Project Qualification">EPQ</abbr></h3>
+					<p>My college <abbr title="Extended Project Qualification">EPQ</abbr> dissertation on multi-technique supervised machine learning</p>
+					<h4 class="bottom"><u>More Info</u></h4>
+				</a>
+
+				<a class="card glass neonOutline reveal" href="CubePuzzleProject.html">
+					<div class="cardImage">
+						<img src="Assets/CubePuzzle/Thumbnail.jpg" alt="Engraved Alhambra Cube Puzzle">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">date_range</i>
+								<h5>3 Weeks</h5>
+							</div>
+							<div class="quickInfo">
+								<i class="material-icons">person</i>
+								<h5>Solo</h5>
+							</div>
+						</div>
+					</div>
+					<h3>Alhambra 4D Cube Puzzle</h3>
+					<p>My algorithm to discover the solutions to the Alhambra Cube Puzzle.</p>
+					<h4 class="bottom"><u>More Info</u></h4>
+				</a>
+
+				<a class="card glass neonOutline reveal" href="Portfolio.html">
+					<div class="cardImage">
+						<img src="Assets/PortfolioProject/Thumbnail.png" alt="Website Logo">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">date_range</i>
+								<h5>4 Weeks</h5>
+							</div>
+							<div class="quickInfo">
+								<i class="material-icons">person</i>
+								<h5>Solo</h5>
+							</div>
+						</div>
+					</div>
+					<h3>My Portfolio</h3>
+					<p>How I made this website.</p>
+					<h4 class="bottom"><u>More Info</u></h4>
+				</a>
+			</div>
+
+			<h2 class="center reveal Bottom">Game Jams:</h2>
+			<div class="cardHolder">
+
+				<div class="card glass reveal disabled">
+					<div class="cardImage">
+						<img src="Assets/Monster Mash/Thumbnail.png" alt="Monster Mash">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">date_range</i>
+								<h5>1 Week</h5>
+							</div>
+							<div class="quickInfo">
+								<i class="material-icons">people</i>
+								<h5>4</h5>
+							</div>
+						</div>
+					</div>
+					<h3>Monster Mash</h3>
+					<p></p>
+					<h4 class="bottom">Info Soon...</h4>
+				</div>
+
+				<div class="card glass reveal disabled">
+					<div class="cardImage">
+						<img src="Assets/Looking For Eden/Thumbnail.png" alt="Looking For Eden">
+						<div class="quickInfoHolder">
+							<div class="quickInfo">
+								<i class="material-icons">date_range</i>
+								<h5>48 hours</h5>
+							</div>
+							<div class="quickInfo">
+								<i class="material-icons">people</i>
+								<h5>3</h5>
+							</div>
+						</div>
+					</div>
+					<h3>Looking For Eden</h3>
+					<p></p>
+					<h4 class="bottom">Info Soon...</h4>
+				</div>
+			</div>
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+		<script src="JavaScript/vanilla-tilt.js"></script>
+		<script>
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 10,
+				speed: 1000,
+				glare: true,
+				"max-glare": 0.75,
+				reverse: true,
+				scale: 1.1,
+			});
+		</script>
+	</div>
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+</body>
+</html>

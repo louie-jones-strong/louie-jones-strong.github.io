@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: 24 Hour Blender Projects",
+			Description: "Louie Jones-Strong's portfolio. Challenge to learn a system in blender in 24 Hours",
+			Url: "https://louie-jones-strong.github.io/BlenderProjects.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Assets/BlenderProjects/Images/blender_6_480x270.png",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/ZipperCard.css">
+</head>
+
+
+<body class="dark">
+
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+		<div class="centeredFrame">
+			<h1 class="center">24 Hour Blender Challenge</h1>
+
+			<div class="quickInfoHolder">
+				<div class="quickInfo">
+					<i class="material-icons">date_range</i>
+					<h5>24 Hours Each</h5>
+				</div>
+				<div class="quickInfo">
+					<i class="material-icons">person</i>
+					<h5>Solo</h5>
+				</div>
+			</div>
+
+			<p>When Blender 2.8 came out I wanted to learn it for a few reasons:</p>
+			<ul>
+				<li>To get a better appreciation of what the artists I work with do.</li>
+				<li>Gain skills in the assets creation pipeline.</li>
+				<li>To have a creative outlet from programming at work.</li>
+				<li>I enjoy learning new things.</li>
+			</ul>
+			<p>To achieve these goals I set myself the challenge to learn a new system in blender and produce an art work based on that system in only 24 hours.</p>
+
+			<p>This is a hand picked sub set of all the renders I have done as part of this challenge.
+				You can see the full collection on my <a href="https://www.instagram.com/louie_j.s/" target="_blank">Instagram.</a>
+			</p>
+		</div>
+
+
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard neonOutline glass reveal fromLeft">
+				<div>
+					<h3>Neon Wave</h3>
+					<p>This was the first render I did in Blender. My goal was just to learn how the interface worked.
+						To do this I followed along with <a href="https://youtu.be/W9eAVW4G8ws" target="_blank">this YouTube tutorial.</a>
+					</p>
+				</div>
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_1.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromRight">
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_4.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+				<div>
+					<h3>Zooming Boxes</h3>
+					<p>My goal in this render was to make a looping video.
+						But I also ended up learning: </p>
+					<ul>
+						<li>Precise modelling</li>
+						<li>Camera Perspectives</li>
+						<li>Animation Curves</li>
+					</ul>
+				</div>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromLeft">
+				<div>
+					<h3>Cup of Tea</h3>
+					<p>My goal in this render was to learn how to model complex shapes. I also created some other tea-set models. </p>
+				</div>
+				<picture>
+					<source srcset="Assets/BlenderProjects/Images/blender_5_1920x1080.png" media="(min-width: 961px)">
+					<source srcset="Assets/BlenderProjects/Images/blender_5_960x540.png" media="(min-width: 481px)">
+					<img src="Assets/BlenderProjects/Images/blender_5_480x270.png" alt="A render of a cup of tea">
+				</picture>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromRight">
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_36.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+				<div>
+					<h3>Water Splash</h3>
+					<p>In this render my goal was to learn about Blender's new FLIP fluid simulation. </p>
+				</div>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromLeft">
+				<div>
+					<h3><abbr title="Augmented Reality">AR</abbr></h3>
+					<p>In this render I learnt about: </p>
+					<ul>
+						<li>Compositing</li>
+						<li>Finding camera settings from an image</li>
+						<li>Matching the lighting in an image</li>
+
+					</ul>
+				</div>
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_35.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromRight">
+				<picture>
+					<source srcset="Assets/BlenderProjects/Images/blender_13_1920x1080.png" media="(min-width: 961px)">
+					<source srcset="Assets/BlenderProjects/Images/blender_13_960x540.png" media="(min-width: 481px)">
+					<img src="Assets/BlenderProjects/Images/blender_13_480x270.png" alt="A render of some glass objects">
+				</picture>
+				<div>
+					<h3>Glass</h3>
+					<p>My goal in this render was to learn about glass shaders. </p>
+				</div>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromLeft">
+				<div>
+					<h3>IPhone</h3>
+					<p>My goal in this render was to learn about adding textures to materials. In this example I started with a screenshot and modelled everything else.</p>
+				</div>
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_14.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromRight">
+				<picture>
+					<source srcset="Assets/BlenderProjects/Images/blender_16_1920x1080.png" media="(min-width: 961px)">
+					<source srcset="Assets/BlenderProjects/Images/blender_16_960x540.png" media="(min-width: 481px)">
+					<img src="Assets/BlenderProjects/Images/blender_16_480x270.png" alt="A render of a Planet Generator">
+				</picture>
+				<div>
+					<h3>Procedural Planet Generator</h3>
+					<p>In this render I learnt about: </p>
+
+					<ul>
+						<li>Displacements</li>
+						<li>Bump maps</li>
+						<li>Normals</li>
+						<li>More complex procedural materials</li>
+					</ul>
+				</div>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromLeft">
+				<div>
+					<h3>Rusting Chain</h3>
+					<p>In this render my goal was to learn about animating material properties.</p>
+				</div>
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_17.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromRight">
+				<picture>
+					<source srcset="Assets/BlenderProjects/Images/blender_25_1920x1080.png" media="(min-width: 961px)">
+					<source srcset="Assets/BlenderProjects/Images/blender_25_960x540.png" media="(min-width: 481px)">
+					<img src="Assets/BlenderProjects/Images/blender_25_480x270.png" alt="A render of a Brighton Bus">
+				</picture>
+				<div>
+					<h3>Brighton Bus</h3>
+					<p>In this render I was trying to learn how to model a large number of assets in the limited amount of time. </p>
+				</div>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromLeft">
+				<div>
+					<h3>Pool Table</h3>
+					<p>In this render my goal was to learn more about Blender's physics.</p>
+				</div>
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_30.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromRight">
+				<picture>
+					<source srcset="Assets/BlenderProjects/Images/blender_32_1920x1080.png" media="(min-width: 961px)">
+					<source srcset="Assets/BlenderProjects/Images/blender_32_960x540.png" media="(min-width: 481px)">
+					<img src="Assets/BlenderProjects/Images/blender_32_480x270.png" alt="A render of the Greek Parthenon">
+				</picture>
+				<div>
+					<h3>Greek Parthenon</h3>
+					<p>In this render my goal was to learn about non destructive modelling by using modifiers. </p>
+				</div>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromLeft">
+				<div>
+					<h3>Magic Monkey</h3>
+					<p>My goal in this render was to learn about Blender's cloth simulation. </p>
+				</div>
+				<video autoplay muted loop>
+					<source src="Assets/BlenderProjects/Videos/blender_7.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video>
+			</div>
+			<div class="ZipperCard neonOutline glass reveal fromRight">
+				<picture>
+					<source srcset="Assets/BlenderProjects/Images/blender_34_1920x1080.png" media="(min-width: 961px)">
+					<source srcset="Assets/BlenderProjects/Images/blender_34_960x540.png" media="(min-width: 481px)">
+					<img src="Assets/BlenderProjects/Images/blender_34_480x270.png" alt="A render of a Desktop Background">
+				</picture>
+				<div>
+					<h3>8K Desktop Background</h3>
+					<p>In this render I learnt about optimizing render times.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+	</div>
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+</body>
+</html>
