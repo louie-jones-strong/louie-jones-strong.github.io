@@ -1,0 +1,37 @@
+	<!-- shared for all pages -->
+	<meta charset="UTF-8">
+	<link rel="icon" href="Assets/Logo/favicon.ico" type="image/x-icon">
+	<meta name="keywords" content="Louie, Jones-Strong, portfolio, cv, code, game, dev, gameplay, mobile, desktop,
+		coding, programmer, c#, python, sql, java, aws, html, css, JavaScript, asp.net, git, c, arduino, json, unity,
+		blender, ai, machine learning, first aid, itch, epq, Alhambra, 4d puzzle, egg hunt">
+
+	<meta property="og:type" content="website"/>
+	<meta property="og:site_name" content="Louie Jones-Strong"/>
+	<meta name="author" content="Louie Jones-Strong">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="refresh" content="600">
+	<link rel="stylesheet" type="text/css" href="StyleSheets/CommonStyles/CommonStyle.css">
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<% if (PageData.IsDevMode) { %>
+		<!-- Dev Mode so no Analytics -->
+	<% }else{ %>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6MK7D2H38"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-B6MK7D2H38');
+		</script>
+	<% } %>
+
+	<!-- just this page -->
+	<title><%= HeadData.Title %></title>
+	<meta property="og:title" content="<%= HeadData.Title %>" />
+
+	<meta name="description" content="<%= HeadData.Description %>">
+	<meta name="og:description " content="<%= HeadData.Description %>">
+
+	<meta property="og:url" content="<%= HeadData.Url %>"/>
+	<meta property="og:image" content="<%= HeadData.Thumbnail %>" />
