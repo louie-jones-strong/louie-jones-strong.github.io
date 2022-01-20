@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: Cube Puzzle",
+			Description: "Louie Jones-Strong's portfolio. My algorithm to be the first to discover the solutions to the Alhambra Cube Puzzle.",
+			Url: "https://louie-jones-strong.github.io/CubePuzzleProject.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Assets/CubePuzzle/Thumbnail.jpg",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="StyleSheets/OptinalComponents/Carousel.css">
+</head>
+
+
+<body class="dark">
+
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+		<!-- cover image slide show -->
+		<div class="slide-holder">
+			<div class="slide">
+				<img src="Assets/CubePuzzle/CoverImage.png" alt="Engraved gold model of the cube">
+				<div class="slide-caption">
+					<p>Engraved gold model of the cube</p>
+				</div>
+			</div>
+		</div>
+		<script src="JavaScript/Carousel.js"></script>
+
+		<div class="centeredFrame">
+
+			<h1 class="center reveal fromBottom">Alhambra 4D Cube Puzzle</h1>
+
+			<div class="quickInfoHolder">
+				<div class="quickInfo">
+					<i class="material-icons">date_range</i>
+					<h5>3 Weeks</h5>
+				</div>
+				<div class="quickInfo">
+					<i class="material-icons">person</i>
+					<h5>Solo</h5>
+				</div>
+			</div>
+
+			<p class="reveal fromBottom">After finishing college I was invited to attempt to solve the Alhambra Puzzle by its inventor.</p>
+			<p class="reveal fromBottom">I was the first to solve it so despite a number of previous attempts, including the maths department at Sussex University.</p>
+			<h2 class="reveal fromBottom">What is the Alhambra Puzzle?</h2>
+			<p class="reveal fromBottom">
+				The puzzle is an award winning ornate hand-crafted gold piece made of 8 unique cubes (the harder version has a extra cube).
+				These sub-cubes are assembled together to form the mega cube.<br>
+				The sub-cubes have a triangle on each of their faces, that form a pattern on each face of the mega cube when assembled.
+				To check if the puzzle if solved all the faces on the mega cube need to match a set of allowed pattens.
+				However you also need to check the inside faces of the mega cube. This means that there are 12 faces on the
+				mega cube that need to have the correct patten.
+			</p>
+			<h2 class="reveal fromBottom">Complexity</h2>
+			<p class="reveal fromBottom">
+				The inventor thought that there was 480,000 possible permutations, and only one correct solution.
+			</p>
+			<p class="reveal fromBottom">
+				My analysis revealed there was over 4 quadrillion permutations for the simple version (8 cubes),
+				and over 39 quadrillion for the complex version (9-cubes).
+			</p>
+			<p class="reveal fromBottom">
+				Even if you tried a new cube 1000 times per second, then it would take 140 thousand years to try all of them.
+				Therefore, I set my goal to simplify the problem to allow it to be solved without checking all these permutations.</p>
+			<h2 class="reveal fromBottom">Results</h2>
+			<p class="reveal fromBottom">
+				Running my algorithm on a laptop found 1,636 solutions in 6 hours, taking an average of 12 seconds per solution.
+			</p>
+		</div>
+
+
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+
+		<script src="JavaScript/AnimateOnAppear.js"></script>
+
+	</div>
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+</body>
+</html>
