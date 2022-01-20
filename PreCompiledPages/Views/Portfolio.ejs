@@ -40,16 +40,12 @@
 		<div class="centeredFrame">
 			<h1 class="center reveal fromLeft">Portfolio</h1>
 
-			<div class="quickInfoHolder">
-				<div class="quickInfo">
-					<i class="material-icons">date_range</i>
-					<h5>4 Weeks</h5>
-				</div>
-				<div class="quickInfo">
-					<i class="material-icons">person</i>
-					<h5>Solo</h5>
-				</div>
-			</div>
+			<%- include('Components/QuickInfo', {
+				QuickInfoData: {
+					TimeSpent: "Month",
+					NumPeople: 1
+				}
+			}); %>
 
 			<!-- Introduction -->
 			<section id="Introduction" class="glass rounded">

@@ -1,0 +1,40 @@
+
+<!-- todo add reveal -->
+<div class="quickInfoHolder">
+
+	<!-- todo add date happened -->
+
+	<% if (QuickInfoData.TimeSpent) { %>
+		<!-- time spent -->
+		<div class="quickInfo">
+			<i class="material-icons">date_range</i>
+			<h5><%= QuickInfoData.TimeSpent %></h5>
+		</div>
+	<% }%>
+
+	<% if (QuickInfoData.NumPeople) { %>
+		<!-- number of people -->
+		<% if (QuickInfoData.NumPeople == 1) { %>
+			<div class="quickInfo">
+				<i class="material-icons">person</i>
+				<h5>Solo</h5>
+			</div>
+		<% }else if (QuickInfoData.NumPeople == 2){ %>
+			<div class="quickInfo">
+				<i class="material-icons">people</i>
+				<h5>2</h5>
+			</div>
+		<% }else { %>
+			<div class="quickInfo">
+				<i class="material-icons">groups</i>
+				<h5><%= QuickInfoData.NumPeople %></h5>
+			</div>
+		<% }%>
+	<% }%>
+
+
+	<!-- todo add skills / tools learn-->
+	<!-- todo add tools used for example unity c# -->
+	<!-- todo add where to play/see it -->
+
+</div>

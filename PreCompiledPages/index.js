@@ -5,6 +5,8 @@ const Fs = require('fs');
 
 function RenderFile(templateFilePath, outputFilePath)
 {
+	console.log(templateFilePath, "->", outputFilePath);
+
 	//render selected file
 	Ejs.renderFile(templateFilePath, {PageData: PageData}, function(renderError, builtHtml) {
 
@@ -56,10 +58,8 @@ function ConvertAllTemplates()
 				outputFile += ".html";
 				let outputFilePath = Path.join(OutputFolder, outputFile);
 
-
-				console.log(templateFilePath, "->", outputFilePath);
-
 				RenderFile(templateFilePath, outputFilePath);
+				console.log();
 			}
 
 		});

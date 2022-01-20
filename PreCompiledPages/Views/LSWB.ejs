@@ -47,16 +47,12 @@
 		<div class="centeredFrame">
 			<h1 class="center center reveal fromBottom">LEGO® Star Wars™ Battles</h1>
 
-			<div class="quickInfoHolder">
-				<div class="quickInfo">
-					<i class="material-icons">date_range</i>
-					<h5>April 2018 - Present</h5>
-				</div>
-				<div class="quickInfo">
-					<i class="material-icons">groups</i>
-					<h5>Avg ~25</h5>
-				</div>
-			</div>
+			<%- include('Components/QuickInfo', {
+				QuickInfoData: {
+					TimeSpent: "April 2018 - Present",
+					NumPeople: "Avg ~25"
+				}
+			}); %>
 
 			<p class="center center reveal fromBottom">
 				While working on <abbr title="LEGO® Star Wars™ Battles">LSWB</abbr> I contributed to multiple areas of the game's development.
