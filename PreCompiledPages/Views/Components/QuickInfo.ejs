@@ -1,6 +1,6 @@
 
 <!-- todo add reveal -->
-<div class="quickInfoHolder">
+<div class="quickInfoHolder delayRevealChildren">
 
 	<!-- todo add date happened -->
 
@@ -48,6 +48,13 @@
 		<a class="quickInfo link" href="<%= QuickInfoData.ItchLink %>" target="_blank">
 			<img class="icon" src="Assets/Icons/itch-dot-io.svg" alt="Itch Log">
 			<h5>Play Here</h5>
+		</a>
+	<% }%>
+
+	<% if (QuickInfoData.WebsiteLink) { %>
+		<a class="quickInfo link" href="<%= QuickInfoData.WebsiteLink %>" target="_blank">
+			<img class="icon" src="Assets/Icons/website.svg" alt="Itch Log">
+			<h5>Website</h5>
 		</a>
 	<% }%>
 </div>

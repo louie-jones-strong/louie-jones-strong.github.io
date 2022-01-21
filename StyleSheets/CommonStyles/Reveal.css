@@ -25,3 +25,27 @@
 .reveal.shown{
 	opacity: 1;
 }
+
+/* normal speed */
+.delayRevealChildren > *:nth-child(1) {transition-delay: 0.1s;}
+.delayRevealChildren > *:nth-child(2) {transition-delay: 0.2s;}
+.delayRevealChildren > *:nth-child(3) {transition-delay: 0.3s;}
+.delayRevealChildren > *:nth-child(4) {transition-delay: 0.4s;}
+.delayRevealChildren > *:nth-child(5) {transition-delay: 0.5s;}
+.delayRevealChildren > *:nth-child(6) {transition-delay: 0.6s;}
+.delayRevealChildren > *:nth-child(7) {transition-delay: 0.7s;}
+.delayRevealChildren > *:nth-child(8) {transition-delay: 0.8s;}
+.delayRevealChildren > *:nth-child(9) {transition-delay: 0.9s;}
+.delayRevealChildren > *:nth-child(10) {transition-delay: 1s;}
+
+/* slower version */
+.delayRevealChildren.slow > *:nth-child(1) {transition-delay: 0.2s;}
+.delayRevealChildren.slow > *:nth-child(2) {transition-delay: 0.4s;}
+.delayRevealChildren.slow > *:nth-child(3) {transition-delay: 0.6s;}
+.delayRevealChildren.slow > *:nth-child(4) {transition-delay: 0.8s;}
+.delayRevealChildren.slow > *:nth-child(5) {transition-delay: 1s;}
+.delayRevealChildren.slow > *:nth-child(6) {transition-delay: 1.2s;}
+.delayRevealChildren.slow > *:nth-child(7) {transition-delay: 1.4s;}
+.delayRevealChildren.slow > *:nth-child(8) {transition-delay: 1.6s;}
+.delayRevealChildren.slow > *:nth-child(9) {transition-delay: 1.8s;}
+.delayRevealChildren.slow > *:nth-child(10) {transition-delay: 2s;}
