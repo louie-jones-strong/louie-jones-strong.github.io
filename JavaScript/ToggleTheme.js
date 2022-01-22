@@ -1,8 +1,3 @@
-// this code has was originally from this website:
-// https://anthonymarmont.com/portfolio
-// but I modified the code for use in our website
-
-
 var currentTheme = localStorage.getItem("theme");
 if (currentTheme === null)
 {

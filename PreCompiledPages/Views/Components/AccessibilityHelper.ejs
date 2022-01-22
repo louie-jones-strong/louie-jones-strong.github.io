@@ -1,0 +1,59 @@
+<script>
+	function ToggleAccessibilityMenu()
+	{
+		let accessibilityHelper = document.getElementById("accessibilityHelper");
+
+		if (accessibilityHelper.classList.contains("open"))
+		{
+			accessibilityHelper.classList.remove("open");
+		}
+		else
+		{
+			accessibilityHelper.classList.add("open");
+		}
+	}
+</script>
+<div id="accessibilityHelper" class="">
+	<button class="accessibilityToggle" onclick="ToggleAccessibilityMenu()">
+		<img src="Assets/Icons/accessibilityIcon.svg" alt="">
+	</button>
+	<div class="accessibilityMenu">
+		<h4 class="accessibilityText">Accessibility</h4>
+
+		<button onclick="IncreaseFontSize()" class="accessibilityText">
+			<span class="material-icons accessibilityText">zoom_in</span>
+			Increase Font
+		</button>
+
+		<button onclick="DecreaseFontSize()" class="accessibilityText">
+			<span class="material-icons accessibilityText">zoom_out</span>
+			Decrease Font
+		</button>
+
+		<button onclick="ToggleTheme()">
+			<div id="darkModeIcon" class="accessibilityText">
+				<i class="material-icons accessibilityText">light_mode</i>
+				Light Theme
+			</div>
+			<div id="lightModeIcon" class="accessibilityText">
+				<i class="material-icons accessibilityText">dark_mode</i>
+				Dark Theme
+			</div>
+		</button>
+
+		<button onclick="ToggleGreyScale()">
+			<div id="greyScaleOffIcon" class="accessibilityText">
+				<span class="material-icons accessibilityText">filter_b_and_w</span>
+				Grey Scale On
+			</div>
+			<div id="greyScaleOnIcon" class="accessibilityText">
+				<span class="material-icons accessibilityText">filter_b_and_w</span>
+				Grey Scale Off
+			</div>
+		</button>
+	</div>
+</div>
+
+<script src="JavaScript/ToggleTheme.js"></script>
+<script src="JavaScript/ToggleGrayScale.js"></script>
+<script src="JavaScript/ChangeFontSize.js"></script>

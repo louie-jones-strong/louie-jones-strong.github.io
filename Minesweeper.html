@@ -17,6 +17,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="refresh" content="600">
 <link rel="stylesheet" type="text/css" href="StyleSheets/CommonStyles/CommonStyle.css">
+<link rel="stylesheet" type="text/css" href="StyleSheets/CommonStyles/AccessibilityHelper.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -40,6 +42,68 @@
 <body class="dark">
 
 	<div class="content">
+
+		<!-- shared common header -->
+		<script>
+	function ToggleAccessibilityMenu()
+	{
+		let accessibilityHelper = document.getElementById("accessibilityHelper");
+
+		if (accessibilityHelper.classList.contains("open"))
+		{
+			accessibilityHelper.classList.remove("open");
+		}
+		else
+		{
+			accessibilityHelper.classList.add("open");
+		}
+	}
+</script>
+<div id="accessibilityHelper" class="">
+	<button class="accessibilityToggle" onclick="ToggleAccessibilityMenu()">
+		<img src="Assets/Icons/accessibilityIcon.svg" alt="">
+	</button>
+	<div class="accessibilityMenu">
+		<h4 class="accessibilityText">Accessibility</h4>
+
+		<button onclick="IncreaseFontSize()" class="accessibilityText">
+			<span class="material-icons accessibilityText">zoom_in</span>
+			Increase Font
+		</button>
+
+		<button onclick="DecreaseFontSize()" class="accessibilityText">
+			<span class="material-icons accessibilityText">zoom_out</span>
+			Decrease Font
+		</button>
+
+		<button onclick="ToggleTheme()">
+			<div id="darkModeIcon" class="accessibilityText">
+				<i class="material-icons accessibilityText">light_mode</i>
+				Light Theme
+			</div>
+			<div id="lightModeIcon" class="accessibilityText">
+				<i class="material-icons accessibilityText">dark_mode</i>
+				Dark Theme
+			</div>
+		</button>
+
+		<button onclick="ToggleGreyScale()">
+			<div id="greyScaleOffIcon" class="accessibilityText">
+				<span class="material-icons accessibilityText">filter_b_and_w</span>
+				Grey Scale On
+			</div>
+			<div id="greyScaleOnIcon" class="accessibilityText">
+				<span class="material-icons accessibilityText">filter_b_and_w</span>
+				Grey Scale Off
+			</div>
+		</button>
+	</div>
+</div>
+
+<script src="JavaScript/ToggleTheme.js"></script>
+<script src="JavaScript/ToggleGrayScale.js"></script>
+<script src="JavaScript/ChangeFontSize.js"></script>
+
 		<!-- shared common header -->
 		<link rel="stylesheet" type="text/css" href="StyleSheets/CommonStyles/HeaderStyle.css">
 
@@ -55,24 +119,7 @@
 		<h1 class="center mainTitle">Louie Jones-Strong</h1>
 	</div>
 
-	<div class="right">
-
-		<button onclick="SetFontSize(0.75)"	type="button" style="font-size: calc(var(--BaseFontSize) * 0.5	);">A</button>
-		<button onclick="SetFontSize(1)"	type="button" style="font-size: calc(var(--BaseFontSize) * 1	);">A</button>
-		<button onclick="SetFontSize(1.25)"	type="button" style="font-size: calc(var(--BaseFontSize) * 1.25	);">A</button>
-
-		<button onclick="ToggleTheme()" type="button" class="themeButton">
-			<div id="darkModeIcon" class="themeIcon">
-				<i class="material-icons">light_mode</i>
-			</div>
-			<div id="lightModeIcon" class="themeIcon">
-				<i class="material-icons">dark_mode</i>
-			</div>
-		</button>
-	</div>
 </Header>
-<script src="JavaScript/ToggleTheme.js"></script>
-<script src="JavaScript/ChangeFontSize.js"></script>
 
 		<iframe src="https://louie-jones-strong.github.io/MineSweeper/Component.html" frameborder="0" style="width: 100%; height: 75vh;">
 
