@@ -1,4 +1,5 @@
-.quickInfoHolder{
+.quickInfoHolder,
+.quickLinkHolder{
 	display: flex;
 	justify-content:center;
 	margin-top: 1em;
@@ -15,26 +16,30 @@
 	border: 2px solid var(--Colour-Text1);
 }
 
-.quickInfo > *{
+.quickInfo button{
+	display: flex;
+}
+
+.quickInfo *{
 	margin: 0px;
 	padding: 0px;
 	margin-inline: 0.25em;
 	color: var(--Colour-Text1);
 }
 
-.quickInfo.link{
-	border-top-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+.quickLinkHolder .quickInfo{
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
 	border-width: 5px;
 	transform: scale(1);
 	transition: all 0.2s;
 	border-color: var(--ColourMain);
 }
 
-.quickInfo.link:hover,
-.quickInfo.link:focus{
+.quickLinkHolder .quickInfo:hover,
+.quickLinkHolder .quickInfo:focus{
 	transform: scale(1.2);
 	border-color: var(--ColourAccent);
-	border-top-left-radius: 0.25em;
-	border-bottom-right-radius: 0.25em;
+	border-bottom-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
 }
