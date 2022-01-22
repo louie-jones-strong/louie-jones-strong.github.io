@@ -67,4 +67,13 @@
 			</button>
 		</form>
 	<% }%>
+
+	<% if (QuickInfoData.InstagramLink) { %>
+		<form action="<%= QuickInfoData.InstagramLink %>" target="_blank" class="quickInfo">
+			<button>
+				<img class="icon" src="Assets/Icons/Instagram.svg" alt="Itch Log">
+				<h5>Instagram</h5>
+			</button>
+		</form>
+	<% }%>
 </div>
