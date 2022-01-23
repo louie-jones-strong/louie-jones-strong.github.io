@@ -8,6 +8,7 @@ body.greyScale{
 }
 
 #accessibilityHelper{
+	z-index: 1000;
 	--ToggleSize: 60px;
 	--MenuWidth: 10em;
 
