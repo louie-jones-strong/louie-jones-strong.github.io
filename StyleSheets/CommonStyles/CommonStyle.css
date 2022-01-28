@@ -59,9 +59,11 @@ body.light{
 .icon{
 	height: 1em;
 	width: 1em;
-	filter: var(--Colour-Contrast-Filter);
 }
 
+.icon.greyScale{
+	filter: var(--Colour-Contrast-Filter);
+}
 
 section{
 	margin-top: 10rem;

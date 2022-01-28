@@ -44,7 +44,7 @@
 	<% if (QuickInfoData.GithubLink) { %>
 		<form action="<%= QuickInfoData.GithubLink %>" target="_blank" class="quickInfo">
 			<button>
-				<img class="icon" src="Assets/Icons/github.svg" alt="Github Logo">
+				<img class="icon greyScale" src="Assets/Icons/github.svg" alt="Github Logo">
 				<h5>Code</h5>
 			</button>
 		</form>
@@ -53,7 +53,7 @@
 	<% if (QuickInfoData.ItchLink) { %>
 		<form action="<%= QuickInfoData.ItchLink %>" target="_blank" class="quickInfo">
 			<button>
-				<img class="icon" src="Assets/Icons/itch-dot-io.svg" alt="Itch Log">
+				<img class="icon greyScale" src="Assets/Icons/itch-dot-io.svg" alt="Itch Logo">
 				<h5>Play Here</h5>
 			</button>
 		</form>
@@ -62,7 +62,7 @@
 	<% if (QuickInfoData.WebsiteLink) { %>
 		<form action="<%= QuickInfoData.WebsiteLink %>" target="_blank" class="quickInfo">
 			<button>
-				<img class="icon" src="Assets/Icons/website.svg" alt="Itch Log">
+				<img class="icon greyScale" src="Assets/Icons/website.svg">
 				<h5>Website</h5>
 			</button>
 		</form>
@@ -71,8 +71,26 @@
 	<% if (QuickInfoData.InstagramLink) { %>
 		<form action="<%= QuickInfoData.InstagramLink %>" target="_blank" class="quickInfo">
 			<button>
-				<img class="icon" src="Assets/Icons/Instagram.svg" alt="Itch Log">
+				<img class="icon greyScale" src="Assets/Icons/Instagram.svg" alt="Instagram Logo">
 				<h5>Instagram</h5>
+			</button>
+		</form>
+	<% }%>
+
+	<% if (QuickInfoData.GooglePlayLink) { %>
+		<form action="<%= QuickInfoData.GooglePlayLink %>" target="_blank" class="quickInfo">
+			<button>
+				<img class="icon" src="Assets/Icons/GooglePlayStore.svg" alt="Google Play Store Logo">
+				<h5>Google Play</h5>
+			</button>
+		</form>
+	<% }%>
+
+	<% if (QuickInfoData.AppleLink) { %>
+		<form action="<%= QuickInfoData.AppleLink %>" target="_blank" class="quickInfo">
+			<button>
+				<img class="icon greyScale" src="Assets/Icons/Apple.svg" alt="Apple Logo">
+				<h5>Apple Arcade</h5>
 			</button>
 		</form>
 	<% }%>
