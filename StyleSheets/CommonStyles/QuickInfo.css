@@ -1,8 +1,9 @@
 .quickInfoHolder,
 .quickLinkHolder{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content:center;
-	margin-top: 1em;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
 
@@ -21,6 +22,7 @@
 .quickInfo{
 	display: flex;
 	text-align: center;
+	margin-block: 0.5em;
 	margin-inline: 0.5em;
 	padding: 0.25em;
 	background-color: var(--BackgroundColour);

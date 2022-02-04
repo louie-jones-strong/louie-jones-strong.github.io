@@ -98,90 +98,90 @@
 	<% }%>
 </div>
 
-<!-- todo add skills / tools learn-->
-<!-- todo add tools used for example unity c# -->
-
 <!-- learning Aims -->
 
-
-<% if (QuickInfoData.Skills) { %>
+<% if (QuickInfoData.Skills || QuickInfoData.ShowSkillList) { %>
 	<!-- skills used -->
 	<div class="quickSkills">
-		<h4 class="center reveal fromLeft">Skills Used:</h4>
+
+		<% if (QuickInfoData.Skills) { %>
+			<h4 class="center reveal fromLeft">Skills Used:</h4>
+		<% }%>
+
 		<div class="quickInfoHolder delayRevealChildren">
 
 
-			<% if (QuickInfoData.Skills.UsedUnity) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedUnity) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon greyScale" src="Assets/Icons/unity.svg" alt="unity Logo">
 					<h5>Unity</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedCsharp) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedCsharp) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/cSharp.svg" alt="C# Logo">
 					<h5>C#</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedCPlusPlus) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedCPlusPlus) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/cpp.svg" alt="C++ Logo">
 					<h5>C++</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedPython) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedPython) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/python.svg" alt="python Logo">
 					<h5>Python</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedJavaScript) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedJavaScript) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/js.svg" alt="JavaScript Logo">
 					<h5>Java Script</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedBlender) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedBlender) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/Blender.svg" alt="Blender Logo">
 					<h5>Blender</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedSQL) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedSQL) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/sql.svg" alt="SQL Logo">
 					<h5>SQL</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedDotNet) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedDotNet) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/dotNet.svg" alt=".Net Logo">
 					<h5>.Net</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedHTML) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedHTML) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/HTML.svg" alt="HTML Logo">
 					<h5>HTML</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedNodejs) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedNodejs) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/nodejs.svg" alt="nodejs Logo">
 					<h5>node.JS</h5>
 				</div>
 			<% }%>
 
-			<% if (QuickInfoData.Skills.UsedCSS) { %>
+			<% if (QuickInfoData.ShowSkillList || QuickInfoData.Skills.UsedCSS) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="Assets/Icons/css.svg" alt="CSS Logo">
 					<h5>CSS</h5>
