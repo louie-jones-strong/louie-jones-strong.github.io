@@ -6,6 +6,18 @@
 	margin-bottom: 1em;
 }
 
+.quickSkills{
+	margin-bottom: 3em;
+}
+
+.quickSkills > h4{
+	margin-top: 1em;
+}
+
+.quickSkills > .quickInfoHolder{
+	flex-direction: row-reverse;
+}
+
 .quickInfo{
 	display: flex;
 	text-align: center;

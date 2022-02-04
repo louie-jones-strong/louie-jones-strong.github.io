@@ -75,6 +75,7 @@ body.greyScale{
 
 	background-color: white;
 	text-align: center;
+	padding-bottom: 0.75em;
 }
 
 .accessibilityMenu > button{
@@ -85,7 +86,6 @@ body.greyScale{
 	background-color: transparent;
 	border: none;
 	margin-block: 0.5em;
-
 
 	transition: background-color 0.35s;
 }

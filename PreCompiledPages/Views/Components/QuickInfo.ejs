@@ -1,14 +1,19 @@
 
-<!-- todo add reveal -->
 <div class="quickInfoHolder delayRevealChildren">
-
-	<!-- todo add date happened -->
 
 	<% if (QuickInfoData.TimeSpent) { %>
 		<!-- time spent -->
 		<div class="quickInfo">
-			<i class="material-icons">date_range</i>
+			<i class="material-icons">schedule</i>
 			<h5><%= QuickInfoData.TimeSpent %></h5>
+		</div>
+	<% }%>
+
+	<% if (QuickInfoData.Date) { %>
+		<!-- time spent -->
+		<div class="quickInfo">
+			<i class="material-icons">date_range</i>
+			<h5><%= QuickInfoData.Date %></h5>
 		</div>
 	<% }%>
 
@@ -35,9 +40,6 @@
 
 </div>
 
-<!-- todo add skills / tools learn-->
-<!-- todo add tools used for example unity c# -->
-
 <div class="quickLinkHolder delayRevealChildren">
 
 	<!-- where to play/see it -->
@@ -54,7 +56,7 @@
 		<form action="<%= QuickInfoData.ItchLink %>" target="_blank" class="quickInfo">
 			<button>
 				<img class="icon greyScale" src="Assets/Icons/itch-dot-io.svg" alt="Itch Logo">
-				<h5>Play Here</h5>
+				<h5>Play</h5>
 			</button>
 		</form>
 	<% }%>
@@ -95,3 +97,96 @@
 		</form>
 	<% }%>
 </div>
+
+<!-- todo add skills / tools learn-->
+<!-- todo add tools used for example unity c# -->
+
+<!-- learning Aims -->
+
+
+<% if (QuickInfoData.Skills) { %>
+	<!-- skills used -->
+	<div class="quickSkills">
+		<h4 class="center reveal fromLeft">Skills Used:</h4>
+		<div class="quickInfoHolder delayRevealChildren">
+
+
+			<% if (QuickInfoData.Skills.UsedUnity) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon greyScale" src="Assets/Icons/unity.svg" alt="unity Logo">
+					<h5>Unity</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedCsharp) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/cSharp.svg" alt="C# Logo">
+					<h5>C#</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedCPlusPlus) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/cpp.svg" alt="C++ Logo">
+					<h5>C++</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedPython) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/python.svg" alt="python Logo">
+					<h5>Python</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedJavaScript) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/js.svg" alt="JavaScript Logo">
+					<h5>Java Script</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedBlender) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/Blender.svg" alt="Blender Logo">
+					<h5>Blender</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedSQL) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/sql.svg" alt="SQL Logo">
+					<h5>SQL</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedDotNet) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/dotNet.svg" alt=".Net Logo">
+					<h5>.Net</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedHTML) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/HTML.svg" alt="HTML Logo">
+					<h5>HTML</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedNodejs) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/nodejs.svg" alt="nodejs Logo">
+					<h5>node.JS</h5>
+				</div>
+			<% }%>
+
+			<% if (QuickInfoData.Skills.UsedCSS) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="Assets/Icons/css.svg" alt="CSS Logo">
+					<h5>CSS</h5>
+				</div>
+			<% }%>
+		</div>
+	</div>
+<% }%>

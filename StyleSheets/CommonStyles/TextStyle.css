@@ -105,21 +105,26 @@ abbr:focus, u:focus, a:focus{
 	--BaseFontSize: 20px;
 }
 
-/*desktop -------------------------------------*/
+@media only screen and (min-width: 1351px) and (max-width: 2000px){
+	:root{
+		--BaseFontSize: 19px;
+	}
+}
+
 @media only screen and (min-width: 1001px) and (max-width: 1350px){
 	:root{
 		--BaseFontSize: 18px;
 	}
 }
 
-/*Tablet -------------------------------------*/
+
 @media only screen and (min-width: 651px) and (max-width: 1000px){
 	:root{
 		--BaseFontSize: 16px;
 	}
 }
 
-/*Phone -------------------------------------*/
+
 @media only screen and (min-width: 351px) and (max-width: 650px){
 
 	:root{
@@ -127,21 +132,21 @@ abbr:focus, u:focus, a:focus{
 	}
 }
 
-/*small screen -------------------------------------*/
+
 @media only screen and (min-width: 251px) and (max-width: 350px){
 	:root{
 		--BaseFontSize: 12px;
 	}
 }
 
-/*small screen -------------------------------------*/
+
 @media only screen and (min-width: 201px) and (max-width: 250px){
 	:root{
 		--BaseFontSize: 10px;
 	}
 }
 
-/*small screen -------------------------------------*/
+
 @media only screen and (max-width: 200px){
 	:root{
 		--BaseFontSize: 8px;
