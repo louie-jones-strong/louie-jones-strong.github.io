@@ -59,7 +59,6 @@ function ConvertAllTemplates()
 				let outputFilePath = Path.join(OutputFolder, outputFile);
 
 				RenderFile(templateFilePath, outputFilePath);
-				console.log();
 			}
 
 		});
