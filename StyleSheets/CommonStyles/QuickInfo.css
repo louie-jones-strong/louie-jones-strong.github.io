@@ -3,8 +3,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:center;
-	margin-top: 0.5em;
-	margin-bottom: 1em;
 }
 
 .quickSkills{
@@ -22,8 +20,8 @@
 .quickInfo{
 	display: flex;
 	text-align: center;
-	margin-block: 0.5em;
-	margin-inline: 0.5em;
+	margin-block: 0.25em;
+	margin-inline: 0.25em;
 	padding: 0.25em;
 	background-color: var(--BackgroundColour);
 	border-radius: 1em;

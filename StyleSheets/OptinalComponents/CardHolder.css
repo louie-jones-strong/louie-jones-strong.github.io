@@ -79,33 +79,33 @@
 /* quick info */
 
 
-.card .quickInfoHolder,
-.card .quickLinkHolder{
+.card > .cardImage > .quickInfoHolder,
+.card > .cardImage > .quickLinkHolder{
 	margin-top: 0px;
 	margin-bottom: 0px;
 	position: absolute;
 	flex-wrap: nowrap;
 }
 
-.card .quickInfoHolder{
+.card > .cardImage > .quickInfoHolder{
 	top: 0px;
 }
 
-.card .quickLinkHolder{
+.card > .cardImage > .quickLinkHolder{
 	bottom: 0px;
 	right: 0px;
 }
 
 /* only hide when not being hovered if this device supports hover state */
 @media (hover: hover) {
-	.card .quickInfoHolder > .quickInfo{
+	.card > .cardImage > .quickInfoHolder > .quickInfo{
 		transform: translateY(-5em);
 		opacity: 0;
 		transition-property: opacity, transform;
 		transition-duration: 0.35s;
 	}
 
-	.card .quickLinkHolder > .quickInfo{
+	.card > .cardImage > .quickLinkHolder > .quickInfo{
 		transform: translateY(5em);
 		opacity: 0;
 		transition-property: opacity, transform;
@@ -113,15 +113,15 @@
 	}
 }
 
-.card:hover .quickInfoHolder > .quickInfo,
-.card:hover .quickLinkHolder > .quickInfo,
-.card:focus .quickInfoHolder > .quickInfo,
-.card:focus .quickLinkHolder > .quickInfo{
+.card:hover > .cardImage > .quickInfoHolder > .quickInfo,
+.card:hover > .cardImage > .quickLinkHolder > .quickInfo,
+.card:focus > .cardImage > .quickInfoHolder > .quickInfo,
+.card:focus > .cardImage > .quickLinkHolder > .quickInfo{
 	opacity: 1;
 	transform: translateY(0px);
 }
 
-.card .quickInfoHolder > .quickInfo{
+.card > .cardImage > .quickInfoHolder > .quickInfo{
 	padding-top: 5px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
