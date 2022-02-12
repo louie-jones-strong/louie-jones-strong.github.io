@@ -72,10 +72,11 @@ body.greyScale{
 	width: calc( var(--MenuWidth) - 0px);
 
 	border-bottom-left-radius: 1.5em;
+	border-bottom: none;
 
 	background-color: white;
 	text-align: center;
-	padding-bottom: 0.75em;
+	overflow: hidden;
 }
 
 .accessibilityMenu > button{
@@ -101,6 +102,19 @@ body.greyScale{
 .accessibilityMenu > button:focus.accessibilityText,
 .accessibilityMenu > button:hover > div > .accessibilityText,
 .accessibilityMenu > button:focus > div > .accessibilityText{
+	color: var(--Colour-Accessibility-Contrast);
+}
+
+
+.accessibilityFeedback{
+	background-color: var(--Colour-Accessibility);
+	color: var(--Colour-Accessibility-Contrast);
+	padding-top: 0.3em;
+	padding-bottom: 0.75em;
+}
+
+.accessibilityFeedback > .accessibilityText{
+	background-color: var(--Colour-Accessibility);
 	color: var(--Colour-Accessibility-Contrast);
 }
 

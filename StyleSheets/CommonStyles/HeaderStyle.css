@@ -1,6 +1,3 @@
-body{
-	--HeaderHeight: 100px;
-}
 
 
 Header{
@@ -9,7 +6,7 @@ Header{
 	position: sticky;
 	top: 0;
 
-	height: var(--HeaderHeight);
+	height: max-content;
 
 	display: flex;
 	justify-content: space-between;
@@ -25,7 +22,7 @@ Header .material-icons{
 }
 
 #headerLogo{
-	height: var(--HeaderHeight);
+	height: 5rem;
 }
 
 .mainTitle{
@@ -38,10 +35,6 @@ Header .material-icons{
 
 /*Tablet -------------------------------------*/
 @media only screen and (min-width: 701px) and (max-width: 900px){
-	body{
-		--HeaderHeight: 75px;
-	}
-
 	.mainTitle{
 		display: none;
 	}
@@ -49,10 +42,6 @@ Header .material-icons{
 
 /*Phone -------------------------------------*/
 @media only screen and (max-width: 700px){
-
-	body{
-		--HeaderHeight: 50px;
-	}
 	.headerCenter{
 		display: none;
 	}
