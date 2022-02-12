@@ -4,14 +4,14 @@
 
 
 //Starting cover image index
-var slideIndex = 0;
+let slideIndex = 0;
 ShowSlides();
 
 function ShowSlides()
 {
-	var i;
-	var slides = document.getElementsByClassName("slide");
-	var dots = document.getElementsByClassName("slide-dot");
+	let i;
+	let slides = document.getElementsByClassName("slide");
+	let dots = document.getElementsByClassName("slide-dot");
 
 	if (slideIndex >= slides.length)
 	{
@@ -53,7 +53,7 @@ function ShowSlides()
 
 function ResetVideos(dicObject)
 {
-	var children = dicObject.children;
+	let children = dicObject.children;
 	for (i = 0; i < children.length; i++)
 	{
 		children[i].currentTime = 0;

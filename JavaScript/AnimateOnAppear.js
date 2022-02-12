@@ -3,14 +3,14 @@ Reveal();
 
 function Reveal()
 {
-	var reveals = document.querySelectorAll(".reveal");
+	let reveals = document.querySelectorAll(".reveal");
 
-	for(var i = 0; i < reveals.length; i++)
+	for(let i = 0; i < reveals.length; i++)
 	{
 
-		var windowHeight = window.innerHeight;
-		var revealTop = reveals[i].getBoundingClientRect().top;
-		var revealPoint = 0;
+		let windowHeight = window.innerHeight;
+		let revealTop = reveals[i].getBoundingClientRect().top;
+		let revealPoint = 0;
 
 		if(revealTop < windowHeight - revealPoint)
 		{

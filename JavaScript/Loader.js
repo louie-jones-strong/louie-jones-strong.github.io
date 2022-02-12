@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
 
 function HideContent()
 {
-	var contents = document.getElementsByClassName("content");
+	let contents = document.getElementsByClassName("content");
 
 	for (let index = 0; index < contents.length; index++)
 	{
@@ -18,10 +18,10 @@ function HideContent()
 
 function ShowContent()
 {
-	var loaderHolder = document.getElementById("loaderHolder");
+	let loaderHolder = document.getElementById("loaderHolder");
 	loaderHolder.classList.add("loaded");
 
-	var contents = document.getElementsByClassName("content");
+	let contents = document.getElementsByClassName("content");
 
 	for (let index = 0; index < contents.length; index++)
 	{
