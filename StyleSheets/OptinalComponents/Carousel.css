@@ -17,7 +17,7 @@
 	animation-duration: 1s;
 	animation-timing-function: ease-out;
 
-	max-height: 66vh;
+	max-height: 80vh;
 	object-fit: cover;
 	width: 100%;
 	height: auto;
@@ -27,7 +27,7 @@
 .slide > img,
 .slide > picture,
 .slide > video{
-	max-height: 66vh;
+	max-height: 80vh;
 	object-fit: cover;
 	width: 100%;
 	height: auto;

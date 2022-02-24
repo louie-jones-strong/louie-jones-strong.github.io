@@ -3,12 +3,18 @@ const Path = require('path');
 const Ejs = require('ejs');
 const Fs = require('fs');
 
-function RenderFile(templateFilePath, outputFilePath)
+function RenderFile(templateFilePath, outputFilePath, pageName)
 {
 	console.log(templateFilePath, "->", outputFilePath);
 
 	//render selected file
-	Ejs.renderFile(templateFilePath, {PageData: PageData}, function(renderError, builtHtml) {
+	Ejs.renderFile(templateFilePath,
+		{PageData: {
+			IsDevMode:IsDevMode,
+			PageName: pageName
+		}},
+
+		function(renderError, builtHtml) {
 
 		// error handling
 		if (renderError)
@@ -49,16 +55,16 @@ function ConvertAllTemplates()
 			// we can only render files not folders
 			if (stat.isFile())
 			{
-				let outputFile = fileName;
-				let lastDotIndex = outputFile.lastIndexOf(".");
+				let pageName = fileName;
+				let lastDotIndex = pageName.lastIndexOf(".");
 				if (lastDotIndex >= 0)
 				{
-					outputFile = outputFile.slice(0, lastDotIndex);
+					pageName = pageName.slice(0, lastDotIndex);
 				}
-				outputFile += ".html";
+				let outputFile = pageName + ".html";
 				let outputFilePath = Path.join(OutputFolder, outputFile);
 
-				RenderFile(templateFilePath, outputFilePath);
+				RenderFile(templateFilePath, outputFilePath, pageName);
 			}
 
 		});
@@ -67,18 +73,16 @@ function ConvertAllTemplates()
 
 const TemplatesFolder = "Views/"
 const OutputFolder = "../"
-let PageData = {
-	IsDevMode:true
-};
+let IsDevMode = true;
 
 console.log("=".repeat(20));
 
 if (process.argv.includes("Release"))
 {
-	PageData.IsDevMode = false;
+	IsDevMode = false;
 	console.log("Building pages for Release");
 }
-console.log("PageData: ", PageData);
+console.log("IsDevMode: ", IsDevMode);
 
 console.log("=".repeat(20));
 console.log();

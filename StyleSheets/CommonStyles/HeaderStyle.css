@@ -1,48 +1,78 @@
-
-
 Header{
 	width: 100%;
 	z-index:1000;
+	height: 0;
 	position: sticky;
-	top: 0;
+	top: -1px;
 
-	height: max-content;
-
-	display: flex;
-	justify-content: space-between;
-}
-
-Header .material-icons{
-	font-size: 50px;
-}
-
-.headerCenter{
-	justify-self: center;
 	display: flex;
 }
 
 #headerLogo{
-	height: 5rem;
+	height: 5em;
+	width: 5em;
+	border-bottom-right-radius:1.5em;
+	overflow: hidden;
+}
+#headerLogo > img{
+	height: 5em;
+	width: 5em;
 }
 
-.mainTitle{
-	margin-top: 0.1em;
-	margin-bottom: 0.1em;
-	justify-self: center;
-	text-shadow: 0px 0px 3px var(--BackgroundColour);
+nav{
+	padding-left: 5em;
+	height: 4em;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	background: linear-gradient(
+		rgba(var(--BackgroundColour-RGB), 0.6) 0%,
+		rgba(var(--BackgroundColour-RGB), 0.4) 65%,
+		rgba(var(--BackgroundColour-RGB), 0) 100%);
 }
 
-
-/*Tablet -------------------------------------*/
-@media only screen and (min-width: 701px) and (max-width: 900px){
-	.mainTitle{
-		display: none;
-	}
+nav > a{
+	margin-block: 0.25em;
+	margin-inline: 1em;
+	text-decoration: none;
+	text-transform:uppercase;
+	color: var(--Colour-Text1);
+	font-size: 1.5rem;
+	text-shadow: 4px 2px black;
 }
 
-/*Phone -------------------------------------*/
-@media only screen and (max-width: 700px){
-	.headerCenter{
-		display: none;
-	}
+nav > a.selected,
+nav > a:hover,
+nav > a:focus{
+	text-decoration: underline;
+	text-decoration-thickness: 0.2em;
+}
+
+nav > a:hover,
+nav > a:focus{
+	text-decoration-color: var(--ColourAccentRGB);
+}
+
+.cvButton{
+	height: 1em;
+	padding-inline: 1.5em;
+	padding-block: 1em;
+
+	background-color: var(--PositiveColour);
+	border: 2px solid var(--PositiveColour-Contrast);
+	border-radius: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-left: 2em;
+	margin-right: 3.5em;
+}
+
+.cvButton,
+.cvButton *{
+	cursor: pointer;
+	color: var(--PositiveColour-Contrast);
+	text-shadow: 1px 2px black;
 }
