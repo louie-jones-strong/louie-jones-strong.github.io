@@ -75,9 +75,9 @@
 }
 
 /* Content */
-.ZipperCard > video,
-.ZipperCard > img,
-.ZipperCard > picture{
+.ZipperCard > div,
+.ZipperCard > div,
+.ZipperCard > div{
 	object-fit: cover;
 	width: 100%;
 	height: auto;
