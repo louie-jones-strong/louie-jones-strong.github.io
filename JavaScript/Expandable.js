@@ -95,3 +95,12 @@ function CloseOverlay()
 	overlayHolder.classList.remove("overlayShowing");
 	overlayHolder.innerHTML = "";
 }
+
+
+document.onkeydown = function(key)
+{
+	if(key.key === "Escape")
+	{
+		CloseOverlay();
+	}
+}
