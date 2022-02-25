@@ -11,20 +11,20 @@
 	<nav>
 		<% if (PageData.PageName == 'index') { %>
 			<a href="#WorkExperience"
-				class="scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Work Experience</a>
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Work Experience</a>
 			<a href="#PersonalProjects"
-				class="scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Personal Projects</a>
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Personal Projects</a>
 			<a href="#GameJams"
-				class="scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Game Jams</a>
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Game Jams</a>
 		<%}else{%>
 			<a href="index.html"
-				class="scaleOnFocus <% if (PageData.PageName == 'index') { %> selected<%}%>">Home</a>
+				class="navLink scaleOnFocus <% if (PageData.PageName == 'index') { %> selected<%}%>">Home</a>
 
 		<%}%>
 
-		<!-- <button class="cvButton shaded sheen scaleOnFocus right">
+		<a href="CV.PDF" target="_blank" class="cvButton shaded sheen scaleOnFocus right">
 			CV <span class="material-icons">download</span>
-		</button> -->
+		</a>
 	</nav>
 
 
