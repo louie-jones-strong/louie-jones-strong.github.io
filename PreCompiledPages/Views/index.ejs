@@ -59,193 +59,156 @@
 			<h2 id="WorkExperience" class="center reveal fromBottom">Work Experience:</h2>
 			<div class="cardHolder">
 
-				<a class="card glass neonOutline reveal" href="LSWB.html">
-					<div class="cardImage">
-						<img src="Public/Assets/LSWB/Thumbnail.png" alt="LEGO® Star Wars™ Battles">
-
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								Date: "April 2018 - Present",
-								<!-- NumPeople: "Avg ~25" -->
-								Links: {
-									AppleLink: "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
-								}
+				<%- include('Components/Card', {
+					CardData: {
+						Link: "LSWB.html",
+						Title: "LEGO® Star Wars™ Battles",
+						Body: "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
+						Thumbnail: "Public/Assets/LSWB/Thumbnail.png",
+						QuickInfoData: {
+							Date: "April 2018 - Present",
+							<!-- NumPeople: "Avg ~25" -->
+							Links: {
+								AppleLink: "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
 							}
-						}); %>
+						}
+					}
+				}); %>
 
-					</div>
-					<h3>LEGO® Star Wars™ Battles</h3>
-					<p>My time at TT Odyssey working on LEGO® Star Wars™ Battles.</p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
 			</div>
 
 			<!-- Personal Projects -->
 			<h2 id="PersonalProjects" class="center reveal fromBottom">Personal Projects:</h2>
 			<div class="cardHolder">
 
-				<a class="card glass neonOutline reveal" href="BlenderProjects.html">
-					<div class="cardImage">
-						<img src="Public/Assets/BlenderProjects/Images/blender_6_480x270.png" alt="Blender rendered of tea set">
+				<%- include('Components/Card', {
+					CardData: {
+						Link: "BlenderProjects.html",
+						Title: "24 Hour Blender Challenge",
+						Body: "I challenged myself to learn different Blender skills, giving myself only 24 hours for each one.",
+						Thumbnail: "Public/Assets/BlenderProjects/Images/blender_6_480x270.png",
+						QuickInfoData: {
+							TimeSpent: "Day Each",
+							NumPeople: 1
+						}
+					}
+				}); %>
 
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "Day Each",
-								NumPeople: 1
+				<%- include('Components/Card', {
+					CardData: {
+						Link: "EggHuntProject.html",
+						Title: "Office Egg Hunt",
+						Body: "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
+						Thumbnail: "Public/Assets/EggHuntGame/thumbnail.png",
+						QuickInfoData: {
+							TimeSpent: "2 Weeks",
+							NumPeople: 1,
+							Links: {
+								ItchLink: "https://louie-js.itch.io/office-egg-hunt",
+								GithubLink: "https://github.com/louie-jones-strong/OfficeGame",
 							}
-						}); %>
+						}
+					}
+				}); %>
 
-					</div>
-					<h3>24 Hour Blender Challenge</h3>
-					<p> I challenged myself to learn different Blender skills,
-						giving myself only 24 hours for each one.</p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
+				<%- include('Components/Card', {
+					CardData: {
+						Link: "EPQProject.html",
+						Title: "EPQ",
+						Body: "My college EPQ dissertation on multi-technique supervised machine learning",
+						Thumbnail: "Public/Assets/EPQ/thumbnail.png",
+						QuickInfoData: {
+							TimeSpent: "6 months",
+							NumPeople: 1
+						}
+					}
+				}); %>
 
-				<a class="card glass neonOutline reveal" href="EggHuntProject.html">
-					<div class="cardImage">
-						<img src="Public/Assets/EggHuntGame/thumbnail.png" alt="Office Egg Hunt cover image">
+				<%- include('Components/Card', {
+					CardData: {
+						Link: "CubePuzzleProject.html",
+						Title: "Alhambra 4D Cube Puzzle",
+						Body: "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
+						Thumbnail: "Public/Assets/CubePuzzle/Thumbnail.jpg",
+						QuickInfoData: {
+							TimeSpent: "3 Weeks",
+							NumPeople: 1
+						}
+					}
+				}); %>
 
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "2 Weeks",
-								NumPeople: 1,
-								Links: {
-									ItchLink: "https://louie-js.itch.io/office-egg-hunt",
-									GithubLink: "https://github.com/louie-jones-strong/OfficeGame",
-								}
+				<%- include('Components/Card', {
+					CardData: {
+						Link: "Portfolio.html",
+						Title: "My Portfolio",
+						Body: "How I made this website.",
+						Thumbnail: "Public/Assets/PortfolioProject/Thumbnail.png",
+						QuickInfoData: {
+							TimeSpent: "Month",
+							NumPeople: 1,
+							Links: {
+								GithubLink: "https://github.com/louie-jones-strong/louie-jones-strong.github.io",
 							}
-						}); %>
+						}
+					}
+				}); %>
 
-					</div>
-					<h3>Office Egg Hunt</h3>
-					<p>A 3D game for my colleagues to play in lockdown, set within my model of our office.</p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
-
-				<a class="card glass neonOutline reveal" href="EPQProject.html">
-					<div class="cardImage">
-						<img src="Public/Assets/EPQ/thumbnail.png" alt="Machine learning">
-
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "6 months",
-								NumPeople: 1
+				<%- include('Components/Card', {
+					CardData: {
+						Link: "Minesweeper.html",
+						Title: "Mine Sweeper",
+						Body: "To prepare for my University courses I taught myself JS, HTML and CSS.",
+						Thumbnail: "Public/Assets/MineSweeper/Thumbnail.png",
+						QuickInfoData: {
+							TimeSpent: "1 Week",
+							NumPeople: 1,
+							Links: {
+								GithubLink: "https://github.com/louie-jones-strong/MineSweeper",
+								WebsiteLink: "https://louie-jones-strong.github.io/MineSweeper/",
 							}
-						}); %>
+						}
+					}
+				}); %>
 
-					</div>
-					<h3><abbr title="Extended Project Qualification">EPQ</abbr></h3>
-					<p>My college <abbr title="Extended Project Qualification">EPQ</abbr> dissertation on multi-technique supervised machine learning</p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
-
-				<a class="card glass neonOutline reveal" href="CubePuzzleProject.html">
-					<div class="cardImage">
-						<img src="Public/Assets/CubePuzzle/Thumbnail.jpg" alt="Engraved Alhambra Cube Puzzle">
-
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "3 Weeks",
-								NumPeople: 1
-							}
-						}); %>
-
-					</div>
-					<h3>Alhambra 4D Cube Puzzle</h3>
-					<p>My algorithm to discover the solutions to the Alhambra Cube Puzzle.</p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
-
-				<a class="card glass neonOutline reveal" href="Portfolio.html">
-					<div class="cardImage">
-						<img src="Public/Assets/PortfolioProject/Thumbnail.png" alt="Website Logo">
-
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "Month",
-								NumPeople: 1,
-								Links: {
-									GithubLink: "https://github.com/louie-jones-strong/louie-jones-strong.github.io",
-								}
-							}
-						}); %>
-
-					</div>
-					<h3>My Portfolio</h3>
-					<p>How I made this website.</p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
-
-				<a class="card glass neonOutline reveal" href="Minesweeper.html">
-					<div class="cardImage">
-						<img src="Public/Assets/MineSweeper/Thumbnail.png" alt="Minesweeper ScreenShot">
-
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "1 Week",
-								NumPeople: 1,
-								Links: {
-									GithubLink: "https://github.com/louie-jones-strong/MineSweeper",
-									WebsiteLink: "https://louie-jones-strong.github.io/MineSweeper/",
-								}
-							}
-						}); %>
-
-					</div>
-					<h3>Mine Sweeper</h3>
-					<p>
-						To prepare for my University courses I taught myself
-						<abbr title="Java Script">JS</abbr>, <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.
-					</p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
 			</div>
 
 			<!-- Game Jam -->
 			<h2 id="GameJams" class="center reveal Bottom">Game Jams:</h2>
 			<div class="cardHolder">
 
-				<a class="card glass neonOutline reveal" href="https://tatltuae.itch.io/monstermash" target="_blank">
-					<div class="cardImage">
-						<img src="Public/Assets/Monster Mash/Thumbnail.png" alt="Monster Mash">
-
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "1 Week",
-								NumPeople: 4,
-								Links: {
-									ItchLink: "https://tatltuae.itch.io/monstermash",
-								}
+				<%- include('Components/Card', {
+					CardData: {
+						OpenInNewTab: true,
+						Link: "https://tatltuae.itch.io/monstermash",
+						Title: "Monster Mash",
+						Body: "",
+						Thumbnail: "Public/Assets/Monster Mash/Thumbnail.png",
+						QuickInfoData: {
+							TimeSpent: "1 Week",
+							NumPeople: 4,
+							Links: {
+								ItchLink: "https://tatltuae.itch.io/monstermash",
 							}
-						}); %>
+						}
+					}
+				}); %>
 
-					</div>
-					<h3>Monster Mash</h3>
-					<p></p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
-
-				<a class="card glass neonOutline reveal" href="https://tatltuae.itch.io/looking-for-eden" target="_blank">
-					<div class="cardImage">
-						<img src="Public/Assets/Looking For Eden/Thumbnail.png" alt="Looking For Eden">
-
-						<%- include('Components/QuickInfo', {
-							QuickInfoData: {
-								TimeSpent: "48 hours",
-								NumPeople: 3,
-								Links: {
-									ItchLink: "https://tatltuae.itch.io/looking-for-eden",
-									WebsiteLink: "https://louie-jones-strong.github.io/Looking-For-Eden/",
-								}
+				<%- include('Components/Card', {
+					CardData: {
+						OpenInNewTab: true,
+						Link: "https://tatltuae.itch.io/looking-for-eden",
+						Title: "Looking For Eden",
+						Body: "",
+						Thumbnail: "Public/Assets/Looking For Eden/Thumbnail.png",
+						QuickInfoData: {
+							TimeSpent: "48 hours",
+							NumPeople: 3,
+							Links: {
+								ItchLink: "https://tatltuae.itch.io/looking-for-eden",
 							}
-						}); %>
-
-					</div>
-					<h3>Looking For Eden</h3>
-					<p></p>
-					<h4 class="bottom"><u>More Info</u></h4>
-				</a>
+						}
+					}
+				}); %>
 			</div>
 		</div>
 

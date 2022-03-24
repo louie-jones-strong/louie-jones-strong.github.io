@@ -1,0 +1,11 @@
+<a class="card glass neonOutline reveal" href="<%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
+	<div class="cardImage">
+		<img src="<%= CardData.Thumbnail %>" alt="<%= CardData.Title %>">
+
+		<%- include('QuickInfo', CardData); %>
+
+	</div>
+	<h3><%= CardData.Title %></h3>
+	<p><%= CardData.Body %></p>
+	<h4 class="bottom"><u>More Info</u></h4>
+</a>
