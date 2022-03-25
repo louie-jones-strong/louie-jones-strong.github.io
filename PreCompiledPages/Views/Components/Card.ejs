@@ -1,4 +1,11 @@
+
+<% if (CardData.Link) { %>
 <a class="card glass neonOutline reveal" href="<%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
+<% }else{%>
+<a class="card glass reveal">
+<% }%>
+
+	<% if (CardData.Thumbnail) { %>
 	<div class="cardImage">
 		<img src="<%= CardData.Thumbnail %>" alt="<%= CardData.Title %>">
 
@@ -7,5 +14,18 @@
 	</div>
 	<h3><%= CardData.Title %></h3>
 	<p><%= CardData.Body %></p>
+
+	<% }else{%>
+
+		<h3><%= CardData.Title %></h3>
+		<p><%= CardData.Body %></p>
+		<%- include('QuickInfo', CardData); %>
+
+	<% }%>
+
+
+
+	<% if (CardData.Link) { %>
 	<h4 class="bottom"><u>More Info</u></h4>
+	<% }%>
 </a>
