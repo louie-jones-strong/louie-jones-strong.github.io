@@ -72,6 +72,15 @@
 			</form>
 		<% }%>
 
+		<% if (QuickInfoData.Links.InstagramLink) { %>
+			<form action="<%= QuickInfoData.InstagramLink %>" target="_blank" class="quickInfo sheen">
+				<button>
+					<img class="icon greyScale" src="Public/Assets/Icons/Instagram.svg" alt="Instagram Logo">
+					<h5>Instagram</h5>
+				</button>
+			</form>
+		<% }%>
+
 		<% if (QuickInfoData.Links.GooglePlayLink) { %>
 			<form action="<%= QuickInfoData.GooglePlayLink %>" target="_blank" class="quickInfo sheen">
 				<button>
