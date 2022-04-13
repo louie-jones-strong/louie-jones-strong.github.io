@@ -65,8 +65,17 @@ body.light{
 }
 
 .cover{
-	height: calc(100vh - 5rem);
-	background-color: #FF6961;
+	max-height: calc(100vh - 5rem);
+	height: max-content;
+	overflow-y: hidden;
+}
+
+.cover > img,
+.cover > picture,
+.cover > video{
+	max-height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .material-icons{
