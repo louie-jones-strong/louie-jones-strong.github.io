@@ -15,6 +15,7 @@
 	}); %>
 
 	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="Public/StyleSheets/OptinalComponents/Carousel.css">
 	<link rel="stylesheet" type="text/css" href="Public/StyleSheets/OptinalComponents/ZipperCard.css">
 </head>
 
@@ -28,6 +29,25 @@
 
 		<!-- shared common header -->
 		<%- include('Components/Header'); %>
+
+		<!-- cover image slide show -->
+		<div class="slide-holder">
+			<div class="slide">
+				<img src="Public/Assets/BlenderProjects/Images/Pier.png" alt="A render of brighton pier and beach">
+				<div class="slide-caption">
+					<h4>Brighton Pier</h4>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="Public/Assets/BlenderProjects/Images/blender_34_1920x1080.png" alt="A render of a Desktop Background">
+				<div class="slide-caption">
+					<h4>8K Desktop Background</h4>
+				</div>
+			</div>
+			<span class="slide-dot"></span>
+			<span class="slide-dot"></span>
+		</div>
+		<script src="Public/JavaScript/Carousel.js"></script>
 
 		<div class="centeredFrame">
 			<h1 class="center">24 Hour Blender Challenge</h1>
@@ -61,6 +81,16 @@
 
 
 		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard shaded glass reveal fromRight">
+				<picture class="expandable">
+					<source srcset="Public/Assets/BlenderProjects/Images/Pier.png" media="(min-width: 481px)">
+					<img src="Public/Assets/BlenderProjects/Images/Pier.png" alt="A render of brighton pier and beach">
+				</picture>
+				<div>
+					<h3>Brighton Pier</h3>
+					<p>For this render I was to attempting to recreate a dream I had, and to practice composition.</p>
+				</div>
+			</div>
 			<div class="ZipperCard shaded glass reveal fromLeft">
 				<div>
 					<h3>Neon Wave</h3>
