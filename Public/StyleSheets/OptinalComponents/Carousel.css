@@ -2,7 +2,6 @@
 
 .slide-holder{
 	position: relative;
-	z-index: -10;
 	overflow: hidden;
 	height: fit-content;
 	text-align: center;

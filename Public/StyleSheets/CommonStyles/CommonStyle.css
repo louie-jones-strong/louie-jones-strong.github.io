@@ -11,9 +11,7 @@ html, body{
 
 body{
 	overflow-x: hidden;
-	 /* background by SVGBackgrounds.com */
-	background-attachment: fixed;
-	background-size: cover;
+
 
 	margin: 0px;
 	overflow-x: hidden;
@@ -35,7 +33,7 @@ body{
 	--BackgroundColour: rgb(var(--BackgroundColour-RGB));
 
 /* dark mode */
-	background-image: url("BackgroundDark.svg");
+	--BackgroundImageUrl: url("BackgroundDark.svg");
 
 	--BackgroundColour-RGB: 0,0,0;
 	--Colour-Text1: rgb(255, 255, 255);
@@ -47,7 +45,7 @@ body{
 
 /* light mode */
 body.light{
-	background-image: url("BackgroundLight.svg");
+	--BackgroundImageUrl: url("BackgroundLight.svg");
 
 	--BackgroundColour: white;
 	--Colour-Text1: rgb(0, 0, 0);
@@ -57,6 +55,13 @@ body.light{
 	--Colour-Contrast-Filter: saturate(0%) brightness(0%);
 }
 
+.background{
+	/* background by SVGBackgrounds.com */
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: var(--BackgroundImageUrl);
+}
+
 :target:before {
 	content: "";
 	display: block;
@@ -64,18 +69,66 @@ body.light{
 	margin: -6rem 0 0;
 }
 
-.cover{
-	max-height: calc(100vh - 5rem);
-	height: max-content;
-	overflow-y: hidden;
+/* parallax */
+.parallaxHolder{
+	margin: 0px;
+	display: block;
+	position: relative;
+	width: 100%;
 }
 
-.cover > img,
-.cover > picture,
-.cover > video{
-	max-height: 100%;
+.parallaxObj{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -5;
+}
+
+/* cover */
+.cover{
+	height: calc(100vh - 5rem);
+	overflow-y: hidden;
+	position: relative;
+}
+
+.cover > .parallaxObj > img,
+.cover > .parallaxObj > picture,
+.cover > .parallaxObj > video{
+	height: 100%;
 	object-fit: cover;
 	width: 100%;
+}
+
+.coverOverlay{
+	position:absolute;
+
+	left: 0px;
+	bottom: 0px;
+	width: max-content;
+	height: max-content;
+
+	padding: 0.25em;
+	padding-left: 2em;
+	padding-bottom: 1em;
+	border-top-right-radius: 2.5em;
+}
+
+#cover_name{
+	margin: 0em;
+	padding-bottom: 0.25em;
+
+	background: linear-gradient(#fe7d76, #e31005);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#cover_title{
+	margin: 0em;
+	background-color:#025caf;
+	color: white;
+	width: max-content;
+	padding-block: 0.25em;
+	padding-inline: 0.5em;
 }
 
 .material-icons{

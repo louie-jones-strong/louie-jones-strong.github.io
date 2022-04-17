@@ -23,220 +23,229 @@
 		<!-- shared common header -->
 		<%- include('Components/AccessibilityHelper'); %>
 
-		<div class="cover">
-			<video autoplay muted loop class="expandable">
-				<source src="Public\Assets\IndexCover\DeskIntro.mp4" type="video/mp4">
-				I'm sorry, your browser doesn't support HTML5 video.
-			</video>
+		<div class="cover parallaxHolder">
+			<div class="parallaxObj">
+				<!-- <video autoplay muted loop class="expandable">
+					<source src="Public\Assets\IndexCover\DeskIntro.mp4" type="video/mp4">
+					I'm sorry, your browser doesn't support HTML5 video.
+				</video> -->
+				<img src="Public\Assets\IndexCover\output.png" alt="Cover photo">
+			</div>
+			<div class="coverOverlay glass">
+				<h1 id="cover_name" class=" reveal fromLeft" >Louie Jones-Strong</h1>
+				<h3 id="cover_title" class=" reveal fromLeft shaded rounded" >Creative Programmer</h3>
+			</div>
 		</div>
 
-		<!-- shared common header -->
-		<%- include('Components/Header'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include('Components/Header'); %>
 
-		<hr class="gap">
-		<hr class="gap">
-
-		<div class="centeredFrame">
-			<h1 class="center reveal fromBottom">Who Am I?</h1>
-			<p class="center reveal fromBottom">I am a <a href="https://goo.gl/maps/uww4cWv48GgdQC719" target="_blank">Brighton, England</a> based
-				 hard working, creative, programmer with a passion for developing tools, games and machine learning.</p>
-			<p class="center reveal fromBottom"> I am working full time at TT Games as a Junior programmer.</p>
-			<p class="center reveal fromBottom">I am also a full time student at Goldsmiths, University of London studying machine learning.</p>
-
-			<h3 class="center reveal fromBottom">My Skills:</h3>
+			<hr class="gap">
+			<hr class="gap">
 
 			<div class="centeredFrame">
-				<%- include('Components/QuickInfo', {
-					QuickInfoData: {
-						Skills: {
-							ShowAll: true,
-							HideTitle: true,
-						}
-					}
-				}); %>
-			</Div>
+				<h1 class="center reveal fromBottom">Who Am I?</h1>
+				<p class="center reveal fromBottom">I am a <a href="https://goo.gl/maps/uww4cWv48GgdQC719" target="_blank">Brighton, England</a> based
+					hard working, creative, programmer with a passion for developing tools, games and machine learning.</p>
+				<p class="center reveal fromBottom"> I am working full time at TT Games as a Junior programmer.</p>
+				<p class="center reveal fromBottom">I am also a full time student at Goldsmiths, University of London studying machine learning.</p>
 
-			<h1 class="center reveal fromBottom">What Have I Done?</h1>
+				<h3 class="center reveal fromBottom">My Skills:</h3>
 
-			<!-- work -->
-			<h2 id="WorkExperience" class="center reveal fromBottom">Work Experience:</h2>
-			<div class="cardHolder">
-
-				<%- include('Components/Card', {
-					CardData: {
-						Link: "LSWB.html",
-						Title: "LEGO® Star Wars™ Battles",
-						Body: "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
-						Thumbnail: "Public/Assets/LSWB/Thumbnail.png",
+				<div class="centeredFrame">
+					<%- include('Components/QuickInfo', {
 						QuickInfoData: {
-							Date: "April 2018 - Present",
-							<!-- NumPeople: "Avg ~25" -->
-							Links: {
-								AppleLink: "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
+							Skills: {
+								ShowAll: true,
+								HideTitle: true,
 							}
 						}
-					}
-				}); %>
+					}); %>
+				</Div>
 
+				<h1 class="center reveal fromBottom">What Have I Done?</h1>
+
+				<!-- work -->
+				<h2 id="WorkExperience" class="center reveal fromBottom">Work Experience:</h2>
+				<div class="cardHolder">
+
+					<%- include('Components/Card', {
+						CardData: {
+							Link: "LSWB.html",
+							Title: "LEGO® Star Wars™ Battles",
+							Body: "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
+							Thumbnail: "Public/Assets/LSWB/Thumbnail.png",
+							QuickInfoData: {
+								Date: "April 2018 - Present",
+								<!-- NumPeople: "Avg ~25" -->
+								Links: {
+									AppleLink: "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
+								}
+							}
+						}
+					}); %>
+
+				</div>
+
+				<!-- Personal Projects -->
+				<h2 id="PersonalProjects" class="center reveal fromBottom">Personal Projects:</h2>
+				<div class="cardHolder">
+
+					<%- include('Components/Card', {
+						CardData: {
+							Link: "BlenderProjects.html",
+							Title: "24 Hour Blender Challenge",
+							Body: "I challenged myself to learn different Blender skills, giving myself only 24 hours for each one.",
+							Thumbnail: "Public/Assets/BlenderProjects/Images/blender_6_480x270.png",
+							QuickInfoData: {
+								TimeSpent: "Day Each",
+								NumPeople: 1,
+								Links: {
+									InstagramLink: "https://www.instagram.com/louie_j.s/"
+								}
+							}
+						}
+					}); %>
+
+					<%- include('Components/Card', {
+						CardData: {
+							Link: "EggHuntProject.html",
+							Title: "Office Egg Hunt",
+							Body: "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
+							Thumbnail: "Public/Assets/EggHuntGame/thumbnail.png",
+							QuickInfoData: {
+								TimeSpent: "2 Weeks",
+								NumPeople: 1,
+								Links: {
+									ItchLink: "https://louie-js.itch.io/office-egg-hunt",
+									GithubLink: "https://github.com/louie-jones-strong/OfficeGame",
+								}
+							}
+						}
+					}); %>
+
+					<%- include('Components/Card', {
+						CardData: {
+							Link: "EPQProject.html",
+							Title: "EPQ",
+							Body: "My college EPQ dissertation on multi-technique supervised machine learning",
+							Thumbnail: "Public/Assets/EPQ/thumbnail.png",
+							QuickInfoData: {
+								TimeSpent: "6 months",
+								NumPeople: 1
+							}
+						}
+					}); %>
+
+					<%- include('Components/Card', {
+						CardData: {
+							Link: "CubePuzzleProject.html",
+							Title: "Alhambra 4D Cube Puzzle",
+							Body: "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
+							Thumbnail: "Public/Assets/CubePuzzle/Thumbnail.jpg",
+							QuickInfoData: {
+								TimeSpent: "3 Weeks",
+								NumPeople: 1
+							}
+						}
+					}); %>
+
+					<%- include('Components/Card', {
+						CardData: {
+							Link: "Portfolio.html",
+							Title: "My Portfolio",
+							Body: "How I made this website.",
+							Thumbnail: "Public/Assets/PortfolioProject/Thumbnail.png",
+							QuickInfoData: {
+								TimeSpent: "Month",
+								NumPeople: 1,
+								Links: {
+									GithubLink: "https://github.com/louie-jones-strong/louie-jones-strong.github.io",
+								}
+							}
+						}
+					}); %>
+
+					<%- include('Components/Card', {
+						CardData: {
+							Link: "Minesweeper.html",
+							Title: "Mine Sweeper",
+							Body: "To prepare for my University courses I taught myself JS, HTML and CSS.",
+							Thumbnail: "Public/Assets/MineSweeper/Thumbnail.png",
+							QuickInfoData: {
+								TimeSpent: "1 Week",
+								NumPeople: 1,
+								Links: {
+									GithubLink: "https://github.com/louie-jones-strong/MineSweeper",
+									WebsiteLink: "https://louie-jones-strong.github.io/MineSweeper/",
+								}
+							}
+						}
+					}); %>
+
+				</div>
+
+				<!-- Game Jam -->
+				<h2 id="GameJams" class="center reveal Bottom">Game Jams:</h2>
+				<div class="cardHolder">
+
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: true,
+							Link: "https://tatltuae.itch.io/monstermash",
+							Title: "Monster Mash",
+							Body: "",
+							Thumbnail: "Public/Assets/Monster Mash/Thumbnail.png",
+							QuickInfoData: {
+								TimeSpent: "1 Week",
+								NumPeople: 4,
+								Links: {
+									ItchLink: "https://tatltuae.itch.io/monstermash",
+								}
+							}
+						}
+					}); %>
+
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: true,
+							Link: "https://tatltuae.itch.io/looking-for-eden",
+							Title: "Looking For Eden",
+							Body: "",
+							Thumbnail: "Public/Assets/Looking For Eden/Thumbnail.png",
+							QuickInfoData: {
+								TimeSpent: "48 hours",
+								NumPeople: 3,
+								Links: {
+									ItchLink: "https://tatltuae.itch.io/looking-for-eden",
+								}
+							}
+						}
+					}); %>
+
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: true,
+							Link: "https://louie-js.itch.io/rougeclicker",
+							Title: "Rogue Clicker",
+							Body: "",
+							Thumbnail: "Public/Assets/RogueClicker/Thumbnail.png",
+							QuickInfoData: {
+								TimeSpent: "1 Week",
+								NumPeople: 1,
+								Links: {
+									ItchLink: "https://louie-js.itch.io/rougeclicker",
+								}
+							}
+						}
+					}); %>
+				</div>
 			</div>
 
-			<!-- Personal Projects -->
-			<h2 id="PersonalProjects" class="center reveal fromBottom">Personal Projects:</h2>
-			<div class="cardHolder">
-
-				<%- include('Components/Card', {
-					CardData: {
-						Link: "BlenderProjects.html",
-						Title: "24 Hour Blender Challenge",
-						Body: "I challenged myself to learn different Blender skills, giving myself only 24 hours for each one.",
-						Thumbnail: "Public/Assets/BlenderProjects/Images/blender_6_480x270.png",
-						QuickInfoData: {
-							TimeSpent: "Day Each",
-							NumPeople: 1,
-							Links: {
-								InstagramLink: "https://www.instagram.com/louie_j.s/"
-							}
-						}
-					}
-				}); %>
-
-				<%- include('Components/Card', {
-					CardData: {
-						Link: "EggHuntProject.html",
-						Title: "Office Egg Hunt",
-						Body: "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
-						Thumbnail: "Public/Assets/EggHuntGame/thumbnail.png",
-						QuickInfoData: {
-							TimeSpent: "2 Weeks",
-							NumPeople: 1,
-							Links: {
-								ItchLink: "https://louie-js.itch.io/office-egg-hunt",
-								GithubLink: "https://github.com/louie-jones-strong/OfficeGame",
-							}
-						}
-					}
-				}); %>
-
-				<%- include('Components/Card', {
-					CardData: {
-						Link: "EPQProject.html",
-						Title: "EPQ",
-						Body: "My college EPQ dissertation on multi-technique supervised machine learning",
-						Thumbnail: "Public/Assets/EPQ/thumbnail.png",
-						QuickInfoData: {
-							TimeSpent: "6 months",
-							NumPeople: 1
-						}
-					}
-				}); %>
-
-				<%- include('Components/Card', {
-					CardData: {
-						Link: "CubePuzzleProject.html",
-						Title: "Alhambra 4D Cube Puzzle",
-						Body: "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
-						Thumbnail: "Public/Assets/CubePuzzle/Thumbnail.jpg",
-						QuickInfoData: {
-							TimeSpent: "3 Weeks",
-							NumPeople: 1
-						}
-					}
-				}); %>
-
-				<%- include('Components/Card', {
-					CardData: {
-						Link: "Portfolio.html",
-						Title: "My Portfolio",
-						Body: "How I made this website.",
-						Thumbnail: "Public/Assets/PortfolioProject/Thumbnail.png",
-						QuickInfoData: {
-							TimeSpent: "Month",
-							NumPeople: 1,
-							Links: {
-								GithubLink: "https://github.com/louie-jones-strong/louie-jones-strong.github.io",
-							}
-						}
-					}
-				}); %>
-
-				<%- include('Components/Card', {
-					CardData: {
-						Link: "Minesweeper.html",
-						Title: "Mine Sweeper",
-						Body: "To prepare for my University courses I taught myself JS, HTML and CSS.",
-						Thumbnail: "Public/Assets/MineSweeper/Thumbnail.png",
-						QuickInfoData: {
-							TimeSpent: "1 Week",
-							NumPeople: 1,
-							Links: {
-								GithubLink: "https://github.com/louie-jones-strong/MineSweeper",
-								WebsiteLink: "https://louie-jones-strong.github.io/MineSweeper/",
-							}
-						}
-					}
-				}); %>
-
-			</div>
-
-			<!-- Game Jam -->
-			<h2 id="GameJams" class="center reveal Bottom">Game Jams:</h2>
-			<div class="cardHolder">
-
-				<%- include('Components/Card', {
-					CardData: {
-						OpenInNewTab: true,
-						Link: "https://tatltuae.itch.io/monstermash",
-						Title: "Monster Mash",
-						Body: "",
-						Thumbnail: "Public/Assets/Monster Mash/Thumbnail.png",
-						QuickInfoData: {
-							TimeSpent: "1 Week",
-							NumPeople: 4,
-							Links: {
-								ItchLink: "https://tatltuae.itch.io/monstermash",
-							}
-						}
-					}
-				}); %>
-
-				<%- include('Components/Card', {
-					CardData: {
-						OpenInNewTab: true,
-						Link: "https://tatltuae.itch.io/looking-for-eden",
-						Title: "Looking For Eden",
-						Body: "",
-						Thumbnail: "Public/Assets/Looking For Eden/Thumbnail.png",
-						QuickInfoData: {
-							TimeSpent: "48 hours",
-							NumPeople: 3,
-							Links: {
-								ItchLink: "https://tatltuae.itch.io/looking-for-eden",
-							}
-						}
-					}
-				}); %>
-
-				<%- include('Components/Card', {
-					CardData: {
-						OpenInNewTab: true,
-						Link: "https://louie-js.itch.io/rougeclicker",
-						Title: "Rogue Clicker",
-						Body: "",
-						Thumbnail: "Public/Assets/RogueClicker/Thumbnail.png",
-						QuickInfoData: {
-							TimeSpent: "1 Week",
-							NumPeople: 1,
-							Links: {
-								ItchLink: "https://louie-js.itch.io/rougeclicker",
-							}
-						}
-					}
-				}); %>
-			</div>
+			<!-- Shared common footer -->
+			<%- include('Components/Footer'); %>
 		</div>
-
-		<!-- Shared common footer -->
-		<%- include('Components/Footer'); %>
 
 		<script src="Public/JavaScript/AnimateOnAppear.js"></script>
 		<script src="Public/JavaScript/vanilla-tilt.js"></script>
