@@ -17,7 +17,7 @@ function Reveal()
 			reveals[i].classList.add("shown");
 			reveals[i].classList.remove("hidden");
 		}
-		else
+		else if (!reveals[i].classList.contains("shown"))
 		{
 			reveals[i].classList.remove("shown");
 			reveals[i].classList.add("hidden");
