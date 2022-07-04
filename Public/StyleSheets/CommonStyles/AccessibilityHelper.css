@@ -121,3 +121,12 @@ body.greyScale{
 .hide{
 	display: none;
 }
+
+
+@media only screen and (hover: none) and (pointer: coarse){
+
+	#accessibilityHelper{
+		display: none;
+	}
+
+}
