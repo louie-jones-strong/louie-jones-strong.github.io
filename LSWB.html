@@ -40,6 +40,7 @@
 
 	<!-- extra links if needed -->
 	<link rel="stylesheet" type="text/css" href="Public/StyleSheets/OptinalComponents/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="Public/StyleSheets/OptinalComponents/Gallery.css">
 </head>
 
 
@@ -327,18 +328,24 @@
 			<p class="center reveal fromLeft">We created multiple web tools to help support our develop of the game.</p>
 			<p class="center reveal fromLeft">I create a tool to capture snapshots of players profiles in both dev and live environments from any version, this tool dramatical reduced time needed to fix bugs.</p>
 
-			<!-- <h3 class="center reveal fromRight">New Unit Creation</h3>
+			<h3 class="center reveal fromRight">New Unit Creation</h3>
 			<p class="center reveal fromLeft">
 				One of the cards that I worked on the most was the Gamorrean Guard.
 			</p>
-			<img class="center reveal fromLeft" src="Public/Assets/LSWB/GamorreanGuardCard.png" alt="Gamorrean Guard Card render"> -->
+
+			<div style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+				<img class="center reveal fromLeft card" src="Public/Assets/LSWB/GamorreanGuardCard.png" alt="Gamorrean Guard Card render">
+				<img class="center reveal fromLeft card" src="Public/Assets/LSWB/Klatoonian_Raider.png" alt="Klatoonian Raider Card render">
+				<img class="center reveal fromLeft card" src="Public/Assets/LSWB/Mandalorian.png" alt="Mandalorian Card render">
+				<img class="center reveal fromLeft card" src="Public/Assets/LSWB/Projection.png" alt="Projection Card render">
+			</div>
 
 
 			<h3 class="center reveal fromRight">Localisation</h3>
 			<p class="center reveal fromLeft">
 				I created our localisation system that supports 17 languages:
 			</p>
-			<ul>
+			<!-- <ul>
 				<li class="center reveal fromLeft">English</li>
 				<li class="center reveal fromLeft">Arabic</li>
 				<li class="center reveal fromLeft">Danish</li>
@@ -354,7 +361,7 @@
 				<li class="center reveal fromLeft">Simplified Chinese</li>
 				<li class="center reveal fromLeft">Traditional Chinese</li>
 				<li class="center reveal fromLeft">Turkish</li>
-			</ul>
+			</ul> -->
 			<p class="center reveal fromLeft">
 				This system also caterers for each language's cultures differences such as:
 			</p>
@@ -415,6 +422,17 @@
 
 
 		<script src="Public/JavaScript/AnimateOnAppear.js"></script>
+		<script src="Public/JavaScript/vanilla-tilt.js"></script>
+		<script>
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 10,
+				speed: 1000,
+				glare: true,
+				"max-glare": 1,
+				reverse: true,
+				scale: 1.1,
+			});
+		</script>
 
 	</div>
 
