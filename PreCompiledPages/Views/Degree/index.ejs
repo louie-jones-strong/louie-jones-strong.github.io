@@ -6,7 +6,7 @@
 	<%- include('../Components/Head', {
 		PageData: PageData,
 		HeadData: {
-			Title: "Louie J-S: Uni Degree",
+			Title: "Louie J-S: Degree",
 			Description: "Louie Jones-Strong's portfolio. Challenge to learn a system in blender in 24 Hours",
 			Url: "https://louie-jones-strong.github.io/uniDegree.html",
 			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/PortfolioProject/Thumbnail.png",
@@ -31,6 +31,13 @@
 			<div class="centeredFrame">
 				<h1 class="center reveal fromBottom">Degree</h1>
 				<h3 class="center reveal fromBottom">BSc Computer Science <br> (Machine Learning and Artificial Intelligence)</h3>
+				<%- include('../Components/QuickInfo', {
+					QuickInfoData: {
+						Grade: "On Track for: First Class",
+						Date: "October 2020",
+						TimeSpent: "3 Years"
+					}
+				}); %>
 				<p class="center reveal fromBottom"></p>
 
 				<!-- First year -->
@@ -38,6 +45,7 @@
 				<%- include('../Components/QuickInfo', {
 					QuickInfoData: {
 						Grade: "First Class",
+						Date: "October 2020"
 					}
 				}); %>
 				<p class="center reveal fromBottom">During my first year of university I continued to also work full time at
@@ -146,6 +154,12 @@
 
 				<!-- second year -->
 				<h2 class="center reveal Bottom">Year 2:</h2>
+				<%- include('../Components/QuickInfo', {
+					QuickInfoData: {
+						Grade: "On Track for: First Class",
+						Date: "October 2021"
+					}
+				}); %>
 				<p class="center reveal fromBottom">During my second year of university I continued to work at the same time,
 					but went to part time at
 					<a href="LSWB.html">TT Odyssey</a> (working 3 days a week).
@@ -249,10 +263,94 @@
 
 				<!-- 3rd year -->
 				<h2 class="center reveal Bottom">Year 3:</h2>
+				<%- include('../Components/QuickInfo', {
+					QuickInfoData: {
+						<!-- Grade: "On Track for: First Class", -->
+						Date: "October 2022"
+					}
+				}); %>
 				<p class="center reveal fromBottom">For my final year of university I stopped working to allow me to
 					spend my full time on my degree to help maintain a healthy life balance.</p>
 				<div class="cardHolder">
-
+					<!-- first term -->
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Databases and Advanced Data Techniques",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Machine Learning and Neural Networks",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Artificial Intelligence",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Intelligent Signal Processing",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<!-- second term -->
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Natural Language Processing",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Advanced Web Development",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Final",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
 				</div>
 			</div>
 
@@ -269,7 +367,7 @@
 				glare: true,
 				"max-glare": 0.3,
 				reverse: true,
-				scale: First Class,
+				scale: 1.1,
 			});
 		</script>
 	</div>

@@ -3,7 +3,7 @@ const Path = require('path');
 const Ejs = require('ejs');
 const Fs = require('fs');
 
-function RenderFile(templateFilePath, outputFilePath, pageName, pathToRoot)
+function RenderFile(templateFilePath, outputFilePath, pageName, subFolder)
 {
 	console.log(templateFilePath, "->", outputFilePath);
 
@@ -11,8 +11,8 @@ function RenderFile(templateFilePath, outputFilePath, pageName, pathToRoot)
 	Ejs.renderFile(templateFilePath,
 		{PageData: {
 			IsDevMode:IsDevMode,
-			PageName: pageName,
-			PathToRoot: pathToRoot
+			PageName: Path.join(subFolder.Folder, pageName),
+			PathToRoot: subFolder.PathToRoot
 		}},
 
 		function(renderError, builtHtml) {
@@ -80,7 +80,7 @@ function ConvertAllTemplates(subFolder)
 
 				let outputFilePath = Path.join(OutputFolder, outputFile);
 
-				RenderFile(templateFilePath, outputFilePath, pageName, subFolder.PathToRoot);
+				RenderFile(templateFilePath, outputFilePath, pageName, subFolder);
 			}
 
 		});

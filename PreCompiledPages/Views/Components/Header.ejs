@@ -1,31 +1,31 @@
 <link rel="stylesheet" type="text/css" href="<%= PageData.PathToRoot %>Public/StyleSheets/CommonStyles/HeaderStyle.css">
-
 <!-- used for light/dark mode icons -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
 <Header>
-	<a id="headerLogo" href="index.html">
+	<a id="headerLogo" href="/index.html">
 		<img src="<%= PageData.PathToRoot %>Public/Assets/Logo/Logo.png" alt="Logo">
 	</a>
-
 	<nav>
 		<% if (PageData.PageName == 'index') { %>
+			<a href="Degree/index.html"
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Degree
+			</a>
 			<a href="#WorkExperience"
-				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Work Experience</a>
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Work Experience
+			</a>
 			<a href="#PersonalProjects"
-				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Personal Projects</a>
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Personal Projects
+			</a>
 			<a href="#GameJams"
-				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Game Jams</a>
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Game Jams
+			</a>
 		<%}else{%>
-			<a href="index.html" id="homeNavLink"
-				class="navLink scaleOnFocus <% if (PageData.PageName == 'index') { %> selected<%}%>">Home</a>
-
+			<a href="/index.html" id="homeNavLink"
+				class="navLink scaleOnFocus <% if (PageData.PageName == 'index') { %> selected<%}%>">Home
+			</a>
 		<%}%>
-
 		<a href="CV.pdf" target="_blank" class="cvButton shaded sheen scaleOnFocus right">
 			CV <span class="material-icons">download</span>
 		</a>
 	</nav>
-
-
 </Header>

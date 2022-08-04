@@ -1,6 +1,4 @@
-
 <div class="quickInfoHolder delayRevealChildren">
-
 	<% if (QuickInfoData.TimeSpent) { %>
 		<!-- time spent -->
 		<div class="quickInfo">
@@ -8,7 +6,6 @@
 			<h5><%= QuickInfoData.TimeSpent %></h5>
 		</div>
 	<% }%>
-
 	<% if (QuickInfoData.Date) { %>
 		<!-- time spent -->
 		<div class="quickInfo">
@@ -16,7 +13,6 @@
 			<h5><%= QuickInfoData.Date %></h5>
 		</div>
 	<% }%>
-
 	<% if (QuickInfoData.NumPeople) { %>
 		<!-- number of people -->
 		<% if (QuickInfoData.NumPeople == 1) { %>
@@ -36,7 +32,6 @@
 			</div>
 		<% }%>
 	<% }%>
-
 	<% if (QuickInfoData.Awards) { %>
 		<!-- number of people -->
 		<% if (QuickInfoData.Awards == 1) { %>
@@ -56,7 +51,6 @@
 			</div>
 		<% }%>
 	<% }%>
-
 	<% if (QuickInfoData.Grade) { %>
 		<!-- time spent -->
 		<div class="quickInfo">
@@ -64,9 +58,7 @@
 			<h5><%= QuickInfoData.Grade %></h5>
 		</div>
 	<% }%>
-
 </div>
-
 <% if (QuickInfoData.Links) { %>
 
 	<div class="quickLinkHolder delayRevealChildren">
@@ -127,97 +119,80 @@
 		<% }%>
 	</div>
 <% }%>
-
 <!-- learning Aims -->
-
 <% if (QuickInfoData.Skills) { %>
 	<!-- skills used -->
 	<div class="quickSkills">
-
 		<% if (!QuickInfoData.Skills.HideTitle) { %>
 			<h4 class="center reveal fromLeft">Skills Used:</h4>
 		<% }%>
-
 		<div class="quickInfoHolder delayRevealChildren">
-
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedUnity) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/unity.svg" alt="unity Logo">
 					<h5>Unity</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCsharp) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/cSharp.svg" alt="C# Logo">
 					<h5>C#</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCPlusPlus) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/cpp.svg" alt="C++ Logo">
 					<h5>C++</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedPython) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/python.svg" alt="python Logo">
 					<h5>Python</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedJavaScript) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/js.svg" alt="JavaScript Logo">
 					<h5>Java Script</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedBlender) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/blender.svg" alt="Blender Logo">
 					<h5>Blender</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedSQL) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/sql.svg" alt="SQL Logo">
 					<h5>SQL</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedDotNet) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/dotNet.svg" alt=".Net Logo">
 					<h5>.Net</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedHTML) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/HTML.svg" alt="HTML Logo">
 					<h5>HTML</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedNodejs) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/nodejs.svg" alt="nodejs Logo">
 					<h5>node.JS</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCSS) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/css.svg" alt="CSS Logo">
 					<h5>CSS</h5>
 				</div>
 			<% }%>
-
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedGit) { %>
 				<div class="quickInfo reveal fromLeft">
 					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Git.svg" alt="Git Logo">
