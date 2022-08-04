@@ -57,6 +57,14 @@
 		<% }%>
 	<% }%>
 
+	<% if (QuickInfoData.Grade) { %>
+		<!-- time spent -->
+		<div class="quickInfo">
+			<i class="material-icons">grade</i>
+			<h5><%= QuickInfoData.Grade %></h5>
+		</div>
+	<% }%>
+
 </div>
 
 <% if (QuickInfoData.Links) { %>

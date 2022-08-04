@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: Uni Degree",
+			Description: "Louie Jones-Strong's portfolio. Challenge to learn a system in blender in 24 Hours",
+			Url: "https://louie-jones-strong.github.io/uniDegree.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/PortfolioProject/Thumbnail.png",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="Public/StyleSheets/OptinalComponents/CardHolder.css">
+</head>
+
+<body class="dark">
+
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('Components/AccessibilityHelper'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include('Components/Header'); %>
+
+			<hr class="gap">
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">Degree</h1>
+				<h2 class="center reveal fromBottom">BSc Computer Science <br> (Machine Learning and Artificial Intelligence)</h2>
+				<p class="center reveal fromBottom"></p>
+
+				<!-- First year -->
+				<h2 class="center reveal Bottom">Year 1:</h2>
+				<%- include('Components/QuickInfo', {
+					QuickInfoData: {
+						Grade: "1.1",
+					}
+				}); %>
+				<p class="center reveal fromBottom">During my first year of university I continued to also work full time at
+					<a href="LSWB.html">TT Odyssey</a>.</p>
+
+				<div class="cardHolder">
+					<!-- first term -->
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Introduction to Programming I",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Discrete Mathematics",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Fundamentals of Computer Science",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "How Computers Work",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "2.1",
+							}
+						}
+					}); %>
+					<!-- second term -->
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Introduction to Programming II",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Computational Mathematics",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Algorithms and Data Structures I",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Web Development",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+				</div>
+
+				<!-- second year -->
+				<h2 class="center reveal Bottom">Year 2:</h2>
+				<p class="center reveal fromBottom">During my second year of university I continued to work at the same time,
+					but went to part time at
+					<a href="LSWB.html">TT Odyssey</a> to help maintain a healthy work, uni and life balance.</p>
+				<div class="cardHolder">
+					<!-- first term -->
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Object Oriented Programming",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Software Design and Development",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Agile Software Projects",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Databases, Networks and the Web",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+								Grade: "1.1",
+							}
+						}
+					}); %>
+					<!-- second term -->
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Programming with Data",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Computer Security",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Graphics Programming",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+					<%- include('Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "",
+							Title: "Algorithms and Data Structures II",
+							Body: "",
+							Thumbnail: "",
+							QuickInfoData: {
+							}
+						}
+					}); %>
+				</div>
+
+				<!-- 3rd year -->
+				<h2 class="center reveal Bottom">Year 3:</h2>
+				<p class="center reveal fromBottom">For my final year of university I stopped working to allow me to
+					spend my full time on my degree to help maintain a healthy life balance.</p>
+				<div class="cardHolder">
+
+				</div>
+			</div>
+
+			<!-- Shared common footer -->
+			<%- include('Components/Footer'); %>
+		</div>
+
+		<script src="Public/JavaScript/AnimateOnAppear.js"></script>
+		<script src="Public/JavaScript/vanilla-tilt.js"></script>
+		<script>
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 10,
+				speed: 1000,
+				glare: true,
+				"max-glare": 0.3,
+				reverse: true,
+				scale: 1.1,
+			});
+		</script>
+	</div>
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+</body>
+</html>
