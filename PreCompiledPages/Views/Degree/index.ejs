@@ -3,7 +3,7 @@
 
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include('../Components/Head', {
 		PageData: PageData,
 		HeadData: {
 			Title: "Louie J-S: Uni Degree",
@@ -14,30 +14,30 @@
 	}); %>
 
 	<!-- extra links if needed -->
-	<link rel="stylesheet" type="text/css" href="Public/StyleSheets/OptinalComponents/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/StyleSheets/OptinalComponents/CardHolder.css">
 </head>
 
 <body class="dark">
 
 	<div class="content">
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include('../Components/AccessibilityHelper'); %>
 		<div class="background">
 			<!-- shared common header -->
-			<%- include('Components/Header'); %>
+			<%- include('../Components/Header'); %>
 
 			<hr class="gap">
 
 			<div class="centeredFrame">
 				<h1 class="center reveal fromBottom">Degree</h1>
-				<h2 class="center reveal fromBottom">BSc Computer Science <br> (Machine Learning and Artificial Intelligence)</h2>
+				<h3 class="center reveal fromBottom">BSc Computer Science <br> (Machine Learning and Artificial Intelligence)</h3>
 				<p class="center reveal fromBottom"></p>
 
 				<!-- First year -->
 				<h2 class="center reveal Bottom">Year 1:</h2>
-				<%- include('Components/QuickInfo', {
+				<%- include('../Components/QuickInfo', {
 					QuickInfoData: {
-						Grade: "1.1",
+						Grade: "First Class",
 					}
 				}); %>
 				<p class="center reveal fromBottom">During my first year of university I continued to also work full time at
@@ -45,7 +45,7 @@
 
 				<div class="cardHolder">
 					<!-- first term -->
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -53,11 +53,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -65,11 +65,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -77,11 +77,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -89,12 +89,12 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "2.1",
+								Grade: "Second class honours",
 							}
 						}
 					}); %>
 					<!-- second term -->
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -102,11 +102,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -114,11 +114,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -126,11 +126,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -138,7 +138,7 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
@@ -151,7 +151,7 @@
 					<a href="LSWB.html">TT Odyssey</a> to help maintain a healthy work, uni and life balance.</p>
 				<div class="cardHolder">
 					<!-- first term -->
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -159,11 +159,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -171,11 +171,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -183,11 +183,11 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -195,12 +195,12 @@
 							Body: "",
 							Thumbnail: "",
 							QuickInfoData: {
-								Grade: "1.1",
+								Grade: "First Class",
 							}
 						}
 					}); %>
 					<!-- second term -->
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -211,7 +211,7 @@
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -222,7 +222,7 @@
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -233,7 +233,7 @@
 							}
 						}
 					}); %>
-					<%- include('Components/Card', {
+					<%- include('../Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "",
@@ -256,11 +256,11 @@
 			</div>
 
 			<!-- Shared common footer -->
-			<%- include('Components/Footer'); %>
+			<%- include('../Components/Footer'); %>
 		</div>
 
-		<script src="Public/JavaScript/AnimateOnAppear.js"></script>
-		<script src="Public/JavaScript/vanilla-tilt.js"></script>
+		<script src="<%=PageData.PathToRoot%>Public/JavaScript/AnimateOnAppear.js"></script>
+		<script src="<%=PageData.PathToRoot%>Public/JavaScript/vanilla-tilt.js"></script>
 		<script>
 			VanillaTilt.init(document.querySelectorAll(".card"), {
 				max: 10,
@@ -268,12 +268,12 @@
 				glare: true,
 				"max-glare": 0.3,
 				reverse: true,
-				scale: 1.1,
+				scale: First Class,
 			});
 		</script>
 	</div>
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include('../Components/Loader'); %>
 </body>
 </html>

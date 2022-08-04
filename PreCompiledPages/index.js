@@ -3,7 +3,7 @@ const Path = require('path');
 const Ejs = require('ejs');
 const Fs = require('fs');
 
-function RenderFile(templateFilePath, outputFilePath, pageName)
+function RenderFile(templateFilePath, outputFilePath, pageName, pathToRoot)
 {
 	console.log(templateFilePath, "->", outputFilePath);
 
@@ -11,7 +11,8 @@ function RenderFile(templateFilePath, outputFilePath, pageName)
 	Ejs.renderFile(templateFilePath,
 		{PageData: {
 			IsDevMode:IsDevMode,
-			PageName: pageName
+			PageName: pageName,
+			PathToRoot: pathToRoot
 		}},
 
 		function(renderError, builtHtml) {
@@ -22,6 +23,7 @@ function RenderFile(templateFilePath, outputFilePath, pageName)
 			console.log(renderError);
 			return;
 		}
+
 
 		// write rendered page to output path
 		Fs.writeFile(outputFilePath, builtHtml, function (fileError) {
@@ -36,9 +38,19 @@ function RenderFile(templateFilePath, outputFilePath, pageName)
 	});
 }
 
-function ConvertAllTemplates()
+function TryMakeDir(path)
 {
-	Fs.readdir(TemplatesFolder, function (error, files) {
+	try {
+		Fs.mkdirSync(path)
+	} catch (err) {
+		if (err.code !== 'EEXIST') throw err
+	}
+}
+
+function ConvertAllTemplates(subFolder)
+{
+	let templatesFolder = Path.join(TemplatesFolder, subFolder.Folder);
+	Fs.readdir(templatesFolder, function (error, files) {
 		// error handling
 		if (error)
 		{
@@ -49,7 +61,7 @@ function ConvertAllTemplates()
 		//iterate over all sub files
 		files.forEach(function(fileName) {
 
-			let templateFilePath = Path.join(TemplatesFolder, fileName);
+			let templateFilePath = Path.join(templatesFolder, fileName);
 			let stat = Fs.statSync(templateFilePath);
 
 			// we can only render files not folders
@@ -62,9 +74,13 @@ function ConvertAllTemplates()
 					pageName = pageName.slice(0, lastDotIndex);
 				}
 				let outputFile = pageName + ".html";
+				outputFile = Path.join(subFolder.Folder, outputFile);
+
+				TryMakeDir(Path.join(OutputFolder, subFolder.Folder))
+
 				let outputFilePath = Path.join(OutputFolder, outputFile);
 
-				RenderFile(templateFilePath, outputFilePath, pageName);
+				RenderFile(templateFilePath, outputFilePath, pageName, subFolder.PathToRoot);
 			}
 
 		});
@@ -72,6 +88,7 @@ function ConvertAllTemplates()
 }
 
 const TemplatesFolder = "Views/"
+const SubFolders = [{Folder:"", PathToRoot:""}, {Folder:"Degree/", PathToRoot:"../"}]
 const OutputFolder = "../"
 let IsDevMode = true;
 
@@ -88,5 +105,7 @@ console.log("=".repeat(20));
 console.log();
 
 
-
-ConvertAllTemplates();
+for (let i = 0; i < SubFolders.length; i++)
+{
+	ConvertAllTemplates(SubFolders[i]);
+}
