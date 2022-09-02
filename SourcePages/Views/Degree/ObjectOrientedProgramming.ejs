@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('../Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: Degree: Object Oriented Programming",
+			Description: "Louie Jones-Strong's portfolio. Degree, Object Oriented Programming module",
+			Url: "https://louie-jones-strong.github.io/uniDegree.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/PortfolioProject/Thumbnail.png",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+</head>
+
+<body class="dark">
+
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('../Components/AccessibilityHelper'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include('../Components/Header'); %>
+
+			<hr class="gap">
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">Object Oriented Programming</h1>
+				<%- include('../Components/QuickInfo', {
+					QuickInfoData: {
+						Grade: "First Class",
+						Date: "October 2020 - 2023",
+						TimeSpent: "3 Years",
+						Skills: {
+							UsedGit: true,
+							UsedCPlusPlus: true
+						}
+					},
+				}); %>
+
+
+				<h2 class="center reveal fromBottom">Learning Outcomes</h2>
+				<il>
+					<li class="center reveal fromLeft">pluralisations</li>
+					<li class="center reveal fromLeft">Genders</li>
+					<li class="center reveal fromLeft">Punctuation</li>
+					<li class="center reveal fromLeft"><abbr title="Right To Left">RTL</abbr> / <abbr title="Left To Right">LTR</abbr></li>
+					<li class="center reveal fromLeft">Making the UI responsive to extreme string lengths</li>
+				</il>
+
+				<h2 class="center reveal fromBottom">Mid Term Project</h2>
+				<%- include('../Components/QuickInfo', {
+					QuickInfoData: {
+						TimeSpent: "Month",
+						Skills: {
+							UsedGit: true,
+							UsedCPlusPlus: true
+						},
+						NumPeople: 1,
+						Links: {
+							GithubLink: "https://github.com/louie-jones-strong/Uni-year-2-term-1/tree/master/Object-Oriented%20Programming/merklerex/Merklerex",
+						}
+					},
+				}); %>
+
+				<h2 class="center reveal fromBottom">Final Project</h2>
+				<%- include('../Components/QuickInfo', {
+					QuickInfoData: {
+						TimeSpent: "Month",
+						Skills: {
+							UsedGit: true,
+							UsedCPlusPlus: true
+						},
+						NumPeople: 1,
+						Links: {
+							GithubLink: "https://github.com/louie-jones-strong/Uni-year-2-term-1/tree/master/Object-Oriented%20Programming/Juce"
+						}
+					},
+				}); %>
+
+			</div>
+
+			<!-- Shared common footer -->
+			<%- include('../Components/Footer'); %>
+		</div>
+
+		<script src="<%=PageData.PathToRoot%>Public/JavaScript/AnimateOnAppear.js"></script>
+	</div>
+
+	<!-- Shared common loader -->
+	<%- include('../Components/Loader'); %>
+</body>
+</html>
