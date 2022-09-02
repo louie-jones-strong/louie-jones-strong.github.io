@@ -199,6 +199,18 @@
 					<h5>Git</h5>
 				</div>
 			<% }%>
+			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedObjectiveC) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Objective-C.svg" alt="Objective C Logo">
+					<h5>Objective C</h5>
+				</div>
+			<% }%>
+			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedJava) { %>
+				<div class="quickInfo reveal fromLeft">
+					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/java.svg" alt="Java Logo">
+					<h5>Java</h5>
+				</div>
+			<% }%>
 		</div>
 	</div>
 <% }%>
