@@ -7,11 +7,18 @@ function RenderFile(templateFilePath, outputFilePath, pageName, subFolder)
 {
 	console.log(templateFilePath, "->", outputFilePath);
 
+	let pageParent = subFolder.Folder;
+	if (pageName == "index")
+	{
+		pageParent = "";
+	}
+
 	//render selected file
 	Ejs.renderFile(templateFilePath,
 		{PageData: {
 			IsDevMode:IsDevMode,
 			PageName: Path.join(subFolder.Folder, pageName),
+			PageParent: pageParent,
 			PathToRoot: subFolder.PathToRoot
 		}},
 

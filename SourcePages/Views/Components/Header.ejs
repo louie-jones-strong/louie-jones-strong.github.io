@@ -7,7 +7,7 @@
 	</a>
 	<nav>
 		<% if (PageData.PageName == 'index') { %>
-			<a href="Degree/index.html"
+			<a href="/Degree/"
 				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Degree
 			</a>
 			<a href="#WorkExperience"
@@ -23,6 +23,11 @@
 			<a href="/index.html" id="homeNavLink"
 				class="navLink scaleOnFocus <% if (PageData.PageName == 'index') { %> selected<%}%>">Home
 			</a>
+			<% if (PageData.PageParent == 'Degree/' ) { %>
+				<a href="/Degree/"
+					class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Degree
+				</a>
+			<%}%>
 		<%}%>
 		<a href="CV.pdf" target="_blank" class="cvButton shaded sheen scaleOnFocus right">
 			CV <span class="material-icons">download</span>
