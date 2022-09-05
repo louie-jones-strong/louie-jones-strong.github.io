@@ -72,7 +72,6 @@
 				</button>
 			</form>
 		<% }%>
-
 		<% if (QuickInfoData.Links.ItchLink) { %>
 			<form action="<%= QuickInfoData.Links.ItchLink %>" target="_blank" class="quickInfo sheen">
 				<button>
@@ -81,7 +80,6 @@
 				</button>
 			</form>
 		<% }%>
-
 		<% if (QuickInfoData.Links.WebsiteLink) { %>
 			<form action="<%= QuickInfoData.Links.WebsiteLink %>" target="_blank" class="quickInfo sheen">
 				<button>
@@ -90,7 +88,6 @@
 				</button>
 			</form>
 		<% }%>
-
 		<% if (QuickInfoData.Links.InstagramLink) { %>
 			<form action="<%= QuickInfoData.Links.InstagramLink %>" target="_blank" class="quickInfo sheen">
 				<button>
@@ -99,21 +96,25 @@
 				</button>
 			</form>
 		<% }%>
-
 		<% if (QuickInfoData.Links.GooglePlayLink) { %>
-			<form action="<%= QuickInfoData.Links.GooglePlayLink %>" target="_blank" class="quickInfo sheen">
-				<button>
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/GooglePlayStore.svg" alt="Google Play Store Logo">
-					<h5>Google Play</h5>
-				</button>
-			</form>
+			<a href="<%= QuickInfoData.Links.GooglePlayLink %>" target="_blank" class="quickInfo sheen noUnderLine">
+				<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/GooglePlayStore.svg" alt="Google Play Store Logo">
+				<h5>Google Play</h5>
+			</a>
 		<% }%>
-
-		<% if (QuickInfoData.Links.AppleLink) { %>
+		<% if (QuickInfoData.Links.AppleArcadeLink) { %>
 			<form action="<%= QuickInfoData.Links.AppleLink %>" target="_blank" class="quickInfo sheen">
 				<button>
 					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Apple.svg" alt="Apple Logo">
 					<h5>Apple Arcade</h5>
+				</button>
+			</form>
+		<% }%>
+		<% if (QuickInfoData.Links.AppStoreLink) { %>
+			<form action="<%= QuickInfoData.Links.AppStoreLink %>" target="_blank" class="quickInfo sheen">
+				<button>
+					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Apple.svg" alt="Apple Logo">
+					<h5>App Store</h5>
 				</button>
 			</form>
 		<% }%>

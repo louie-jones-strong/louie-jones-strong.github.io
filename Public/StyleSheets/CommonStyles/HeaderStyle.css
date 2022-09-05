@@ -39,7 +39,9 @@ nav{
 	text-transform:uppercase;
 	color: var(--Colour-Text1);
 	font-size: 1.5rem;
-	text-shadow: 4px 2px black;
+
+
+	text-shadow: 4px 2px 8px var(--BackgroundColour);;
 }
 
 .navLink.selected,
