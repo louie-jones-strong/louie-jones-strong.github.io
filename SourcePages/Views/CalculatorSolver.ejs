@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: Calculator Solver",
+			Description: "Louie Jones-Strong's portfolio. Calculator: The Game Solver",
+			Url: "https://louie-jones-strong.github.io/CalculatorSolver.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/CalculatorSolver/Thumbnail.png",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="Public/StyleSheets/OptinalComponents/ZipperCard.css">
+</head>
+
+
+<body class="dark">
+
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include('Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+		<div class="centeredFrame">
+
+			<h1 class="center reveal fromBottom">Calculator: The Game Solver</h1>
+
+			<%- include('Components/QuickInfo', {
+				QuickInfoData: {
+					TimeSpent: "2 Months",
+					NumPeople: 1,
+					Links: {
+						GithubLink: "https://github.com/louie-jones-strong/CalculatorGame-Solver"
+					},
+					Skills: {
+						UsedPython: true
+					}
+				}
+			}); %>
+
+
+			<h2 class="center reveal fromBottom">Calculator: The Game</h2>
+			<p class="reveal fromLeft center">
+				"Calculator: The Game" is a mobile puzzle game,
+				where the aim is to modify a starting number using maths operations to get to a target number.
+				<br> Check out the game with the links below:</p>
+
+			<%- include('Components/QuickInfo', {
+				QuickInfoData: {
+					Links: {
+						GooglePlayLink: "https://play.google.com/store/apps/details?id=com.sm.calculateme",
+						AppStoreLink: "https://apps.apple.com/us/app/calculator-the-game/id1243055750"
+					}
+				}
+			}); %>
+
+			<h2 class="center reveal fromBottom">Solver</h2>
+			<p class="reveal fromLeft center">I wanted to create a simple python app that will calculate the correct solution to each puzzle.</p>
+
+			<div class="ZipperCardsHolder glass centeredFrame">
+				<div class="ZipperCard shaded glass reveal fromRight">
+					<img src="Public/Assets/CalculatorSolver/Tests.png"  class="expandable" alt="">
+					<div>
+						<h3>Units Tests</h3>
+						<P>I took this project as an opportunity to learn how to setup unit tests in python.</P>
+						<P>As there are a large number of puzzles and operations in the game,
+							I found these tests very useful to spot edge case issues.</P>
+
+					</div>
+				</div>
+				<div class="ZipperCard shaded glass reveal fromLeft">
+					<div>
+						<h3>UX Polishing</h3>
+						<p>
+							I started by creating a terminal program that could solve inputted puzzles. <br>
+							But I soon expanded it to save and load the puzzles to json, to allow for quick back testing. <br>
+							I then continue to improve on it to add a graphic user interface, similar to the game, to allow to easier inputting of the puzzles.
+						</p>
+					</div>
+					<img src="Public/Assets/CalculatorSolver/level_64.png"  class="expandable" alt="">
+				</div>
+			</div>
+
+		</div>
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+		<script src="Public/JavaScript/AnimateOnAppear.js"></script>
+	</div>
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+</body>
+</html>
