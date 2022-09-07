@@ -7,4 +7,4 @@ link: https://louie-jones-strong.github.io/
  - Install Node: https://nodejs.org/en/download/
  - `cd SourcePages`
  - `npm install`
- - `CompilePages_Dev.bat`
+ - `BuildPages_Dev.bat`
