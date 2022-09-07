@@ -1,38 +1,15 @@
 /* cardHolder */
 .cardHolder{
-	display: grid;
-}
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 
-/*Mobile-------------------------------------*/
-@media only screen and (max-width: 570px){
-	.cardHolder{
-		grid-template-columns: 1fr;
-	}
 }
-
-/*Tablet-------------------------------------*/
-@media only screen and (min-width: 571px) and (max-width: 1500px){
-	.cardHolder{
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1501px) and (max-width: 1900px){
-	.cardHolder{
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-}
-
-@media only screen and (min-width: 1901px){
-	.cardHolder{
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-}
-
 
 /* card */
 .card{
+	width: 100%;
+	max-width: 350px;
 	padding-bottom: 2.5em;
 	margin: 1.5em;
 	margin-bottom: 1em;

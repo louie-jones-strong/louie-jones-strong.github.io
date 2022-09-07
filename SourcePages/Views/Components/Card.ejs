@@ -19,7 +19,9 @@
 
 		<h3><%= CardData.Title %></h3>
 		<p><%= CardData.Body %></p>
-		<%- include('QuickInfo', CardData); %>
+		<% if (CardData.QuickInfoData) { %>
+			<%- include('QuickInfo', CardData); %>
+		<% }%>
 
 	<% }%>
 

@@ -42,7 +42,7 @@
 .quickLinkHolder .quickInfo{
 	border-bottom-left-radius: 0px;
 	border-top-right-radius: 0px;
-	border-width: 5px;
+	border-width: 0.2em;
 	transform: scale(1);
 	transition: all 0.2s;
 	border-color: var(--ColourMain);
