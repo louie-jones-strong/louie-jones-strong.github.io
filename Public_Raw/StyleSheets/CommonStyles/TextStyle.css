@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@400;500;700;900&display=swap');
+
+
+p, h1, h2, h3, h4, h5{
+	max-width: 60ch;
+	padding-left:  clamp(0px, 0.25em, 30px);
+	padding-right: clamp(0px, 0.25em, 30px);
+}
+
+* :not(abbr, u){
+	font-size: 1rem;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+
+	color: var(--Colour-Text4);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+
+	line-height: 125%;
+}
+
+h5{
+	font-size: 1rem;
+	text-transform: capitalize;
+	color: var(--Colour-Text2);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
+
+h4{
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	color: var(--Colour-Text3);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+h3{
+	font-size: 2rem;
+	text-transform: capitalize;
+	color: var(--Colour-Text3);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+
+h2{
+	font-size: 3rem;
+	text-transform: capitalize;
+	color: var(--Colour-Text2);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
+
+h1{
+	/* center Text */
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	font-size: 4rem;
+	text-transform: capitalize;
+	color: var(--Colour-Text1);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+h1, h2, h3, h4{
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	line-height: 95%;
+}
+
+
+/* text decoration */
+
+/* underlines */
+abbr, u, a{
+	text-decoration-color: var(--ColourAccent);
+	text-decoration-thickness: 0.1em;
+
+	transition: text-decoration-color ease 0.25s;
+}
+
+.noUnderLine{
+	text-decoration: none;
+
+}
+
+abbr:hover, u:hover, a:hover,
+abbr:focus, u:focus, a:focus{
+	text-decoration-color: var(--ColourMain);
+}
+
+/* Root Font Sizes + Scaling */
+
+:root{
+	font-size: calc(var(--BaseFontSize) * var(--FontScale));
+	--FontScale: 1;
+	--BaseFontSize: 20px;
+}
+
+@media only screen and (min-width: 1351px) and (max-width: 2000px){
+	:root{
+		--BaseFontSize: 19px;
+	}
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1350px){
+	:root{
+		--BaseFontSize: 18px;
+	}
+}
+
+
+@media only screen and (min-width: 651px) and (max-width: 1000px){
+	:root{
+		--BaseFontSize: 16px;
+	}
+}
+
+
+@media only screen and (min-width: 351px) and (max-width: 650px){
+
+	:root{
+		--BaseFontSize: 14px;
+	}
+}
+
+
+@media only screen and (min-width: 251px) and (max-width: 350px){
+	:root{
+		--BaseFontSize: 12px;
+	}
+}
+
+
+@media only screen and (min-width: 201px) and (max-width: 250px){
+	:root{
+		--BaseFontSize: 10px;
+	}
+}
+
+
+@media only screen and (max-width: 200px){
+	:root{
+		--BaseFontSize: 8px;
+	}
+}

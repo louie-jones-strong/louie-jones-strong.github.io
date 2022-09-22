@@ -1,0 +1,84 @@
+
+.ZipperCardsHolder{
+	align-items: center;
+	overflow: hidden;
+}
+
+/* container */
+.ZipperCard{
+
+	--FarSidePadding: 25%;
+
+	border-radius: 5em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	margin-top: 4.25em;
+	margin-bottom: 3.25em;
+	overflow: hidden;
+
+	text-align: left;
+	transition: all 0.5s ease-out;
+
+}
+
+/*Mobile and Tablet-------------------------------------*/
+@media only screen and (max-width: 700px){
+	.ZipperCard{
+		grid-template-columns: 1fr;
+		--FarSidePadding: 0px;
+		border-radius: 0px;
+		margin-top: 5em;
+		margin-bottom: 5em;
+	}
+}
+
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 701px) and (max-width: 1200px){
+	.ZipperCard{
+		grid-template-columns: 1fr 1fr;
+		--FarSidePadding: 0px;
+		border-radius: 0px;
+		margin-top: 5em;
+		margin-bottom: 5em;
+	}
+}
+
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1201px) and (max-width: 1600px){
+	.ZipperCard{
+		grid-template-columns: 1fr 1fr;
+		--FarSidePadding: 10%;
+	}
+}
+
+@media only screen and (min-width: 1601px){
+	.ZipperCard{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* fromLeft */
+.ZipperCard.fromLeft{
+	margin-right: var(--FarSidePadding);
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	border-left: 0;
+}
+
+/* fromRight */
+.ZipperCard.fromRight{
+	margin-left: var(--FarSidePadding);
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-right: 0;
+}
+
+/* Content */
+.ZipperCard > div,
+.ZipperCard > div,
+.ZipperCard > div{
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}

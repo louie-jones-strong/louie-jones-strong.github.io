@@ -1,2 +1,2 @@
-node ConvertImages.js
-node BuildPages.js
+node BuildPages.js Compress
+node CompressAssets.js

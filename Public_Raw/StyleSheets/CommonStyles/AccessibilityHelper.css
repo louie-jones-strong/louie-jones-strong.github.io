@@ -1,0 +1,132 @@
+body{
+	--Colour-Accessibility: hsl(225, 95%, 60%);
+	--Colour-Accessibility-Contrast: white;
+}
+
+body.greyScale{
+	filter: saturate(0%);
+}
+
+#accessibilityHelper{
+	z-index: 1001;
+	--ToggleSize: 60px;
+	--MenuWidth: 10em;
+
+	position: fixed;
+	top: calc(50vh - (var(--ToggleSize) / 2));
+	right: calc(-10px - var(--MenuWidth));
+
+	transition: right ease-in-out 0.3s;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.accessibilityText{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	color: black;
+}
+
+#accessibilityHelper.open{
+	right: 0;
+}
+
+/* toggle */
+.accessibilityToggle{
+
+	width: calc(var(--ToggleSize) * 1.1 * var(--Scale));
+	height: calc(var(--ToggleSize)* var(--Scale));
+	background-color: var(--Colour-Accessibility);
+	color: var(--Colour-Accessibility-Contrast);
+
+	border-top-left-radius: 33%;
+	border-bottom-left-radius: 33%;
+	border: 2px solid var(--Colour-Accessibility-Contrast);
+	border-right: none;
+	padding: 10px;
+	padding-right: calc(10px + var(--ToggleSize) * 0.1);;
+	cursor: pointer;
+
+
+	transition: all 0.2s;
+	--Scale: 1;
+}
+
+.accessibilityToggle:hover,
+.accessibilityToggle:focus{
+	border-width: 4;
+	--Scale: 1.2;
+}
+
+.accessibilityToggle > img{
+	width: 100%;
+	height: 100%;
+	filter: saturate(0%) brightness(0%) invert(100%);
+}
+
+
+/* menu */
+.accessibilityMenu{
+	border: 3px solid var(--Colour-Accessibility);
+	border-right: none;
+	width: calc( var(--MenuWidth) - 0px);
+
+	border-bottom-left-radius: 1.5em;
+	border-bottom: none;
+
+	background-color: white;
+	text-align: center;
+	overflow: hidden;
+}
+
+.accessibilityMenu > button{
+	text-align: left;
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	margin-block: 0.5em;
+
+	transition: background-color 0.35s;
+}
+
+.accessibilityMenu > button:hover,
+.accessibilityMenu > button:focus{
+	background-color: var(--Colour-Accessibility);
+}
+
+.accessibilityMenu > button:hover > .accessibilityText,
+.accessibilityMenu > button:focus > .accessibilityText,
+.accessibilityMenu > button:hover.accessibilityText,
+.accessibilityMenu > button:focus.accessibilityText,
+.accessibilityMenu > button:hover > div > .accessibilityText,
+.accessibilityMenu > button:focus > div > .accessibilityText{
+	color: var(--Colour-Accessibility-Contrast);
+}
+
+
+.accessibilityFeedback{
+	background-color: var(--Colour-Accessibility);
+	color: var(--Colour-Accessibility-Contrast);
+	padding-top: 0.3em;
+	padding-bottom: 0.75em;
+}
+
+.accessibilityFeedback > .accessibilityText{
+	background-color: var(--Colour-Accessibility);
+	color: var(--Colour-Accessibility-Contrast);
+}
+
+.hide{
+	display: none;
+}
+
+
+@media only screen and (hover: none) and (pointer: coarse){
+
+	#accessibilityHelper{
+		display: none;
+	}
+
+}

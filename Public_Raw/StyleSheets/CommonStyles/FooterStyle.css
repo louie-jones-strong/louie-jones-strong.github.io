@@ -1,0 +1,33 @@
+footer{
+	width:100%;
+	padding-top: 100px;
+	overflow-x: hidden;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.ContactLinkHolder a{
+	text-decoration: none;
+}
+
+
+.brandLogo{
+	width: 2.5em;
+	height: 2.5em;
+	padding: 0.5em;
+	margin: 1em;
+	transition: 0.3s;
+	filter: var(--Colour-Contrast-Filter)
+}
+
+.brandLogo:hover,
+.brandLogo:focus{
+	transform: scale(1.25);
+}
+
+#copyRight{
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-left: 1em;
+	margin: 0px;
+}

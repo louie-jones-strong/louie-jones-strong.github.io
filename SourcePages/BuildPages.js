@@ -31,9 +31,17 @@ function RenderFile(templateFilePath, outputFilePath, pageName, subFolder)
 			return;
 		}
 
+		if (Compress)
+		{
+			html = CompressHtml(builtHtml)
+		}
+		else
+		{
+			html = builtHtml
+		}
 
 		// write rendered page to output path
-		Fs.writeFile(outputFilePath, builtHtml, function (fileError) {
+		Fs.writeFile(outputFilePath, html, function (fileError) {
 
 			// error handling
 			if (fileError)
@@ -44,6 +52,21 @@ function RenderFile(templateFilePath, outputFilePath, pageName, subFolder)
 		});
 	});
 }
+
+function CompressHtml(html)
+{
+	// remove comments
+	data = data.replace(/<!--(.*?)-->/g,'');
+
+	// remove new lines
+	html = html.replace(/[\r\n]/gm, '');
+
+	// remove tabs
+	html = html.replace(/\t/g,'');
+	return html
+}
+
+
 
 function TryMakeDir(path)
 {
@@ -98,6 +121,7 @@ const TemplatesFolder = "Views/"
 const SubFolders = [{Folder:"", PathToRoot:""}, {Folder:"Degree/", PathToRoot:"../"}]
 const OutputFolder = "../"
 let IsDevMode = true;
+let Compress = false;
 
 console.log("=".repeat(20));
 
@@ -106,7 +130,14 @@ if (process.argv.includes("Release"))
 	IsDevMode = false;
 	console.log("Building pages for Release");
 }
+
+if (process.argv.includes("Compress"))
+{
+	Compress = true;
+}
+
 console.log("IsDevMode: ", IsDevMode);
+console.log("Compress: ", Compress);
 
 console.log("=".repeat(20));
 console.log();

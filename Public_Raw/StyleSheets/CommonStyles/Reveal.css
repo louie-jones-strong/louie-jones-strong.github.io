@@ -1,0 +1,89 @@
+.reveal{
+	transition: all 1s ease-out;
+}
+
+.reveal.hidden{
+	opacity: 0;
+}
+
+.reveal.hidden.fromLeft{
+	transform: translateX(-15vw);
+}
+
+.reveal.hidden.fromRight{
+	transform: translateX(15vw);
+}
+
+.reveal.hidden.fromBottom{
+	transform: translateY(5vh);
+}
+
+.reveal.hidden.fromTop{
+	transform: translateY(-5vh);
+}
+
+.reveal.shown{
+	opacity: 1;
+}
+
+/* normal speed */
+.delayRevealChildren > *:nth-child(2 ) {transition-delay: calc(calc(2  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(3 ) {transition-delay: calc(calc(3  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(4 ) {transition-delay: calc(calc(4  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(5 ) {transition-delay: calc(calc(5  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(6 ) {transition-delay: calc(calc(6  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(7 ) {transition-delay: calc(calc(7  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(8 ) {transition-delay: calc(calc(8  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(9 ) {transition-delay: calc(calc(9  - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(10) {transition-delay: calc(calc(10 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(11) {transition-delay: calc(calc(11 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(12) {transition-delay: calc(calc(12 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(13) {transition-delay: calc(calc(13 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(14) {transition-delay: calc(calc(14 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(15) {transition-delay: calc(calc(15 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(16) {transition-delay: calc(calc(16 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(17) {transition-delay: calc(calc(17 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(18) {transition-delay: calc(calc(18 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(19) {transition-delay: calc(calc(19 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(20) {transition-delay: calc(calc(20 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(21) {transition-delay: calc(calc(21 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(22) {transition-delay: calc(calc(22 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(23) {transition-delay: calc(calc(23 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(24) {transition-delay: calc(calc(24 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(25) {transition-delay: calc(calc(25 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(26) {transition-delay: calc(calc(26 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(27) {transition-delay: calc(calc(27 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(28) {transition-delay: calc(calc(28 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(29) {transition-delay: calc(calc(29 - 1) * 0.1s);}
+.delayRevealChildren > *:nth-child(30) {transition-delay: calc(calc(30 - 1) * 0.1s);}
+
+/* slower version */
+.delayRevealChildren.slow > *:nth-child(2 ) {transition-delay: calc(calc(2  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(3 ) {transition-delay: calc(calc(3  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(4 ) {transition-delay: calc(calc(4  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(5 ) {transition-delay: calc(calc(5  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(6 ) {transition-delay: calc(calc(6  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(7 ) {transition-delay: calc(calc(7  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(8 ) {transition-delay: calc(calc(8  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(9 ) {transition-delay: calc(calc(9  - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(10) {transition-delay: calc(calc(10 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(11) {transition-delay: calc(calc(11 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(12) {transition-delay: calc(calc(12 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(13) {transition-delay: calc(calc(13 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(14) {transition-delay: calc(calc(14 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(15) {transition-delay: calc(calc(15 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(16) {transition-delay: calc(calc(16 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(17) {transition-delay: calc(calc(17 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(18) {transition-delay: calc(calc(18 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(19) {transition-delay: calc(calc(19 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(20) {transition-delay: calc(calc(20 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(21) {transition-delay: calc(calc(21 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(22) {transition-delay: calc(calc(22 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(23) {transition-delay: calc(calc(23 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(24) {transition-delay: calc(calc(24 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(25) {transition-delay: calc(calc(25 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(26) {transition-delay: calc(calc(26 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(27) {transition-delay: calc(calc(27 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(28) {transition-delay: calc(calc(28 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(29) {transition-delay: calc(calc(29 - 1) * 0.2s);}
+.delayRevealChildren.slow > *:nth-child(30) {transition-delay: calc(calc(30 - 1) * 0.2s);}

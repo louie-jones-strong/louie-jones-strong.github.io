@@ -1,0 +1,83 @@
+/* slide Holder */
+
+.slide-holder{
+	position: relative;
+	overflow: hidden;
+	height: fit-content;
+	text-align: center;
+	margin: 0px;
+}
+
+/* slide */
+.slide{
+	object-fit: cover;
+	width: 100%;
+	height: fit-content;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+
+	max-height: 80vh;
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+
+/* slide  Content */
+.slide > img,
+.slide > picture,
+.slide > video{
+	max-height: 80vh;
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+
+/* slide Transition states */
+.active{
+	opacity: 1;
+	position:unset;
+}
+
+
+.inactive{
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+/* slide dot */
+.slide-dot{
+	height: 15px;
+	width: 15px;
+	border-radius: 100%;
+	display: inline-block;
+	transition-duration: 0.5s;
+}
+
+.activeDot{
+	background-color: var(--ColourAccent);
+}
+
+
+.inactiveDot{
+	background-color: var(--DarkenBackground);
+}
+
+
+/* slide captions */
+.slide-caption{
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	margin-right: 50%;
+	background-color: var(--DarkenBackground);
+	border-radius: 10px;
+	text-align: left;
+}
+
+.slide-caption h3{
+	color: var(--LightText);
+}
+.slide-caption p{
+	color: var(--LightText);
+}
