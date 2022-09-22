@@ -110,7 +110,11 @@
 				<script src="Public/JavaScript/Carousel.js"></script>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<img src="Public/Assets/EPQ/Graphs/TimeToLearn.png"  class="expandable" alt="A graph showing the time taken to learn">
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/EPQ/Graphs/TimeToLearn",
+					ClassList: "expandable",
+					Alt:"A graph showing the time taken to learn"
+				}}); %>
 				<div>
 					<h3>Time To Learn</h3>
 					<table style="width:100%">

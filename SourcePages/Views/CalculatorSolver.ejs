@@ -67,7 +67,11 @@
 
 			<div class="ZipperCardsHolder glass centeredFrame">
 				<div class="ZipperCard shaded glass reveal fromRight">
-					<img src="Public/Assets/CalculatorSolver/Tests.png"  class="expandable" alt="">
+					<%- include('Components/Picture', {ImgData: {
+						Path:"Public/Assets/CalculatorSolver/Tests",
+						ClassList: "expandable",
+						Alt:""
+					}}); %>
 					<div>
 						<h3>Units Tests</h3>
 						<P>I took this project as an opportunity to learn how to setup unit tests in python.</P>
@@ -85,7 +89,11 @@
 							I then continue to improve on it to add a graphic user interface, similar to the game, to allow to easier inputting of the puzzles.
 						</p>
 					</div>
-					<img src="Public/Assets/CalculatorSolver/level_64.png"  class="expandable" alt="">
+					<%- include('Components/Picture', {ImgData: {
+						Path:"Public/Assets/CalculatorSolver/level_64",
+						ClassList: "expandable",
+						Alt:""
+					}}); %>
 				</div>
 			</div>
 

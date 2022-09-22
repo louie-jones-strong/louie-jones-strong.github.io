@@ -33,13 +33,21 @@
 		<!-- cover image slide show -->
 		<div class="slide-holder">
 			<div class="slide">
-				<img src="Public/Assets/BlenderProjects/Images/Pier.png" alt="A render of brighton pier and beach">
+				<%- include('Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/Pier",
+					ClassList: "",
+					Alt:"A render of brighton pier and beach"
+				}}); %>
 				<div class="slide-caption">
 					<h4>Brighton Pier</h4>
 				</div>
 			</div>
 			<div class="slide">
-				<img src="Public/Assets/BlenderProjects/Images/blender_34.png" alt="A render of a Desktop Background">
+				<%- include('Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/blender_34",
+					ClassList: "",
+					Alt:"A render of a Desktop Background"
+				}}); %>
 				<div class="slide-caption">
 					<h4>8K Desktop Background</h4>
 				</div>
