@@ -82,10 +82,11 @@
 
 		<div class="ZipperCardsHolder glass centeredFrame">
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<picture class="expandable">
-					<source srcset="Public/Assets/BlenderProjects/Images/Pier.png" media="(min-width: 481px)">
-					<img src="Public/Assets/BlenderProjects/Images/Pier.png" alt="A render of brighton pier and beach">
-				</picture>
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/Pier",
+					ClassList: "expandable",
+					Alt:"A render of brighton pier and beach"
+				}}); %>
 				<div>
 					<h3>Brighton Pier</h3>
 					<p>For this render I was to attempting to recreate a dream I had, and to practice composition.</p>
@@ -124,11 +125,11 @@
 					<h3>Cup of Tea</h3>
 					<p>My goal in this render was to learn how to model complex shapes. I also created some other tea-set models. </p>
 				</div>
-				<picture class="expandable">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_5.png" media="(min-width: 961px)">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_5.png" media="(min-width: 481px)">
-					<img src="Public/Assets/BlenderProjects/Images/blender_5.png" alt="A render of a cup of tea">
-				</picture>
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/blender_5",
+					ClassList: "expandable",
+					Alt:"A render of a cup of tea"
+				}}); %>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
 				<video autoplay muted loop class="expandable">
@@ -157,11 +158,11 @@
 				</video>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<picture class="expandable">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_13.png" media="(min-width: 961px)">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_13.png" media="(min-width: 481px)">
-					<img src="Public/Assets/BlenderProjects/Images/blender_13.png" alt="A render of some glass objects">
-				</picture>
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/blender_13",
+					ClassList: "expandable",
+					Alt:"A render of some glass objects"
+				}}); %>
 				<div>
 					<h3>Glass</h3>
 					<p>My goal in this render was to learn about glass shaders. </p>
@@ -178,11 +179,11 @@
 				</video>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<picture class="expandable">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_16.png" media="(min-width: 961px)">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_16.png" media="(min-width: 481px)">
-					<img src="Public/Assets/BlenderProjects/Images/blender_16.png" alt="A render of a Planet Generator">
-				</picture>
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/blender_16",
+					ClassList: "expandable",
+					Alt:"A render of a Planet Generator"
+				}}); %>
 				<div>
 					<h3>Procedural Planet Generator</h3>
 					<p>In this render I learnt about: </p>
@@ -206,11 +207,11 @@
 				</video>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<picture class="expandable">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_25.png" media="(min-width: 961px)">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_25.png" media="(min-width: 481px)">
-					<img src="Public/Assets/BlenderProjects/Images/blender_25.png" alt="A render of a Brighton Bus">
-				</picture>
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/blender_25",
+					ClassList: "expandable",
+					Alt:"A render of a Brighton Bus"
+				}}); %>
 				<div>
 					<h3>Brighton Bus</h3>
 					<p>In this render I was trying to learn how to model a large number of assets in the limited amount of time. </p>
@@ -227,11 +228,11 @@
 				</video>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<picture class="expandable">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_32.png" media="(min-width: 961px)">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_32.png" media="(min-width: 481px)">
-					<img src="Public/Assets/BlenderProjects/Images/blender_32.png" alt="A render of the Greek Parthenon">
-				</picture>
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/blender_32",
+					ClassList: "expandable",
+					Alt:"A render of the Greek Parthenon"
+				}}); %>
 				<div>
 					<h3>Greek Parthenon</h3>
 					<p>In this render my goal was to learn about non destructive modelling by using modifiers. </p>
@@ -248,11 +249,11 @@
 				</video>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<picture class="expandable">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_34.png" media="(min-width: 961px)">
-					<source srcset="Public/Assets/BlenderProjects/Images/blender_34.png" media="(min-width: 481px)">
-					<img src="Public/Assets/BlenderProjects/Images/blender_34.png" alt="A render of a Desktop Background">
-				</picture>
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/BlenderProjects/Images/blender_34",
+					ClassList: "expandable",
+					Alt:"A render of a Desktop Background"
+				}}); %>
 				<div>
 					<h3>8K Desktop Background</h3>
 					<p>In this render I learnt about optimizing render times.</p>
