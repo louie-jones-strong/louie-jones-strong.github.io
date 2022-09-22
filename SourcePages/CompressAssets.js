@@ -214,7 +214,7 @@ function CompressImages(inputPath, outputPath)
 const StartFolder = "../Public_Raw/"
 const OutputFolder = "../Public/"
 
-const ImageSizes = [256,512,1024,2048]
+const ImageSizes = [128, 256,512,1024,2048]
 const ImageFormats = [".webp", ".png"]
 
 Compress = true;
