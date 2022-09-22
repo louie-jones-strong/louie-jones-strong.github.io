@@ -175,7 +175,7 @@ const StartFolder = "../Public_Raw/"
 const OutputFolder = "../Public/"
 
 const ImageSizes = []
-const ImageFormats = [".webp", ".jpg"]
+const ImageFormats = [".webp", ".png"]
 
 Compress = true;
 

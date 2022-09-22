@@ -56,7 +56,7 @@ function RenderFile(templateFilePath, outputFilePath, pageName, subFolder)
 function CompressHtml(html)
 {
 	// remove comments
-	data = data.replace(/<!--(.*?)-->/g,'');
+	html = html.replace(/<!--(.*?)-->/g,'');
 
 	// remove new lines
 	html = html.replace(/[\r\n]/gm, '');
