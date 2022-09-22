@@ -7,7 +7,12 @@
 
 	<% if (CardData.Thumbnail) { %>
 	<div class="cardImage">
-		<img src="<%= CardData.Thumbnail %>" alt="<%= CardData.Title %>">
+		<%- include('Picture', {ImgData: {
+			Path:CardData.Thumbnail,
+			ClassList: "",
+			Alt: CardData.Title
+		}}); %>
+		<!-- <img src="<%= CardData.Thumbnail %>" alt="<%= CardData.Title %>"> -->
 
 		<%- include('QuickInfo', CardData); %>
 

@@ -9,7 +9,7 @@
 			Title: "Louie Jones-Strong",
 			Description: "Louie Jones-Strong's portfolio. I am a Brighton based hard working, creative, programmer. I work full time as a programmer at TT Odyssey and full time as machine learning student",
 			Url: "https://louie-jones-strong.github.io/",
-			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/PortfolioProject/Thumbnail.png",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/PortfolioProject/Thumbnail",
 		}
 	}); %>
 
@@ -25,11 +25,11 @@
 
 		<div class="cover parallaxHolder">
 			<div class="parallaxObj">
-				<!-- <video autoplay muted loop class="expandable">
-					<source src="Public\Assets\IndexCover\DeskIntro.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video> -->
-				<img src="Public\Assets\IndexCover\output.png" alt="Cover photo">
+				<%- include('Components/Picture', {ImgData: {
+					Path:"Public/Assets/IndexCover/output",
+					ClassList: "",
+					Alt:"Cover photo"
+				}}); %>
 			</div>
 			<div class="coverOverlay glass">
 				<h1 id="cover_name" class=" reveal fromLeft" >Louie <wbr> Jones&#8209;Strong</h1>
@@ -76,7 +76,7 @@
 							Link: "LSWB.html",
 							Title: "LEGO® Star Wars™ Battles",
 							Body: "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
-							Thumbnail: "Public/Assets/LSWB/Thumbnail.png",
+							Thumbnail: "Public/Assets/LSWB/Thumbnail",
 							QuickInfoData: {
 								Date: "April 2018 - September 2023",
 							<!-- NumPeople: "Avg ~25" -->
@@ -98,7 +98,7 @@
 							Link: "BlenderProjects.html",
 							Title: "24 Hour Blender Challenge",
 							Body: "I challenged myself to learn different Blender skills, giving myself only 24 hours for each one.",
-							Thumbnail: "Public/Assets/BlenderProjects/Images/blender_6_480x270.png",
+							Thumbnail: "Public/Assets/BlenderProjects/Images/blender_6",
 							QuickInfoData: {
 								TimeSpent: "Day Each",
 								NumPeople: 1,
@@ -114,7 +114,7 @@
 							Link: "EggHuntProject.html",
 							Title: "Office Egg Hunt",
 							Body: "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
-							Thumbnail: "Public/Assets/EggHuntGame/thumbnail.png",
+							Thumbnail: "Public/Assets/EggHuntGame/thumbnail",
 							QuickInfoData: {
 								TimeSpent: "2 Weeks",
 								NumPeople: 1,
@@ -131,7 +131,7 @@
 							Link: "EPQProject.html",
 							Title: "EPQ",
 							Body: "My college EPQ dissertation on multi-technique supervised machine learning",
-							Thumbnail: "Public/Assets/EPQ/thumbnail.png",
+							Thumbnail: "Public/Assets/EPQ/thumbnail",
 							QuickInfoData: {
 								TimeSpent: "6 months",
 								NumPeople: 1
@@ -144,7 +144,7 @@
 							Link: "CubePuzzleProject.html",
 							Title: "Alhambra 4D Cube Puzzle",
 							Body: "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
-							Thumbnail: "Public/Assets/CubePuzzle/Thumbnail.jpg",
+							Thumbnail: "Public/Assets/CubePuzzle/Thumbnail",
 							QuickInfoData: {
 								TimeSpent: "3 Weeks",
 								NumPeople: 1
@@ -157,7 +157,7 @@
 							Link: "Portfolio.html",
 							Title: "My Portfolio",
 							Body: "How I made this website.",
-							Thumbnail: "Public/Assets/PortfolioProject/Thumbnail.png",
+							Thumbnail: "Public/Assets/PortfolioProject/Thumbnail",
 							QuickInfoData: {
 								TimeSpent: "Month",
 								NumPeople: 1,
@@ -173,7 +173,7 @@
 							Link: "Minesweeper.html",
 							Title: "Mine Sweeper",
 							Body: "To prepare for my University courses I taught myself JS, HTML and CSS.",
-							Thumbnail: "Public/Assets/MineSweeper/Thumbnail.png",
+							Thumbnail: "Public/Assets/MineSweeper/Thumbnail",
 							QuickInfoData: {
 								TimeSpent: "1 Week",
 								NumPeople: 1,
@@ -190,7 +190,7 @@
 							Link: "CalculatorSolver.html",
 							Title: "Calculator: The Game Solver",
 							Body: "",
-							Thumbnail: "Public/Assets/CalculatorSolver/Thumbnail.png",
+							Thumbnail: "Public/Assets/CalculatorSolver/Thumbnail",
 							QuickInfoData: {
 								TimeSpent: "2 Months",
 								NumPeople: 1,
@@ -213,7 +213,7 @@
 							Link: "https://tatltuae.itch.io/monstermash",
 							Title: "Monster Mash",
 							Body: "",
-							Thumbnail: "Public/Assets/Monster Mash/Thumbnail.png",
+							Thumbnail: "Public/Assets/MonsterMash/Thumbnail",
 							QuickInfoData: {
 								TimeSpent: "1 Week",
 								NumPeople: 4,
@@ -230,7 +230,7 @@
 							Link: "https://tatltuae.itch.io/looking-for-eden",
 							Title: "Looking For Eden",
 							Body: "",
-							Thumbnail: "Public/Assets/Looking For Eden/Thumbnail.png",
+							Thumbnail: "Public/Assets/LookingForEden/Thumbnail",
 							QuickInfoData: {
 								TimeSpent: "48 hours",
 								NumPeople: 3,
@@ -247,7 +247,7 @@
 							Link: "https://louie-js.itch.io/rougeclicker",
 							Title: "Rogue Clicker",
 							Body: "",
-							Thumbnail: "Public/Assets/RogueClicker/Thumbnail.png",
+							Thumbnail: "Public/Assets/RogueClicker/Thumbnail",
 							QuickInfoData: {
 								TimeSpent: "1 Week",
 								NumPeople: 1,

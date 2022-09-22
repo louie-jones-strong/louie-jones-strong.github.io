@@ -107,6 +107,7 @@ body.light{
 
 .cover > .parallaxObj > img,
 .cover > .parallaxObj > picture,
+.cover > .parallaxObj > picture > img,
 .cover > .parallaxObj > video{
 	height: 100%;
 	object-fit: cover;

@@ -2,7 +2,14 @@
 <!-- used for light/dark mode icons -->
 <Header>
 	<a id="headerLogo" href="/">
-		<img src="<%= PageData.PathToRoot %>Public/Assets/Logo/Logo.png" alt="Logo">
+		<!-- <img src="<%= PageData.PathToRoot %>Public/Assets/Logo/Logo.png" alt="Logo"> -->
+
+		<%- include('Picture', {ImgData: {
+			Path:PageData.PathToRoot + "Public/Assets/Logo/Logo",
+			ClassList: "",
+			Alt:"Cover photo"
+		}}); %>
+
 	</a>
 	<nav>
 		<% if (PageData.PageName == 'index') { %>
