@@ -10,7 +10,8 @@
 		<%- include('Picture', {ImgData: {
 			Path:CardData.Thumbnail,
 			ClassList: "",
-			Alt: CardData.Title
+			Alt: CardData.Title,
+			Sizes: "(max-width: 350px)"
 		}}); %>
 
 		<%- include('QuickInfo', CardData); %>

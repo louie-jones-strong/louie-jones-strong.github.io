@@ -1,7 +1,26 @@
 <picture
 	<% if (ImgData.ClassList) { %> class="<%= ImgData.ClassList %>" <% }%>
-	<% if (ImgData.style) { %> style="<%= ImgData.Style %>" <% }%>
+	<% if (ImgData.Style) { %> style="<%= ImgData.Style %>" <% }%>
 	>
-	<source srcset="<%= ImgData.Path %>.webp" type="image/webp">
-	<img src="<%= ImgData.Path %>.png" alt="<%= ImgData.Alt %>">
+
+
+	<source srcset="
+		<%= ImgData.Path %>_256.webp 256w,
+		<%= ImgData.Path %>_512.webp 512w,
+		<%= ImgData.Path %>_1024.webp 1024w,
+		<%= ImgData.Path %>_2048.webp 2048w,
+		<%= ImgData.Path %>_max.webp 2500w"
+	type="image/webp"
+	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
+
+	<source srcset="
+		<%= ImgData.Path %>_256.png 256w,
+		<%= ImgData.Path %>_512.png 512w,
+		<%= ImgData.Path %>_1024.png 1024w,
+		<%= ImgData.Path %>_2048.png 2048w,
+		<%= ImgData.Path %>_max.png 2500w"
+	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
+
+	<img src="<%= ImgData.Path %>.png" alt="<%= ImgData.Alt %>"
+	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 </picture>

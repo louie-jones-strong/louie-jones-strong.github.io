@@ -136,45 +136,85 @@ function CompressImages(inputPath, outputPath)
 {
 	let noExtensionPath = RemoveExtension(outputPath)
 
-	console.log(inputPath);
-	for (let f = 0; f < ImageFormats.length; f++)
+	sharp(inputPath)
+		.metadata()
+		.then(function(metadata)
 	{
-		for (let s = 0; s < ImageSizes.length; s++)
-		{
-			let outputPath = noExtensionPath + "_" + ImageSizes[s] + ImageFormats[f];
 
+		console.log(inputPath + " " + metadata.width);
+
+		for (let f = 0; f < ImageFormats.length; f++)
+		{
+
+
+			let outputPath = noExtensionPath + "_max" + ImageFormats[f];
 			console.log("  ->  ", outputPath);
 
 			sharp(inputPath)
-				.resize(ImageSizes[s])
 				.toFile(outputPath, (error, info) =>
-				{
-					if (error)
-					{
-						console.log("Image Convert Error: " + error)
-					}
-				});
-		}
-
-		let outputPath = noExtensionPath + ImageFormats[f];
-		console.log("  ->  ", outputPath);
-
-		sharp(inputPath)
-			.toFile(outputPath, (error, info) =>
 			{
 				if (error)
 				{
 					console.log("Image Convert Error: " + error)
 				}
 			});
-	}
+
+			width = metadata.width
+
+			outputRezIndex = ImageSizes.length - 1
+			while (width < ImageSizes[outputRezIndex])
+			{
+				let outputPath = noExtensionPath + "_" + ImageSizes[outputRezIndex] + ImageFormats[f];
+				console.log("  ->  ", outputPath);
+
+				sharp(inputPath)
+					.toFile(outputPath, (error, info) =>
+				{
+					if (error)
+					{
+						console.log("Image Convert Error: " + error)
+					}
+				});
+
+				outputRezIndex -= 1;
+			}
+
+
+			newWidth = width;
+			while (outputRezIndex >= 0)
+			{
+				if (newWidth < ImageSizes[outputRezIndex])
+				{
+					outputPath = noExtensionPath + "_" + ImageSizes[outputRezIndex] + ImageFormats[f];
+					console.log("  ->  ", outputPath);
+					sharp(inputPath)
+						.resize(width)
+						.toFile(outputPath, (error, info) =>
+					{
+						if (error)
+						{
+							console.log("Image Convert Error: " + error)
+						}
+					});
+
+					width = newWidth;
+					outputRezIndex -= 1;
+				}
+				else
+				{
+					width = newWidth;
+					newWidth = Math.round(newWidth * 0.5);
+				}
+			}
+		}
+	});
 }
 
 
 const StartFolder = "../Public_Raw/"
 const OutputFolder = "../Public/"
 
-const ImageSizes = []
+const ImageSizes = [256,512,1024,2048]
 const ImageFormats = [".webp", ".png"]
 
 Compress = true;
@@ -190,4 +230,6 @@ console.log("Compress: ", Compress);
 
 console.log("=".repeat(20));
 
+
+Fs.rmSync(OutputFolder, { recursive: true, force: true });
 HandleFolder(StartFolder, OutputFolder);
