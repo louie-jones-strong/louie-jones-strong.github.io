@@ -147,17 +147,17 @@ function CompressImages(inputPath, outputPath)
 		{
 
 
-			let outputPath = noExtensionPath + "_max" + ImageFormats[f];
-			console.log("  ->  ", outputPath);
+			// let outputPath = noExtensionPath + "_max" + ImageFormats[f];
+			// console.log("  ->  ", outputPath);
 
-			sharp(inputPath)
-				.toFile(outputPath, (error, info) =>
-			{
-				if (error)
-				{
-					console.log("Image Convert Error: " + error)
-				}
-			});
+			// sharp(inputPath)
+			// 	.toFile(outputPath, (error, info) =>
+			// {
+			// 	if (error)
+			// 	{
+			// 		console.log("Image Convert Error: " + error)
+			// 	}
+			// });
 
 			width = metadata.width
 
