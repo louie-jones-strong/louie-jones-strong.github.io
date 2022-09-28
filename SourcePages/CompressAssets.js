@@ -218,10 +218,16 @@ const ImageSizes = [128, 256,512,1024,2048]
 const ImageFormats = [".webp", ".png"]
 
 Compress = true;
+CleanCopy = false
 
 if (process.argv.includes("NoCompress"))
 {
 	Compress = false;
+}
+
+if (process.argv.includes("CleanCopy"))
+{
+	CleanCopy = true;
 }
 
 console.log("=".repeat(20));
@@ -230,6 +236,9 @@ console.log("Compress: ", Compress);
 
 console.log("=".repeat(20));
 
+if (CleanCopy)
+{
+	Fs.rmSync(OutputFolder, { recursive: true, force: true });
+}
 
-Fs.rmSync(OutputFolder, { recursive: true, force: true });
 HandleFolder(StartFolder, OutputFolder);

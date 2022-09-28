@@ -19,7 +19,9 @@
 
 <body class="dark">
 
-	<div class="content">
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+	<div class="content hide">
 		<!-- shared common header -->
 		<%- include('Components/AccessibilityHelper'); %>
 
@@ -293,7 +295,5 @@
 		</script>
 	</div>
 
-	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
 </body>
 </html>
