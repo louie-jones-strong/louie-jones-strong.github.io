@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: English Tutor",
+			Description: "Louie Jones-Strong's portfolio.",
+			Url: "https://louie-jones-strong.github.io/EnglishTutor.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/EnglishTutor/Thumbnail",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+	<div class="content background">
+		<!-- shared common header -->
+		<%- include('Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+
+
+		<div class="centeredFrame">
+			<h1 class="center center reveal fromBottom">LEGO® Star Wars™ Battles</h1>
+
+			<%- include('Components/QuickInfo', {
+				QuickInfoData: {
+					Date: "April 2018 - September 2019",
+				}
+			}); %>
+
+
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+
+		<script src="Public/JavaScript/AnimateOnAppear.js"></script>
+	</div>
+</body>
+</html>
