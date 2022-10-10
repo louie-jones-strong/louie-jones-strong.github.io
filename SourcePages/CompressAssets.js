@@ -25,11 +25,11 @@ function HandleFolder(inputPath, outputPath)
 			let stat = Fs.statSync(itemInputPath);
 			if (stat.isFile())
 			{
-				if (itemInputPath.endsWith('.png') || itemInputPath.endsWith('.jpg'))
+				if (itemInputPath.endsWith('.png') || itemInputPath.endsWith('.jpg')) // Images
 				{
 					CompressImages(itemInputPath, itemOutputPath)
 				}
-				else if (Compress && itemInputPath.endsWith('.js'))
+				else if (Compress && itemInputPath.endsWith('.js')) // JS
 				{
 					TextFiles(itemInputPath, itemOutputPath, function(data)
 					{
@@ -45,7 +45,7 @@ function HandleFolder(inputPath, outputPath)
 						return data;
 					});
 				}
-				else if (Compress && itemInputPath.endsWith('.css'))
+				else if (Compress && itemInputPath.endsWith('.css')) // CSS
 				{
 					TextFiles(itemInputPath, itemOutputPath, function(data)
 					{
@@ -63,18 +63,23 @@ function HandleFolder(inputPath, outputPath)
 						return data;
 					});
 				}
-				else
+				else // others just copy
 				{
-					Fs.copyFile(itemInputPath, itemOutputPath, (err) => {
-						if (error)
-						{
-							console.log("File copy error: " + error)
-						}
-						else
-						{
-							console.log(itemInputPath + " -> ", itemOutputPath);
-						}
-					});
+					if(!ShouldSkipFile(itemOutputPath))
+					{
+
+						Fs.copyFile(itemInputPath, itemOutputPath, (err) => {
+							if (error)
+							{
+								console.log("File copy error: " + error)
+							}
+							else
+							{
+								console.log(itemInputPath + " -> ", itemOutputPath);
+							}
+						});
+
+					}
 				}
 			}
 			else
@@ -98,6 +103,11 @@ function RemoveExtension(path)
 
 function TextFiles(inputPath, outputPath, compressorFunc)
 {
+	if(ShouldSkipFile(outputPath))
+	{
+		return;
+	}
+
 	Fs.readFile(inputPath, 'utf8', function(fileError, data)
 	{
 		if (fileError)
@@ -141,23 +151,10 @@ function CompressImages(inputPath, outputPath)
 		.then(function(metadata)
 	{
 
-		console.log(inputPath + " " + metadata.width);
+		// console.log(inputPath + " " + metadata.width);
 
 		for (let f = 0; f < ImageFormats.length; f++)
 		{
-
-
-			// let outputPath = noExtensionPath + "_max" + ImageFormats[f];
-			// console.log("  ->  ", outputPath);
-
-			// sharp(inputPath)
-			// 	.toFile(outputPath, (error, info) =>
-			// {
-			// 	if (error)
-			// 	{
-			// 		console.log("Image Convert Error: " + error)
-			// 	}
-			// });
 
 			width = metadata.width
 
@@ -165,16 +162,20 @@ function CompressImages(inputPath, outputPath)
 			while (width < ImageSizes[outputRezIndex])
 			{
 				let outputPath = noExtensionPath + "_" + ImageSizes[outputRezIndex] + ImageFormats[f];
-				console.log("  ->  ", outputPath);
 
-				sharp(inputPath)
-					.toFile(outputPath, (error, info) =>
+				if(!ShouldSkipFile(outputPath))
 				{
-					if (error)
+					console.log("  ->  ", outputPath);
+
+					sharp(inputPath)
+						.toFile(outputPath, (error, info) =>
 					{
-						console.log("Image Convert Error: " + error)
-					}
-				});
+						if (error)
+						{
+							console.log("Image Convert Error: " + error)
+						}
+					});
+				}
 
 				outputRezIndex -= 1;
 			}
@@ -186,17 +187,21 @@ function CompressImages(inputPath, outputPath)
 				if (newWidth < ImageSizes[outputRezIndex])
 				{
 					outputPath = noExtensionPath + "_" + ImageSizes[outputRezIndex] + ImageFormats[f];
-					console.log("  ->  ", outputPath);
-					sharp(inputPath)
-						.resize(width)
-						.toFile(outputPath, (error, info) =>
-					{
-						if (error)
-						{
-							console.log("Image Convert Error: " + error)
-						}
-					});
 
+					if(!ShouldSkipFile(outputPath))
+					{
+						console.log("  ->  ", outputPath);
+						sharp(inputPath)
+							.resize(width)
+							.toFile(outputPath, (error, info) =>
+						{
+							if (error)
+							{
+								console.log("Image Convert Error: " + error)
+							}
+						});
+
+					}
 					width = newWidth;
 					outputRezIndex -= 1;
 				}
@@ -211,6 +216,11 @@ function CompressImages(inputPath, outputPath)
 }
 
 
+function ShouldSkipFile(path)
+{
+	return Fs.existsSync(path) && OnlyCopyIfNew;
+}
+
 const StartFolder = "../Public_Raw/"
 const OutputFolder = "../Public/"
 
@@ -218,7 +228,8 @@ const ImageSizes = [128, 256,512,1024,2048]
 const ImageFormats = [".webp", ".png"]
 
 Compress = true;
-CleanCopy = false
+CleanCopy = false;
+OnlyCopyIfNew = false;
 
 if (process.argv.includes("NoCompress"))
 {
@@ -230,9 +241,16 @@ if (process.argv.includes("CleanCopy"))
 	CleanCopy = true;
 }
 
+if (process.argv.includes("OnlyCopyIfNew"))
+{
+	OnlyCopyIfNew = true;
+}
+
 console.log("=".repeat(20));
 
 console.log("Compress: ", Compress);
+console.log("CleanCopy: ", CleanCopy);
+console.log("OnlyCopyIfNew: ", OnlyCopyIfNew);
 
 console.log("=".repeat(20));
 
