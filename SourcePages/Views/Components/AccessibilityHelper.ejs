@@ -17,7 +17,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <div id="accessibilityHelper" class="">
 	<button class="accessibilityToggle shaded" onclick="ToggleAccessibilityMenu()">
-		<img src="<%= PageData.PathToRoot %>Public/Assets/Icons/accessibilityIcon.svg" alt="">
+		<%- include('Picture', {ImgData: {
+			Path:PageData.PathToRoot + "Public/Assets/Icons/accessibilityIcon",
+			ClassList: "",
+			Alt: "",
+			IsSvg: true
+		}}); %>
 	</button>
 	<div class="accessibilityMenu">
 		<h4 class="accessibilityText">Accessibility</h4>

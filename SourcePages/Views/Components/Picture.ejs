@@ -1,3 +1,17 @@
+
+<% if (!ImgData.LoadingType) {
+	ImgData.LoadingType = "lazy"
+}%>
+
+<% if (ImgData.IsSvg) { %>
+
+<img src="<%= ImgData.Path %>.svg" alt="<%= ImgData.Alt %>" loading=<%= ImgData.LoadingType %>
+	<% if (ImgData.ClassList) { %> class="<%= ImgData.ClassList %>" <% }%>
+	<% if (ImgData.Style) { %> style="<%= ImgData.Style %>" <% }%>
+>
+
+<% }else{%>
+
 <picture
 	<% if (ImgData.ClassList) { %> class="<%= ImgData.ClassList %>" <% }%>
 	<% if (ImgData.Style) { %> style="<%= ImgData.Style %>" <% }%>
@@ -14,13 +28,15 @@
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 
 	<source srcset="
-		<%= ImgData.Path %>_128.webp 128w,
+		<%= ImgData.Path %>_128.png 128w,
 		<%= ImgData.Path %>_256.png 256w,
 		<%= ImgData.Path %>_512.png 512w,
 		<%= ImgData.Path %>_1024.png 1024w,
 		<%= ImgData.Path %>_2048.png 2048w"
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 
-	<img src="<%= ImgData.Path %>.png" alt="<%= ImgData.Alt %>"
+	<img src="<%= ImgData.Path %>.png" alt="<%= ImgData.Alt %>" loading=<%= ImgData.LoadingType %>
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 </picture>
+
+<% }%>

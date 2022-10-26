@@ -67,7 +67,12 @@
 		<% if (QuickInfoData.Links.GithubLink) { %>
 			<form action="<%= QuickInfoData.Links.GithubLink %>" target="_blank" class="quickInfo sheen">
 				<button>
-					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/github.svg" alt="Github Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/github",
+						ClassList: "icon greyScale",
+						Alt: "Github Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Code</h5>
 				</button>
 			</form>
@@ -75,7 +80,12 @@
 		<% if (QuickInfoData.Links.ItchLink) { %>
 			<form action="<%= QuickInfoData.Links.ItchLink %>" target="_blank" class="quickInfo sheen">
 				<button>
-					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/itch-dot-io.svg" alt="Itch Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/itch-dot-io",
+						ClassList: "icon greyScale",
+						Alt: "Itch Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Play</h5>
 				</button>
 			</form>
@@ -83,7 +93,12 @@
 		<% if (QuickInfoData.Links.WebsiteLink) { %>
 			<form action="<%= QuickInfoData.Links.WebsiteLink %>" target="_blank" class="quickInfo sheen">
 				<button>
-					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/website.svg">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/website",
+						ClassList: "icon greyScale",
+						Alt: "",
+						IsSvg: true
+					}}); %>
 					<h5>Website</h5>
 				</button>
 			</form>
@@ -91,21 +106,36 @@
 		<% if (QuickInfoData.Links.InstagramLink) { %>
 			<form action="<%= QuickInfoData.Links.InstagramLink %>" target="_blank" class="quickInfo sheen">
 				<button>
-					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Instagram.svg" alt="Instagram Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/Instagram",
+						ClassList: "icon greyScale",
+						Alt: "Instagram Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Instagram</h5>
 				</button>
 			</form>
 		<% }%>
 		<% if (QuickInfoData.Links.GooglePlayLink) { %>
 			<a href="<%= QuickInfoData.Links.GooglePlayLink %>" target="_blank" class="quickInfo sheen noUnderLine">
-				<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/GooglePlayStore.svg" alt="Google Play Store Logo">
+				<%- include('Picture', {ImgData: {
+					Path:PageData.PathToRoot + "Public/Assets/Icons/GooglePlayStore",
+					ClassList: "icon greyScale",
+					Alt: "Google Play Store Logo",
+					IsSvg: true
+				}}); %>
 				<h5>Google Play</h5>
 			</a>
 		<% }%>
 		<% if (QuickInfoData.Links.AppleArcadeLink) { %>
 			<form action="<%= QuickInfoData.Links.AppleLink %>" target="_blank" class="quickInfo sheen">
 				<button>
-					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Apple.svg" alt="Apple Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/Apple",
+						ClassList: "icon greyScale",
+						Alt: "Apple Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Apple Arcade</h5>
 				</button>
 			</form>
@@ -113,7 +143,12 @@
 		<% if (QuickInfoData.Links.AppStoreLink) { %>
 			<form action="<%= QuickInfoData.Links.AppStoreLink %>" target="_blank" class="quickInfo sheen">
 				<button>
-					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Apple.svg" alt="Apple Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/Apple",
+						ClassList: "icon greyScale",
+						Alt: "Apple Logo",
+						IsSvg: true
+					}}); %>
 					<h5>App Store</h5>
 				</button>
 			</form>
@@ -130,85 +165,155 @@
 		<div class="quickInfoHolder delayRevealChildren">
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedUnity) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon greyScale" src="<%=PageData.PathToRoot%>Public/Assets/Icons/unity.svg" alt="unity Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/unity",
+						ClassList: "icon",
+						Alt: "unity Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Unity</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCsharp) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/cSharp.svg" alt="C# Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/cSharp",
+						ClassList: "icon",
+						Alt: "C# Logo",
+						IsSvg: true
+					}}); %>
 					<h5>C#</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCPlusPlus) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/cpp.svg" alt="C++ Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/cpp",
+						ClassList: "icon",
+						Alt: "C++ Logo",
+						IsSvg: true
+					}}); %>
 					<h5>C++</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedPython) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/python.svg" alt="python Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/python",
+						ClassList: "icon",
+						Alt: "python Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Python</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedJavaScript) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/js.svg" alt="JavaScript Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/js",
+						ClassList: "icon",
+						Alt: "JavaScript Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Java Script</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedBlender) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/blender.svg" alt="Blender Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/blender",
+						ClassList: "icon",
+						Alt: "Blender Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Blender</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedSQL) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/sql.svg" alt="SQL Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/sql",
+						ClassList: "icon",
+						Alt: "SQL Logo",
+						IsSvg: true
+					}}); %>
 					<h5>SQL</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedDotNet) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/dotNet.svg" alt=".Net Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/dotNet",
+						ClassList: "icon",
+						Alt: ".Net Logo",
+						IsSvg: true
+					}}); %>
 					<h5>.Net</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedHTML) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/HTML.svg" alt="HTML Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/HTML",
+						ClassList: "icon",
+						Alt: "HTML Logo",
+						IsSvg: true
+					}}); %>
 					<h5>HTML</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedNodejs) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/nodejs.svg" alt="nodejs Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/nodejs",
+						ClassList: "icon",
+						Alt: "nodejs Logo",
+						IsSvg: true
+					}}); %>
 					<h5>node.JS</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCSS) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/css.svg" alt="CSS Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/css",
+						ClassList: "icon",
+						Alt: "CSS Logo",
+						IsSvg: true
+					}}); %>
 					<h5>CSS</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedGit) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Git.svg" alt="Git Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/Git",
+						ClassList: "icon",
+						Alt: "Git Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Git</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedObjectiveC) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/Objective-C.svg" alt="Objective C Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/Objective-C",
+						ClassList: "icon",
+						Alt: "Objective C Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Objective C</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedJava) { %>
 				<div class="quickInfo reveal fromLeft">
-					<img class="icon" src="<%=PageData.PathToRoot%>Public/Assets/Icons/java.svg" alt="Java Logo">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/java",
+						ClassList: "icon",
+						Alt: "Java Logo",
+						IsSvg: true
+					}}); %>
 					<h5>Java</h5>
 				</div>
 			<% }%>
