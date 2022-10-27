@@ -10,7 +10,7 @@ body.greyScale{
 #accessibilityHelper{
 	z-index: 1001;
 	--ToggleSize: 60px;
-	--MenuWidth: 10em;
+	--MenuWidth: 12em;
 
 	position: fixed;
 	top: calc(50vh - (var(--ToggleSize) / 2));
