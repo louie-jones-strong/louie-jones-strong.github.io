@@ -387,6 +387,10 @@ ul{
 	width: max-content;
 }
 
+ol > li{
+	padding-bottom: 0.2em;
+}
+
 ul li::before{
 	content: "\25A0";  /* Add content: \25A0 is the CSS Code/unicode for a SQUARE bullet */
 	color: var(--ColourAccent);
