@@ -89,20 +89,24 @@ function HandleFile(itemInputPath, itemOutputPath)
 		itemOutputPath = RemoveExtension(itemOutputPath)
 		itemOutputPath += ".css"
 
-		let result = Sass.compile(itemInputPath);
-		Fs.writeFile(itemOutputPath, result.css, function (fileError)
+		if(!ShouldSkipFile(itemOutputPath))
 		{
 
-			// error handling
-			if (fileError)
+			let result = Sass.compile(itemInputPath);
+			Fs.writeFile(itemOutputPath, result.css, function (fileError)
 			{
-				console.log("Write File: " + fileError);
-				return;
-			}
-			// console.log(itemInputPath + " -> ", itemOutputPath);
 
-			HandleFile(itemOutputPath, itemOutputPath)
-		});
+				// error handling
+				if (fileError)
+				{
+					console.log("Write File: " + fileError);
+					return;
+				}
+				// console.log(itemInputPath + " -> ", itemOutputPath);
+
+				HandleFile(itemOutputPath, itemOutputPath)
+			});
+		}
 
 	}
 	else // others just copy
