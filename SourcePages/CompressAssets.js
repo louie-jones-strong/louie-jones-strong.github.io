@@ -104,7 +104,10 @@ function HandleFile(itemInputPath, itemOutputPath)
 				}
 				// console.log(itemInputPath + " -> ", itemOutputPath);
 
-				HandleFile(itemOutputPath, itemOutputPath)
+				if (Compress)
+				{
+					HandleFile(itemOutputPath, itemOutputPath)
+				}
 			});
 		}
 
