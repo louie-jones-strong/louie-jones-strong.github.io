@@ -1,10 +1,16 @@
 const Path = require('path');
 const Fs = require('fs');
-const sharp = require('sharp');
+const Sharp = require('sharp');
+const Sass = require('sass');
 
 
 function HandleFolder(inputPath, outputPath)
 {
+	if (FoldersToSkip.includes(inputPath))
+	{
+		console.log("Skip folder: " + inputPath)
+		return;
+	}
 	TryMakeDir(outputPath)
 	Fs.readdir(inputPath, function (error, items)
 	{
@@ -25,62 +31,7 @@ function HandleFolder(inputPath, outputPath)
 			let stat = Fs.statSync(itemInputPath);
 			if (stat.isFile())
 			{
-				if (itemInputPath.endsWith('.png') || itemInputPath.endsWith('.jpg')) // Images
-				{
-					CompressImages(itemInputPath, itemOutputPath)
-				}
-				else if (Compress && itemInputPath.endsWith('.js')) // JS
-				{
-					TextFiles(itemInputPath, itemOutputPath, function(data)
-					{
-						// remove comments
-						data = data.replace(/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g,'');
-
-						// remove new lines
-						data = data.replace(/[\r\n]/gm, ' ');
-
-						// remove tabs
-						data = data.replace(/\t/g,'');
-
-						return data;
-					});
-				}
-				else if (Compress && itemInputPath.endsWith('.css')) // CSS
-				{
-					TextFiles(itemInputPath, itemOutputPath, function(data)
-					{
-						// remove comments
-						data = data.replace(/\/\*.+?\*\//g,'');
-
-						// remove new lines
-						data = data.replace(/[\r\n]/g, '');
-
-						// remove tabs
-						data = data.replace(/\t/g,'');
-
-						// remove spaces
-						data = data.replace(' ','');
-						return data;
-					});
-				}
-				else // others just copy
-				{
-					if(!ShouldSkipFile(itemOutputPath))
-					{
-
-						Fs.copyFile(itemInputPath, itemOutputPath, (err) => {
-							if (error)
-							{
-								console.log("File copy error: " + error)
-							}
-							else
-							{
-								console.log(itemInputPath + " -> ", itemOutputPath);
-							}
-						});
-
-					}
-				}
+				HandleFile(itemInputPath, itemOutputPath)
 			}
 			else
 			{
@@ -88,6 +39,90 @@ function HandleFolder(inputPath, outputPath)
 			}
 		});
 	});
+}
+
+function HandleFile(itemInputPath, itemOutputPath)
+{
+	if (itemInputPath.endsWith('.png') || itemInputPath.endsWith('.jpg')) // Images
+	{
+		CompressImages(itemInputPath, itemOutputPath)
+	}
+	else if (Compress && itemInputPath.endsWith('.js')) // JS
+	{
+		TextFiles(itemInputPath, itemOutputPath, function(data)
+		{
+			// remove comments
+			data = data.replace(/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g,'');
+
+			// remove new lines
+			data = data.replace(/[\r\n]/gm, ' ');
+
+			// remove tabs
+			data = data.replace(/\t/g,'');
+
+			return data;
+		});
+	}
+	else if (Compress && itemInputPath.endsWith('.css')) // CSS
+	{
+		TextFiles(itemInputPath, itemOutputPath, function(data)
+		{
+			// remove comments
+			data = data.replace(/\/\*.+?\*\//g,'');
+
+			// remove new lines
+			data = data.replace(/[\r\n]/g, '');
+
+			// remove tabs
+			data = data.replace(/\t/g,'');
+
+			// remove spaces
+			data = data.replace(' ','');
+			return data;
+		});
+	}
+	else if (itemInputPath.endsWith('.scss')) // scss
+	{
+		// let tempCssOutput = RemoveExtension(itemInputPath)
+		// tempCssOutput += ".css"
+
+		itemOutputPath = RemoveExtension(itemOutputPath)
+		itemOutputPath += ".css"
+
+		let result = Sass.compile(itemInputPath);
+		Fs.writeFile(itemOutputPath, result.css, function (fileError)
+		{
+
+			// error handling
+			if (fileError)
+			{
+				console.log("Write File: " + fileError);
+				return;
+			}
+			// console.log(itemInputPath + " -> ", itemOutputPath);
+
+			HandleFile(itemOutputPath, itemOutputPath)
+		});
+
+	}
+	else // others just copy
+	{
+		if(!ShouldSkipFile(itemOutputPath))
+		{
+
+			Fs.copyFile(itemInputPath, itemOutputPath, (error) => {
+				if (error)
+				{
+					console.log("File copy error: " + error)
+				}
+				else
+				{
+					// console.log(itemInputPath + " -> ", itemOutputPath);
+				}
+			});
+
+		}
+	}
 }
 
 function RemoveExtension(path)
@@ -128,7 +163,7 @@ function TextFiles(inputPath, outputPath, compressorFunc)
 				return;
 			}
 
-			console.log(inputPath + " -> ", outputPath);
+			// console.log(inputPath + " -> ", outputPath);
 		});
 	});
 }
@@ -146,7 +181,7 @@ function CompressImages(inputPath, outputPath)
 {
 	let noExtensionPath = RemoveExtension(outputPath)
 
-	sharp(inputPath)
+	Sharp(inputPath)
 		.metadata()
 		.then(function(metadata)
 	{
@@ -165,9 +200,9 @@ function CompressImages(inputPath, outputPath)
 
 				if(!ShouldSkipFile(outputPath))
 				{
-					console.log("  ->  ", outputPath);
+					// console.log("  ->  ", outputPath);
 
-					sharp(inputPath)
+					Sharp(inputPath)
 						.toFile(outputPath, (error, info) =>
 					{
 						if (error)
@@ -190,8 +225,8 @@ function CompressImages(inputPath, outputPath)
 
 					if(!ShouldSkipFile(outputPath))
 					{
-						console.log("  ->  ", outputPath);
-						sharp(inputPath)
+						// console.log("  ->  ", outputPath);
+						Sharp(inputPath)
 							.resize(width)
 							.toFile(outputPath, (error, info) =>
 						{
@@ -223,6 +258,10 @@ function ShouldSkipFile(path)
 
 const StartFolder = "../Public_Raw/"
 const OutputFolder = "../Public/"
+
+const FoldersToSkip = [Path.join(StartFolder, "css", "Shared")]
+
+
 
 const ImageSizes = [128, 256,512,1024,2048]
 const ImageFormats = [".webp", ".png"]
