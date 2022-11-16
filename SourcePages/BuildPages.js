@@ -94,6 +94,8 @@ function ConvertAllTemplates(subFolder)
 			let templateFilePath = Path.join(templatesFolder, fileName);
 			let stat = Fs.statSync(templateFilePath);
 
+			TryMakeDir(Path.join(OutputFolder, subFolder.Folder))
+
 			// we can only render files not folders
 			if (stat.isFile())
 			{
@@ -104,9 +106,7 @@ function ConvertAllTemplates(subFolder)
 					pageName = pageName.slice(0, lastDotIndex);
 				}
 				let outputFile = pageName + ".html";
-				outputFile = Path.join(subFolder.Folder, outputFile);
-
-				TryMakeDir(Path.join(OutputFolder, subFolder.Folder))
+				outputFile = Path.join(subFolder.Folder, outputFile)
 
 				let outputFilePath = Path.join(OutputFolder, outputFile);
 
@@ -118,7 +118,11 @@ function ConvertAllTemplates(subFolder)
 }
 
 const TemplatesFolder = "Views/"
-const SubFolders = [{Folder:"", PathToRoot:""}, {Folder:"Degree/", PathToRoot:"../"}]
+const SubFolders = [{Folder:"", PathToRoot:""},
+	{Folder:"Degree/", PathToRoot:"../"},
+	{Folder:"cards/", PathToRoot:"../"},
+	{Folder:"cards/xmas/", PathToRoot:"../../"}]
+
 const OutputFolder = "../"
 let IsDevMode = true;
 let Compress = false;

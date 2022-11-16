@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('../../Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Xmas Art",
+			Description: "",
+			Url: "https://louie-jones-strong.github.io/Xmas",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/Xmas/Thumbnail",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+</head>
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include('../../Components/Loader'); %>
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('../../Components/AccessibilityHelper'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include('../../Components/Header'); %>
+
+			<hr class="gap">
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">Project Christmas</h1>
+
+			</div>
+
+			<!-- Shared common footer -->
+			<%- include('../../Components/Footer'); %>
+		</div>
+
+		<script src="<%=PageData.PathToRoot%>Public/JavaScript/AnimateOnAppear.js"></script>
+		<script src="<%=PageData.PathToRoot%>Public/JavaScript/vanilla-tilt.min.js"></script>
+		<script>
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 10,
+				speed: 1000,
+				glare: true,
+				"max-glare": 0.3,
+				reverse: true,
+				scale: 1.1,
+			});
+		</script>
+	</div>
+</body>
+</html>
