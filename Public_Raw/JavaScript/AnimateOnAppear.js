@@ -1,5 +1,11 @@
-window.addEventListener("scroll", Reveal);
-Reveal();
+
+
+window.addEventListener('load', function () {
+	window.addEventListener("scroll", Reveal);
+	Reveal();
+});
+
+
 
 function Reveal()
 {
