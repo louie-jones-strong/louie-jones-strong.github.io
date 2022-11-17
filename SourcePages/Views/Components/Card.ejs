@@ -13,8 +13,9 @@
 			Alt: CardData.Title,
 			Sizes: "350px"
 		}}); %>
-
-		<%- include('QuickInfo', CardData); %>
+		<% if (CardData.QuickInfoData) { %>
+			<%- include('QuickInfo', CardData); %>
+		<% }%>
 
 	</div>
 	<h3><%= CardData.Title %></h3>

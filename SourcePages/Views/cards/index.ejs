@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('../Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Xmas Cards",
+			Description: "",
+			Url: "https://louie-jones-strong.github.io/cards/",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/cards/xmas/card1",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+</head>
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include('../Components/Loader'); %>
+	<div class="content">
+		<!-- shared common header -->
+		<%- include('../Components/AccessibilityHelper'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include('../Components/Header'); %>
+
+			<!-- cover image slide show -->
+			<div class="slide-holder">
+				<div class="slide">
+					<%- include('../Components/Picture', {ImgData: {
+						Path:"../Public/Assets/cards/xmas/card1",
+						ClassList: "",
+						Alt:"First Xmas Render",
+						LoadingType: "eager"
+					}}); %>
+				</div>
+			</div>
+			<script src="<%=PageData.PathToRoot%>Public/JavaScript/Carousel.js"></script>
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">Cards</h1>
+
+
+				<div class="cardHolder">
+					<%- include('../Components/Card', {
+						CardData: {
+							OpenInNewTab: false,
+							Link: "xmas",
+							Title: "Christmas",
+							Body: "",
+							Thumbnail: "../Public/Assets/cards/xmas/card1"
+						}
+					}); %>
+				</div>
+
+
+				<hr class="gap">
+				<hr class="gap">
+				<a href="/"><h3 class="center reveal fromBottom">Check Out My Portfolio</h3></a>
+
+			</div>
+
+
+
+
+			<!-- Shared common footer -->
+			<%- include('../Components/Footer'); %>
+		</div>
+
+		<script src="<%=PageData.PathToRoot%>Public/JavaScript/AnimateOnAppear.js"></script>
+		<script src="<%=PageData.PathToRoot%>Public/JavaScript/vanilla-tilt.min.js"></script>
+		<script>
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 10,
+				speed: 1000,
+				glare: true,
+				"max-glare": 0.3,
+				reverse: true,
+				scale: 1.1,
+			});
+		</script>
+	</div>
+</body>
+</html>
