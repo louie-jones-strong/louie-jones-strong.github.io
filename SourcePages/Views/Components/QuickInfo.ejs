@@ -207,6 +207,17 @@
 					<h5>Python</h5>
 				</div>
 			<% }%>
+			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedNodejs) { %>
+				<div class="quickInfo reveal fromLeft">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/nodejs",
+						ClassList: "icon",
+						Alt: "nodejs Logo",
+						IsSvg: true
+					}}); %>
+					<h5>node.JS</h5>
+				</div>
+			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedJavaScript) { %>
 				<div class="quickInfo reveal fromLeft">
 					<%- include('Picture', {ImgData: {
@@ -216,6 +227,28 @@
 						IsSvg: true
 					}}); %>
 					<h5>Java Script</h5>
+				</div>
+			<% }%>
+			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedHTML) { %>
+				<div class="quickInfo reveal fromLeft">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/HTML",
+						ClassList: "icon",
+						Alt: "HTML Logo",
+						IsSvg: true
+					}}); %>
+					<h5>HTML</h5>
+				</div>
+			<% }%>
+			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCSS) { %>
+				<div class="quickInfo reveal fromLeft">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/css",
+						ClassList: "icon",
+						Alt: "CSS Logo",
+						IsSvg: true
+					}}); %>
+					<h5>CSS</h5>
 				</div>
 			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedBlender) { %>
@@ -251,39 +284,6 @@
 					<h5>.Net</h5>
 				</div>
 			<% }%>
-			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedHTML) { %>
-				<div class="quickInfo reveal fromLeft">
-					<%- include('Picture', {ImgData: {
-						Path:PageData.PathToRoot + "Public/Assets/Icons/HTML",
-						ClassList: "icon",
-						Alt: "HTML Logo",
-						IsSvg: true
-					}}); %>
-					<h5>HTML</h5>
-				</div>
-			<% }%>
-			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedNodejs) { %>
-				<div class="quickInfo reveal fromLeft">
-					<%- include('Picture', {ImgData: {
-						Path:PageData.PathToRoot + "Public/Assets/Icons/nodejs",
-						ClassList: "icon",
-						Alt: "nodejs Logo",
-						IsSvg: true
-					}}); %>
-					<h5>node.JS</h5>
-				</div>
-			<% }%>
-			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedCSS) { %>
-				<div class="quickInfo reveal fromLeft">
-					<%- include('Picture', {ImgData: {
-						Path:PageData.PathToRoot + "Public/Assets/Icons/css",
-						ClassList: "icon",
-						Alt: "CSS Logo",
-						IsSvg: true
-					}}); %>
-					<h5>CSS</h5>
-				</div>
-			<% }%>
 			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedGit) { %>
 				<div class="quickInfo reveal fromLeft">
 					<%- include('Picture', {ImgData: {
@@ -315,6 +315,17 @@
 						IsSvg: true
 					}}); %>
 					<h5>Java</h5>
+				</div>
+			<% }%>
+			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedPhp) { %>
+				<div class="quickInfo reveal fromLeft">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/php",
+						ClassList: "icon",
+						Alt: "Php Logo",
+						IsSvg: true
+					}}); %>
+					<h5>Php</h5>
 				</div>
 			<% }%>
 		</div>

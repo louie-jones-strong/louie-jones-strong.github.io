@@ -1,3 +1,7 @@
+<% if (CardData.QuickInfoData && CardData.QuickInfoData.Skills) {
+	CardData.QuickInfoData.Skills.HideTitle = true
+}%>
+
 
 <% if (CardData.Link) { %>
 <a class="card glass neonOutline reveal" href="<%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
