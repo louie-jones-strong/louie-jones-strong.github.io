@@ -19,7 +19,8 @@ function RenderFile(templateFilePath, outputFilePath, pageName, subFolder)
 			IsDevMode:IsDevMode,
 			PageName: Path.join(subFolder.Folder, pageName),
 			PageParent: pageParent,
-			PathToRoot: subFolder.PathToRoot
+			PathToRoot: subFolder.PathToRoot,
+			HideCvButton: subFolder.HideCvButton
 		}},
 
 		function(renderError, builtHtml) {
@@ -118,10 +119,10 @@ function ConvertAllTemplates(subFolder)
 }
 
 const TemplatesFolder = "Views/"
-const SubFolders = [{Folder:"", PathToRoot:""},
-	{Folder:"Degree/", PathToRoot:"../"},
-	{Folder:"cards/", PathToRoot:"../"},
-	{Folder:"cards/xmas/", PathToRoot:"../../"}]
+const SubFolders = [{Folder:"", PathToRoot:"", HideCvButton:false},
+	{Folder:"Degree/", PathToRoot:"../", HideCvButton:false},
+	{Folder:"cards/", PathToRoot:"../", HideCvButton:true},
+	{Folder:"cards/xmas/", PathToRoot:"../../", HideCvButton:true}]
 
 const OutputFolder = "../"
 let IsDevMode = true;

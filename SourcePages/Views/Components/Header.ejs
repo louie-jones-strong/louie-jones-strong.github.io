@@ -4,7 +4,7 @@
 		<%- include('Picture', {ImgData: {
 			Path:PageData.PathToRoot + "Public/Assets/Logo/Logo",
 			ClassList: "",
-			Alt:"Cover photo",
+			Alt:"Logo",
 			Sizes: "5em"
 		}}); %>
 
@@ -33,8 +33,10 @@
 				</a>
 			<%}%>
 		<%}%>
-		<a href="CV.pdf" target="_blank" class="cvButton shaded sheen scaleOnFocus right">
-			CV <span class="material-icons">download</span>
-		</a>
+		<% if (!PageData.HideCvButton) { %>
+			<a href="CV.pdf" target="_blank" class="cvButton shaded sheen scaleOnFocus right">
+				CV <span class="material-icons">download</span>
+			</a>
+		<%}%>
 	</nav>
 </Header>
