@@ -89,7 +89,7 @@ function HandleFile(itemInputPath, itemOutputPath)
 		itemOutputPath = RemoveExtension(itemOutputPath)
 		itemOutputPath += ".css"
 
-		if(!ShouldSkipFile(itemOutputPath))
+		// if(!ShouldSkipFile(itemOutputPath))
 		{
 
 			let result = Sass.compile(itemInputPath);

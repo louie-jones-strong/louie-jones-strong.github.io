@@ -1,3 +1,5 @@
+@import 'Mixins';
+
 body{
 	--Colour-Accessibility: hsl(225, 95%, 60%);
 	--Colour-Accessibility-Contrast: white;
@@ -107,14 +109,13 @@ body.greyScale{
 
 
 .accessibilityFeedback{
-	background-color: var(--Colour-Accessibility);
+	@include shaded_Bottom(hsl(225, 95%, 60%));
 	color: var(--Colour-Accessibility-Contrast);
 	padding-top: 0.3em;
 	padding-bottom: 0.75em;
 }
 
 .accessibilityFeedback > .accessibilityText{
-	background-color: var(--Colour-Accessibility);
 	color: var(--Colour-Accessibility-Contrast);
 }
 

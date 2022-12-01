@@ -6,6 +6,8 @@
 @use 'Shared/Reveal';
 @use 'Shared/TextStyle';
 
+@import 'Shared/Mixins';
+
 
 /* const colours to allow easy editing of colour schemes over the website */
 html, body {
