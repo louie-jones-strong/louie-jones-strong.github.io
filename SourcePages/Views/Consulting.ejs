@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include('Components/Head', {
+		PageData: PageData,
+		HeadData: {
+			Title: "Louie J-S: Consulting",
+			Description: "Louie Jones-Strong's portfolio. My time as a consultant.",
+			Url: "https://louie-jones-strong.github.io/Consulting.html",
+			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/Consulting/thumbnail",
+		}
+	}); %>
+
+	<!-- extra links if needed -->
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include('Components/Loader'); %>
+	<div class="content background">
+		<!-- shared common header -->
+		<%- include('Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include('Components/Header'); %>
+
+		<div class="centeredFrame">
+			<h1 class="center center reveal fromBottom">Consulting</h1>
+
+			<%- include('Components/QuickInfo', {
+				QuickInfoData: {
+					Date: "2022 - 2023",
+					NumPeople: 1,
+					Skills: {
+						UsedPython: true,
+						UsedGit: true,
+						UsedHTML: true,
+						UsedCSS: true,
+						UsedJavaScript: true,
+					}
+				}
+			}); %>
+
+			<p class="center reveal fromBottom">
+				During my last year of university I worked as a consultant for a number of small businesses.
+				With a focus on enabling them to scale their business.
+				I provided them with a number of services including:
+			</p>
+
+			<ul class="center">
+				<li class="left reveal fromLeft"> <abbr title="Search Engine Optimization">SEO</abbr> </li>
+				<li class="left reveal fromLeft"> Integrating payment processing </li>
+				<li class="left reveal fromLeft"> Marketing </li>
+				<li class="left reveal fromLeft"> Process Automation </li>
+				<li class="left reveal fromLeft"> Creating Models To predict seasonal stock requirements </li>
+				<li class="left reveal fromLeft"> IT Support </li>
+			</ul>
+
+
+
+
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include('Components/Footer'); %>
+	</div>
+</body>
+</html>
