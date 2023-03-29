@@ -4,5 +4,25 @@
         "Skeuomorphismis",
         "glassmorphism",
         "gtag"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#fe7d76",
+        "activityBar.background": "#fe7d76",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#a0fea5",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#fe7d76",
+        "statusBar.background": "#fe4d43",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#fe1d10",
+        "statusBarItem.remoteBackground": "#fe4d43",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#fe4d43",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#fe4d4399",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#fe4d43"
 }
