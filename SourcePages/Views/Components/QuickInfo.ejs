@@ -317,6 +317,17 @@
 					<h5>Java</h5>
 				</div>
 			<% }%>
+			<% if (QuickInfoData.Skills.ShowAll || QuickInfoData.Skills.UsedDocker) { %>
+				<div class="quickInfo reveal fromLeft">
+					<%- include('Picture', {ImgData: {
+						Path:PageData.PathToRoot + "Public/Assets/Icons/Docker",
+						ClassList: "icon",
+						Alt: "Docker Logo",
+						IsSvg: true
+					}}); %>
+					<h5>Docker</h5>
+				</div>
+			<% }%>
 		</div>
 	</div>
 <% }%>
