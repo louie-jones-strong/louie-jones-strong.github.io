@@ -1,0 +1,41 @@
+{
+	"Raw_ViewsFolder": "Views",
+	"Output_ViewsFolder": "docs",
+	"Raw_StaticFolder": "Public_Raw",
+	"Output_StaticFolder": "docs/Public",
+
+	"ContactLinks": {
+		"LinkedIn": "https://www.linkedin.com/in/louie-jones-strong",
+		"GitHub": "https://github.com/louie-jones-strong",
+		"Itch.io": "https://louie-js.itch.io/",
+		"Instagram": null,
+		"Email": "louiej-s@hotmail.co.uk",
+		"LeetCode": null,
+		"Kaggle": null
+	},
+
+	"HomePageSettings": {
+		"Skills": [
+			"Unity",
+			"Blender"
+		],
+		"ProjectFilters": {
+		}
+	},
+
+	"AssetConfig":{
+		"ImageConfig": {
+			"ImageSizes": [128, 256, 512, 1024, 2048],
+			"ImageFormats_Inputs": [".webp", ".png"],
+			"ImageFormats_Outputs": [".webp", ".png"]
+		},
+		"NoCopyFolders": [
+			"css/Shared"
+		]
+	},
+	"CompressionConfig": {
+		"CompressHTML": true,
+		"CompressCSS": true,
+		"CompressJS": true
+	}
+}

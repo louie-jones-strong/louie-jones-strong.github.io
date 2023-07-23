@@ -1,2 +1,2 @@
-node BuildPages.js
-node CompressAssets.js NoCompress
+node src/BuildPages.js
+node src/CompressAssets.js NoCompress

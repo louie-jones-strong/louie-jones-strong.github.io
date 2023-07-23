@@ -1,2 +1,2 @@
-node BuildPages.js Release Compress
-node CompressAssets.js CleanCopy
+node src/BuildPages.js Release Compress
+node src/CompressAssets.js CleanCopy

@@ -15,13 +15,11 @@
 <link rel="stylesheet" type="text/css" href="<%= PageData.PathToRoot %>Public/css/Shared.css">
 <link rel="preload" as="image" href="<%= PageData.PathToRoot %>Public/css/BackgroundDark.svg">
 
-<script src="<%= PageData.PathToRoot %>Public/JavaScript/AnimateOnAppear.js"></script>
+<script src="<%= PageData.PathToRoot %>Public/js/AnimateOnAppear.js"></script>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<% if (PageData.IsDevMode) { %>
-	<!-- Dev Mode so no Analytics -->
-<% }else{ %>
+<% if (PageData.isRelease) { %>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6MK7D2H38"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];

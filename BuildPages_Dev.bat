@@ -1,2 +1,2 @@
-node BuildPages.js Compress
-node CompressAssets.js
+node src/BuildPages.js Compress
+node src/CompressAssets.js

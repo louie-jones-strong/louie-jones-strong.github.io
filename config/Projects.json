@@ -1,0 +1,201 @@
+{
+	"LSWB": {
+		"Title": "LEGO® Star Wars™ Battles",
+		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
+		"Date": "April 2018 - September 2022",
+		"TimeSpent": "4 Years",
+		"NumPeople": "Avg ~25",
+		"Awards": "Develop Star: Best Mobile Game",
+		"QuickDescription": "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
+		"PagePath": "LSWB",
+		"Link": null,
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"DotNet",
+			"SQL",
+			"Python",
+			"Git",
+			"HTML",
+			"ObjectiveC",
+			"Java",
+			"Docker"
+		],
+		"Links": {
+			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698",
+			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.ttgames.legoswb"
+		},
+		"SubProjects": []
+	},
+	"BlenderProjects": {
+		"Title": "24 Hour Blender Challenge",
+		"Thumbnail": "Public/Assets/BlenderProjects/Images/blender_6",
+		"Date": null,
+		"TimeSpent": "Day Each",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "I challenged myself to learn different Blender skills, giving myself only 24 hours for each one.",
+		"PagePath": "BlenderProjects",
+		"Link": null,
+		"Skills": [
+			"Blender"
+		],
+		"Links": {
+			"InstagramLink": "https://www.instagram.com/louie_j.s/"
+		},
+		"SubProjects": []
+	},
+	"EggHuntProject": {
+		"Title": "Office Egg Hunt",
+		"Thumbnail": "Public/Assets/EggHuntGame/thumbnail",
+		"Date": null,
+		"TimeSpent": "2 Weeks",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
+		"PagePath": "EggHuntProject",
+		"Link": null,
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Blender"
+		],
+		"Links": {
+			"ItchLink": "https://louie-js.itch.io/office-egg-hunt",
+			"GithubLink": "https://github.com/louie-jones-strong/OfficeGame"
+		},
+		"SubProjects": []
+	},
+	"EPQProject": {
+		"Title": "EPQ",
+		"Thumbnail": "Public/Assets/EPQ/thumbnail",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "My college EPQ dissertation on multi-technique supervised machine learning.",
+		"PagePath": "EPQProject",
+		"Link": null,
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"CubePuzzleProject": {
+		"Title": "Alhambra 4D Cube Puzzle",
+		"Thumbnail": "Public/Assets/CubePuzzle/Thumbnail",
+		"Date": null,
+		"TimeSpent": "3 Weeks",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
+		"PagePath": "CubePuzzleProject",
+		"Link": null,
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"Portfolio": {
+		"Title": "My Portfolio",
+		"Thumbnail": "Public/Assets/PortfolioProject/Thumbnail",
+		"Date": null,
+		"TimeSpent": "Month",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "How I made this website.",
+		"PagePath": "Portfolio",
+		"Link": null,
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS"
+		],
+		"Links": {
+			"GithubLink": "https://github.com/louie-jones-strong/louie-jones-strong.github.io"
+		},
+		"SubProjects": []
+	},
+	"Minesweeper": {
+		"Title": "Mine Sweeper",
+		"Thumbnail": "Public/Assets/MineSweeper/Thumbnail",
+		"Date": null,
+		"TimeSpent": "1 Week",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "To prepare for my University courses I taught myself JS, HTML and CSS.",
+		"PagePath": "Minesweeper",
+		"Link": null,
+		"Skills": [
+			"HTML",
+			"CSS",
+			"JavaScript"
+		],
+		"Links": {
+			"GithubLink": "https://github.com/louie-jones-strong/MineSweeper",
+			"WebsiteLink": "https://louie-jones-strong.github.io/MineSweeper/"
+		},
+		"SubProjects": []
+	},
+	"CalculatorSolver": {
+		"Title": "Calculator: The Game Solver",
+		"Thumbnail": "Public/Assets/CalculatorSolver/Thumbnail",
+		"Date": null,
+		"TimeSpent": "2 Months",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "Calculator: The Game Solver.",
+		"PagePath": "CalculatorSolver",
+		"Link": null,
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+			"GithubLink": "https://github.com/louie-jones-strong/CalculatorGame-Solver"
+		},
+		"SubProjects": []
+	},
+	"MediaStudio": {
+		"Title": "Media Studio",
+		"Thumbnail": "Public/Assets/MediaStudio/thumbnail",
+		"Date": null,
+		"TimeSpent": "2 Months",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.",
+		"PagePath": "MediaStudio",
+		"Link": null,
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS"
+		],
+		"Links": {
+			"WebsiteLink": "https://louie-jones-strong.github.io/MediaStudio"
+		},
+		"SubProjects": []
+	},
+	"MonsterMash": {
+		"Title": "Monster Mash",
+		"Thumbnail": "Public/Assets/MonsterMash/Thumbnail",
+		"Date": null,
+		"TimeSpent": "1 Week",
+		"NumPeople": 4,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": "https://tatltuae.itch.io/monstermash",
+		"Skills": [
+			"Unity",
+			"Csharp"
+		],
+		"Links": {
+			"ItchLink": "https://tatltuae.itch.io/monstermash"
+		},
+		"SubProjects": []
+	}
+}

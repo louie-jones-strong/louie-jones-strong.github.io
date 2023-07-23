@@ -1,0 +1,62 @@
+{
+	"Unity":{
+		"IconPath": "Public/Assets/Icons/unity",
+		"Label": "Unity"
+	},
+	"Csharp":{
+		"IconPath": "Public/Assets/Icons/cSharp",
+		"Label": "C#"
+	},
+	"CPlusPlus":{
+		"IconPath": "Public/Assets/Icons/cpp",
+		"Label": "C++"
+	},
+	"Python":{
+		"IconPath": "Public/Assets/Icons/python",
+		"Label": "Python"
+	},
+	"Nodejs":{
+		"IconPath": "Public/Assets/Icons/nodejs",
+		"Label": "node.js"
+	},
+	"JavaScript":{
+		"IconPath": "Public/Assets/Icons/js",
+		"Label": "Java Script"
+	},
+	"HTML":{
+		"IconPath": "Public/Assets/Icons/HTML",
+		"Label": "HTML"
+	},
+	"CSS":{
+		"IconPath": "Public/Assets/Icons/css",
+		"Label": "CSS"
+	},
+	"Blender":{
+		"IconPath": "Public/Assets/Icons/blender",
+		"Label": "Blender"
+	},
+	"SQL":{
+		"IconPath": "Public/Assets/Icons/sql",
+		"Label": "SQL"
+	},
+	"DotNet":{
+		"IconPath": "Public/Assets/Icons/dotNet",
+		"Label": ".Net"
+	},
+	"Git":{
+		"IconPath": "Public/Assets/Icons/Git",
+		"Label": "Git"
+	},
+	"ObjectiveC":{
+		"IconPath": "Public/Assets/Icons/Objective-C",
+		"Label": "Objective C"
+	},
+	"Java":{
+		"IconPath": "Public/Assets/Icons/java",
+		"Label": "Java"
+	},
+	"Docker":{
+		"IconPath": "Public/Assets/Icons/Docker",
+		"Label": "Docker"
+	}
+}
