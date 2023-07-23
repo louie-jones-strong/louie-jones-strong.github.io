@@ -264,13 +264,13 @@ function ShouldSkipFile(path)
 }
 
 const StartFolder = "../Public_Raw/"
-const OutputFolder = "../Public/"
+const OutputFolder = "../docs/Public/"
 
 const FoldersToSkip = [Path.join(StartFolder, "css", "Shared")]
 
 
 
-const ImageSizes = [128, 256,512,1024,2048]
+const ImageSizes = [128, 256, 512, 1024, 2048]
 const ImageFormats = [".webp", ".png"]
 
 Compress = true;

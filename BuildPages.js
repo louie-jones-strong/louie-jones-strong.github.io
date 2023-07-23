@@ -124,7 +124,7 @@ const SubFolders = [{Folder:"", PathToRoot:"", HideCvButton:false},
 	{Folder:"cards/", PathToRoot:"../", HideCvButton:true},
 	{Folder:"cards/xmas/", PathToRoot:"../../", HideCvButton:true}]
 
-const OutputFolder = "../"
+const OutputFolder = "../docs/"
 let IsDevMode = true;
 let Compress = false;
 
