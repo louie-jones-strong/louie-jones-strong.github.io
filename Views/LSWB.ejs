@@ -6,12 +6,7 @@
 	<!-- shared common Head Logic -->
 	<%- include('Components/Head', {
 		PageData: PageData,
-		HeadData: {
-			Title: "Louie J-S: LEGO Star Wars Battles",
-			Description: "Louie Jones-Strong's portfolio. My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
-			Url: "https://louie-jones-strong.github.io/LSWB.html",
-			Thumbnail: "https://louie-jones-strong.github.io/Public/Assets/LSWB/Thumbnail",
-		}
+		ProjectData: ProjectData
 	}); %>
 
 	<!-- extra links if needed -->
@@ -45,29 +40,7 @@
 		<div class="centeredFrame">
 			<h1 class="center center reveal fromBottom">LEGO® Star Wars™ Battles</h1>
 
-			<%- include('Components/QuickInfo', {
-				QuickInfoData: {
-					Date: "April 2018 - September 2022",
-					NumPeople: "Avg ~25",
-					Awards: "Develop Star: Best Mobile Game",
-					Links: {
-						AppleArcadeLink: "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698",
-						GooglePlayLink: "https://play.google.com/store/apps/details?id=com.ttgames.legoswb"
-					},
-					Skills: {
-						UsedUnity: true,
-						UsedCsharp: true,
-						UsedDotNet: true,
-						UsedSQL: true,
-						UsedPython: true,
-						UsedGit: true,
-						UsedHTML: true,
-						UsedObjectiveC: true,
-						UsedJava: true,
-						UsedDocker: true,
-					}
-				}
-			}); %>
+			<%- include('Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 			<p class="center center reveal fromBottom">
 				While working on <abbr title="LEGO® Star Wars™ Battles">LSWB</abbr> I contributed to multiple areas of the game's development.
@@ -156,23 +129,6 @@
 			<p class="center reveal fromLeft">
 				I created our localisation system that supports 17 languages
 			</p>
-			<!-- <ul class="center">
-				<li class="left reveal fromLeft">English</li>
-				<li class="left reveal fromLeft">Arabic</li>
-				<li class="left reveal fromLeft">Danish</li>
-				<li class="left reveal fromLeft">Dutch</li>
-				<li class="left reveal fromLeft">French</li>
-				<li class="left reveal fromLeft">German</li>
-				<li class="left reveal fromLeft">Italian</li>
-				<li class="left reveal fromLeft">Japanese</li>
-				<li class="left reveal fromLeft">Korean</li>
-				<li class="left reveal fromLeft">Malay</li>
-				<li class="left reveal fromLeft">Portuguese</li>
-				<li class="left reveal fromLeft">Russian</li>
-				<li class="left reveal fromLeft">Simplified Chinese</li>
-				<li class="left reveal fromLeft">Traditional Chinese</li>
-				<li class="left reveal fromLeft">Turkish</li>
-			</ul> -->
 			<p class="center reveal fromLeft">
 				This system also caterers for each language's cultures differences such as:
 			</p>

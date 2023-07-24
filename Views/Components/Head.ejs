@@ -19,7 +19,7 @@
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<% if (PageData.isRelease) { %>
+<% if (PageData.IsRelease) { %>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6MK7D2H38"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -30,11 +30,11 @@
 <% } %>
 
 <!-- just this page -->
-<title><%= HeadData.Title %></title>
-<meta property="og:title" content="<%= HeadData.Title %>" />
+<title><%= ProjectData.Title %></title>
+<meta property="og:title" content="Louie J-S: <%= ProjectData.Title %>" />
 
-<meta name="description" content="<%= HeadData.Description %>">
-<meta name="og:description " content="<%= HeadData.Description %>">
+<meta name="description" content="Louie Jones-Strong's portfolio. <%= ProjectData.QuickDescription %>">
+<meta name="og:description " content="Louie Jones-Strong's portfolio. <%= ProjectData.QuickDescription %>">
 
-<meta property="og:url" content="<%= HeadData.Url %>"/>
-<meta property="og:image" content="<%= HeadData.Thumbnail %>.png" />
+<meta property="og:url" content="<%= PageData.SiteConfig.HostURL %><%= ProjectData.PagePath %>.html"/>
+<meta property="og:image" content="<%= PageData.SiteConfig.HostURL %><%= ProjectData.Thumbnail %>.png" />

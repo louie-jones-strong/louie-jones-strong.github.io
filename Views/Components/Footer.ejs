@@ -1,3 +1,7 @@
+<%
+	contactLinks = PageData.SiteConfig.ContactLinks
+%>
+
 
 <hr class="gap">
 
@@ -6,7 +10,9 @@
 	<h2 class="reveal fromTop center">Find Me On:</h2>
 
 	<div class="delayRevealChildren slow center ContactLinkHolder">
-		<a class="reveal" href="https://www.linkedin.com/in/louie-jones-strong" target="_blank">
+
+		<%if (contactLinks.LinkedIn){%>
+		<a class="reveal" href=<%=contactLinks.LinkedIn%> target="_blank">
 			<%- include('Picture', {ImgData: {
 				Path:PageData.PathToRoot + "Public/Assets/Icons/linkedin-flat",
 				ClassList: "brandLogo glass neonOutline",
@@ -14,7 +20,11 @@
 				IsSvg: true
 			}}); %>
 		</a>
-		<a class="reveal" href="https://louie-js.itch.io/" target="_blank">
+		<%}%>
+
+
+		<%if (contactLinks.ItchIo){%>
+		<a class="reveal" href=<%=contactLinks.ItchIo%> target="_blank">
 			<%- include('Picture', {ImgData: {
 				Path:PageData.PathToRoot + "Public/Assets/Icons/itch-dot-io",
 				ClassList: "brandLogo glass neonOutline",
@@ -22,7 +32,11 @@
 				IsSvg: true
 			}}); %>
 		</a>
-		<a class="reveal" href="https://github.com/louie-jones-strong" target="_blank">
+		<%}%>
+
+
+		<%if (contactLinks.GitHub){%>
+		<a class="reveal" href=<%=contactLinks.GitHub%> target="_blank">
 			<%- include('Picture', {ImgData: {
 				Path:PageData.PathToRoot + "Public/Assets/Icons/github",
 				ClassList: "brandLogo glass neonOutline",
@@ -30,7 +44,11 @@
 				IsSvg: true
 			}}); %>
 		</a>
-		<a class="reveal" href="https://www.instagram.com/louie_j.s/" target="_blank">
+		<%}%>
+
+
+		<%if (contactLinks.Instagram){%>
+		<a class="reveal" href="<%=contactLinks.Instagram%>" target="_blank">
 			<%- include('Picture', {ImgData: {
 				Path:PageData.PathToRoot + "Public/Assets/Icons/Instagram",
 				ClassList: "brandLogo glass neonOutline",
@@ -38,12 +56,15 @@
 				IsSvg: true
 			}}); %>
 		</a>
+		<%}%>
 	</div>
 
-	<div class="reveal fromRight center">
-		<label for = "email">Email:</label>
-		<a href="mailto:louiej-s@hotmail.co.uk" id="email">louiej-s@hotmail.co.uk</a>
-	</div>
+	<%if (contactLinks.Email){%>
+		<div class="reveal fromRight center">
+			<label for = "email">Email:</label>
+			<a href="mailto:<%=contactLinks.Email%>" id="email"><%=contactLinks.Email%></a>
+		</div>
+	<%}%>
 
 	<p id="copyRight" class="reveal fromLeft left">©2021 Louie Jones-Strong</p>
 

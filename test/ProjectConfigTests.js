@@ -7,11 +7,11 @@ describe("Projects Config", function ()
 
 
 // load the skills config file
-var skillsConfig = require("../config/Skills.json");
+var iconsConfig = require("../config/Icons.json");
 it("Skills Config Loaded", function () {
-	assert.notEqual(skillsConfig, null);
-	assert.equal(typeof skillsConfig, "object");
-	assert.ok(Object.keys(skillsConfig).length > 0);
+	assert.notEqual(iconsConfig, null);
+	assert.equal(typeof iconsConfig, "object");
+	assert.ok(Object.keys(iconsConfig).length > 0);
 });
 
 
@@ -125,8 +125,8 @@ for (const projectKey in projects)
 
 
 				// check the skill is in the skills config
-				let skillConfig = skillsConfig[skill];
-				assert.notEqual(skillConfig, null);
+				let iconConfig = iconsConfig[skill];
+				assert.notEqual(iconConfig, null);
 			}
 		});
 

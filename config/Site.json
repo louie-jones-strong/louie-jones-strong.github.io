@@ -4,29 +4,21 @@
 	"Raw_StaticFolder": "Public_Raw",
 	"Output_StaticFolder": "docs/Public",
 
+	"HostURL": "https://louie-jones-strong.github.io/",
+
 	"ContactLinks": {
 		"LinkedIn": "https://www.linkedin.com/in/louie-jones-strong",
 		"GitHub": "https://github.com/louie-jones-strong",
-		"Itch.io": "https://louie-js.itch.io/",
+		"ItchIo": "https://louie-js.itch.io/",
 		"Instagram": null,
+		"Twitter": null,
 		"Email": "louiej-s@hotmail.co.uk",
 		"LeetCode": null,
 		"Kaggle": null
 	},
-
-	"HomePageSettings": {
-		"Skills": [
-			"Unity",
-			"Blender"
-		],
-		"ProjectFilters": {
-		}
-	},
-
 	"AssetConfig":{
 		"ImageConfig": {
 			"ImageSizes": [128, 256, 512, 1024, 2048],
-			"ImageFormats_Inputs": [".webp", ".png"],
 			"ImageFormats_Outputs": [".webp", ".png"]
 		},
 		"NoCopyFolders": [

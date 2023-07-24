@@ -18,15 +18,15 @@ class PageBuilder
 		let rootConfigPath = path.join(this.PathToRoot, "config");
 		let sitePath = path.join(rootConfigPath, "Site.json");
 		let projectPath = path.join(rootConfigPath, "Projects.json");
-		let skillsPath = path.join(rootConfigPath, "Skills.json");
+		let iconsPath = path.join(rootConfigPath, "Icons.json");
 
 		this.SiteConfig = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
 		this.ProjectConfig = JSON.parse(fs.readFileSync(projectPath, 'utf8'));
-		this.SkillConfig = JSON.parse(fs.readFileSync(skillsPath, 'utf8'));
+		this.IconsConfig = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));
 
 	}
 
-	BuildPage(pagePath)
+	BuildPage(pagePath, config)
 	{
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_ViewsFolder, pagePath);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder, pagePath);
@@ -53,16 +53,14 @@ class PageBuilder
 		let pathToRoot = "../".repeat(count);
 
 
-		let config = {
+		config["PageData"] = {
+			IsRelease: this.IsRelease,
+			PageName: pageName,
+			PageParent: pageParent,
+			PathToRoot: pathToRoot,
 			SiteConfig: this.SiteConfig,
 			Projects: this.ProjectConfig,
-			Skills: this.SkillConfig,
-			PageData: {
-				IsRelease: this.IsRelease,
-				PageName: pageName,
-				PageParent: pageParent,
-				PathToRoot: pathToRoot
-			}
+			Icons: this.IconsConfig,
 		}
 
 		this.RenderFile(sourceFilePath, outputFilePath, config);

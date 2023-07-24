@@ -16,11 +16,11 @@ class Main
 		let rootConfigPath = path.join(this.PathToRoot, "config");
 		let sitePath = path.join(rootConfigPath, "Site.json");
 		let projectPath = path.join(rootConfigPath, "Projects.json");
-		let skillsPath = path.join(rootConfigPath, "Skills.json");
+		let iconsPath = path.join(rootConfigPath, "Icons.json");
 
 		this.SiteConfig = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
 		this.ProjectConfig = JSON.parse(fs.readFileSync(projectPath, 'utf8'));
-		this.SkillConfig = JSON.parse(fs.readFileSync(skillsPath, 'utf8'));
+		this.IconsConfig = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));
 
 		console.log("=".repeat(20));
 		console.log("Is Release: ", this.IsRelease);
@@ -32,6 +32,18 @@ class Main
 
 	BuildSite()
 	{
+		// todo before adding this back need to make sure robots.txt is copied over and cv.pdf is copied over
+		// if clean, delete output folder
+		// if (this.IsRelease)
+		// {
+		// 	console.log();
+		// 	console.log("Cleaning Output Folder...");
+		// 	let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
+		// 	fs.rmSync(outputPath, {recursive: true});
+		// }
+
+
+
 		// build pages
 		console.log();
 		console.log("Building Pages...");
@@ -47,16 +59,15 @@ class Main
 	{
 		let pageBuilder = new PageBuilder.PageBuilder(this.IsRelease, this.Compress, "../");
 
-		// build home page
-		let pagePath = "index"
-		pageBuilder.BuildPage(pagePath);
-
 		// build project pages
 		for (const projectKey of Object.keys(this.ProjectConfig))
 		{
 			let pagePath = this.ProjectConfig[projectKey].PagePath;
+
+			let config = {ProjectData: this.ProjectConfig[projectKey]}
+
 			if (pagePath != null)
-				pageBuilder.BuildPage(pagePath);
+				pageBuilder.BuildPage(pagePath, config);
 		}
 	}
 

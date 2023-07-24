@@ -1,4 +1,41 @@
 {
+	"Home": {
+		"Title": "Louie Jones-Strong",
+		"Thumbnail": "Public/Assets/PortfolioProject/Thumbnail",
+		"Date": null,
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "",
+		"QuickDescription": "I am a Brighton based hard working, creative, programmer studying machine learning.",
+		"PagePath": "index",
+		"Link": null,
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"CPlusPlus",
+			"Python",
+			"Nodejs",
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Blender",
+			"SQL",
+			"DotNet",
+			"Git",
+			"ObjectiveC",
+			"Java",
+			"Docker"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"BlenderProjects",
+			"EPQProject",
+			"CubePuzzleProject",
+			"Portfolio",
+			"MediaStudio"
+		]
+	},
 	"LSWB": {
 		"Title": "LEGO® Star Wars™ Battles",
 		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
@@ -22,8 +59,60 @@
 			"Docker"
 		],
 		"Links": {
-			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698",
-			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.ttgames.legoswb"
+			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
+		},
+		"SubProjects": []
+	},
+	"EnglishTutor": {
+		"Title": "English Tutor",
+		"Thumbnail": "Public/Assets/EnglishTutor/thumbnail",
+		"Date": "2018 - 2019",
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "I spent my evenings after work as a tutor for arabic students to help them pass the IELTS speaking exam",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"MathsTutor": {
+		"Title": "Math Tutor",
+		"Thumbnail": null,
+		"Date": "2020 - 2021",
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"BusinessConsulting": {
+		"Title": "Business Consulting",
+		"Thumbnail": "Public/Assets/BusinessConsulting/thumbnail",
+		"Date": "2022 - 2023",
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "During my last year of university I worked as a consultant for a number of small businesses.",
+		"PagePath": "BusinessConsulting",
+		"Link": null,
+		"Skills": [
+			"Python",
+			"Git",
+			"HTML",
+			"CSS",
+			"JavaScript"
+		],
+		"Links": {
 		},
 		"SubProjects": []
 	},
@@ -195,6 +284,66 @@
 		],
 		"Links": {
 			"ItchLink": "https://tatltuae.itch.io/monstermash"
+		},
+		"SubProjects": []
+	},
+	"looking-for-eden": {
+		"Title": "Looking For Eden",
+		"Thumbnail": "Public/Assets/LookingForEden/Thumbnail",
+		"Date": null,
+		"TimeSpent": "48 hours",
+		"NumPeople": 3,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": "https://tatltuae.itch.io/looking-for-eden",
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Blender"
+		],
+		"Links": {
+			"ItchLink": "hhttps://tatltuae.itch.io/looking-for-eden"
+		},
+		"SubProjects": []
+	},
+	"RougeClicker": {
+		"Title": "Rogue Clicker",
+		"Thumbnail": "Public/Assets/RogueClicker/Thumbnail",
+		"Date": null,
+		"TimeSpent": "1 Week",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": "https://louie-js.itch.io/rougeclicker",
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Blender"
+		],
+		"Links": {
+			"ItchLink": "https://louie-js.itch.io/rougeclicker"
+		},
+		"SubProjects": []
+	},
+	"DrPlantenstein": {
+		"Title": "Monster Mash",
+		"Thumbnail": "Public/Assets/Plantenstein/Thumbnail",
+		"Date": null,
+		"TimeSpent": "1 Week",
+		"NumPeople": 3,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": "https://louie-js.itch.io/dr-plantenstein",
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Blender"
+		],
+		"Links": {
+			"ItchLink": "https://louie-js.itch.io/dr-plantenstein"
 		},
 		"SubProjects": []
 	}

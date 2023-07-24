@@ -1,6 +1,37 @@
-<% if (CardData.QuickInfoData && CardData.QuickInfoData.Skills) {
-	CardData.QuickInfoData.Skills.HideTitle = true
-}%>
+<%
+if (CardData.ProjectData)
+{
+	ProjectData = CardData.ProjectData
+	CardData = {
+		Title: ProjectData.Title,
+		Body: ProjectData.QuickDescription,
+		Thumbnail: ProjectData.Thumbnail,
+		QuickInfoData: ProjectData,
+	}
+
+	if (ProjectData.PagePath)
+	{
+		CardData.Link = ProjectData.PagePath + ".html"
+	}
+	else
+	{
+		CardData.Link = ProjectData.Link
+	}
+}
+
+if (CardData.QuickInfoData)
+{
+	CardData.QuickInfoData.Skills = null
+
+	let dataText = CardData.QuickInfoData.Date
+	if (dataText && dataText.length > 15)
+	{
+		CardData.QuickInfoData.Date = null
+	}
+
+	CardData.QuickInfoData.Awards = null
+}
+%>
 
 
 <% if (CardData.Link) { %>
@@ -18,7 +49,10 @@
 			Sizes: "350px"
 		}}); %>
 		<% if (CardData.QuickInfoData) { %>
-			<%- include('QuickInfo', CardData); %>
+			<%- include('QuickInfo', {
+				QuickInfoData: CardData.QuickInfoData,
+				PageData: PageData
+			}); %>
 		<% }%>
 
 	</div>
@@ -30,7 +64,10 @@
 		<h3><%= CardData.Title %></h3>
 		<p><%= CardData.Body %></p>
 		<% if (CardData.QuickInfoData) { %>
-			<%- include('QuickInfo', CardData); %>
+			<%- include('QuickInfo', {
+				QuickInfoData: CardData.QuickInfoData,
+				PageData: PageData
+			}); %>
 		<% }%>
 
 	<% }%>

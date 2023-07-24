@@ -1,62 +1,77 @@
 {
 	"Unity":{
 		"IconPath": "Public/Assets/Icons/unity",
-		"Label": "Unity"
+		"Label": "Unity",
+		"ClassList": "greyScale"
 	},
 	"Csharp":{
 		"IconPath": "Public/Assets/Icons/cSharp",
-		"Label": "C#"
+		"Label": "C#",
+		"ClassList": ""
 	},
 	"CPlusPlus":{
 		"IconPath": "Public/Assets/Icons/cpp",
-		"Label": "C++"
+		"Label": "C++",
+		"ClassList": ""
 	},
 	"Python":{
 		"IconPath": "Public/Assets/Icons/python",
-		"Label": "Python"
+		"Label": "Python",
+		"ClassList": ""
 	},
 	"Nodejs":{
 		"IconPath": "Public/Assets/Icons/nodejs",
-		"Label": "node.js"
+		"Label": "node.js",
+		"ClassList": ""
 	},
 	"JavaScript":{
 		"IconPath": "Public/Assets/Icons/js",
-		"Label": "Java Script"
+		"Label": "Java Script",
+		"ClassList": ""
 	},
 	"HTML":{
 		"IconPath": "Public/Assets/Icons/HTML",
-		"Label": "HTML"
+		"Label": "HTML",
+		"ClassList": ""
 	},
 	"CSS":{
 		"IconPath": "Public/Assets/Icons/css",
-		"Label": "CSS"
+		"Label": "CSS",
+		"ClassList": ""
 	},
 	"Blender":{
 		"IconPath": "Public/Assets/Icons/blender",
-		"Label": "Blender"
+		"Label": "Blender",
+		"ClassList": ""
 	},
 	"SQL":{
 		"IconPath": "Public/Assets/Icons/sql",
-		"Label": "SQL"
+		"Label": "SQL",
+		"ClassList": ""
 	},
 	"DotNet":{
 		"IconPath": "Public/Assets/Icons/dotNet",
-		"Label": ".Net"
+		"Label": ".Net",
+		"ClassList": ""
 	},
 	"Git":{
 		"IconPath": "Public/Assets/Icons/Git",
-		"Label": "Git"
+		"Label": "Git",
+		"ClassList": ""
 	},
 	"ObjectiveC":{
 		"IconPath": "Public/Assets/Icons/Objective-C",
-		"Label": "Objective C"
+		"Label": "Objective C",
+		"ClassList": ""
 	},
 	"Java":{
 		"IconPath": "Public/Assets/Icons/java",
-		"Label": "Java"
+		"Label": "Java",
+		"ClassList": ""
 	},
 	"Docker":{
 		"IconPath": "Public/Assets/Icons/Docker",
-		"Label": "Docker"
+		"Label": "Docker",
+		"ClassList": ""
 	}
 }
