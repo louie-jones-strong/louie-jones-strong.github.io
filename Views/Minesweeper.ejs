@@ -4,7 +4,7 @@
 <!-- Metadata about the page itself for search engines -->
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		ProjectData: ProjectData
 	}); %>
@@ -14,14 +14,14 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content background">
 
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
 		<!-- shared common header -->
-		<%- include('Components/Header'); %>
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 		<iframe src="https://louie-jones-strong.github.io/MineSweeper/Component.html" frameborder="0" style="width: 100%; height: 75vh;">
 
@@ -30,7 +30,7 @@
 		<div class="centeredFrame">
 			<h1 class="center reveal fromBottom">Minesweeper</h1>
 
-			<%- include('Components/QuickInfo', {
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 				QuickInfoData: {
 					TimeSpent: "1 Week",
 					NumPeople: 1,
@@ -64,7 +64,7 @@
 
 
 		<!-- Shared common footer -->
-		<%- include('Components/Footer'); %>
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
 
 
 

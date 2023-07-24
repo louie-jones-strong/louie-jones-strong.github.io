@@ -49,7 +49,7 @@ class PageBuilder
 		let pageParent = path.dirname(pagePath);
 
 		// count how many levels up the path is
-		let count = pagePath.split(path.sep).length - 1;
+		let count = pagePath.split("/").length - 1;
 		let pathToRoot = "../".repeat(count);
 
 

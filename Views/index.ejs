@@ -3,7 +3,7 @@
 
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		ProjectData: ProjectData
 	}); %>
@@ -15,14 +15,14 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content hide">
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
 		<div class="cover parallaxHolder">
 			<div class="parallaxObj">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/IndexCover/output",
 					ClassList: "",
 					Alt:"Cover photo",
@@ -37,7 +37,7 @@
 
 		<div class="background">
 			<!-- shared common header -->
-			<%- include('Components/Header'); %>
+			<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 			<hr class="gap">
 			<hr class="gap">
@@ -51,7 +51,7 @@
 				<h3 class="center reveal fromBottom">My Skills:</h3>
 
 				<div class="centeredFrame">
-					<%- include('Components/QuickInfo', {
+					<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 						PageData:PageData,
 						QuickInfoData: {
 							"HideSkillTitle": true,
@@ -64,10 +64,10 @@
 				<!-- work -->
 				<h2 id="Work" class="center reveal fromBottom">Work:</h2>
 				<div class="cardHolder">
-					<%- include('Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["LSWB"]}}); %>
-					<%- include('Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["EnglishTutor"]}}); %>
-					<%- include('Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["MathsTutor"]}}); %>
-					<%- include('Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["BusinessConsulting"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["LSWB"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["EnglishTutor"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["MathsTutor"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["BusinessConsulting"]}}); %>
 
 				</div>
 
@@ -80,7 +80,7 @@
 					for (const projectKey of ProjectData.SubProjects)
 					{
 						const project = PageData.Projects[projectKey];%>
-						<%- include('Components/Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
+						<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
 					<%}
 					%>
 
@@ -89,7 +89,7 @@
 
 
 			<!-- Shared common footer -->
-			<%- include('Components/Footer'); %>
+			<%- include(PageData.PathToRoot+'Components/Footer'); %>
 		</div>
 
 

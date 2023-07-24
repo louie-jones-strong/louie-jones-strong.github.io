@@ -4,7 +4,7 @@
 <!-- Metadata about the page itself for search engines -->
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		ProjectData: ProjectData
 	}); %>
@@ -17,20 +17,20 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content background">
 
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
 		<!-- shared common header -->
-		<%- include('Components/Header'); %>
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 		<div class="centeredFrame">
 			<h1 class="reveal fromBottom center">Media Studio</h1>
 			<p class="reveal fromBottom center">Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.</p>
 
-			<%- include('Components/QuickInfo', {
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 				QuickInfoData: {
 					TimeSpent: "2 months",
 					NumPeople: 1,
@@ -44,7 +44,7 @@
 
 			<br>
 			<h3 class="center">Try out the tool:</h3>
-			<%- include('Components/QuickInfo', {
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 				QuickInfoData: {
 					Links: {
 						WebsiteLink: "https://louie-jones-strong.github.io/MediaStudio"
@@ -56,7 +56,7 @@
 
 		<div class="ZipperCardsHolder glass centeredFrame">
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/MediaStudio/template",
 					ClassList: "expandable",
 					Alt:"Screenshot of Media Studio"
@@ -71,14 +71,14 @@
 					<h3>Layers</h3>
 					<p>Layers are a very important feature of any power user image editing tool.</p>
 				</div>
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/MediaStudio/layers",
 					ClassList: "expandable",
 					Alt:"Screenshot of Media Studio"
 				}}); %>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/MediaStudio/screenshot",
 					ClassList: "expandable",
 					Alt:"Screenshot of Media Studio"
@@ -91,7 +91,7 @@
 		</div>
 
 		<!-- Shared common footer -->
-		<%- include('Components/Footer'); %>
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
 	</div>
 </body>
 </html>

@@ -14,7 +14,8 @@
 		"Twitter": null,
 		"Email": "louiej-s@hotmail.co.uk",
 		"LeetCode": null,
-		"Kaggle": null
+		"Kaggle": null,
+		"CVDownloadAllowed": true
 	},
 	"AssetConfig":{
 		"ImageConfig": {

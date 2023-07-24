@@ -4,7 +4,7 @@
 <!-- Metadata about the page itself for search engines -->
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		ProjectData: ProjectData
 	}); %>
@@ -18,19 +18,19 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content background">
 
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
 		<!-- shared common header -->
-		<%- include('Components/Header'); %>
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 		<!-- cover image slide show -->
 		<div class="slide-holder">
 			<div class="slide">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/EggHuntGame/GamePlay/yPzUzd",
 					ClassList: "",
 					Alt:"In game lower floor screen shot",
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div class="slide">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/EggHuntGame/GamePlay/NPihBC",
 					ClassList: "",
 					Alt:"In game upper floor screen shot",
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<div class="slide">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/EggHuntGame/GamePlay/mgAzdG",
 					ClassList: "",
 					Alt:"In game Menu screen shot",
@@ -71,7 +71,7 @@
 		<div class="centeredFrame">
 			<h1 class="center reveal fromBottom">Office Egg Hunt</h1>
 
-			<%- include('Components/QuickInfo', {
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 				QuickInfoData: {
 					TimeSpent: "2 Weeks",
 					NumPeople: 1,
@@ -97,35 +97,35 @@
 
 			<div class="gallery glass reveal">
 				<div class="glass reveal">
-					<%- include('Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"Public/Assets/EggHuntGame/Blender/ray0001",
 						ClassList: "expandable",
 						Alt:"A render of the upper floor of the office"
 					}}); %>
 				</div>
 				<div class="glass reveal">
-					<%- include('Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"Public/Assets/EggHuntGame/Blender/ray0002",
 						ClassList: "expandable",
 						Alt:"A render of main meeting room"
 					}}); %>
 				</div>
 				<div class="glass reveal">
-					<%- include('Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"Public/Assets/EggHuntGame/Blender/ray0003",
 						ClassList: "expandable",
 						Alt:"A render of the lower floor of the office"
 					}}); %>
 				</div>
 				<div class="glass reveal">
-					<%- include('Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"Public/Assets/EggHuntGame/Blender/ray0004",
 						ClassList: "expandable",
 						Alt:"A render of my desk"
 					}}); %>
 				</div>
 				<div class="glass reveal">
-					<%- include('Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"Public/Assets/EggHuntGame/Blender/ray0005",
 						ClassList: "expandable",
 						Alt:"A render of the kitchen"
@@ -146,8 +146,8 @@
 
 
 		<!-- Shared common footer -->
-		<%- include('Components/Footer'); %>
-		<%- include('Components/Expandable'); %>
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+		<%- include(PageData.PathToRoot+'Components/Expandable'); %>
 
 
 

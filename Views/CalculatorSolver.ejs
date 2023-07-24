@@ -4,7 +4,7 @@
 <!-- Metadata about the page itself for search engines -->
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		ProjectData: ProjectData
 	}); %>
@@ -17,20 +17,20 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content background">
 
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
 		<!-- shared common header -->
-		<%- include('Components/Header'); %>
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 		<div class="centeredFrame">
 
 			<h1 class="center reveal fromBottom">Calculator: The Game Solver</h1>
 
-			<%- include('Components/QuickInfo', {
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 				QuickInfoData: {
 					TimeSpent: "2 Months",
 					NumPeople: 1,
@@ -50,7 +50,7 @@
 				where the aim is to modify a starting number using maths operations to get to a target number.
 				<br> Check out the game with the links below:</p>
 
-			<%- include('Components/QuickInfo', {
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 				QuickInfoData: {
 					Links: {
 						GooglePlayLink: "https://play.google.com/store/apps/details?id=com.sm.calculateme",
@@ -64,7 +64,7 @@
 
 			<div class="ZipperCardsHolder glass centeredFrame">
 				<div class="ZipperCard shaded glass reveal fromRight">
-					<%- include('Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"Public/Assets/CalculatorSolver/Tests",
 						ClassList: "expandable",
 						Alt:""
@@ -86,7 +86,7 @@
 							I then continue to improve on it to add a graphic user interface, similar to the game, to allow to easier inputting of the puzzles.
 						</p>
 					</div>
-					<%- include('Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"Public/Assets/CalculatorSolver/level_64",
 						ClassList: "expandable",
 						Alt:""
@@ -96,7 +96,7 @@
 
 		</div>
 		<!-- Shared common footer -->
-		<%- include('Components/Footer'); %>
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
 
 	</div>
 </body>

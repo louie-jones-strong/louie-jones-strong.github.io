@@ -4,7 +4,7 @@
 <!-- Metadata about the page itself for search engines -->
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		ProjectData: ProjectData
 	}); %>
@@ -18,19 +18,19 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content background">
 
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
 		<!-- shared common header -->
-		<%- include('Components/Header'); %>
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 		<div class="centeredFrame">
 			<h1 class="reveal fromBottom center">Extended Project Qualification (EPQ)</h1>
 
-			<%- include('Components/QuickInfo', {
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 				QuickInfoData: {
 					TimeSpent: "6 months",
 					NumPeople: 1,
@@ -106,7 +106,7 @@
 				<script src="Public/js/Carousel.js"></script>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/EPQ/Graphs/TimeToLearn",
 					ClassList: "expandable",
 					Alt:"A graph showing the time taken to learn"
@@ -156,8 +156,8 @@
 
 
 		<!-- Shared common footer -->
-		<%- include('Components/Footer'); %>
-		<%- include('Components/Expandable'); %>
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+		<%- include(PageData.PathToRoot+'Components/Expandable'); %>
 
 
 

@@ -4,7 +4,7 @@
 <!-- Metadata about the page itself for search engines -->
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		ProjectData: ProjectData
 	}); %>
@@ -18,13 +18,13 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content background">
 		<!-- shared common header -->
-		<%- include('Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
 		<!-- shared common header -->
-		<%- include('Components/Header'); %>
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 		<!-- cover image slide show -->
 		<div class="slide-holder">
@@ -40,7 +40,7 @@
 		<div class="centeredFrame">
 			<h1 class="center center reveal fromBottom">LEGO® Star Wars™ Battles</h1>
 
-			<%- include('Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 			<p class="center center reveal fromBottom">
 				While working on <abbr title="LEGO® Star Wars™ Battles">LSWB</abbr> I contributed to multiple areas of the game's development.
@@ -98,25 +98,25 @@
 			</p>
 
 			<div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center">
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path: "Public/Assets/LSWB/GamorreanGuardCard",
 					ClassList: "center reveal fromLeft card",
 					Style: "height: 10em;",
 					Alt: "Gamorrean Guard Card render"
 				}}); %>
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path: "Public/Assets/LSWB/Klatoonian_Raider",
 					ClassList: "center reveal fromLeft card",
 					Style: "height: 10em;",
 					Alt: "Klatoonian Raider Card render"
 				}}); %>
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path: "Public/Assets/LSWB/Mandalorian",
 					ClassList: "center reveal fromLeft card",
 					Style: "height: 10em;",
 					Alt: "Mandalorian Card render"
 				}}); %>
-				<%- include('Components/Picture', {ImgData: {
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path: "Public/Assets/LSWB/Projection",
 					ClassList: "center reveal fromLeft card",
 					Style: "height: 10em;",
@@ -157,7 +157,7 @@
 		</div>
 
 		<!-- Shared common footer -->
-		<%- include('Components/Footer'); %>
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
 
 
 		<script src="Public/js/vanilla-tilt.min.js"></script>

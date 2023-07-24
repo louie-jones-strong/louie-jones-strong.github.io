@@ -3,7 +3,7 @@
 
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('../Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		HeadData: {
 			Title: "Louie J-S: Degree: Graphics Programming",
@@ -20,19 +20,19 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('../Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content">
 		<!-- shared common header -->
-		<%- include('../Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 		<div class="background">
 			<!-- shared common header -->
-			<%- include('../Components/Header'); %>
+			<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 			<hr class="gap">
 
 			<div class="centeredFrame">
 				<h1 class="center reveal fromBottom">Graphics Programming</h1>
-				<%- include('../Components/QuickInfo', {
+				<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 					QuickInfoData: {
 						Grade: "TBD",
 						Date: "March 2022",
@@ -61,7 +61,7 @@
 				</ul>
 
 				<h2 class="center reveal fromBottom">Mid Term Project</h2>
-				<%- include('../Components/QuickInfo', {
+				<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 					QuickInfoData: {
 						TimeSpent: "Month",
 						NumPeople: 1
@@ -69,7 +69,7 @@
 				}); %>
 
 				<div class="cardHolder">
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/MidTerm/AngryBirds/",
@@ -78,7 +78,7 @@
 							Thumbnail: ""
 						}
 					}); %>
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/MidTerm/AsteroidGame/",
@@ -87,7 +87,7 @@
 							Thumbnail: ""
 						}
 					}); %>
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/MidTerm/NoisyGrid/",
@@ -96,7 +96,7 @@
 							Thumbnail: ""
 						}
 					}); %>
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/MidTerm/SolarSystem/",
@@ -108,14 +108,14 @@
 				</div>
 
 				<h2 class="center reveal fromBottom">Final Project</h2>
-				<%- include('../Components/QuickInfo', {
+				<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 					QuickInfoData: {
 						TimeSpent: "Month",
 						NumPeople: 1
 					},
 				}); %>
 				<div class="cardHolder">
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/3DSinGames/",
@@ -124,7 +124,7 @@
 							Thumbnail: ""
 						}
 					}); %>
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/averageFace/",
@@ -133,7 +133,7 @@
 							Thumbnail: ""
 						}
 					}); %>
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/instagramFilter/",
@@ -142,7 +142,7 @@
 							Thumbnail: ""
 						}
 					}); %>
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/WebcamPiano/",
@@ -155,7 +155,7 @@
 			</div>
 
 			<!-- Shared common footer -->
-			<%- include('../Components/Footer'); %>
+			<%- include(PageData.PathToRoot+'Components/Footer'); %>
 		</div>
 		<script src="<%=PageData.PathToRoot%>Public/js/vanilla-tilt.min.js"></script>
 		<script>

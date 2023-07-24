@@ -19,7 +19,7 @@ if (CardData.ProjectData)
 	}
 }
 
-if (CardData.QuickInfoData)
+if (CardData.QuickInfoData && CardData.Thumbnail)
 {
 	CardData.QuickInfoData.Skills = null
 
@@ -31,6 +31,13 @@ if (CardData.QuickInfoData)
 
 	CardData.QuickInfoData.Awards = null
 }
+
+if (CardData.QuickInfoData )
+{
+	CardData.QuickInfoData.HideSkillTitle = true
+}
+
+
 %>
 
 

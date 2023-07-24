@@ -3,7 +3,7 @@
 
 <head>
 	<!-- shared common Head Logic -->
-	<%- include('../Components/Head', {
+	<%- include(PageData.PathToRoot+'Components/Head', {
 		PageData: PageData,
 		HeadData: {
 			Title: "Xmas Cards",
@@ -21,18 +21,18 @@
 <body class="dark">
 
 	<!-- Shared common loader -->
-	<%- include('../Components/Loader'); %>
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
 	<div class="content">
 		<!-- shared common header -->
-		<%- include('../Components/AccessibilityHelper'); %>
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 		<div class="background">
 			<!-- shared common header -->
-			<%- include('../Components/Header'); %>
+			<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 			<!-- cover image slide show -->
 			<div class="slide-holder">
 				<div class="slide">
-					<%- include('../Components/Picture', {ImgData: {
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 						Path:"../Public/Assets/cards/xmas/card1",
 						ClassList: "",
 						Alt:"First Xmas Render",
@@ -47,7 +47,7 @@
 
 
 				<div class="cardHolder">
-					<%- include('../Components/Card', {
+					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
 							OpenInNewTab: false,
 							Link: "xmas",
@@ -69,7 +69,7 @@
 
 
 			<!-- Shared common footer -->
-			<%- include('../Components/Footer'); %>
+			<%- include(PageData.PathToRoot+'Components/Footer'); %>
 		</div>
 		<script src="<%=PageData.PathToRoot%>Public/js/vanilla-tilt.min.js"></script>
 		<script>

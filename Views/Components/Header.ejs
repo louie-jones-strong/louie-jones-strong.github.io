@@ -11,7 +11,7 @@
 	</a>
 	<nav>
 		<% if (PageData.PageName == 'index') { %>
-			<a href="/Degree/"
+			<a href="/Education/Degree/"
 				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Education
 			</a>
 			<a href="#Work"
@@ -25,13 +25,17 @@
 				class="navLink scaleOnFocus <% if (PageData.PageName == 'index') { %> selected<%}%>">Home
 			</a>
 			<% if (PageData.PageParent == 'Degree/' ) { %>
-				<a href="/Degree/"
+				<a href="/Education/Degree/"
 					class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Education
 				</a>
 			<%}%>
 		<%}%>
+
+		<% if (PageData.SiteConfig.ContactLinks.CVDownloadAllowed) { %>
 		<a href="CV.pdf" target="_blank" class="cvButton shaded sheen scaleOnFocus right">
 			CV <span class="material-icons">download</span>
 		</a>
+		<%}%>
+
 	</nav>
 </Header>

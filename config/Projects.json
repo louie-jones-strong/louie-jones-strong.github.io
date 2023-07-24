@@ -32,10 +32,513 @@
 			"BlenderProjects",
 			"EPQProject",
 			"CubePuzzleProject",
-			"Portfolio",
 			"MediaStudio"
 		]
 	},
+
+
+
+	"Education": {
+		"Title": "Education",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"Degree"
+		]
+	},
+
+	"Degree": {
+		"Title": "Degree",
+		"Thumbnail": "",
+		"Date": "October 2020 - 2023",
+		"TimeSpent": "3 Years",
+		"NumPeople": null,
+		"Awards": "On Track for: First Class",
+		"QuickDescription": "BSc Computer Science (Machine Learning And Artificial Intelligence)",
+		"PagePath": "Education/Degree/index",
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"IntroToProgramming1",
+			"DiscreteMaths",
+			"FundamentalsOfComputerScience",
+			"HowComputersWork",
+			"IntroToProgramming2",
+			"ComputationalMaths",
+			"AlgorithmsAndDataStructures1",
+			"WebDevelopment",
+			"ObjectOrientedProgramming",
+			"SoftwareDesignAndDevelopment",
+			"AgileSoftwareProjects",
+			"DatabasesNetworksAndTheWeb",
+			"ProgrammingWithData",
+			"ComputerSecurity",
+			"GraphicsProgramming",
+			"AlgorithmsAndDataStructures2",
+			"DatabasesAndAdvancedDataTechniques",
+			"MachineLearningAndNeuralNetworks",
+			"ArtificialIntelligence",
+			"IntelligentSignalProcessing",
+			"NaturalLanguageProcessing",
+			"DataScience",
+			"FinalProject"
+		]
+	},
+	"IntroToProgramming1": {
+		"Title": "Introduction To Programming I",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"JavaScript"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"DiscreteMaths": {
+		"Title": "Discrete Mathematics",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"FundamentalsOfComputerScience": {
+		"Title": "Fundamentals Of Computer Science",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"HowComputersWork": {
+		"Title": "How Computers Work",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "Second Class Honours",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"IntroToProgramming2": {
+		"Title": "Introduction To Programming II",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"ComputationalMaths": {
+		"Title": "Computational Mathematics",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"AlgorithmsAndDataStructures1": {
+		"Title": "Algorithms And Data Structures I",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"JavaScript"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"WebDevelopment": {
+		"Title": "Web Development",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": 4,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Git"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+
+	"ObjectOrientedProgramming": {
+		"Title": "Object Oriented Programming",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"CPlusPlus"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"SoftwareDesignAndDevelopment": {
+		"Title": "Software Design And Development",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"CPlusPlus",
+			"Python",
+			"Git"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"AgileSoftwareProjects": {
+		"Title": "Agile Software Projects",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": 6,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Nodejs",
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Git",
+			"SQL"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"DatabasesNetworksAndTheWeb": {
+		"Title": "Databases, Networks And The Web",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python",
+			"Nodejs",
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"SQL"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"ProgrammingWithData": {
+		"Title": "Programming With Data",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python",
+			"SQL"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"ComputerSecurity": {
+		"Title": "Computer Security",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"GraphicsProgramming": {
+		"Title": "Graphics Programming",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"JavaScript"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"AlgorithmsAndDataStructures2": {
+		"Title": "Algorithms And Data Structures II",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"CPlusPlus",
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+
+	"DatabasesAndAdvancedDataTechniques": {
+		"Title": "Databases And Advanced Data Techniques",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python",
+			"Nodejs",
+			"JavaScript",
+			"SQL"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"MachineLearningAndNeuralNetworks": {
+		"Title": "Machine Learning And Neural Networks",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"ArtificialIntelligence": {
+		"Title": "Artificial Intelligence",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"IntelligentSignalProcessing": {
+		"Title": "Intelligent Signal Processing",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "First Class",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python",
+			"JavaScript",
+			"HTML",
+			"CSS"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"NaturalLanguageProcessing": {
+		"Title": "Natural Language Processing",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "TBD",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"DataScience": {
+		"Title": "Data Science",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "TBD",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"FinalProject": {
+		"Title": "Final Project",
+		"Thumbnail": "",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": null,
+		"Awards": "TBD",
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"Skills": [
+			"Python",
+			"HTML",
+			"Docker",
+			"Git"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+
+
+
 	"LSWB": {
 		"Title": "LEGO® Star Wars™ Battles",
 		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
@@ -70,7 +573,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "I spent my evenings after work as a tutor for arabic students to help them pass the IELTS speaking exam",
+		"QuickDescription": "I spent my evenings after work as a tutor for arabic students to teaching them pass the IELTS speaking exam",
 		"PagePath": null,
 		"Link": null,
 		"Skills": [
@@ -80,13 +583,13 @@
 		"SubProjects": []
 	},
 	"MathsTutor": {
-		"Title": "Math Tutor",
-		"Thumbnail": null,
+		"Title": "Maths Tutor",
+		"Thumbnail": "Public/Assets/MathsTutor/thumbnail",
 		"Date": "2020 - 2021",
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "During my free time between working and studying in my 2nd year of university I taught a number of students maths for their GCSEs.",
 		"PagePath": null,
 		"Link": null,
 		"Skills": [
