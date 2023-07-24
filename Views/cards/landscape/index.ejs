@@ -10,7 +10,7 @@
 
 	<!-- extra links if needed -->
 	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Carousel.css">
-	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Gallery.css">
 </head>
 
 <body class="dark">
@@ -28,9 +28,9 @@
 			<div class="slide-holder">
 				<div class="slide">
 					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
-						Path:"../Public/Assets/cards/xmas/card1",
+						Path:"../../Public/Assets/cards/landscape/card1",
 						ClassList: "",
-						Alt:"First Xmas Render",
+						Alt:"First Landscape Render",
 						LoadingType: "eager"
 					}}); %>
 				</div>
@@ -38,18 +38,17 @@
 			<script src="<%=PageData.PathToRoot%>Public/js/Carousel.js"></script>
 
 			<div class="centeredFrame">
-				<h1 class="center reveal fromBottom">Cards</h1>
+				<h1 class="center reveal fromBottom">Landscape Cards</h1>
 
 
-				<div class="cardHolder">
-
-					<%
-					for (const projectKey of ProjectData.SubProjects)
-					{
-						const project = PageData.Projects[projectKey];%>
-						<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
-					<%}
-					%>
+				<div class="gallery glass reveal">
+					<div class="glass reveal">
+						<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+							Path:"../../Public/Assets/cards/landscape/card1",
+							ClassList: "expandable",
+							Alt:""
+						}}); %>
+					</div>
 				</div>
 
 
@@ -64,18 +63,8 @@
 
 			<!-- Shared common footer -->
 			<%- include(PageData.PathToRoot+'Components/Footer'); %>
+			<%- include(PageData.PathToRoot+'Components/Expandable'); %>
 		</div>
-		<script src="<%=PageData.PathToRoot%>Public/js/vanilla-tilt.min.js"></script>
-		<script>
-			VanillaTilt.init(document.querySelectorAll(".card"), {
-				max: 10,
-				speed: 1000,
-				glare: true,
-				"max-glare": 0.3,
-				reverse: true,
-				scale: 1.1,
-			});
-		</script>
 	</div>
 </body>
 </html>

@@ -849,5 +849,64 @@
 			"ItchLink": "https://louie-js.itch.io/dr-plantenstein"
 		},
 		"SubProjects": []
+	},
+
+
+
+
+	"Cards": {
+		"Title": "Cards",
+		"Thumbnail": null,
+		"Date": null,
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": "cards/index",
+		"Link": null,
+		"Skills": [
+			"Blender"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"LandscapeCards",
+			"XmasCards"
+		]
+	},
+	"LandscapeCards": {
+		"Title": "Landscape Cards",
+		"Thumbnail": "Public/Assets/cards/landscape/card1",
+		"Date": null,
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": "cards/landscape/index",
+		"Link": null,
+		"Skills": [
+			"Blender"
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"XmasCards": {
+		"Title": "Christmas Cards",
+		"Thumbnail": "Public/Assets/cards/xmas/card1",
+		"Date": null,
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": "cards/xmas/index",
+		"Link": null,
+		"Skills": [
+			"Blender"
+		],
+		"Links": {
+		},
+		"SubProjects": []
 	}
+
 }

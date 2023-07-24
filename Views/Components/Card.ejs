@@ -42,7 +42,7 @@ if (CardData.QuickInfoData )
 
 
 <% if (CardData.Link) { %>
-<a class="card glass neonOutline reveal" href="<%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
+<a class="card glass neonOutline reveal" href="<%=PageData.PathToRoot%><%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
 <% }else{%>
 <a class="card glass reveal">
 <% }%>
@@ -50,7 +50,7 @@ if (CardData.QuickInfoData )
 	<% if (CardData.Thumbnail) { %>
 	<div class="cardImage">
 		<%- include('Picture', {ImgData: {
-			Path:CardData.Thumbnail,
+			Path:PageData.PathToRoot + CardData.Thumbnail,
 			ClassList: "",
 			Alt: CardData.Title,
 			Sizes: "350px"
