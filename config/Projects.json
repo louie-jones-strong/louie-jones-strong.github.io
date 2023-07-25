@@ -46,7 +46,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "My education history.",
 		"PagePath": null,
 		"Link": null,
 		"Skills": [
@@ -65,7 +65,7 @@
 		"TimeSpent": "3 Years",
 		"NumPeople": null,
 		"Awards": "On Track for: First Class",
-		"QuickDescription": "BSc Computer Science (Machine Learning And Artificial Intelligence)",
+		"QuickDescription": "BSc Computer Science (Machine Learning And Artificial Intelligence).",
 		"PagePath": "Education/Degree/index",
 		"Link": null,
 		"Skills": [
@@ -574,7 +574,7 @@
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
-		"QuickDescription": "I spent my evenings after work as a tutor for arabic students to teaching them pass the IELTS speaking exam",
+		"QuickDescription": "I spent my evenings after work as a tutor for arabic students to teaching them pass the IELTS speaking exam.",
 		"PagePath": null,
 		"Link": null,
 		"Skills": [
@@ -783,7 +783,7 @@
 		"TimeSpent": "1 Week",
 		"NumPeople": 4,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Roguelike made with the limitations of the Gameboy. You upgrade you monster with the body parts of creatures you defeat.",
 		"PagePath": null,
 		"Link": "https://tatltuae.itch.io/monstermash",
 		"Skills": [
@@ -802,7 +802,7 @@
 		"TimeSpent": "48 hours",
 		"NumPeople": 3,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "A post-civilization story game based in space. As you visit planets you find the story of those who lived long ago.",
 		"PagePath": null,
 		"Link": "https://tatltuae.itch.io/looking-for-eden",
 		"Skills": [
@@ -811,7 +811,7 @@
 			"Blender"
 		],
 		"Links": {
-			"ItchLink": "hhttps://tatltuae.itch.io/looking-for-eden"
+			"ItchLink": "https://tatltuae.itch.io/looking-for-eden"
 		},
 		"SubProjects": []
 	},
@@ -822,7 +822,7 @@
 		"TimeSpent": "1 Week",
 		"NumPeople": 1,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "A short fast passed clicker with constant upgrades.",
 		"PagePath": null,
 		"Link": "https://louie-js.itch.io/rougeclicker",
 		"Skills": [
@@ -836,13 +836,13 @@
 		"SubProjects": []
 	},
 	"DrPlantenstein": {
-		"Title": "Monster Mash",
+		"Title": "Dr. Plantenstein",
 		"Thumbnail": "Public/Assets/Plantenstein/Thumbnail",
 		"Date": null,
 		"TimeSpent": "1 Week",
 		"NumPeople": 3,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Shop and garden managment game made for GB jam 10, where you play as a herbalist who grows plants to heal the villagers.",
 		"PagePath": null,
 		"Link": "https://louie-js.itch.io/dr-plantenstein",
 		"Skills": [
@@ -866,7 +866,7 @@
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Collection of cards I have made for different occasions, in blender.",
 		"PagePath": "cards/index",
 		"Link": null,
 		"Skills": [
@@ -886,7 +886,7 @@
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Cards I have made of landscapes, in blender.",
 		"PagePath": "cards/landscape/index",
 		"Link": null,
 		"Skills": [
@@ -903,7 +903,7 @@
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Cards I have made for Christmas, in blender.",
 		"PagePath": "cards/xmas/index",
 		"Link": null,
 		"Skills": [

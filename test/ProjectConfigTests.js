@@ -89,6 +89,24 @@ for (const projectKey in projects)
 			assert.notEqual(value, null);
 			assert.equal(typeof value, "string");
 			assert.ok(value.length >= 10);
+
+			// check no new lines
+			assert.ok(!value.includes("\n"));
+
+			// check they end with a full stop
+			assert.ok(value.endsWith("."));
+
+			// check they start with a capital letter
+			assert.ok(value[0] === value[0].toUpperCase());
+
+			// check they don't start with a space
+			assert.ok(value[0] !== " ");
+
+			// check there is no double spaces
+			assert.ok(!value.includes("  "));
+
+			// check there are no lower case I's
+			assert.ok(!value.includes(" i "));
 		});
 
 		it("PagePath/Link", function () {
