@@ -1,4 +1,4 @@
-<div class="quickInfoHolder delayRevealChildren">
+<div class="quickInfoHolder delayRevealChildren center">
 
 	<% if (QuickInfoData.TimeSpent) { %>
 		<!-- time spent -->
@@ -61,7 +61,7 @@
 
 <% if (QuickInfoData.Links) { %>
 
-<div class="quickLinkHolder delayRevealChildren">
+<div class="quickLinkHolder delayRevealChildren center">
 
 	<!-- where to play/see it -->
 	<% if (QuickInfoData.Links.GithubLink && PageData.SiteConfig.ContactLinks.GitHub) { %>
@@ -165,7 +165,7 @@
 		<h4 class="center reveal fromLeft">Skills Used:</h4>
 	<% }%>
 
-	<div class="quickInfoHolder delayRevealChildren">
+	<div class="quickInfoHolder delayRevealChildren center">
 
 		<%
 			for (let i = 0; i < QuickInfoData.Skills.length; i++)
