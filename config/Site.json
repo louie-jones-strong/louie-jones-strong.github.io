@@ -27,10 +27,5 @@
 		"NoCopyFolders": [
 			"css/Shared"
 		]
-	},
-	"CompressionConfig": {
-		"CompressHTML": true,
-		"CompressCSS": true,
-		"CompressJS": true
 	}
 }
