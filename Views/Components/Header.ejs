@@ -10,7 +10,7 @@
 
 	</a>
 	<nav>
-		<% if (PageData.PageName == 'index') { %>
+		<% if (PageData.PageName == 'index' && PageData.PageParent == ".") { %>
 			<a href="/Education/Degree/"
 				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Education
 			</a>
