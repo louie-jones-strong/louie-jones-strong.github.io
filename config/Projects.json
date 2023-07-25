@@ -5,7 +5,7 @@
 		"Date": null,
 		"TimeSpent": null,
 		"NumPeople": null,
-		"Awards": "",
+		"Awards": null,
 		"QuickDescription": "I am a Brighton based hard working, creative, programmer studying machine learning.",
 		"PagePath": "index",
 		"Link": null,
@@ -32,7 +32,8 @@
 			"BlenderProjects",
 			"EPQProject",
 			"CubePuzzleProject",
-			"MediaStudio"
+			"MediaStudio",
+			"Minesweeper"
 		]
 	},
 
@@ -44,7 +45,7 @@
 		"Date": null,
 		"TimeSpent": null,
 		"NumPeople": null,
-		"Awards": "",
+		"Awards": null,
 		"QuickDescription": "",
 		"PagePath": null,
 		"Link": null,
@@ -619,6 +620,10 @@
 		},
 		"SubProjects": []
 	},
+
+
+
+
 	"BlenderProjects": {
 		"Title": "24 Hour Blender Challenge",
 		"Thumbnail": "Public/Assets/BlenderProjects/Images/blender_6",

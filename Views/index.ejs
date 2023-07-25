@@ -44,7 +44,7 @@
 
 			<div class="">
 				<h1 class="center reveal fromBottom">Who Am I?</h1>
-				<p class="center reveal fromBottom">I am a <a href="https://goo.gl/maps/uww4cWv48GgdQC719" target="_blank">Brighton, England</a> based, hard working, creative, programmer with a passion for developing tools, games and machine learning.</p>
+				<p class="center reveal fromBottom">I am a <a href="https://goo.gl/maps/uww4cWv48GgdQC719" target="_blank">Brighton, England</a> based, hard working, creative, programmer with a passion for learning and problem solving.</p>
 				<p class="center reveal fromBottom">I am a Student at Goldsmiths, University of London studying machine learning. (<a href="/Degree/">More Info</a>)
 				</p>
 
@@ -73,9 +73,12 @@
 
 				<!-- Personal Projects -->
 				<h2 id="PersonalProjects" class="center reveal fromBottom">Personal Projects:</h2>
+				<p class="center reveal fromBottom">
+					I enjoy pushing myself to learn new skills and technologies, these are some of my personal projects that I developed in my spare time.
+					Each project was focused on challenging me in different ways and learning new skills, technologies and techniques.
+				</p>
+
 				<div class="cardHolder">
-
-
 					<%
 					for (const projectKey of ProjectData.SubProjects)
 					{
@@ -83,7 +86,19 @@
 						<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
 					<%}
 					%>
+				</div>
 
+				<!-- Game Jams -->
+				<h2 id="PersonalProjects" class="center reveal fromBottom">Game Jams:</h2>
+				<p class="center reveal fromBottom">
+					As well as my personal projects, I also enjoy participating in game jams, as further opportunities to challenge myself in a creative way.
+					Working in a team under a time limit is a great way to learn new techniques to new problems.
+				</p>
+				<div class="cardHolder">
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["MonsterMash"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["looking-for-eden"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["RougeClicker"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["DrPlantenstein"]}}); %>
 				</div>
 			</div>
 

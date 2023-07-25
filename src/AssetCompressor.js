@@ -220,7 +220,7 @@ function CompressHtml(text)
 	text = text.replace(/<!--(.*?)-->/g,'');
 
 	// remove new lines
-	text = text.replace(/[\r\n]/gm, '');
+	text = text.replace(/[\r\n]/gm, ' ');
 
 	// remove tabs
 	text = text.replace(/\t/g,'');
