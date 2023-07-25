@@ -30,27 +30,7 @@
 			<h1 class="reveal fromBottom center">Media Studio</h1>
 			<p class="reveal fromBottom center">Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.</p>
 
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
-				QuickInfoData: {
-					TimeSpent: "2 months",
-					NumPeople: 1,
-					Skills: {
-						UsedJavaScript: true,
-						UsedCSS: true,
-						UsedHTML: true
-					}
-				}
-			}); %>
-
-			<br>
-			<h3 class="center">Try out the tool:</h3>
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
-				QuickInfoData: {
-					Links: {
-						WebsiteLink: "https://louie-jones-strong.github.io/MediaStudio"
-					},
-				}
-			}); %>
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 		</div>
 

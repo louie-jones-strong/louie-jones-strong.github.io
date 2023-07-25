@@ -33,21 +33,7 @@
 		<div class="centeredFrame">
 			<h1 class="center reveal fromBottom">Minesweeper</h1>
 
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
-				QuickInfoData: {
-					TimeSpent: "1 Week",
-					NumPeople: 1,
-					Links: {
-						GithubLink: "https://github.com/louie-jones-strong/MineSweeper",
-						WebsiteLink: "https://louie-jones-strong.github.io/MineSweeper/",
-					},
-					Skills: {
-						UsedJavaScript: true,
-						UsedHTML: true,
-						UsedCSS: true,
-					}
-				}
-			}); %>
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 			<p class="center reveal fromLeft">
 				Before I started my University degree I wanted to get ahead of the course to help me maintain a good work, education and life balance. (as I was working full time during my first year of University).

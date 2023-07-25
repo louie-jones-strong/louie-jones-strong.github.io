@@ -27,19 +27,7 @@
 		<div class="centeredFrame">
 			<h1 class="center center reveal fromBottom">Business Consulting</h1>
 
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
-				QuickInfoData: {
-					Date: "2022 - 2023",
-					NumPeople: 1,
-					Skills: {
-						UsedPython: true,
-						UsedGit: true,
-						UsedHTML: true,
-						UsedCSS: true,
-						UsedJavaScript: true,
-					}
-				}
-			}); %>
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 			<p class="center reveal fromBottom">
 				During my last year of university I worked part time as a business consultant for a number of small businesses.

@@ -30,15 +30,7 @@
 		<div class="centeredFrame">
 			<h1 class="reveal fromBottom center">Extended Project Qualification (EPQ)</h1>
 
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
-				QuickInfoData: {
-					TimeSpent: "6 months",
-					NumPeople: 1,
-					Skills: {
-						UsedPython: true
-					}
-				}
-			}); %>
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 			<p class="reveal fromBottom center">During my A levels I completed an award winning A* <abbr title="Extended Project Qualification">EPQ</abbr>.
 			   This is a dissertation equivalent to half an A level. For the topic of my

@@ -28,21 +28,7 @@
 		<div class="centeredFrame">
 			<h1 class="center reveal fromLeft">Portfolio</h1>
 
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
-				QuickInfoData: {
-					TimeSpent: "Month",
-					NumPeople: 1,
-					Links: {
-						GithubLink: "https://github.com/louie-jones-strong/louie-jones-strong.github.io",
-					},
-					Skills: {
-						UsedJavaScript: true,
-						UsedHTML: true,
-						UsedNodejs: true,
-						UsedCSS: true,
-					}
-				}
-			}); %>
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 			<!-- Introduction -->
 			<section id="Introduction" class="glass rounded">

@@ -29,18 +29,7 @@
 		<div class="centeredFrame">
 			<h1 class="center">24 Hour Blender Challenge</h1>
 
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
-				QuickInfoData: {
-					TimeSpent: "24 Hours Each",
-					NumPeople: 1,
-					Links: {
-						InstagramLink: "https://www.instagram.com/louie_j.s/",
-					},
-					Skills: {
-						UsedBlender: true,
-					}
-				}
-			}); %>
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 			<p>When Blender 2.8 came out I wanted to learn it for a few reasons:</p>
 			<ul>
