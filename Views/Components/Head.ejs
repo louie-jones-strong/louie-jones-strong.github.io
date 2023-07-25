@@ -27,7 +27,13 @@
 		gtag('js', new Date());
 		gtag('config', 'G-B6MK7D2H38');
 	</script>
-<% } %>
+<% }
+
+	let thumbnail = PageData.ProjectData.Thumbnail;
+	if (thumbnail == null) {
+		thumbnail = PageData.SiteConfig.DefaultThumbnail;
+	}
+%>
 
 <!-- just this page -->
 <title><%= ProjectData.Title %></title>
@@ -37,4 +43,4 @@
 <meta name="og:description " content="Louie Jones-Strong's portfolio. <%= ProjectData.QuickDescription %>">
 
 <meta property="og:url" content="<%= PageData.SiteConfig.HostURL %><%= ProjectData.PagePath %>.html"/>
-<meta property="og:image" content="<%= PageData.SiteConfig.HostURL %><%= ProjectData.Thumbnail %>.png" />
+<meta property="og:image" content="<%= PageData.SiteConfig.HostURL %><%= thumbnail %>_512.png" />

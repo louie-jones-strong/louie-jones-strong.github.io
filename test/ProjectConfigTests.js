@@ -52,9 +52,12 @@ for (const projectKey in projects)
 
 		it("Thumbnail", function () {
 			let value = project.Thumbnail;
-			assert.notEqual(value, null);
-			assert.equal(typeof value, "string");
-			assert.ok(value.length >= 10);
+
+			if (value != null)
+			{
+				assert.equal(typeof value, "string");
+				assert.ok(value.length >= 10);
+			}
 		});
 
 		// it("Date", function () {

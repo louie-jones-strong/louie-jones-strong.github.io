@@ -41,7 +41,7 @@
 
 	"Education": {
 		"Title": "Education",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": null,
 		"NumPeople": null,
@@ -60,7 +60,7 @@
 
 	"Degree": {
 		"Title": "Degree",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": "October 2020 - 2023",
 		"TimeSpent": "3 Years",
 		"NumPeople": null,
@@ -100,7 +100,7 @@
 	},
 	"IntroToProgramming1": {
 		"Title": "Introduction To Programming I",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -118,7 +118,7 @@
 	},
 	"DiscreteMaths": {
 		"Title": "Discrete Mathematics",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -135,7 +135,7 @@
 	},
 	"FundamentalsOfComputerScience": {
 		"Title": "Fundamentals Of Computer Science",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -152,7 +152,7 @@
 	},
 	"HowComputersWork": {
 		"Title": "How Computers Work",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -169,7 +169,7 @@
 	},
 	"IntroToProgramming2": {
 		"Title": "Introduction To Programming II",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -189,7 +189,7 @@
 	},
 	"ComputationalMaths": {
 		"Title": "Computational Mathematics",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -206,7 +206,7 @@
 	},
 	"AlgorithmsAndDataStructures1": {
 		"Title": "Algorithms And Data Structures I",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -224,7 +224,7 @@
 	},
 	"WebDevelopment": {
 		"Title": "Web Development",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": 4,
@@ -246,7 +246,7 @@
 
 	"ObjectOrientedProgramming": {
 		"Title": "Object Oriented Programming",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -264,7 +264,7 @@
 	},
 	"SoftwareDesignAndDevelopment": {
 		"Title": "Software Design And Development",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -284,7 +284,7 @@
 	},
 	"AgileSoftwareProjects": {
 		"Title": "Agile Software Projects",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": 6,
@@ -307,7 +307,7 @@
 	},
 	"DatabasesNetworksAndTheWeb": {
 		"Title": "Databases, Networks And The Web",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -330,7 +330,7 @@
 	},
 	"ProgrammingWithData": {
 		"Title": "Programming With Data",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -349,7 +349,7 @@
 	},
 	"ComputerSecurity": {
 		"Title": "Computer Security",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -366,7 +366,7 @@
 	},
 	"GraphicsProgramming": {
 		"Title": "Graphics Programming",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -384,7 +384,7 @@
 	},
 	"AlgorithmsAndDataStructures2": {
 		"Title": "Algorithms And Data Structures II",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -404,7 +404,7 @@
 
 	"DatabasesAndAdvancedDataTechniques": {
 		"Title": "Databases And Advanced Data Techniques",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -425,7 +425,7 @@
 	},
 	"MachineLearningAndNeuralNetworks": {
 		"Title": "Machine Learning And Neural Networks",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -443,7 +443,7 @@
 	},
 	"ArtificialIntelligence": {
 		"Title": "Artificial Intelligence",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -461,7 +461,7 @@
 	},
 	"IntelligentSignalProcessing": {
 		"Title": "Intelligent Signal Processing",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -482,7 +482,7 @@
 	},
 	"NaturalLanguageProcessing": {
 		"Title": "Natural Language Processing",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -500,7 +500,7 @@
 	},
 	"DataScience": {
 		"Title": "Data Science",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,
@@ -518,7 +518,7 @@
 	},
 	"FinalProject": {
 		"Title": "Final Project",
-		"Thumbnail": "",
+		"Thumbnail": null,
 		"Date": null,
 		"TimeSpent": "6 months",
 		"NumPeople": null,

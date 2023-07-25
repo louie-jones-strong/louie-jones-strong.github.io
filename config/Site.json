@@ -6,6 +6,8 @@
 
 	"HostURL": "https://louie-jones-strong.github.io/",
 
+	"DefaultThumbnail": "Public/Assets/PortfolioProject/Thumbnail",
+
 	"ContactLinks": {
 		"LinkedIn": "https://www.linkedin.com/in/louie-jones-strong",
 		"GitHub": "https://github.com/louie-jones-strong",
