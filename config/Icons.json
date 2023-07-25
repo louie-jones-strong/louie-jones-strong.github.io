@@ -73,5 +73,10 @@
 		"IconPath": "Public/Assets/Icons/Docker",
 		"Label": "Docker",
 		"ClassList": ""
+	},
+	"Latex":{
+		"IconPath": "Public/Assets/Icons/latex",
+		"Label": "Latex",
+		"ClassList": "greyScale"
 	}
 }

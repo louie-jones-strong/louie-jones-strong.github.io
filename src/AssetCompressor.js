@@ -7,9 +7,10 @@ const Utils = require('./Utils.js');
 
 class AssetCompressor
 {
-	constructor(compress, pathToRoot)
+	constructor(compress, onlyCopyNew, pathToRoot)
 	{
 		this.Compress = compress;
+		this.OnlyCopyNew = onlyCopyNew;
 		this.PathToRoot = pathToRoot;
 
 		let rootConfigPath = path.join(this.PathToRoot, "config");
@@ -90,6 +91,10 @@ class AssetCompressor
 			itemOutputPath = Utils.RemoveExtension(itemOutputPath)
 			itemOutputPath += ".css"
 
+			// if (fs.existsSync(itemOutputPath) && this.OnlyCopyNew)
+			// {
+			// 	return;
+			// }
 
 			let self = this;
 			let result = sass.compile(itemInputPath);
@@ -123,6 +128,11 @@ class AssetCompressor
 
 	TextFiles(inputPath, outputPath, compressorFunc)
 	{
+		// if (fs.existsSync(outputPath) && this.OnlyCopyNew)
+		// {
+		// 	return;
+		// }
+
 		fs.readFile(inputPath, 'utf8', function(fileError, data)
 		{
 			if (fileError)
@@ -153,6 +163,14 @@ class AssetCompressor
 		let imageConfig = this.SiteConfig.AssetConfig.ImageConfig;
 		let imageFormats = imageConfig.ImageFormats_Outputs;
 		let imageSizes = imageConfig.ImageSizes;
+
+		let outputFilePath = noExtensionPath + "_" + imageSizes[0] + imageFormats[0];
+
+		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
+		{
+			return;
+		}
+
 
 		sharp(inputPath)
 			.metadata()

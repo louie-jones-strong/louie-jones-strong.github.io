@@ -11,6 +11,7 @@ class Main
 	{
 		this.IsRelease = process.argv.includes("release");
 		this.Compress = process.argv.includes("compress");
+		this.OnlyCopyNew = process.argv.includes("onlyNew");
 		this.PathToRoot = "../";
 
 		let rootConfigPath = path.join(this.PathToRoot, "config");
@@ -25,6 +26,7 @@ class Main
 		console.log("=".repeat(20));
 		console.log("Is Release: ", this.IsRelease);
 		console.log("Compression: ", this.Compress);
+		console.log("Only Copy New: ", this.OnlyCopyNew);
 		console.log("=".repeat(20));
 		console.log();
 	}
@@ -73,7 +75,7 @@ class Main
 
 	BuildAssets()
 	{
-		let compressor = new Compressor.AssetCompressor(this.Compress, "../");
+		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, "../");
 
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_StaticFolder);
