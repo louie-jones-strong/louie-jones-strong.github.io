@@ -1,9 +1,15 @@
 # louie-jones-strong.github.io
+
+## Status
+![Unit Tests](https://github.com/louie-jones-strong/louie-jones-strong.github.io/actions/workflows/UnitTests.yml/badge.svg)
+
+
+
 My Portfolio
 link: https://louie-jones-strong.github.io/
 
 
-### Setup
+## Setup
  - Install Node: https://nodejs.org/en/download/
  - `npm install`
  - `cd src`

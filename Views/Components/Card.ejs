@@ -69,13 +69,13 @@ if (CardData.QuickInfoData )
 	<% }else{%>
 
 		<h3><%= CardData.Title %></h3>
-		<p><%= CardData.Body %></p>
 		<% if (CardData.QuickInfoData) { %>
 			<%- include('QuickInfo', {
 				QuickInfoData: CardData.QuickInfoData,
 				PageData: PageData
 			}); %>
 		<% }%>
+		<p><%= CardData.Body %></p>
 
 	<% }%>
 
