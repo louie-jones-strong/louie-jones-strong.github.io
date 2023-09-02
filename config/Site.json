@@ -21,7 +21,7 @@
 	},
 	"AssetConfig":{
 		"ImageConfig": {
-			"ImageSizes": [128, 256, 512, 1024, 2048],
+			"ImageSizes": [128, 256, 512, 1024],
 			"ImageFormats_Outputs": [".webp", ".png"]
 		},
 		"NoCopyFolders": [

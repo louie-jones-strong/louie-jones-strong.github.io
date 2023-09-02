@@ -47,7 +47,7 @@
 		"NumPeople": null,
 		"Awards": null,
 		"QuickDescription": "My education history.",
-		"PagePath": null,
+		"PagePath": "Education/index",
 		"Link": null,
 		"Skills": [
 			"JavaScript",

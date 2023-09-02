@@ -10,8 +10,14 @@ class Main
 	constructor()
 	{
 		this.IsRelease = process.argv.includes("release");
+		this.CleanBuild = process.argv.includes("clean");
 		this.Compress = process.argv.includes("compress");
 		this.OnlyCopyNew = process.argv.includes("onlyNew");
+
+		if (this.IsRelease)
+			this.CleanBuild = true;
+
+
 		this.PathToRoot = path.join(__dirname, "..");
 
 		let rootConfigPath = path.join(this.PathToRoot, "config");
@@ -25,6 +31,7 @@ class Main
 
 		console.log("=".repeat(20));
 		console.log("Is Release: ", this.IsRelease);
+		console.log("Clean Build: ", this.CleanBuild);
 		console.log("Compression: ", this.Compress);
 		console.log("Only Copy New: ", this.OnlyCopyNew);
 		console.log("=".repeat(20));
@@ -36,13 +43,13 @@ class Main
 	{
 		// todo before adding this back need to make sure robots.txt is copied over and cv.pdf is copied over
 		// if clean, delete output folder
-		// if (this.IsRelease)
-		// {
-		// 	console.log();
-		// 	console.log("Cleaning Output Folder...");
-		// 	let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
-		// 	fs.rmSync(outputPath, {recursive: true});
-		// }
+		if (this.CleanBuild)
+		{
+			console.log();
+			console.log("Cleaning Output Folder...");
+			let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
+			fs.rmSync(outputPath, {recursive: true});
+		}
 
 
 
@@ -55,6 +62,12 @@ class Main
 		console.log();
 		console.log("Building Assets...");
 		this.BuildAssets();
+
+
+		// copy non ejs files in views folder
+		console.log();
+		console.log("Copying Non EJS Files...");
+		this.CopyNonEJSFiles();
 	}
 
 	BuildPages()
@@ -79,6 +92,16 @@ class Main
 
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_StaticFolder);
+
+		compressor.HandleFolder(sourcePath, outputPath);
+	}
+
+	CopyNonEJSFiles()
+	{
+		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot);
+
+		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_ViewsFolder);
+		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
 
 		compressor.HandleFolder(sourcePath, outputPath);
 	}
