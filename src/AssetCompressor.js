@@ -38,6 +38,7 @@ class AssetCompressor
 				console.log('Unable to scan directory: ' + error);
 				return;
 			}
+
 			for (let i = 0; i < items.length; i++)
 			{
 				let item = items[i];
@@ -113,6 +114,11 @@ class AssetCompressor
 					self.TextFiles(itemOutputPath, itemOutputPath, CompressCss);
 				}
 			});
+
+		}
+		else if (itemInputPath.endsWith('.ejs') | itemInputPath.endsWith('.html'))
+		{
+			// skip these files
 
 		}
 		else // others just copy

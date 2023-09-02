@@ -40,7 +40,7 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: node src/BuildSite.js compress
+      - run: node src/BuildSite.js clean compress
 
 
   build-release:
@@ -55,7 +55,7 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: node src/BuildSite.js release compress
+      - run: node src/BuildSite.js clean release compress
 
       # Create artifact of the build output for GitHub Pages
       - name: Upload artifact

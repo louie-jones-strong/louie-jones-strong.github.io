@@ -6,7 +6,7 @@ function TryMakeDir(path)
 	try {
 		fs.mkdirSync(path)
 	} catch (err) {
-		if (err.code !== 'EEXIST') throw err
+		if (err.code !== 'EEXIST' & err.code !== 'ENOENT') throw err
 	}
 }
 

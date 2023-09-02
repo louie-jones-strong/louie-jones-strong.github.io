@@ -22,8 +22,7 @@
 		<%= ImgData.Path %>_128.webp 128w,
 		<%= ImgData.Path %>_256.webp 256w,
 		<%= ImgData.Path %>_512.webp 512w,
-		<%= ImgData.Path %>_1024.webp 1024w,
-		<%= ImgData.Path %>_2048.webp 2048w"
+		<%= ImgData.Path %>_1024.webp 1024w"
 	type="image/webp"
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 
@@ -31,11 +30,10 @@
 		<%= ImgData.Path %>_128.png 128w,
 		<%= ImgData.Path %>_256.png 256w,
 		<%= ImgData.Path %>_512.png 512w,
-		<%= ImgData.Path %>_1024.png 1024w,
-		<%= ImgData.Path %>_2048.png 2048w"
+		<%= ImgData.Path %>_1024.png 1024w"
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 
-	<img src="<%= ImgData.Path %>_2048.png" alt="<%= ImgData.Alt %>" loading=<%= ImgData.LoadingType %>
+	<img src="<%= ImgData.Path %>_1024.png" alt="<%= ImgData.Alt %>" loading=<%= ImgData.LoadingType %>
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 </picture>
 
