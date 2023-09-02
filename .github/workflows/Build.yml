@@ -40,8 +40,7 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: cd src
-      - run: node BuildSite.js compress
+      - run: node src/BuildSite.js compress
 
       # Create artifact of the build output
       - uses: actions/upload-artifact@v3
@@ -63,8 +62,7 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: cd src
-      - run: node BuildSite.js release compress
+      - run: node src/BuildSite.js release compress
 
       # Create artifact of the build output
       - uses: actions/upload-artifact@v3
