@@ -12,7 +12,7 @@ class Main
 		this.IsRelease = process.argv.includes("release");
 		this.Compress = process.argv.includes("compress");
 		this.OnlyCopyNew = process.argv.includes("onlyNew");
-		this.PathToRoot = "../";
+		this.PathToRoot = path.join(__dirname, "..");
 
 		let rootConfigPath = path.join(this.PathToRoot, "config");
 		let sitePath = path.join(rootConfigPath, "Site.json");
@@ -59,7 +59,7 @@ class Main
 
 	BuildPages()
 	{
-		let pageBuilder = new PageBuilder.PageBuilder(this.IsRelease, this.Compress, "../");
+		let pageBuilder = new PageBuilder.PageBuilder(this.IsRelease, this.Compress, this.PathToRoot);
 
 		// build project pages
 		for (const projectKey of Object.keys(this.ProjectConfig))
@@ -75,7 +75,7 @@ class Main
 
 	BuildAssets()
 	{
-		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, "../");
+		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot);
 
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_StaticFolder);

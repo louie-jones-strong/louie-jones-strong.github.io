@@ -1,7 +1,7 @@
 # louie-jones-strong.github.io
 
 ## Status
-![Unit Tests](https://github.com/louie-jones-strong/louie-jones-strong.github.io/actions/workflows/UnitTests.yml/badge.svg)
+![Unit Tests](https://github.com/louie-jones-strong/louie-jones-strong.github.io/actions/workflows/Build.yml/badge.svg)
 
 
 
