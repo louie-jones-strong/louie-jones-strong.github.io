@@ -42,13 +42,6 @@ jobs:
       - run: npm ci
       - run: node src/BuildSite.js compress
 
-      # Create artifact of the build output
-      - uses: actions/upload-artifact@v3
-        with:
-          name: dev-build
-          path: docs/
-          if-no-files-found: error
-
 
   build-release:
     needs: run-tests
@@ -64,15 +57,9 @@ jobs:
       - run: npm ci
       - run: node src/BuildSite.js release compress
 
-      # Create artifact of the build output
-      - uses: actions/upload-artifact@v3
-        with:
-          name: release-build
-          path: docs/
-          if-no-files-found: error
-
       # Create artifact of the build output for GitHub Pages
       - name: Upload artifact
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v2
         with:
           path: docs/
