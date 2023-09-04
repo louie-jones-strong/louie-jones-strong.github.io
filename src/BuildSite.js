@@ -41,8 +41,6 @@ class Main
 
 	BuildSite()
 	{
-		// todo before adding this back need to make sure robots.txt is copied over and cv.pdf is copied over
-		// if clean, delete output folder
 		if (this.CleanBuild)
 		{
 			console.log();
@@ -51,23 +49,30 @@ class Main
 			fs.rmSync(outputPath, {recursive: true});
 		}
 
-
+		// build assets
+		console.log();
+		console.log("Building Assets...");
+		this.BuildAssets();
 
 		// build pages
 		console.log();
 		console.log("Building Pages...");
 		this.BuildPages();
 
-		// build assets
-		console.log();
-		console.log("Building Assets...");
-		this.BuildAssets();
-
-
 		// copy non ejs files in views folder
 		console.log();
 		console.log("Copying Non EJS Files...");
 		this.CopyNonEJSFiles();
+	}
+
+	BuildAssets()
+	{
+		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot);
+
+		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
+		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_StaticFolder);
+
+		compressor.HandleFolder(sourcePath, outputPath);
 	}
 
 	BuildPages()
@@ -84,16 +89,6 @@ class Main
 			if (pagePath != null)
 				pageBuilder.BuildPage(pagePath, config);
 		}
-	}
-
-	BuildAssets()
-	{
-		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot);
-
-		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
-		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_StaticFolder);
-
-		compressor.HandleFolder(sourcePath, outputPath);
 	}
 
 	CopyNonEJSFiles()
