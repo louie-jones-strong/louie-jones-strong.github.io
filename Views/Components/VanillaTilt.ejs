@@ -1,0 +1,25 @@
+
+<%
+let glareOn = true;
+let scale = 1.1;
+
+if (TiltData.GlareOverride != undefined) {
+	glareOn = TiltData.GlareOverride;
+}
+
+if (TiltData.ScaleOverride != undefined) {
+	scale = TiltData.ScaleOverride;
+}
+%>
+
+<script src="<%=PageData.PathToRoot%>Public/js/vanilla-tilt.min.js"></script>
+<script>
+	VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 10,
+		speed: 1000,
+		glare: <%=glareOn%>,
+		"max-glare": 0.3,
+		reverse: true,
+		scale: <%=scale%>,
+	});
+</script>
