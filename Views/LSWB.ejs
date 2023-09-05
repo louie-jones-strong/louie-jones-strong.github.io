@@ -160,17 +160,7 @@
 		<%- include(PageData.PathToRoot+'Components/Footer'); %>
 
 
-		<script src="Public/js/vanilla-tilt.min.js"></script>
-		<script>
-			VanillaTilt.init(document.querySelectorAll(".card"), {
-				max: 10,
-				speed: 1000,
-				glare: false,
-				"max-glare": 1,
-				reverse: true,
-				scale: 1.5,
-			});
-		</script>
+		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {GlareOverride:false, ScaleOverride:1.5}}); %>
 
 	</div>
 </body>
