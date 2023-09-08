@@ -720,26 +720,6 @@
 		},
 		"SubProjects": []
 	},
-	"Portfolio": {
-		"Title": "My Portfolio",
-		"Thumbnail": "Public/Assets/PortfolioProject/Thumbnail",
-		"Date": null,
-		"TimeSpent": "Month",
-		"NumPeople": 1,
-		"Awards": null,
-		"QuickDescription": "How I made this website.",
-		"PagePath": "Portfolio",
-		"Link": null,
-		"Skills": [
-			"JavaScript",
-			"HTML",
-			"CSS"
-		],
-		"Links": {
-			"GithubLink": "https://github.com/louie-jones-strong/louie-jones-strong.github.io"
-		},
-		"SubProjects": []
-	},
 	"Minesweeper": {
 		"Title": "Mine Sweeper",
 		"Thumbnail": "Public/Assets/MineSweeper/Thumbnail",
