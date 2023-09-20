@@ -28,7 +28,18 @@
 		gtag('config', 'G-B6MK7D2H38');
 	</script>
 <% }
+else { %>
+	<!-- add data as js object for debugging -->
+	<script>
+		let PageData = <%- JSON.stringify(PageData) %>;
+		let ProjectData = <%- JSON.stringify(ProjectData) %>;
+	</script>
 
+
+<%} %>
+
+
+<%
 	let thumbnail = ProjectData.Thumbnail;
 	if (thumbnail == null) {
 		thumbnail = PageData.SiteConfig.DefaultThumbnail;
