@@ -524,16 +524,18 @@
 		"NumPeople": null,
 		"Awards": "TBD",
 		"QuickDescription": "My dissertation involved independently planning, managing, researching, designing, developing, testing and evaluating my own software project. For this project I designed a new machine learning framework for creating agents for the games industry.",
-		"PagePath": null,
+		"PagePath": "Education/Degree/FinalProject",
 		"Link": null,
 		"Skills": [
 			"Python",
-			"HTML",
 			"Docker",
 			"Git",
+			"HTML",
+			"CSS",
 			"Latex"
 		],
 		"Links": {
+			"GithubLink": "https://github.com/louie-jones-strong/DECAF"
 		},
 		"SubProjects": [
 		]
