@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const PageBuilder = require('./PageBuilder.js');
 const Compressor = require('./AssetCompressor.js');
+const Utils = require('./Utils.js');
 
 
 
@@ -48,6 +49,9 @@ class Main
 			let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
 			fs.rmSync(outputPath, {recursive: true});
 		}
+
+		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
+		Utils.TryMakeDir(outputPath)
 
 		// build assets
 		console.log();
