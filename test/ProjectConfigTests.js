@@ -151,7 +151,30 @@ for (const projectKey in projects)
 				let iconConfig = iconsConfig[skill];
 				assert.notEqual(iconConfig, null);
 			}
+
+			// contains sub project skills
+			let subProjects = project.SubProjects;
+			if (subProjects != null)
+			{
+				for (const subProject of subProjects)
+				{
+					let subProjectConfig = projects[subProject];
+					assert.notEqual(subProjectConfig, null);
+
+					let subProjectSkills = subProjectConfig.Skills;
+					assert.notEqual(subProjectSkills, null);
+
+					for (const subProjectSkill of subProjectSkills)
+					{
+						let includesSkill = skills.includes(subProjectSkill)
+						let message = subProjectSkill + " skill found in sub project " + subProject + " but not in main project " + projectKey;
+						assert.ok(includesSkill, message);
+					}
+				}
+			}
 		});
+
+
 
 		it("Links", function () {
 			var links = project.Links;

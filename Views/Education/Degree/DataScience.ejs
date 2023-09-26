@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+</head>
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content">
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+			<hr class="gap">
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">Data Science</h1>
+				<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+			</div>
+
+			<!-- Shared common footer -->
+			<%- include(PageData.PathToRoot+'Components/Footer'); %>
+		</div>
+		<script src="<%=PageData.PathToRoot%>Public/js/vanilla-tilt.min.js"></script>
+		<script>
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 10,
+				speed: 1000,
+				glare: true,
+				"max-glare": 0.3,
+				reverse: true,
+				scale: 1.1,
+			});
+		</script>
+	</div>
+</body>
+</html>
