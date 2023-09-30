@@ -14,6 +14,18 @@ Install Node: https://nodejs.org/en/download/
 ```
 npm install
 ```
+
+### Run Pre Build Tests
+```
+npm run PreTests
+```
+
+### Build
 ```
 node src/BuildSite.js compress onlyNew
+```
+
+### Run Post Build Tests
+```
+npm run PostTests
 ```
