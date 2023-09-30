@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "PreTests": "mocha --grep BuiltTests* -i",
+    "PostTests": "mocha --grep BuiltTests*"
   },
   "author": "",
   "license": "ISC",

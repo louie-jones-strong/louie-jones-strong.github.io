@@ -5,7 +5,7 @@ const utils = require("../src/Utils.js");
 
 
 
-describe("BuiltSite Tests", function ()
+describe("BuiltTests", function ()
 {
 	var siteConfig = require("../config/Site.json");
 	var projects = require("../config/Projects.json");
