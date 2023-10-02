@@ -63,47 +63,111 @@ describe("BuiltTests", function ()
 
 		assert.notEqual(page, null);
 
-		it("href", function ()
+		describe("Links: " + pagePath, function ()
 		{
-			let srcs = FindOccurrances(page, /href="([^"]*)"/g);
-			for (const src of srcs)
+			it("href", function ()
 			{
-				let srcPath = src.replace("href=\"", "").replace("\"", "");
-				CheckLocalPath(pagePath, srcPath);
-			}
+				let srcs = FindOccurrences(page, /href="([^"]*)"/g);
+				for (const src of srcs)
+				{
+					let srcPath = src.replace("href=\"", "").replace("\"", "");
+					CheckLocalPath(pagePath, srcPath);
+				}
+			});
+
+			it("src", function ()
+			{
+				let srcs = FindOccurrences(page, /src="([^"]*)"/g);
+				for (const src of srcs)
+				{
+					let srcPath = src.replace("src=\"", "").replace("\"", "");
+					CheckLocalPath(pagePath, srcPath);
+				}
+			});
+
+			it("srcset", function ()
+			{
+				let srcsets = FindOccurrences(page, /srcset="([^"]*)"/g);
+				for (const srcset of srcsets)
+				{
+					let srcs = srcset.replace("srcset=\"", "").replace("\"", "").split(",");
+					for (const src of srcs)
+					{
+						let srcPath = src.trim().split(" ")[0];
+						CheckLocalPath(pagePath, srcPath);
+					}
+				}
+
+			});
 		});
 
-		it("src", function ()
+
+		describe("Text: " + pagePath, function ()
 		{
-			let srcs = FindOccurrances(page, /src="([^"]*)"/g);
-			for (const src of srcs)
+			it("alt", function ()
 			{
-				let srcPath = src.replace("src=\"", "").replace("\"", "");
-				CheckLocalPath(pagePath, srcPath);
-			}
+				let items = FindOccurrences(page, /alt="([^"]*)"/g);
+				for (const item of items)
+				{
+					let alt = item.replace("alt=\"", "").replace("\"", "");
+					CheckText(alt, 5, "alt");
+
+				}
+			});
+
+
+			describe("Text Tags: " + pagePath, function ()
+			{
+				let textTypes = [
+					["h1", 5, false],
+					["h2", 4, false],
+					["h3", 3, false],
+					["h4", 4, false],
+					["h5", 1, false],
+					["h6", 4, false],
+					["p", 4, true],
+					["a", 4, false]];
+
+
+				for (const kvp of textTypes)
+				{
+					let textType = kvp[0];
+					let minLen = kvp[1];
+					let oneWord = kvp[2];
+					it(textType, function ()
+					{
+						let items = FindOccurrences(page, new RegExp("<" + textType + "[^>]*>[^<]*</" + textType + ">", "g"));
+						if (items != null)
+						{
+							for (const item of items)
+							{
+								let text = item.replace("<" + textType + ">", "").replace("</" + textType + ">", "");
+								CheckText(text, minLen, textType, oneWord=oneWord);
+							}
+						}
+					});
+				}
+			});
 		});
 
-		// it("srcset", function ()
-		// {
-
-		// });
-
-
-
-		// it("alt", function ()
-		// {
-
-		// });
-
-		// it("text", function ()
-		// {
-
-		// });
+		describe("Images: " + pagePath, function ()
+		{
+			it("Must have alt", function ()
+			{
+				let items = FindOccurrences(page, /<img[^>]*>/g);
+				for (const item of items)
+				{
+					let alt = item.match(/alt="([^"]*)"/g);
+					let message = "Missing alt: " + item;
+					assert.ok(alt, message);
+				}
+			});
+		});
 
 	});
 	}
 
-	function FindOccurrances(content, regex)
+	function FindOccurrences(content, regex)
 	{
 		let matches = content.match(regex);
 		return matches;
@@ -114,12 +178,21 @@ describe("BuiltTests", function ()
 		if (localPath.startsWith("http"))
 		{
 			// todo check that the url exists
+			// check that the url is valid
+			let validRegex = /https?:\/\/[^\s$.?#].[^\s]*$/gm;
+			let valid = validRegex.test(localPath);
+			let message = "Invalid url: " + localPath;
+			assert.ok(valid, message);
 
 		}
 		else if (localPath.startsWith("mailto"))
 		{
-			// todo check that the url exists
-
+			// check that the email is valid
+			let email = localPath.replace("mailto:", "");
+			let validRegex = /\S+@\S+\.\S+/;
+			let valid = validRegex.test(email);
+			let message = "Invalid email: " + email;
+			assert.ok(valid, message);
 		}
 		else if (localPath.startsWith("#"))
 		{
@@ -128,15 +201,37 @@ describe("BuiltTests", function ()
 		}
 		else
 		{
-			let localFile = path.join(pagePath, "../"+localPath);
+			let localFile = localPath;
+
+			if (localPath.startsWith("../"))
+				localFile = path.join(pagePath, "../"+localPath);
+			else
+				localFile = path.join(outDir, localPath);
+
+
 			let srcExists = fs.existsSync(localFile);
 			let message = "doesn't exist: " + localFile;
 			assert.ok(srcExists, message);
 		}
-
-
-
 	}
 
+	function CheckText(text, minLen, message, oneWord=true)
+	{
+		message = "\"" + text + "\" Context: " + message
+		assert.ok(text, "text missing: " + message);
+		assert.ok(text.length >= minLen, "text to short: " + message);
+		assert.ok(!text.includes("  "), "double space: " + message);
 
+		if (oneWord)
+			assert.ok(text.includes(" "), "Only one word: " + message);
+
+		// todo check for ending with a full stop
+
+
+
+		// todo check for bad words
+		let lowerText = text.toLowerCase();
+		let badWords = new Set(["fuck", "shit"]);
+
+	}
 });
