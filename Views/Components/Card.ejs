@@ -52,7 +52,7 @@ if (CardData.QuickInfoData )
 		<%- include('Picture', {ImgData: {
 			Path:PageData.PathToRoot + CardData.Thumbnail,
 			ClassList: "",
-			Alt: CardData.Title,
+			Alt: CardData.Title + " Thumbnail",
 			Sizes: "350px"
 		}}); %>
 		<% if (CardData.QuickInfoData) { %>

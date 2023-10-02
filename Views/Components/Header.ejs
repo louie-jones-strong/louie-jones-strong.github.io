@@ -4,7 +4,7 @@
 		<%- include('Picture', {ImgData: {
 			Path:PageData.PathToRoot + "Public/Assets/Logo/Logo",
 			ClassList: "",
-			Alt:"Logo",
+			Alt:"Portfolio Logo",
 			Sizes: "5em"
 		}}); %>
 
@@ -22,7 +22,7 @@
 			</a>
 		<%}else{%>
 			<a href="/" id="homeNavLink"
-				class="navLink scaleOnFocus <% if (PageData.PageName == 'index') { %> selected<%}%>">Home
+				class="navLink scaleOnFocus <% if (PageData.PageName == 'index') { %>selected<%}%>">Home
 			</a>
 			<% if (PageData.PageParent == 'Education/Degree' && PageData.PageName != "index") { %>
 				<a href="/Education/Degree/"
