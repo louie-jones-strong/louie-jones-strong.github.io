@@ -110,7 +110,7 @@ describe("BuiltTests", function ()
 				for (const item of items)
 				{
 					let alt = item.replace("alt=\"", "").replace("\"", "");
-					CheckText(alt, 5, "alt");
+					CheckText(alt, "alt", 5, true, false);
 
 				}
 			});
@@ -119,14 +119,14 @@ describe("BuiltTests", function ()
 			describe("Text Tags: " + pagePath, function ()
 			{
 				let textTypes = [
-					["h1", 5, false],
-					["h2", 4, false],
-					["h3", 3, false],
-					["h4", 4, false],
-					["h5", 1, false],
-					["h6", 4, false],
-					["p", 4, true],
-					["a", 4, false]];
+					["h1", 5, false, false],
+					["h2", 4, false, false],
+					["h3", 3, false, false],
+					["h4", 4, false, false],
+					["h5", 1, false, false],
+					["h6", 4, false, false],
+					["p", 4, true, true],
+					["a", 4, false, false]];
 
 
 				for (const kvp of textTypes)
@@ -134,6 +134,8 @@ describe("BuiltTests", function ()
 					let textType = kvp[0];
 					let minLen = kvp[1];
 					let oneWord = kvp[2];
+					let punctuation = kvp[3];
+
 					it(textType, function ()
 					{
 						let items = FindOccurrences(page, new RegExp("<" + textType + "[^>]*>[^<]*</" + textType + ">", "g"));
@@ -141,8 +143,10 @@ describe("BuiltTests", function ()
 						{
 							for (const item of items)
 							{
-								let text = item.replace("<" + textType + ">", "").replace("</" + textType + ">", "");
-								CheckText(text, minLen, textType, oneWord=oneWord);
+								// get only the inner text
+								let text = item.replace(new RegExp("<" + textType + "[^>]*>", "g"), "").replace(new RegExp("</" + textType + ">", "g"), "");
+								context = "(" + textType + ") " + item;
+								CheckText(text, context, minLen, oneWord=oneWord, punctuation=punctuation);
 							}
 						}
 					});
@@ -215,7 +219,7 @@ describe("BuiltTests", function ()
 		}
 	}
 
-	function CheckText(text, minLen, message, oneWord=true)
+	function CheckText(text, message, minLen, oneWord=true, punctuation=true)
 	{
 		message = "\"" + text + "\" Context: " + message
 		assert.ok(text, "text missing: " + message);
@@ -225,8 +229,21 @@ describe("BuiltTests", function ()
 		if (oneWord)
 			assert.ok(text.includes(" "), "Only one word: " + message);
 
-		// todo check for ending with a full stop
+		if (punctuation)
+		{
+			let validPunctuation =
+				text.endsWith(".") ||
+				text.endsWith(". ") ||
+				text.endsWith("?") ||
+				text.endsWith("? ") ||
+				text.endsWith("!") ||
+				text.endsWith("! ") ||
+				text.endsWith(":") ||
+				text.endsWith(": ");
 
+
+			assert.ok(validPunctuation, "Missing full stop: " + message);
+		}
 
 
 		// todo check for bad words
