@@ -79,7 +79,10 @@
 					Each project was focused on challenging me in different ways and learning new skills, technologies and techniques.
 				</p>
 
-				<div class="cardHolder">
+
+				<%- include(PageData.PathToRoot+'Components/ContentFilter', {PageData: PageData,
+					FilterData:{HolderId: "filter", Tags: ["Degree"], StartTags: ["Degree"]}}); %>
+				<div class="cardHolder" id="filter">
 					<%
 					for (const projectKey of ProjectData.SubProjects)
 					{
@@ -112,6 +115,5 @@
 
 		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
 	</div>
-
 </body>
 </html>

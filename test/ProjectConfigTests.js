@@ -209,6 +209,13 @@ for (const projectKey in projects)
 				assert.notEqual(subProjectConfig, null);
 			}
 		});
+
+		it("Tags", function () {
+			let value = project.Tags;
+			assert.notEqual(value, null);
+			assert.equal(typeof value, "string");
+
+		});
 	});
 }
 });

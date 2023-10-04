@@ -1,0 +1,37 @@
+<script src="<%= PageData.PathToRoot %>Public/js/TagFilter.js"></script>
+<script>
+	var tagFilter = null;
+	window.addEventListener('load', function () {
+		tagFilter = new TagFilter("<%=FilterData.HolderId%>", <%- JSON.stringify(FilterData.StartTags) %>)
+	});
+</script>
+
+<div class="center FilterOptions" id="<%=FilterData.HolderId%>-Options">
+	<h4>Filters:</h4>
+<%for (let i = 0; i < FilterData.Tags.length; i++)
+{
+	let skillKey = FilterData.Tags[i]
+	let icon = PageData.Icons[skillKey];
+	%>
+	<button class="filterButton scaleOnFocus" tag="<%=skillKey%>" onclick="tagFilter.ToggleTag('<%=skillKey%>')">
+
+		<div class="filterButtonIcons">
+			<span class="material-icons">done</span>
+			<span class="material-icons">horizontal_rule</span>
+			<span class="material-icons">close</span>
+		</div>
+
+		<%if (icon) {%>
+			<%- include('Picture', {ImgData: {
+				Path:PageData.PathToRoot + icon.IconPath,
+				ClassList: "icon " + icon.ClassList,
+				Alt: icon.Label + " Logo",
+				IsSvg: true
+			}}); %>
+		<%}%>
+
+
+		<h5><%=skillKey%></h5>
+	</button>
+<%}%>
+</div>
