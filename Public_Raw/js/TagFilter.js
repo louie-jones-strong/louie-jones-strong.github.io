@@ -56,8 +56,6 @@ class TagFilter
 
 	Filter()
 	{
-		// console.log("TagFilter.Filter Tags: ", this.Tags);
-
 		let holder = document.getElementById(this.HolderId);
 		if (holder == null)
 		{
