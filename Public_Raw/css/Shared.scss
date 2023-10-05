@@ -409,15 +409,15 @@ ul li::before{
 
 .filterable{
 	opacity: 1;
-	transition: opacity 0.2s linear, width 0.2s linear, height 0.2s linear, margin 0.2s linear;
+	transition: opacity 0.2s linear, max-width 0.2s linear, max-height 0.2s linear, margin 0.2s linear;
 
 }
 
 .filterable.filtered{
 	opacity: 0;
-	width: 0px;
 	margin: 0px;
-	height: 0px;
+	max-height: 0px;
+	max-width: 0px;
 }
 
 
