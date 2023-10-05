@@ -2,18 +2,17 @@
 <script>
 	var tagFilter = null;
 	window.addEventListener('load', function () {
-		tagFilter = new TagFilter("<%=FilterData.HolderId%>", <%- JSON.stringify(FilterData.StartTags) %>)
+		tagFilter = new TagFilter("<%=FilterData.HolderId%>", <%- JSON.stringify(FilterData.Tags) %>)
 	});
 </script>
 
 <div class="center FilterOptions" id="<%=FilterData.HolderId%>-Options">
 	<h4>Filters:</h4>
-<%for (let i = 0; i < FilterData.Tags.length; i++)
+<%for (const tag in FilterData.Tags)
 {
-	let skillKey = FilterData.Tags[i]
-	let icon = PageData.Icons[skillKey];
+	let icon = PageData.Icons[tag];
 	%>
-	<button class="filterButton scaleOnFocus" tag="<%=skillKey%>" onclick="tagFilter.ToggleTag('<%=skillKey%>')">
+	<button class="filterButton scaleOnFocus" tag="<%=tag%>" onclick="tagFilter.ToggleTag('<%=tag%>')">
 
 		<div class="filterButtonIcons">
 			<span class="material-icons">done</span>
@@ -31,7 +30,7 @@
 		<%}%>
 
 
-		<h5><%=skillKey%></h5>
+		<h5><%=tag%></h5>
 	</button>
 <%}%>
 </div>

@@ -1,10 +1,10 @@
 class TagFilter
 {
 //#region Init
-	constructor(holderId, startTags)
+	constructor(holderId, tags)
 	{
 		console.log("TagFilter constructor holderId: ", holderId);
-		this.Tags = new Set(startTags);
+		this.Tags = tags
 		this.HolderId = holderId;
 		this.FilterOptionsId = holderId + "-Options";
 
@@ -38,14 +38,18 @@ class TagFilter
 
 	ToggleTag(tag)
 	{
-		if (this.Tags.has(tag))
+		if (this.Tags[tag] == null)
 		{
-			this.Tags.delete(tag);
+			console.error("TagFilter.ToggleTag: tag not found: ", tag);
+			return;
 		}
-		else
+		this.Tags[tag] -= 1;
+
+		if (this.Tags[tag] < -1)
 		{
-			this.Tags.add(tag);
+			this.Tags[tag] = 1;
 		}
+
 		this.UpdateToggles();
 		this.Filter();
 	}
@@ -60,47 +64,76 @@ class TagFilter
 			console.warn("TagFilter.Filter: holder is null");
 			return;
 		}
-		let items = holder.children;
 
+		let numItemsShown = 0;
+		let items = holder.children;
 		for (let index = 0; index < items.length; index++)
 		{
 			const item = items[index];
-			let hide = true;
-			if (this.Tags.size == 0)
+			let show = true;
+
+			let tagsAttribute = item.getAttribute("tags");
+			if (tagsAttribute != null)
 			{
-				hide = false;
+				let tags = tagsAttribute.split(" ");
+				show = this.ItemMatches(tags, this.Tags);
+			}
+
+
+			if (show)
+			{
+				item.classList.remove("filtered");
+				numItemsShown += 1;
 			}
 			else
-			{
-				let tagsAttribute = item.getAttribute("tags");
-				if (tagsAttribute != null)
-				{
-					let tags = tagsAttribute.split(" ");
-					if (this.Tags.size > 0)
-					{
-						for (let index = 0; index < tags.length; index++)
-						{
-							const tag = tags[index];
-
-							if (this.Tags.has(tag))
-							{
-								hide = false;
-								break;
-							}
-						}
-					}
-				}
-			}
-
-			if (hide)
 			{
 				item.classList.add("filtered");
 			}
-			else
+		}
+
+		if (numItemsShown == 0)
+		{
+			// todo show text saying no items match
+		}
+	}
+
+	ItemMatches(itemTags, filterTags)
+	{
+		let matches = true;
+		if (filterTags.size == 0)
+		{
+			return matches;
+		}
+
+		let itemTagsSet = new Set(itemTags);
+
+		for (const filterTag in filterTags)
+		{
+			let filterValue = filterTags[filterTag];
+
+			if (filterValue == 0)
 			{
-				item.classList.remove("filtered");
+				continue;
+			}
+			else if (filterValue == 1)
+			{
+				if (!itemTagsSet.has(filterTag))
+				{
+					matches = false;
+					break;
+				}
+			}
+			else if (filterValue == -1)
+			{
+				if (itemTagsSet.has(filterTag))
+				{
+					matches = false;
+					break;
+				}
 			}
 		}
+
+		return matches;
 	}
 
 	UpdateToggles()
@@ -119,13 +152,28 @@ class TagFilter
 			let tag = item.getAttribute("tag");
 			if (tag != null)
 			{
-				if (this.Tags.has(tag))
+				let tagValue = this.Tags[tag];
+				if (tagValue == 1)
 				{
 					item.classList.add("positive");
+					item.classList.remove("neutral");
+					item.classList.remove("negative");
+				}
+				else if (tagValue == 0)
+				{
+					item.classList.remove("positive");
+					item.classList.add("neutral");
+					item.classList.remove("negative");
+				}
+				else if (tagValue == -1)
+				{
+					item.classList.remove("positive");
+					item.classList.remove("neutral");
+					item.classList.add("negative");
 				}
 				else
 				{
-					item.classList.remove("positive");
+					console.error("TagFilter.UpdateToggles: tagValue not found: ", tagValue);
 				}
 			}
 		}
