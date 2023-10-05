@@ -241,7 +241,7 @@ class AssetCompressor
 function CompressHtml(text)
 {
 	// remove comments
-	text = text.replace(/<!--(.*?)-->/g,'');
+	text = text.replace(/<!--([\s\S]*?)-->/g, '');
 
 	// remove new lines but keep spaces when there is a . or ,
 	text = text.replace(/[.][\r\n]/gm, '. ');
