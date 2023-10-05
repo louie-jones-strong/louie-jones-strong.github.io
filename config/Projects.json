@@ -25,7 +25,8 @@
 			"Git",
 			"ObjectiveC",
 			"Java",
-			"Docker"
+			"Docker",
+			"Latex"
 		],
 		"Links": {
 		},
@@ -35,7 +36,11 @@
 			"CubePuzzleProject",
 			"MediaStudio",
 			"Minesweeper",
-			"FinalProject"
+			"FinalProject",
+			"MonsterMash",
+			"looking-for-eden",
+			"RougeClicker",
+			"DrPlantenstein"
 		]
 	},
 
@@ -600,7 +605,7 @@
 		"QuickDescription": "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
 		"PagePath": "LSWB",
 		"Link": null,
-		"Tags": "",
+		"Tags": "Work",
 		"Skills": [
 			"Unity",
 			"Csharp",
@@ -628,7 +633,7 @@
 		"QuickDescription": "I spent my evenings after TT Odyssey working as an English tutor for Arabic students, focusing on preparing them for the IELTS speaking exam.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Solo",
+		"Tags": "Solo Work",
 		"Skills": [
 		],
 		"Links": {
@@ -645,7 +650,7 @@
 		"QuickDescription": "While at TT Odyssey and studying, I regularly made time at weekends to tutor GCSE maths. This was for a number of students that would have failed otherwise due to lack of class time because covid.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Solo",
+		"Tags": "Solo Work",
 		"Skills": [
 		],
 		"Links": {
@@ -662,7 +667,7 @@
 		"QuickDescription": "During my last year of university I worked as a consultant for a number of small businesses.",
 		"PagePath": "BusinessConsulting",
 		"Link": null,
-		"Tags": "Solo",
+		"Tags": "Solo Work",
 		"Skills": [
 			"Python",
 			"Git",

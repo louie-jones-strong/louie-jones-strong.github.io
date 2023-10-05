@@ -409,7 +409,7 @@ ul li::before{
 
 .filterable{
 	opacity: 1;
-	transition: opacity 0.2s linear, width 0.2s linear, margin 0.2s linear;
+	transition: opacity 0.2s linear, width 0.2s linear, height 0.2s linear, margin 0.2s linear;
 
 }
 
@@ -417,6 +417,7 @@ ul li::before{
 	opacity: 0;
 	width: 0px;
 	margin: 0px;
+	height: 0px;
 }
 
 
