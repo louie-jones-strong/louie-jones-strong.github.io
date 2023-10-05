@@ -10,6 +10,7 @@ class TagFilter
 
 
 		this.SetupHolderChildren();
+		this.AddNonShownLabel();
 
 		this.UpdateToggles();
 		this.Filter();
@@ -30,6 +31,23 @@ class TagFilter
 			const item = items[index];
 			item.classList.add("filterable");
 		}
+	}
+
+	AddNonShownLabel()
+	{
+		let holder = document.getElementById(this.HolderId);
+		if (holder == null)
+		{
+			console.warn("TagFilter.constructor: holder is null");
+			return;
+		}
+
+		let nonShownLabel = document.createElement("h5");
+		nonShownLabel.id = this.HolderId + "-NonShown";
+		nonShownLabel.classList.add("filterable");
+		// nonShownLabel.classList.add("filtered");
+		nonShownLabel.innerHTML = "No items match the current filter";
+		holder.appendChild(nonShownLabel);
 	}
 
 //#endregion Init
@@ -69,6 +87,10 @@ class TagFilter
 		{
 			const item = items[index];
 			let show = true;
+			if (item.id == this.HolderId + "-NonShown")
+			{
+				continue;
+			}
 
 			let tagsAttribute = item.getAttribute("tags");
 			if (tagsAttribute != null)
@@ -89,9 +111,14 @@ class TagFilter
 			}
 		}
 
+		let nonShownLabel = document.getElementById(this.HolderId + "-NonShown");
 		if (numItemsShown == 0)
 		{
-			// todo show text saying no items match
+			nonShownLabel.classList.remove("filtered");
+		}
+		else
+		{
+			nonShownLabel.classList.add("filtered");
 		}
 	}
 
