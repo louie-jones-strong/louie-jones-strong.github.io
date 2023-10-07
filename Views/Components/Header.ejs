@@ -12,7 +12,7 @@
 	<nav>
 		<% if (PageData.PageName == 'index' && PageData.PageParent == ".") { %>
 			<a href="/Education/Degree/"
-				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Education
+				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Degree
 			</a>
 			<a href="#Work"
 				class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Work
@@ -26,7 +26,7 @@
 			</a>
 			<% if (PageData.PageParent == 'Education/Degree' && PageData.PageName != "index") { %>
 				<a href="/Education/Degree/"
-					class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Education
+					class="navLink scaleOnFocus <% if (PageData.PageName == '') { %> selected<%}%>">Degree
 				</a>
 			<%}%>
 		<%}%>

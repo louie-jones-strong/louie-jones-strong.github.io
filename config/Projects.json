@@ -56,7 +56,7 @@
 		"QuickDescription": "My education history.",
 		"PagePath": "Education/index",
 		"Link": null,
-		"Tags": "",
+		"Tags": "Education",
 		"Skills": [
 			"JavaScript",
 			"HTML",
@@ -72,9 +72,31 @@
 		"Links": {
 		},
 		"SubProjects": [
-			"Degree"
+			"Degree",
+			"EPQProject"
 		]
 	},
+
+
+	"EPQProject": {
+		"Title": "EPQ",
+		"Thumbnail": "Public/Assets/EPQ/thumbnail",
+		"Date": null,
+		"TimeSpent": "6 months",
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "My college EPQ dissertation on multi-technique supervised machine learning.",
+		"PagePath": "Education/EPQProject",
+		"Link": null,
+		"Tags": "Education Solo",
+		"Skills": [
+			"Python"
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+
 
 	"Degree": {
 		"Title": "Degree",
@@ -86,7 +108,7 @@
 		"QuickDescription": "BSc Computer Science (Machine Learning And Artificial Intelligence).",
 		"PagePath": "Education/Degree/index",
 		"Link": null,
-		"Tags": "Degree",
+		"Tags": "Education Degree",
 		"Skills": [
 			"JavaScript",
 			"HTML",
@@ -137,7 +159,7 @@
 		"QuickDescription": "This module covered core programming techniques, including variables, conditionals, functions, and loops. It emphasized interactive, graphical program creation and introduced basic object-oriented programming.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript"
 		],
@@ -156,7 +178,7 @@
 		"QuickDescription": "Covered sets, logic (propositional and predicate), functions, relations, graphs, trees, induction and recursion. This module builds a foundation to describe problems and algorithms in a mathematical way.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
 		"Links": {
@@ -174,7 +196,7 @@
 		"QuickDescription": "This module covered binary representations and logic, complexity theory and theories of computation, finite state machines and Turing machines. These are then applied to databases, artificial intelligence and machine learning.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
 		"Links": {
@@ -192,7 +214,7 @@
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
 		"Links": {
@@ -210,7 +232,7 @@
 		"QuickDescription": "Focused on maintainable code, defensive coding techniques, program testing techniques, cyclical approaches to software development, encapsulation, developing code across multiple files and using third-party libraries.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript",
 			"HTML",
@@ -231,7 +253,7 @@
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
 		"Links": {
@@ -249,7 +271,7 @@
 		"QuickDescription": "This module covered linear data structures such as arrays, vectors and lists. Expressing algorithms as flowcharts and pseudocode. Sorting and searching algorithms.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript"
 		],
@@ -268,7 +290,7 @@
 		"QuickDescription": "This module introduced me to HTML, CSS and JavaScript. It covered the document object model and how you can dynamically manipulate it with JavaScript to create interactive web pages. It also covered accessibility and usability issues.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree",
+		"Tags": "Education Degree",
 		"Skills": [
 			"JavaScript",
 			"HTML",
@@ -291,7 +313,7 @@
 		"QuickDescription": "This module covered objects and classes, inheritance, abstraction and polymorphism. It also covered code documentation and style.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"CPlusPlus"
 		],
@@ -310,7 +332,7 @@
 		"QuickDescription": "This module covered defensive coding, exception handling, unit testing, test driven development and collaboration using version control.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"CPlusPlus",
 			"Python",
@@ -331,7 +353,7 @@
 		"QuickDescription": "This module covered project management, requirements gathering, user centred design, agile software development methodologies, test driven software development, software validation and user testing. It also covered professional practices and software documentation.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree",
+		"Tags": "Education Degree",
 		"Skills": [
 			"Nodejs",
 			"JavaScript",
@@ -355,7 +377,7 @@
 		"QuickDescription": "This module covered networking concepts, socket architectures, HTTP servers, relational databases, querying a database, representing data in a database.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
 			"Nodejs",
@@ -379,7 +401,7 @@
 		"QuickDescription": "This module covered data-driven programming, visualising data, descriptive statistics, getting data, processing data, classification and clustering.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
 			"SQL"
@@ -399,7 +421,7 @@
 		"QuickDescription": "This module covered security threats, access control and authentication, security models, operating system security, network security, cryptography, cryptographic protocols and key management, public key cryptography and blockchain protocols.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
 		"Links": {
@@ -417,7 +439,7 @@
 		"QuickDescription": "This module covered coordinate transformations, number generators, images, pixels, colors, image processing, computer vision, simulating physical systems and 3D graphics.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript"
 		],
@@ -436,7 +458,7 @@
 		"QuickDescription": "This module covered stacks, queues, binary trees, heaps, priority queues, implicit array algorithms, recursion, iteration, graphs, shortest-path algorithms, sets, maps, hash tables and collections.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"CPlusPlus",
 			"Python"
@@ -457,7 +479,7 @@
 		"QuickDescription": "This module covered basic databases and data schemas for a website, CRUD/RESTful APIs, websockets, user authentication and security, working with external APIs and scalability.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
 			"Nodejs",
@@ -479,7 +501,7 @@
 		"QuickDescription": "This module covered regression, classification, clustering, matrix completion, pattern recognition, neural networks, multi-layer perceptrons, back propagation, network optimisers, deep and recurrent networks.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python"
 		],
@@ -498,7 +520,7 @@
 		"QuickDescription": "This module covered reinforcement learning, problem solving, knowledge representation and ontologies, reasoning under uncertainty,optimal decisions in games, robotics and automated scientific discovery.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python"
 		],
@@ -517,7 +539,7 @@
 		"QuickDescription": "This module covered capturing, representing and processing audio and camera inputs as well as video. It covered LTI systems and impulse responses, frequency domain representations, extracting features from signals, speech recognition, computer vision, compressing signals.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
 			"JavaScript",
@@ -539,7 +561,7 @@
 		"QuickDescription": "This module covered information retrieval and curation in NLP, formal grammars, rule based NLP, statistical NLP, NER, stemmers, taggers and parsers, software packages for NLP and applications of NLP.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python"
 		],
@@ -558,7 +580,7 @@
 		"QuickDescription": "This module covered working with different types of data, correlation and regression, distributions and significance, processing text data, decision making based on data analysis, data visualisation, time-series data visualisation, scientific data visualisation and case studies.",
 		"PagePath": null,
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python"
 		],
@@ -577,7 +599,7 @@
 		"QuickDescription": "My dissertation involved independently planning, managing, researching, designing, developing, testing and evaluating my own software project. For this project I designed a new machine learning framework for creating agents for the games industry.",
 		"PagePath": "Education/Degree/FinalProject",
 		"Link": null,
-		"Tags": "Degree Solo",
+		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
 			"Docker",
@@ -721,24 +743,6 @@
 		"Links": {
 			"ItchLink": "https://louie-js.itch.io/office-egg-hunt",
 			"GithubLink": "https://github.com/louie-jones-strong/OfficeGame"
-		},
-		"SubProjects": []
-	},
-	"EPQProject": {
-		"Title": "EPQ",
-		"Thumbnail": "Public/Assets/EPQ/thumbnail",
-		"Date": null,
-		"TimeSpent": "6 months",
-		"NumPeople": 1,
-		"Awards": null,
-		"QuickDescription": "My college EPQ dissertation on multi-technique supervised machine learning.",
-		"PagePath": "EPQProject",
-		"Link": null,
-		"Tags": "Solo",
-		"Skills": [
-			"Python"
-		],
-		"Links": {
 		},
 		"SubProjects": []
 	},
