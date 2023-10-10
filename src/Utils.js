@@ -21,5 +21,14 @@ function RemoveExtension(path)
 	return filePath
 }
 
+function MakePathRelative(fullPath)
+{
+	let rootPath = process.cwd();
+	let path = fullPath.replace(rootPath, "");
+
+	return path;
+}
+
 exports.TryMakeDir = TryMakeDir;
 exports.RemoveExtension = RemoveExtension;
+exports.MakePathRelative = MakePathRelative;
