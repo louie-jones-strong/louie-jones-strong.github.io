@@ -149,7 +149,7 @@ for (const projectKey in projects)
 
 				// check the skill is in the skills config
 				let iconConfig = iconsConfig[skill];
-				assert.notEqual(iconConfig, null);
+				assert.notEqual(iconConfig, null, "Skill " + skill + " not found in icon config");
 			}
 
 			// contains sub project skills

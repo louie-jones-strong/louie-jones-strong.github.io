@@ -26,7 +26,9 @@
 			"ObjectiveC",
 			"Java",
 			"Docker",
-			"Latex"
+			"Latex",
+			"Tensorflow",
+			"scikitlearn"
 		],
 		"Links": {
 		},
@@ -67,7 +69,9 @@
 			"CPlusPlus",
 			"Python",
 			"Nodejs",
-			"Latex"
+			"Latex",
+			"Tensorflow",
+			"scikitlearn"
 		],
 		"Links": {
 		},
@@ -90,7 +94,8 @@
 		"Link": null,
 		"Tags": "Education Solo",
 		"Skills": [
-			"Python"
+			"Python",
+			"Tensorflow"
 		],
 		"Links": {
 		},
@@ -119,7 +124,9 @@
 			"CPlusPlus",
 			"Python",
 			"Nodejs",
-			"Latex"
+			"Latex",
+			"Tensorflow",
+			"scikitlearn"
 		],
 		"Links": {
 		},
@@ -503,7 +510,9 @@
 		"Link": null,
 		"Tags": "Education Degree Solo",
 		"Skills": [
-			"Python"
+			"Python",
+			"Tensorflow",
+			"scikitlearn"
 		],
 		"Links": {
 		},
@@ -522,7 +531,9 @@
 		"Link": null,
 		"Tags": "Education Degree Solo",
 		"Skills": [
-			"Python"
+			"Python",
+			"Tensorflow",
+			"scikitlearn"
 		],
 		"Links": {
 		},
@@ -563,7 +574,8 @@
 		"Link": null,
 		"Tags": "Education Degree Solo",
 		"Skills": [
-			"Python"
+			"Python",
+			"scikitlearn"
 		],
 		"Links": {
 		},
@@ -582,7 +594,8 @@
 		"Link": null,
 		"Tags": "Education Degree Solo",
 		"Skills": [
-			"Python"
+			"Python",
+			"scikitlearn"
 		],
 		"Links": {
 		},
@@ -606,7 +619,9 @@
 			"Git",
 			"HTML",
 			"CSS",
-			"Latex"
+			"Latex",
+			"Tensorflow",
+			"scikitlearn"
 		],
 		"Links": {
 			"GithubLink": "https://github.com/louie-jones-strong/DECAF"
