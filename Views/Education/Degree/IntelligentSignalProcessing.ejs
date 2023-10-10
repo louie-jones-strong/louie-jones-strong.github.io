@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+</head>
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content">
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+			<hr class="gap">
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
+				<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+				<p class="center reveal fromBottom">
+					In this module, I learned about the fundamentals of capturing, processing, storing and presenting signals applied to real world problems.
+					This module covered <abbr title="Linear time-invariant">LTI</abbr> systems and impulse responses, frequency domain representations, extracting features from signals, speech recognition, computer vision, compressing signals.
+				</p>
+
+
+				<h2 class="center reveal fromBottom">Mid Term</h2>
+				<p class="center reveal fromBottom">
+
+				</p>
+
+				<h2 class="center reveal fromBottom">Final</h2>
+				<p class="center reveal fromBottom">
+
+				</p>
+
+
+
+			</div>
+
+			<!-- Shared common footer -->
+			<%- include(PageData.PathToRoot+'Components/Footer'); %>
+		</div>
+	</div>
+</body>
+</html>
