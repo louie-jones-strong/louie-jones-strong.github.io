@@ -68,7 +68,7 @@ class PageBuilder
 
 	RenderFile(sourceFile, outputFile, config)
 	{
-		console.log(sourceFile, "->", outputFile);
+		console.log(Utils.MakePathRelative(sourceFile), "->", Utils.MakePathRelative(outputFile));
 
 		let compress = this.Compress;
 
