@@ -10,8 +10,8 @@
 	}); %>
 
 	<!-- extra links if needed -->
-	<link rel="stylesheet" type="text/css" href="Public/css/Optinal/ZipperCard.css">
-	<link rel="stylesheet" type="text/css" href="Public/css/Optinal/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/ZipperCard.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Carousel.css">
 </head>
 
 
@@ -66,7 +66,7 @@
 				<div class="slide-holder">
 					<div class="slide">
 						<video autoplay muted loop>
-							<source src="Public/Assets/EPQ/videos/worst.mp4" type="video/mp4">
+							<source src="<%=PageData.PathToRoot%>Public/Assets/EPQ/videos/worst.mp4" type="video/mp4">
 							I'm sorry, your browser doesn't support HTML5 video.
 						</video>
 						<div class="slide-caption">
@@ -75,7 +75,7 @@
 					</div>
 					<div class="slide">
 						<video autoplay muted loop>
-							<source src="Public/Assets/EPQ/videos/middle.mp4" type="video/mp4">
+							<source src="<%=PageData.PathToRoot%>Public/Assets/EPQ/videos/middle.mp4" type="video/mp4">
 							I'm sorry, your browser doesn't support HTML5 video.
 						</video>
 						<div class="slide-caption">
@@ -84,7 +84,7 @@
 					</div>
 					<div class="slide">
 						<video autoplay muted loop>
-							<source src="Public/Assets/EPQ/videos/best.mp4" type="video/mp4">
+							<source src="<%=PageData.PathToRoot%>Public/Assets/EPQ/videos/best.mp4" type="video/mp4">
 							I'm sorry, your browser doesn't support HTML5 video.
 						</video>
 						<div class="slide-caption">
@@ -95,7 +95,7 @@
 					<span class="slide-dot"></span>
 					<span class="slide-dot"></span>
 				</div>
-				<script src="Public/js/Carousel.js"></script>
+				<script src="<%=PageData.PathToRoot%>Public/js/Carousel.js"></script>
 			</div>
 			<div class="ZipperCard shaded glass reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
