@@ -78,5 +78,15 @@
 		"IconPath": "Public/Assets/Icons/latex",
 		"Label": "Latex",
 		"ClassList": "greyScale"
+	},
+	"Tensorflow":{
+		"IconPath": "Public/Assets/Icons/tensorflow",
+		"Label": "Tensorflow",
+		"ClassList": ""
+	},
+	"scikitlearn":{
+		"IconPath": "Public/Assets/Icons/scikitlearn",
+		"Label": "scikit-learn",
+		"ClassList": ""
 	}
 }
