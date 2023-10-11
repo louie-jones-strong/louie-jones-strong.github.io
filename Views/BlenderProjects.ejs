@@ -53,16 +53,18 @@
 						To do this I followed along with <a href="https://youtu.be/W9eAVW4G8ws" target="_blank">this YouTube tutorial.</a>
 					</p>
 				</div>
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_1.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_1",
+					ClassList: "expandable"
+				}}); %>
 			</div>
 			<div class="ZipperCard shaded reveal fromRight">
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_4.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_4",
+					ClassList: "expandable"
+				}}); %>
 				<div>
 					<h3>Zooming Boxes</h3>
 					<p>My goal in this render was to make a looping video.
@@ -86,10 +88,11 @@
 				}}); %>
 			</div>
 			<div class="ZipperCard shaded reveal fromRight">
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_36.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_36",
+					ClassList: "expandable"
+				}}); %>
 				<div>
 					<h3>Water Splash</h3>
 					<p>In this render my goal was to learn about Blender's new FLIP fluid simulation.</p>
@@ -106,10 +109,11 @@
 
 					</ul>
 				</div>
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_35.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_35",
+					ClassList: "expandable"
+				}}); %>
 			</div>
 			<div class="ZipperCard shaded reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
@@ -127,10 +131,11 @@
 					<h3>IPhone</h3>
 					<p>My goal in this render was to learn about adding textures to materials. In this example I started with a screenshot and modelled everything else.</p>
 				</div>
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_14.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_14",
+					ClassList: "expandable"
+				}}); %>
 			</div>
 			<div class="ZipperCard shaded reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
@@ -155,10 +160,11 @@
 					<h3>Rusting Chain</h3>
 					<p>In this render my goal was to learn about animating material properties.</p>
 				</div>
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_17.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_17",
+					ClassList: "expandable"
+				}}); %>
 			</div>
 			<div class="ZipperCard shaded reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
@@ -176,10 +182,11 @@
 					<h3>Pool Table</h3>
 					<p>In this render my goal was to learn more about Blender's physics.</p>
 				</div>
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_30.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_30",
+					ClassList: "expandable"
+				}}); %>
 			</div>
 			<div class="ZipperCard shaded reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
@@ -197,10 +204,12 @@
 					<h3>Magic Monkey</h3>
 					<p>My goal in this render was to learn about Blender's cloth simulation.</p>
 				</div>
-				<video autoplay muted loop class="expandable">
-					<source src="<%=PageData.PathToRoot%>Public/Assets/BlenderProjects/Videos/blender_7.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/BlenderProjects/Videos/blender_7",
+					ClassList: "expandable"
+				}}); %>
 			</div>
 			<div class="ZipperCard shaded reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
