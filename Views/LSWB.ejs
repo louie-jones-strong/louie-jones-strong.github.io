@@ -29,10 +29,11 @@
 		<!-- cover image slide show -->
 		<div class="slide-holder">
 			<div class="slide">
-				<video autoplay muted loop>
-					<source src="<%=PageData.PathToRoot%>Public/Assets/LSWB/LaunchTrailer.mp4" type="video/mp4">
-					I'm sorry, your browser doesn't support HTML5 video.
-				</video>
+				<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/LSWB/LaunchTrailer",
+					ClassList: ""
+				}}); %>
 			</div>
 		</div>
 		<script src="<%=PageData.PathToRoot%>Public/js/Carousel.js"></script>
