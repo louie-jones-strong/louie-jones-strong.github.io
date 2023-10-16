@@ -68,7 +68,7 @@
 		<form action="<%= QuickInfoData.Links.GithubLink %>" target="_blank" class="quickInfo sheen">
 			<button>
 				<%- include('Picture', {ImgData: {
-					Path:PageData.PathToRoot + "Public/Assets/Icons/github",
+					Path:"Public/Assets/Icons/github",
 					ClassList: "icon greyScale",
 					Alt: "Github Logo",
 					IsSvg: true
@@ -81,7 +81,7 @@
 		<form action="<%= QuickInfoData.Links.ItchLink %>" target="_blank" class="quickInfo sheen">
 			<button>
 				<%- include('Picture', {ImgData: {
-					Path:PageData.PathToRoot + "Public/Assets/Icons/itch-dot-io",
+					Path:"Public/Assets/Icons/itch-dot-io",
 					ClassList: "icon greyScale",
 					Alt: "Itch Logo",
 					IsSvg: true
@@ -94,7 +94,7 @@
 		<form action="<%= QuickInfoData.Links.WebsiteLink %>" target="_blank" class="quickInfo sheen">
 			<button>
 				<%- include('Picture', {ImgData: {
-					Path:PageData.PathToRoot + "Public/Assets/Icons/website",
+					Path:"Public/Assets/Icons/website",
 					ClassList: "icon greyScale",
 					Alt: "Website Icon",
 					IsSvg: true
@@ -107,7 +107,7 @@
 		<form action="<%= QuickInfoData.Links.InstagramLink %>" target="_blank" class="quickInfo sheen">
 			<button>
 				<%- include('Picture', {ImgData: {
-					Path:PageData.PathToRoot + "Public/Assets/Icons/Instagram",
+					Path:"Public/Assets/Icons/Instagram",
 					ClassList: "icon greyScale",
 					Alt: "Instagram Logo",
 					IsSvg: true
@@ -119,7 +119,7 @@
 	<% if (QuickInfoData.Links.GooglePlayLink) { %>
 		<a href="<%= QuickInfoData.Links.GooglePlayLink %>" target="_blank" class="quickInfo sheen noUnderLine">
 			<%- include('Picture', {ImgData: {
-				Path:PageData.PathToRoot + "Public/Assets/Icons/GooglePlayStore",
+				Path:"Public/Assets/Icons/GooglePlayStore",
 				ClassList: "icon greyScale",
 				Alt: "Google Play Store Logo",
 				IsSvg: true
@@ -131,7 +131,7 @@
 		<form action="<%= QuickInfoData.Links.AppleArcadeLink %>" target="_blank" class="quickInfo sheen">
 			<button>
 				<%- include('Picture', {ImgData: {
-					Path:PageData.PathToRoot + "Public/Assets/Icons/Apple",
+					Path:"Public/Assets/Icons/Apple",
 					ClassList: "icon greyScale",
 					Alt: "Apple Logo",
 					IsSvg: true
@@ -144,7 +144,7 @@
 		<form action="<%= QuickInfoData.Links.AppStoreLink %>" target="_blank" class="quickInfo sheen">
 			<button>
 				<%- include('Picture', {ImgData: {
-					Path:PageData.PathToRoot + "Public/Assets/Icons/Apple",
+					Path:"Public/Assets/Icons/Apple",
 					ClassList: "icon greyScale",
 					Alt: "Apple Logo",
 					IsSvg: true
@@ -177,7 +177,7 @@
 				<div class="quickInfo reveal fromLeft">
 
 					<%- include('Picture', {ImgData: {
-						Path:PageData.PathToRoot + icon.IconPath,
+						Path:icon.IconPath,
 						ClassList: "icon " + icon.ClassList,
 						Alt: icon.Label + " Logo",
 						IsSvg: true

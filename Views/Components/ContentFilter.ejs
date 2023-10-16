@@ -22,7 +22,7 @@
 
 		<%if (icon) {%>
 			<%- include('Picture', {ImgData: {
-				Path:PageData.PathToRoot + icon.IconPath,
+				Path:icon.IconPath,
 				ClassList: "icon " + icon.ClassList,
 				Alt: icon.Label + " Logo",
 				IsSvg: true

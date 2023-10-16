@@ -548,7 +548,7 @@
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered capturing, representing and processing audio and camera inputs as well as video. It covered LTI systems and impulse responses, frequency domain representations, extracting features from signals, speech recognition, computer vision, compressing signals.",
-		"PagePath": "Education/Degree/IntelligentSignalProcessing",
+		"PagePath": null,
 		"Link": null,
 		"Tags": "Education Degree Solo",
 		"Skills": [
