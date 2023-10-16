@@ -49,7 +49,7 @@ if (CardData.QuickInfoData )
 	<% if (CardData.Thumbnail) { %>
 	<div class="cardImage">
 		<%- include('Picture', {ImgData: {
-			Path:PageData.PathToRoot + CardData.Thumbnail,
+			Path:CardData.Thumbnail,
 			ClassList: "",
 			Alt: CardData.Title + " Thumbnail",
 			Sizes: "350px"

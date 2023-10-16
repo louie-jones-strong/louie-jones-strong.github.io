@@ -9,6 +9,7 @@
 	}); %>
 
 	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/ZipperCard.css">
 </head>
 
 <body class="dark">
@@ -36,18 +37,81 @@
 
 				<h2 class="center reveal fromBottom">Mid Term</h2>
 				<p class="center reveal fromBottom">
-
+					For the mid term coursework, I was asked to create a collection of applications, each demonstrating a different aspect of signal processing.
 				</p>
+				<div class="ZipperCardsHolder glass centeredFrame">
+					<div class="ZipperCard shaded glass reveal fromLeft">
+						<div>
+							<h3></h3>
+						</div>
+						<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+							Path:"Public/Assets/Degree/IntelligentSignalProcessing/Midterm-Exercise-1",
+							ClassList: "expandable",
+							Alt:"Screenshot of dj website running in a browser"
+						}}); %>
+
+					</div>
+					<div class="ZipperCard shaded glass reveal fromRight">
+						<div>
+							<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+								Autoplay: true, Muted: true, Loop: true,
+								Path:"Public/Assets/Degree/IntelligentSignalProcessing/MusicVis",
+								ClassList: ""
+							}}); %>
+						</div>
+						<div>
+							<h3>Music Visualisation</h3>
+							<p></p>
+						</div>
+					</div>
+					<div class="ZipperCard shaded glass reveal fromLeft">
+						<div>
+							<h3>Audio steganography</h3>
+							<p></p>
+						</div>
+					</div>
+					<div class="ZipperCard shaded glass reveal fromRight">
+						<div>
+							<h3>speech recognition</h3>
+							<p></p>
+						</div>
+
+					</div>
+				</div>
 
 				<h2 class="center reveal fromBottom">Final</h2>
 				<p class="center reveal fromBottom">
-
+					For the final coursework, I again was asked to create a collection of applications.
 				</p>
+				<div class="ZipperCardsHolder glass centeredFrame">
+					<div class="ZipperCard shaded glass reveal fromLeft">
+						<div>
+							<h3>Car Detection & Tracking system</h3>
+							<p></p>
+						</div>
+						<%- include(PageData.PathToRoot+'Components/video', {VideoData: {
+							Autoplay: true, Muted: true, Loop: true, Controls: true,
+							Path:"Public/Assets/Degree/IntelligentSignalProcessing/CarDetection",
+							ClassList: ""
+						}}); %>
+					</div>
+					<div class="ZipperCard shaded glass reveal fromRight">
+						<div>
+							<h3>Lossless compression</h3>
+							<p></p>
+						</div>
 
+					</div>
+					<div class="ZipperCard shaded glass reveal fromLeft">
 
+						<div>
+							<h3>video Ingest pipeline</h3>
+							<p></p>
+						</div>
 
+					</div>
+				</div>
 			</div>
-
 			<!-- Shared common footer -->
 			<%- include(PageData.PathToRoot+'Components/Footer'); %>
 		</div>
