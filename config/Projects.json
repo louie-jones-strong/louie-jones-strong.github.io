@@ -9,6 +9,8 @@
 		"QuickDescription": "I am a Brighton based hard working, creative, programmer studying machine learning.",
 		"PagePath": "index",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "",
 		"Skills": [
 			"Unity",
@@ -58,6 +60,8 @@
 		"QuickDescription": "My education history.",
 		"PagePath": "Education/index",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 			"JavaScript",
@@ -92,6 +96,8 @@
 		"QuickDescription": "My college EPQ dissertation on multi-technique supervised machine learning.",
 		"PagePath": "Education/EPQProject",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education Solo",
 		"Skills": [
 			"Python",
@@ -113,6 +119,8 @@
 		"QuickDescription": "BSc Computer Science (Machine Learning And Artificial Intelligence).",
 		"PagePath": "Education/Degree/index",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education Degree",
 		"Skills": [
 			"JavaScript",
@@ -166,6 +174,8 @@
 		"QuickDescription": "This module covered core programming techniques, including variables, conditionals, functions, and loops. It emphasized interactive, graphical program creation and introduced basic object-oriented programming.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript"
@@ -185,6 +195,8 @@
 		"QuickDescription": "Covered sets, logic (propositional and predicate), functions, relations, graphs, trees, induction and recursion. This module builds a foundation to describe problems and algorithms in a mathematical way.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
@@ -203,6 +215,8 @@
 		"QuickDescription": "This module covered binary representations and logic, complexity theory and theories of computation, finite state machines and Turing machines. These are then applied to databases, artificial intelligence and machine learning.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
@@ -221,6 +235,8 @@
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
@@ -239,6 +255,8 @@
 		"QuickDescription": "Focused on maintainable code, defensive coding techniques, program testing techniques, cyclical approaches to software development, encapsulation, developing code across multiple files and using third-party libraries.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript",
@@ -260,6 +278,8 @@
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
@@ -278,6 +298,8 @@
 		"QuickDescription": "This module covered linear data structures such as arrays, vectors and lists. Expressing algorithms as flowcharts and pseudocode. Sorting and searching algorithms.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript"
@@ -297,6 +319,8 @@
 		"QuickDescription": "This module introduced me to HTML, CSS and JavaScript. It covered the document object model and how you can dynamically manipulate it with JavaScript to create interactive web pages. It also covered accessibility and usability issues.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree",
 		"Skills": [
 			"JavaScript",
@@ -318,8 +342,10 @@
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered objects and classes, inheritance, abstraction and polymorphism. It also covered code documentation and style.",
-		"PagePath": null,
+		"PagePath": "Education/Degree/ObjectOrientedProgramming",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"CPlusPlus"
@@ -339,6 +365,8 @@
 		"QuickDescription": "This module covered defensive coding, exception handling, unit testing, test driven development and collaboration using version control.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"CPlusPlus",
@@ -360,6 +388,8 @@
 		"QuickDescription": "This module covered project management, requirements gathering, user centred design, agile software development methodologies, test driven software development, software validation and user testing. It also covered professional practices and software documentation.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree",
 		"Skills": [
 			"Nodejs",
@@ -384,6 +414,8 @@
 		"QuickDescription": "This module covered networking concepts, socket architectures, HTTP servers, relational databases, querying a database, representing data in a database.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -408,6 +440,8 @@
 		"QuickDescription": "This module covered data-driven programming, visualising data, descriptive statistics, getting data, processing data, classification and clustering.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -428,6 +462,8 @@
 		"QuickDescription": "This module covered security threats, access control and authentication, security models, operating system security, network security, cryptography, cryptographic protocols and key management, public key cryptography and blockchain protocols.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 		],
@@ -444,8 +480,10 @@
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered coordinate transformations, number generators, images, pixels, colors, image processing, computer vision, simulating physical systems and 3D graphics.",
-		"PagePath": null,
+		"PagePath": "Education/Degree/GraphicsProgramming",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"JavaScript"
@@ -465,6 +503,8 @@
 		"QuickDescription": "This module covered stacks, queues, binary trees, heaps, priority queues, implicit array algorithms, recursion, iteration, graphs, shortest-path algorithms, sets, maps, hash tables and collections.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"CPlusPlus",
@@ -486,6 +526,8 @@
 		"QuickDescription": "This module covered basic databases and data schemas for a website, CRUD/RESTful APIs, websockets, user authentication and security, working with external APIs and scalability.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -508,6 +550,8 @@
 		"QuickDescription": "This module covered regression, classification, clustering, matrix completion, pattern recognition, neural networks, multi-layer perceptrons, back propagation, network optimisers, deep and recurrent networks.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -529,6 +573,8 @@
 		"QuickDescription": "This module covered reinforcement learning, problem solving, knowledge representation and ontologies, reasoning under uncertainty,optimal decisions in games, robotics and automated scientific discovery.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -548,8 +594,10 @@
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered capturing, representing and processing audio and camera inputs as well as video. It covered LTI systems and impulse responses, frequency domain representations, extracting features from signals, speech recognition, computer vision, compressing signals.",
-		"PagePath": null,
+		"PagePath": "Education/Degree/IntelligentSignalProcessing",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -570,8 +618,10 @@
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "This module covered information retrieval and curation in NLP, formal grammars, rule based NLP, statistical NLP, NER, stemmers, taggers and parsers, software packages for NLP and applications of NLP.",
-		"PagePath": null,
+		"PagePath": "Education/Degree/NLP",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -590,8 +640,10 @@
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "This module covered working with different types of data, correlation and regression, distributions and significance, processing text data, decision making based on data analysis, data visualisation, time-series data visualisation, scientific data visualisation and case studies.",
-		"PagePath": null,
+		"PagePath": "Education/Degree/DataScience",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -612,6 +664,8 @@
 		"QuickDescription": "My dissertation involved independently planning, managing, researching, designing, developing, testing and evaluating my own software project. For this project I designed a new machine learning framework for creating agents for the games industry.",
 		"PagePath": "Education/Degree/FinalProject",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
@@ -642,6 +696,8 @@
 		"QuickDescription": "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
 		"PagePath": "LSWB",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Work",
 		"Skills": [
 			"Unity",
@@ -670,6 +726,8 @@
 		"QuickDescription": "I spent my evenings after TT Odyssey working as an English tutor for Arabic students, focusing on preparing them for the IELTS speaking exam.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Solo Work",
 		"Skills": [
 		],
@@ -687,6 +745,8 @@
 		"QuickDescription": "While at TT Odyssey and studying, I regularly made time at weekends to tutor GCSE maths. This was for a number of students that would have failed otherwise due to lack of class time because covid.",
 		"PagePath": null,
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Solo Work",
 		"Skills": [
 		],
@@ -704,6 +764,8 @@
 		"QuickDescription": "During my last year of university I worked as a consultant for a number of small businesses.",
 		"PagePath": "BusinessConsulting",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Solo Work",
 		"Skills": [
 			"Python",
@@ -730,6 +792,8 @@
 		"QuickDescription": "I challenged myself to learn different Blender skills, giving myself only 24 hours for each one.",
 		"PagePath": "BlenderProjects",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Solo Art",
 		"Skills": [
 			"Blender"
@@ -749,7 +813,9 @@
 		"QuickDescription": "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
 		"PagePath": "EggHuntProject",
 		"Link": null,
-		"Tags": "Solo",
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo Game",
 		"Skills": [
 			"Unity",
 			"Csharp",
@@ -771,6 +837,8 @@
 		"QuickDescription": "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
 		"PagePath": "CubePuzzleProject",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Solo",
 		"Skills": [
 			"Python"
@@ -789,7 +857,9 @@
 		"QuickDescription": "To prepare for my University courses I taught myself JS, HTML and CSS.",
 		"PagePath": "Minesweeper",
 		"Link": null,
-		"Tags": "Solo",
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo Game",
 		"Skills": [
 			"HTML",
 			"CSS",
@@ -811,7 +881,9 @@
 		"QuickDescription": "Calculator: The Game Solver.",
 		"PagePath": "CalculatorSolver",
 		"Link": null,
-		"Tags": "Solo",
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo Game",
 		"Skills": [
 			"Python"
 		],
@@ -830,6 +902,8 @@
 		"QuickDescription": "Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.",
 		"PagePath": "MediaStudio",
 		"Link": null,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Solo",
 		"Skills": [
 			"JavaScript",
@@ -851,7 +925,9 @@
 		"QuickDescription": "Roguelike made with the limitations of the Gameboy. You upgrade you monster with the body parts of creatures you defeat.",
 		"PagePath": null,
 		"Link": "https://tatltuae.itch.io/monstermash",
-		"Tags": "",
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Game",
 		"Skills": [
 			"Unity",
 			"Csharp"
@@ -871,7 +947,9 @@
 		"QuickDescription": "A post-civilization story game based in space. As you visit planets you find the story of those who lived long ago.",
 		"PagePath": null,
 		"Link": "https://tatltuae.itch.io/looking-for-eden",
-		"Tags": "",
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Game",
 		"Skills": [
 			"Unity",
 			"Csharp",
@@ -892,7 +970,9 @@
 		"QuickDescription": "A short fast passed clicker with constant upgrades.",
 		"PagePath": null,
 		"Link": "https://louie-js.itch.io/rougeclicker",
-		"Tags": "Solo",
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo Game",
 		"Skills": [
 			"Unity",
 			"Csharp",
@@ -913,7 +993,9 @@
 		"QuickDescription": "Shop and garden managment game made for GB jam 10. You play as a herbalist who grows plants to heal the villagers.",
 		"PagePath": null,
 		"Link": "https://louie-js.itch.io/dr-plantenstein",
-		"Tags": "",
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Game",
 		"Skills": [
 			"Unity",
 			"Csharp",
@@ -938,6 +1020,8 @@
 		"QuickDescription": "Collection of cards I have made for different occasions, in blender.",
 		"PagePath": "cards/index",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Solo Art",
 		"Skills": [
 			"Blender"
@@ -959,6 +1043,8 @@
 		"QuickDescription": "Cards I have made of landscapes, in blender.",
 		"PagePath": "cards/landscape/index",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Solo Art",
 		"Skills": [
 			"Blender"
@@ -977,6 +1063,8 @@
 		"QuickDescription": "Cards I have made for Christmas, in blender.",
 		"PagePath": "cards/xmas/index",
 		"Link": null,
+		"HideLink": true,
+		"Hide": false,
 		"Tags": "Solo Art",
 		"Skills": [
 			"Blender"
