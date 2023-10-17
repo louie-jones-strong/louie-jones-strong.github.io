@@ -8,15 +8,21 @@ if (CardData.ProjectData)
 		Thumbnail: ProjectData.Thumbnail,
 		QuickInfoData: ProjectData,
 		Tags: ProjectData.Tags,
+		Hide: ProjectData.Hide
 	}
 
 	if (ProjectData.PagePath)
 	{
-		CardData.Link = ProjectData.PagePath + ".html"
+		CardData.Link = PageData.PathToRoot + ProjectData.PagePath + ".html"
 	}
 	else
 	{
 		CardData.Link = ProjectData.Link
+	}
+
+	if (ProjectData.HideLink)
+	{
+		CardData.Link = null;
 	}
 }
 
@@ -40,8 +46,12 @@ if (CardData.QuickInfoData )
 %>
 
 
-<% if (CardData.Link) { %>
-<a class="card glass reveal neonOutline" tags="<%=CardData.Tags%>" href="<%=PageData.PathToRoot%><%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
+<%
+if (!CardData.Hide)
+{
+
+if (CardData.Link) { %>
+<a class="card glass reveal neonOutline" tags="<%=CardData.Tags%>" href="<%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
 <% }else{%>
 <a class="card glass reveal" tags="<%=CardData.Tags%>">
 <% }%>
@@ -84,3 +94,5 @@ if (CardData.QuickInfoData )
 	<h4 class="bottom"><u>More Info</u></h4>
 	<% }%>
 </a>
+
+<% } %>

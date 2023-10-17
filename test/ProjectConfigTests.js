@@ -210,6 +210,20 @@ for (const projectKey in projects)
 			}
 		});
 
+		it("Hide", function () {
+			let value = project.Hide;
+			assert.notEqual(value, null);
+			assert.equal(typeof value, "boolean");
+
+		});
+
+		it("HideLink", function () {
+			let value = project.HideLink;
+			assert.notEqual(value, null);
+			assert.equal(typeof value, "boolean");
+
+		});
+
 		it("Tags", function () {
 			let value = project.Tags;
 			assert.notEqual(value, null);
