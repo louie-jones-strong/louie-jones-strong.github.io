@@ -245,6 +245,10 @@ describe("BuiltTests", function ()
 			assert.ok(validPunctuation, "Missing full stop: " + message);
 		}
 
+		// check for any lowercase i's
+		assert.ok(!text.match(/i /g), "found lowercase i: " + message);
+
+
 
 		// todo check for bad words
 		let lowerText = text.toLowerCase();
