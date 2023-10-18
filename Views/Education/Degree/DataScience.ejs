@@ -10,6 +10,7 @@
 
 	<!-- extra links if needed -->
 	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/ZipperCard.css">
 </head>
 
 <body class="dark">
@@ -26,24 +27,20 @@
 			<hr class="gap">
 
 			<div class="centeredFrame">
-				<h1 class="center reveal fromBottom">Data Science</h1>
+				<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
 				<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+				<h2 class="center reveal fromBottom">Mid term</h2>
+				<p class="center reveal fromBottom">
+					For the mid term project, I was tasked with building a linear regression model. I took this opportunity create a model to predict the number of sales of products from a number of chain of stores. This was based on the data from the Kaggle competition <a href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting">Store Sales - Time Series Forecasting</a>.
+				</p>
+
 			</div>
 
 			<!-- Shared common footer -->
 			<%- include(PageData.PathToRoot+'Components/Footer'); %>
 		</div>
-		<script src="<%=PageData.PathToRoot%>Public/js/vanilla-tilt.min.js"></script>
-		<script>
-			VanillaTilt.init(document.querySelectorAll(".card"), {
-				max: 10,
-				speed: 1000,
-				glare: true,
-				"max-glare": 0.3,
-				reverse: true,
-				scale: 1.1,
-			});
-		</script>
+		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
 	</div>
 </body>
 </html>
