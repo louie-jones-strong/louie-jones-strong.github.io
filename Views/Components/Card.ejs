@@ -73,7 +73,10 @@ if (CardData.Link) { %>
 
 	</div>
 	<h3><%= CardData.Title %></h3>
+
+	<% if (CardData.Body) { %>
 	<p><%= CardData.Body %></p>
+	<% }%>
 
 	<% }else{%>
 
@@ -84,7 +87,9 @@ if (CardData.Link) { %>
 				PageData: PageData
 			}); %>
 		<% }%>
-		<p><%= CardData.Body %></p>
+		<% if (CardData.Body) { %>
+			<p><%= CardData.Body %></p>
+		<% }%>
 
 	<% }%>
 

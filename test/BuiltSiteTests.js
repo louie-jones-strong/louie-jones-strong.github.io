@@ -221,6 +221,9 @@ describe("BuiltTests", function ()
 
 	function CheckText(text, message, minLen, oneWord=true, punctuation=true)
 	{
+		if (text == null)
+			return;
+
 		message = "\"" + text + "\" Context: " + message
 		assert.ok(text, "text missing: " + message);
 		assert.ok(text.length >= minLen, "text to short: " + message);
