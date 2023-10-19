@@ -3,6 +3,8 @@ const fs = require('fs');
 const sharp = require('sharp');
 const sass = require('sass');
 const Utils = require('./Utils.js');
+const ffmpegCommand  = require('fluent-ffmpeg');
+
 
 
 class AssetCompressor
@@ -78,6 +80,10 @@ class AssetCompressor
 		if (itemInputPath.endsWith('.png') || itemInputPath.endsWith('.jpg')) // Images
 		{
 			this.CompressImage(itemInputPath, itemOutputPath)
+		}
+		else if (itemInputPath.endsWith('.mp4')) // Videos
+		{
+			this.CompressVideo(itemInputPath, itemOutputPath)
 		}
 		else if (this.Compress && itemInputPath.endsWith('.js')) // JS
 		{
@@ -235,6 +241,38 @@ class AssetCompressor
 		});
 	}
 
+	CompressVideo(inputPath, outputPath)
+	{
+		let noExtensionPath = Utils.RemoveExtension(outputPath)
+
+		let videoConfig = this.SiteConfig.AssetConfig.VideoConfig;
+		let outputFormats = videoConfig.OutputFormats;
+		let horizontalResGroups = videoConfig.HorizontalResolutionsGroups;
+
+		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + outputFormats[0];
+
+		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
+		{
+			return;
+		}
+
+
+		for (let f = 0; f < outputFormats.length; f++)
+		{
+			let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + outputFormats[f];
+
+			let ffmpeg = ffmpegCommand(inputPath);
+			ffmpeg.withAudioChannels(1);
+			ffmpeg.audioBitrate('128k');
+			ffmpeg.videoBitrate(1024);
+			ffmpeg.output(outputFilePath);
+			ffmpeg.run();
+		}
+
+
+
+
+	}
 }
 
 
