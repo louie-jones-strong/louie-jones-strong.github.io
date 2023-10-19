@@ -21,8 +21,8 @@
 	},
 	"AssetConfig":{
 		"ImageConfig": {
-			"ImageSizes": [128, 256, 512, 1024],
-			"ImageFormats_Outputs": [".webp", ".png"]
+			"HorizontalResolutionsGroups": [128, 256, 512, 1024],
+			"OutputFormats": [".webp", ".png"]
 		},
 		"NoCopyFolders": [
 			"css/Shared"
