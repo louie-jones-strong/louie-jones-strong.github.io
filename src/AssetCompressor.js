@@ -168,9 +168,9 @@ class AssetCompressor
 
 		let imageConfig = this.SiteConfig.AssetConfig.ImageConfig;
 		let imageFormats = imageConfig.OutputFormats;
-		let HorizontalResolutionsGroups = imageConfig.HorizontalResolutionsGroups;
+		let horizontalResGroups = imageConfig.HorizontalResolutionsGroups;
 
-		let outputFilePath = noExtensionPath + "_" + HorizontalResolutionsGroups[0] + imageFormats[0];
+		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + imageFormats[0];
 
 		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
 		{
@@ -188,10 +188,10 @@ class AssetCompressor
 
 				let width = metadata.width
 
-				let outputRezIndex = HorizontalResolutionsGroups.length - 1
-				while (width < HorizontalResolutionsGroups[outputRezIndex])
+				let outputRezIndex = horizontalResGroups.length - 1
+				while (width < horizontalResGroups[outputRezIndex])
 				{
-					let outputPath = noExtensionPath + "_" + HorizontalResolutionsGroups[outputRezIndex] + imageFormats[f];
+					let outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + imageFormats[f];
 
 					sharp(inputPath)
 						.toFile(outputPath, (error, info) =>
@@ -209,9 +209,9 @@ class AssetCompressor
 				let newWidth = width;
 				while (outputRezIndex >= 0)
 				{
-					if (newWidth < HorizontalResolutionsGroups[outputRezIndex])
+					if (newWidth < horizontalResGroups[outputRezIndex])
 					{
-						outputPath = noExtensionPath + "_" + HorizontalResolutionsGroups[outputRezIndex] + imageFormats[f];
+						outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + imageFormats[f];
 
 						sharp(inputPath)
 							.resize(width)
