@@ -176,7 +176,7 @@ class AssetCompressor
 		let imageFormats = imageConfig.OutputFormats;
 		let horizontalResGroups = imageConfig.HorizontalResolutionsGroups;
 
-		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + imageFormats[0];
+		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + "." + imageFormats[0];
 
 		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
 		{
@@ -197,7 +197,7 @@ class AssetCompressor
 				let outputRezIndex = horizontalResGroups.length - 1
 				while (width < horizontalResGroups[outputRezIndex])
 				{
-					let outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + imageFormats[f];
+					let outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
 
 					sharp(inputPath)
 						.toFile(outputPath, (error, info) =>
@@ -217,7 +217,7 @@ class AssetCompressor
 				{
 					if (newWidth < horizontalResGroups[outputRezIndex])
 					{
-						outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + imageFormats[f];
+						outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
 
 						sharp(inputPath)
 							.resize(width)
@@ -249,24 +249,26 @@ class AssetCompressor
 		let outputFormats = videoConfig.OutputFormats;
 		let horizontalResGroups = videoConfig.HorizontalResolutionsGroups;
 
-		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + outputFormats[0];
+		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + "." + outputFormats[0];
 
 		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
 		{
 			return;
 		}
 
-
-		for (let f = 0; f < outputFormats.length; f++)
+		for (let r = 0; r < horizontalResGroups.length; r++)
 		{
-			let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + outputFormats[f];
+			for (let f = 0; f < outputFormats.length; f++)
+			{
+				let outputFilePath = noExtensionPath + "_" + horizontalResGroups[r] + "." + outputFormats[f];
 
-			let ffmpeg = ffmpegCommand(inputPath);
-			ffmpeg.withAudioChannels(1);
-			ffmpeg.audioBitrate('128k');
-			ffmpeg.videoBitrate(1024);
-			ffmpeg.output(outputFilePath);
-			ffmpeg.run();
+				let ffmpeg = ffmpegCommand(inputPath);
+				ffmpeg.withAudioChannels(1);
+				ffmpeg.audioBitrate('128k');
+				ffmpeg.videoBitrate(1024);
+				ffmpeg.output(outputFilePath);
+				ffmpeg.run();
+			}
 		}
 
 

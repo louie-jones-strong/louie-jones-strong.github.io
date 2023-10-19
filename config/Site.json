@@ -22,11 +22,11 @@
 	"AssetConfig":{
 		"ImageConfig": {
 			"HorizontalResolutionsGroups": [128, 256, 512, 1024],
-			"OutputFormats": [".webp", ".png"]
+			"OutputFormats": ["webp", "png"]
 		},
 		"VideoConfig": {
-			"HorizontalResolutionsGroups": [128, 256, 512, 1024],
-			"OutputFormats": [".webm", ".mp4"]
+			"HorizontalResolutionsGroups": [1024],
+			"OutputFormats": ["webm", "mp4"]
 		},
 		"NoCopyFolders": [
 			"css/Shared"

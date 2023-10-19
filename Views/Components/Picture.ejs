@@ -17,23 +17,25 @@
 	<% if (ImgData.Style) { %> style="<%= ImgData.Style %>" <% }%>
 	>
 
-
+<%
+let imageConfig = PageData.SiteConfig.AssetConfig.ImageConfig;
+let outputFormats = imageConfig.OutputFormats;
+let resGroups = imageConfig.HorizontalResolutionsGroups;
+for (const outputFormat of outputFormats)
+{%>
 	<source srcset="
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_128.webp 128w,
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_256.webp 256w,
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_512.webp 512w,
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_1024.webp 1024w"
-	type="image/webp"
+	<%
+	for (let r = 0; r < resGroups.length; r++)
+	{
+		let resGroup = resGroups[r];
+	%>
+		<%= PageData.PathToRoot %><%= ImgData.Path %>_<%= resGroup %>.<%= outputFormat %> <%= resGroup %>w<% if (r < resGroups.length -1) { %> ,  <%}%>
+	<%}%>
+	" type="image/<%= outputFormat %>"
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
+<%}%>
 
-	<source srcset="
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_128.png 128w,
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_256.png 256w,
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_512.png 512w,
-		<%= PageData.PathToRoot %><%= ImgData.Path %>_1024.png 1024w"
-	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
-
-	<img src="<%= PageData.PathToRoot %><%= ImgData.Path %>_1024.png" alt="<%= ImgData.Alt %>" loading=<%= ImgData.LoadingType %>
+	<img src="<%= PageData.PathToRoot %><%= ImgData.Path %>_<%= resGroups[resGroups.length -1] %>.<%= outputFormats[outputFormats.length -1] %>" alt="<%= ImgData.Alt %>" loading=<%= ImgData.LoadingType %>
 	<% if (ImgData.Sizes) { %> sizes="<%= ImgData.Sizes %>" <% }%>>
 </picture>
 
