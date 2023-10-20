@@ -129,12 +129,7 @@ class AssetCompressor
 		}
 		else // others just copy
 		{
-			fs.copyFile(itemInputPath, itemOutputPath, (error) => {
-				if (error)
-				{
-					console.log("File copy error: " + error)
-				}
-			});
+			this.CopyFile(itemInputPath, itemOutputPath)
 		}
 	}
 
@@ -243,37 +238,48 @@ class AssetCompressor
 
 	CompressVideo(inputPath, outputPath)
 	{
-		let noExtensionPath = Utils.RemoveExtension(outputPath)
+		this.CopyFile(inputPath, outputPath)
 
-		let videoConfig = this.SiteConfig.AssetConfig.VideoConfig;
-		let outputFormats = videoConfig.OutputFormats;
-		let horizontalResGroups = videoConfig.HorizontalResolutionsGroups;
+		// todo add this back
+		// this was removed because converting the videos was taking to many resources on the github actions jobs
 
-		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + "." + outputFormats[0];
+		// let noExtensionPath = Utils.RemoveExtension(outputPath)
 
-		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
-		{
-			return;
-		}
+		// let videoConfig = this.SiteConfig.AssetConfig.VideoConfig;
+		// let outputFormats = videoConfig.OutputFormats;
+		// let horizontalResGroups = videoConfig.HorizontalResolutionsGroups;
 
-		for (let r = 0; r < horizontalResGroups.length; r++)
-		{
-			for (let f = 0; f < outputFormats.length; f++)
+		// let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + "." + outputFormats[0];
+
+		// if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
+		// {
+		// 	return;
+		// }
+
+		// for (let r = 0; r < horizontalResGroups.length; r++)
+		// {
+		// 	for (let f = 0; f < outputFormats.length; f++)
+		// 	{
+		// 		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[r] + "." + outputFormats[f];
+
+		// 		let ffmpeg = ffmpegCommand(inputPath);
+		// 		ffmpeg.withAudioChannels(1);
+		// 		ffmpeg.audioBitrate('128k');
+		// 		ffmpeg.videoBitrate(1024);
+		// 		ffmpeg.output(outputFilePath);
+		// 		ffmpeg.run();
+		// 	}
+		// }
+	}
+
+	CopyFile(inputPath, outputPath)
+	{
+		fs.copyFile(inputPath, outputPath, (error) => {
+			if (error)
 			{
-				let outputFilePath = noExtensionPath + "_" + horizontalResGroups[r] + "." + outputFormats[f];
-
-				let ffmpeg = ffmpegCommand(inputPath);
-				ffmpeg.withAudioChannels(1);
-				ffmpeg.audioBitrate('128k');
-				ffmpeg.videoBitrate(1024);
-				ffmpeg.output(outputFilePath);
-				ffmpeg.run();
+				console.log("File copy error: " + error)
 			}
-		}
-
-
-
-
+		});
 	}
 }
 

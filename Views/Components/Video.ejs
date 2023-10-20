@@ -19,7 +19,7 @@ loading=<%= VideoData.LoadingType %>
 
 
 
-<%
+<!-- <%
 let videoConfig = PageData.SiteConfig.AssetConfig.VideoConfig;
 let outputFormats = videoConfig.OutputFormats;
 let resGroups = videoConfig.HorizontalResolutionsGroups;
@@ -31,8 +31,10 @@ for (const outputFormat of outputFormats)
 		<%= PageData.PathToRoot %><%= VideoData.Path %>_<%= resGroup %>.<%= outputFormat %>
 	<%}%>
 	" type="video/<%= outputFormat %>"
-	<% if (VideoData.Sizes) { %> sizes="<%= VideoData.Sizes %>" <% }%>>
-<%}%>
+<%}%> -->
+
+<source src="<%= PageData.PathToRoot %><%= VideoData.Path %>.mp4" type="video/mp4">
+
 
 
 I'm sorry, your browser doesn't support HTML5 video.
