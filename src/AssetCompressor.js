@@ -242,6 +242,7 @@ class AssetCompressor
 
 		// todo add this back
 		// this was removed because converting the videos was taking to many resources on the github actions jobs
+		// there is a limit of 7gb per job and this was using 15gb when ran locally
 
 		// let noExtensionPath = Utils.RemoveExtension(outputPath)
 
@@ -263,10 +264,20 @@ class AssetCompressor
 		// 		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[r] + "." + outputFormats[f];
 
 		// 		let ffmpeg = ffmpegCommand(inputPath);
+		// 		ffmpeg.addOption('-threads', 2);
+
 		// 		ffmpeg.withAudioChannels(1);
 		// 		ffmpeg.audioBitrate('128k');
-		// 		ffmpeg.videoBitrate(1024);
+
+		// 		ffmpeg.videoCodec('libx264');
+		// 		ffmpeg.addOption('-x264opts', 'keyint=24:min-keyint=24:no-scenecut')
+		// 		ffmpeg.videoBitrate('4000k');
+
 		// 		ffmpeg.output(outputFilePath);
+		// 		ffmpeg.on('error', function(error)
+		// 		{
+		// 			console.log("Error "+error.message+" converting video: " + inputPath + " to " + outputFormats[f]);
+		// 		});
 		// 		ffmpeg.run();
 		// 	}
 		// }
