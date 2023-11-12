@@ -14,8 +14,8 @@
 }
 
 .indent{
-	padding-block: 0.25em;
-	height: 2em;
+	margin-block: 0.5em;
+	height: 3em;
 	width: 100%;
 
 	position: relative;
@@ -27,11 +27,14 @@
 
 .timeline,
 .timelineHeader{
+	--tileHight: 1.5em;
+	--Colour: var(--Colour-Text1);
+
+
 	position: absolute;
 	left: calc(var(--dateOffset) * var(--dateScale));
 	width: calc(var(--duration) * var(--dateScale));
-	height: 1em;
-	--Colour: var(--Colour-Text1);
+	height: calc(var(--tileHight) + var(--tickHeight));
 }
 
 .timelineHeader{
@@ -53,11 +56,18 @@
 }
 
 
+.timelineTitle{
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+
 .line{
 	position: absolute;
 
 	border: var(--lineBorderWidth) solid var(--Colour);
-	top: calc(50% - var(--lineBorderWidth)*0.5);
+	top: calc(50% - var(--lineBorderWidth)*0.5 + var(--tileHight));
 	width: calc(100% - var(--lineBorderWidth)*2 - var(--tickWidth));
 	left: calc(var(--tickWidth) / 2);
 
@@ -66,18 +76,38 @@
 
 .tick{
 	position: absolute;
-	width: calc(var(--tickWidth));
-	height: calc(var(--tickHeight));
+	width: calc(var(--tickWidth) * var(--tickScale, 1));
+	height: calc(var(--tickHeight) * var(--tickScale, 1));
 
 	background-color: var(--Colour);
 
-	top: calc(50% - var(--tickHeight) / 2);
+	top: calc(50% - var(--tickHeight) * var(--tickScale, 1) / 2 + var(--tileHight));
 
-	left: calc(var(--dateOffset) * var(--dateScale) - var(--tickWidth) / 2);
+	left: calc(var(--dateOffset) * var(--dateScale) - var(--tickWidth) * var(--tickScale, 1) / 2);
 
 	transition: all 0.1s;
 }
 
+.tick.large{
+	--tickScale: 1.5;
+}
+
 .timeline > .tick{
 	border-radius: 50%;
+}
+
+.tick > *{
+	top: calc(-1 * var(--tickHeight) * var(--tickScale, 1));
+	left: -1em;
+	position: absolute;
+
+
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	text-wrap: nowrap;
+}
+
+.timeline > .tick > *{
+	top: calc(var(--tickHeight) * var(--tickScale, 1));
 }

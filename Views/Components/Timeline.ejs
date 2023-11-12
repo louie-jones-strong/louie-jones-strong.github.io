@@ -1,18 +1,38 @@
 <%
 	<!-- define helper functions -->
+
+	function RoundDate(date)
+	{
+		<!-- round the date to the nearest resolution -->
+
+	}
+
 	function GetDelta(start, end)
 	{
 		return Math.ceil((end - start) / (1000 * 60 * 60 * 24));
 	}
 
-	function FormatDate(date)
+	function FormatDate(date, showYear = true, showMonth = true, showDay = true)
 	{
-		return date.toLocaleDateString("en-US", { year: 'numeric', month: 'long'});
+		let format = {};
+
+		if (showYear)
+			format.year = 'numeric';
+
+		if (showMonth)
+			format.month = 'long';
+
+		if (showDay)
+			format.day = 'numeric';
+
+		<!-- { year: 'numeric', month: 'long', day: 'numeric' } -->
+		return date.toLocaleDateString("en-US", format);
 	}
 
+
+<!-- find the range of the timeline header -->
 let headerStart = -1;
 let headerEnd = -1;
-
 for (const projectKey of TimelineData.Projects)
 {
 	const project = PageData.Projects[projectKey];
@@ -30,12 +50,12 @@ for (const projectKey of TimelineData.Projects)
 		headerEnd = projectEndDate;
 	}
 }
+
+headerStart = new Date(headerStart.getFullYear(), 0, 1);
+headerEnd = new Date(headerEnd.getFullYear() + 1, 0, 1);
+
 const headerDays = GetDelta(headerStart, headerEnd);
 %>
-
-
-
-
 
 
 
@@ -44,10 +64,20 @@ const headerDays = GetDelta(headerStart, headerEnd);
 	<div class="indent">
 		<div class="timelineHeader" style="--dateOffset: <%=headerStart %>; --duration: <%=headerDays %>;">
 			<div class="line"></div>
-			<div class="tick" style="--dateOffset: 0;"><%= FormatDate(headerStart) %></div>
-			<div class="tick" style="--dateOffset: <%=headerDays %>;"><%= FormatDate(headerEnd) %></div>
-			<!-- <div class="tick" style="--dateOffset: 1;"></div>
-			<div class="tick" style="--dateOffset: 2;"></div> -->
+			<%var subDate = new Date(headerStart);
+			while (subDate <= headerEnd)
+			{
+				const subDateOffset = GetDelta(headerStart, new Date(subDate));
+
+				if (subDate.getMonth() == 0){%>
+					<div class="tick large" style="--dateOffset: <%= subDateOffset %>;">
+						<h4><%= FormatDate(subDate, showYear=true, showMonth=false, showDay=false) %></h4>
+					</div>
+				<%}else{%>
+					<div class="tick" style="--dateOffset: <%= subDateOffset %>;"></div>
+				<%}
+				subDate.setMonth(subDate.getMonth() + 1);
+			}%>
 		</div>
 	</div>
 
@@ -64,11 +94,16 @@ const headerDays = GetDelta(headerStart, headerEnd);
 			%>
 
 
-			<%=project.Title %>
+
 			<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;">
+				<h4 class="timelineTitle"> <%=project.Title %> </h4>
 				<div class="line"></div>
-				<div class="tick" style="--dateOffset: 0;"><%= FormatDate(startDate) %></div>
-				<div class="tick" style="--dateOffset: <%= duration %>;"><%= FormatDate(endDate) %></div>
+				<div class="tick large" style="--dateOffset: 0;">
+					<!-- <h5><%= FormatDate(startDate, false, true, true) %></h5> -->
+				</div>
+				<div class="tick large" style="--dateOffset: <%= duration %>;">
+					<!-- <h5><%= FormatDate(endDate, false, true, true) %></h5> -->
+				</div>
 
 				<%for (const subDateStr of project.SubDates)
 				{
@@ -82,6 +117,4 @@ const headerDays = GetDelta(headerStart, headerEnd);
 			</div>
 		</div>
 	<%}%>
-	<div class="indent"></div>
-	<div class="indent"></div>
 </div>
