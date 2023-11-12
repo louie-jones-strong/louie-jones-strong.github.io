@@ -1,7 +1,9 @@
 <%
 if (CardData.ProjectData)
 {
-	ProjectData = CardData.ProjectData
+	<!-- create copy of the data -->
+	ProjectData = Object.assign({}, CardData.ProjectData);
+
 	CardData = {
 		Title: ProjectData.Title,
 		Body: ProjectData.QuickDescription,
@@ -26,14 +28,16 @@ if (CardData.ProjectData)
 	}
 }
 
+
+
 if (CardData.QuickInfoData && CardData.Thumbnail)
 {
 	CardData.QuickInfoData.Skills = null
 
-	let dataText = CardData.QuickInfoData.Date
+	let dataText = CardData.QuickInfoData.StartDate
 	if (dataText && dataText.length > 15)
 	{
-		CardData.QuickInfoData.Date = null
+		CardData.QuickInfoData.StartDate = null
 	}
 
 	CardData.QuickInfoData.Awards = null

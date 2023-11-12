@@ -1,0 +1,87 @@
+<%
+	<!-- define helper functions -->
+	function GetDelta(start, end)
+	{
+		return Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+	}
+
+	function FormatDate(date)
+	{
+		return date.toLocaleDateString("en-US", { year: 'numeric', month: 'long'});
+	}
+
+let headerStart = -1;
+let headerEnd = -1;
+
+for (const projectKey of TimelineData.Projects)
+{
+	const project = PageData.Projects[projectKey];
+
+	let projectStartDate = new Date(project.StartDate);
+	let projectEndDate = new Date(project.EndDate);
+
+	if (headerStart == -1 || projectStartDate < headerStart)
+	{
+		headerStart = projectStartDate;
+	}
+
+	if (headerEnd == -1 || projectEndDate > headerEnd)
+	{
+		headerEnd = projectEndDate;
+	}
+}
+const headerDays = GetDelta(headerStart, headerEnd);
+%>
+
+
+
+
+
+
+
+
+<div class="timelineHolder" style="--dateScale: 0.1em">
+	<div class="indent">
+		<div class="timelineHeader" style="--dateOffset: <%=headerStart %>; --duration: <%=headerDays %>;">
+			<div class="line"></div>
+			<div class="tick" style="--dateOffset: 0;"><%= FormatDate(headerStart) %></div>
+			<div class="tick" style="--dateOffset: <%=headerDays %>;"><%= FormatDate(headerEnd) %></div>
+			<!-- <div class="tick" style="--dateOffset: 1;"></div>
+			<div class="tick" style="--dateOffset: 2;"></div> -->
+		</div>
+	</div>
+
+	<%for (const projectKey of TimelineData.Projects)
+	{%>
+		<div class="indent">
+			<%
+			const project = PageData.Projects[projectKey];
+			const startDate = new Date(project.StartDate);
+			const endDate = new Date(project.EndDate);
+
+			const offset = GetDelta(headerStart, startDate);
+			const duration = GetDelta(startDate, endDate);
+			%>
+
+
+			<%=project.Title %>
+			<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;">
+				<div class="line"></div>
+				<div class="tick" style="--dateOffset: 0;"><%= FormatDate(startDate) %></div>
+				<div class="tick" style="--dateOffset: <%= duration %>;"><%= FormatDate(endDate) %></div>
+
+				<%for (const subDateStr of project.SubDates)
+				{
+					const subDate = new Date(subDateStr);
+					const subDateOffset = GetDelta(startDate, subDate);
+					%>
+					<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
+						<!-- <%= FormatDate(subDate) %> -->
+					</div>
+				<%}%>
+			</div>
+		</div>
+	<%}%>
+	<div class="indent"></div>
+	<div class="indent"></div>
+</div>
