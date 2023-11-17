@@ -55,11 +55,50 @@ headerStart = new Date(headerStart.getFullYear(), 0, 1);
 headerEnd = new Date(headerEnd.getFullYear() + 1, 0, 1);
 
 const headerDays = GetDelta(headerStart, headerEnd);
+
+
+
+<!-- squash timelines into the indents -->
+let indents = [];
+for (const projectKey of TimelineData.Projects)
+{
+	const projectToFit = PageData.Projects[projectKey];
+	const projectStartDate = new Date(projectToFit.StartDate);
+	const projectEndDate = new Date(projectToFit.EndDate);
+
+	<!-- pack the project into the first indent that has spare space for it -->
+	let indent = 0;
+	while (indents[indent] != undefined)
+	{
+		let indentEnd = new Date(headerStart);
+		for (const intentProjectKey of indents[indent])
+		{
+			const intentProject = PageData.Projects[intentProjectKey];
+			const endDate = new Date(intentProject.EndDate);
+
+			if (endDate > indentEnd)
+				indentEnd = endDate;
+		}
+
+		if (projectStartDate > indentEnd)
+			break;
+
+		indent++;
+	}
+
+
+
+
+
+	if (indents[indent] == undefined)
+		indents[indent] = [];
+
+	indents[indent].push(projectKey);
+}
 %>
 
 
-
-
+<!-- creating of the html content -->
 <div class="timelineHolder" style="--dateScale: 0.1em">
 	<div class="indent">
 		<div class="timelineHeader" style="--dateOffset: <%=headerStart %>; --duration: <%=headerDays %>;">
@@ -81,40 +120,44 @@ const headerDays = GetDelta(headerStart, headerEnd);
 		</div>
 	</div>
 
-	<%for (const projectKey of TimelineData.Projects)
+	<%for (const indentProjects of indents)
 	{%>
 		<div class="indent">
-			<%
-			const project = PageData.Projects[projectKey];
-			const startDate = new Date(project.StartDate);
-			const endDate = new Date(project.EndDate);
+			<%for (const projectKey of indentProjects)
+			{%>
 
-			const offset = GetDelta(headerStart, startDate);
-			const duration = GetDelta(startDate, endDate);
-			%>
+					<%
+					const project = PageData.Projects[projectKey];
+					const startDate = new Date(project.StartDate);
+					const endDate = new Date(project.EndDate);
 
-
-
-			<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;">
-				<h4 class="timelineTitle"> <%=project.Title %> </h4>
-				<div class="line"></div>
-				<div class="tick large" style="--dateOffset: 0;">
-					<!-- <h5><%= FormatDate(startDate, false, true, true) %></h5> -->
-				</div>
-				<div class="tick large" style="--dateOffset: <%= duration %>;">
-					<!-- <h5><%= FormatDate(endDate, false, true, true) %></h5> -->
-				</div>
-
-				<%for (const subDateStr of project.SubDates)
-				{
-					const subDate = new Date(subDateStr);
-					const subDateOffset = GetDelta(startDate, subDate);
+					const offset = GetDelta(headerStart, startDate);
+					const duration = GetDelta(startDate, endDate);
 					%>
-					<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
-						<!-- <%= FormatDate(subDate) %> -->
+
+
+					<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;">
+						<h4 class="timelineTitle"> <%=project.Title %> </h4>
+						<div class="line"></div>
+						<div class="tick large" style="--dateOffset: 0;">
+							<!-- <h5><%= FormatDate(startDate, false, true, true) %></h5> -->
+						</div>
+						<div class="tick large" style="--dateOffset: <%= duration %>;">
+							<!-- <h5><%= FormatDate(endDate, false, true, true) %></h5> -->
+						</div>
+
+						<%for (const subDateStr of project.SubDates)
+						{
+							const subDate = new Date(subDateStr);
+							const subDateOffset = GetDelta(startDate, subDate);
+							%>
+							<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
+								<!-- <%= FormatDate(subDate) %> -->
+							</div>
+						<%}%>
 					</div>
-				<%}%>
-			</div>
+
+			<%}%>
 		</div>
 	<%}%>
 </div>

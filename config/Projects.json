@@ -826,8 +826,8 @@
 	"EnglishTutor": {
 		"Title": "English Tutor",
 		"Thumbnail": "Public/Assets/EnglishTutor/thumbnail",
-		"StartDate": "2018",
-		"EndDate": "2019",
+		"StartDate": "September 30, 2018",
+		"EndDate": "April, 2019",
 		"SubDates": [
 		],
 		"TimeSpent": null,
@@ -848,8 +848,8 @@
 	"MathsTutor": {
 		"Title": "Maths Tutor",
 		"Thumbnail": "Public/Assets/MathsTutor/thumbnail",
-		"StartDate": "2020",
-		"EndDate": "2021",
+		"StartDate": "March, 2020",
+		"EndDate": "June, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": null,
