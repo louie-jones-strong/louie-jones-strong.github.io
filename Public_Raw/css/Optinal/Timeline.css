@@ -6,9 +6,8 @@
 
 	overflow: auto;
 
-	/* --dateScale: 5em; */
 	padding-inline: 5em;
-
+	width: calc(var(--duration) * var(--dateScale));
 
 	position: relative;
 }
