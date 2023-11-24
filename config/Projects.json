@@ -47,8 +47,7 @@
 			"MonsterMash",
 			"looking-for-eden",
 			"RougeClicker",
-			"DrPlantenstein",
-			"Timeline"
+			"DrPlantenstein"
 		]
 	},
 
@@ -805,7 +804,7 @@
 		"Link": null,
 		"HideLink": false,
 		"Hide": false,
-		"Tags": "Work",
+		"Tags": "Work Game",
 		"Skills": [
 			"Unity",
 			"Csharp",
