@@ -51,32 +51,6 @@
 		]
 	},
 
-	"Timeline": {
-		"Title": "Louie Jones-Strong",
-		"Thumbnail": "Public/Assets/PortfolioProject/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
-		"SubDates": [
-		],
-		"TimeSpent": null,
-		"NumPeople": null,
-		"Awards": null,
-		"QuickDescription": "Timeline page.",
-		"PagePath": "Timeline",
-		"Link": null,
-		"HideLink": false,
-		"Hide": false,
-		"Tags": "",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
-	},
-
-
-
 	"Education": {
 		"Title": "Education",
 		"Thumbnail": null,
