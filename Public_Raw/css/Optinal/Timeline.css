@@ -10,6 +10,8 @@
 	width: calc(var(--duration) * var(--dateScale));
 
 	position: relative;
+
+	margin-block: 2em;
 }
 
 .indent{

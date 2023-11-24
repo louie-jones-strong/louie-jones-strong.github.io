@@ -10,6 +10,7 @@
 
 	<!-- extra links if needed -->
 	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Timeline.css">
 </head>
 
 <body class="dark">
@@ -59,6 +60,11 @@
 						}
 					}); %>
 				</Div>
+
+				<%- include(PageData.PathToRoot+'Components/Timeline', {PageData: PageData, TimelineData: {
+						Projects: ["LSWB", "EnglishTutor", "MathsTutor", "Degree", "BlenderProjects"]
+					}}); %>
+
 
 
 				<hr class="gap">

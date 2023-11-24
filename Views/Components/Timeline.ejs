@@ -98,9 +98,10 @@ for (const projectKey of TimelineData.Projects)
 
 
 	<!-- add constants -->
-	var dateScale = 0.2;
+	var dateScale = 0.05;
 	var hybridScroll = false;
 	var showEventStartEndDates = false;
+	var showEventSubs = false;
 	var showEventSubDates = false;
 }
 %>
@@ -166,16 +167,18 @@ for (const projectKey of TimelineData.Projects)
 						<%}%>
 					</div>
 
-					<%for (const subDateStr of project.SubDates)
-					{
-						const subDate = new Date(subDateStr);
-						const subDateOffset = GetDelta(startDate, subDate);
-						%>
-						<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
-							<%if (showEventSubDates){%>
-								<%= FormatDate(subDate) %>
-							<%}%>
-						</div>
+					<%if (showEventSubs){%>
+						<%for (const subDateStr of project.SubDates)
+						{
+							const subDate = new Date(subDateStr);
+							const subDateOffset = GetDelta(startDate, subDate);
+							%>
+							<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
+								<%if (showEventSubDates){%>
+									<%= FormatDate(subDate) %>
+								<%}%>
+							</div>
+						<%}%>
 					<%}%>
 				</div>
 
