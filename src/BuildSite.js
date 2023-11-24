@@ -54,9 +54,16 @@ class Main
 		Utils.TryMakeDir(outputPath)
 
 		// build assets
-		console.log();
-		console.log("Building Assets...");
-		this.BuildAssets();
+		if (this.SiteConfig.Raw_StaticFolder.includes(this.SiteConfig.Raw_ViewsFolder))
+		{
+			// console.log("Static Folder is a subfolder of Views Folder. Skipping Asset Build.");
+		}
+		else
+		{
+			console.log();
+			console.log("Building Assets...");
+			this.BuildAssets();
+		}
 
 		// build pages
 		console.log();
