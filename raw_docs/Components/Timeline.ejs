@@ -150,11 +150,30 @@ for (const projectKey of TimelineData.Projects)
 
 				const offset = GetDelta(headerStart, startDate);
 				const duration = GetDelta(startDate, endDate);
+
+				var projectLink = null;
+				if (project.PagePath)
+				{
+					projectLink = PageData.PathToRoot + project.PagePath + ".html"
+				}
+				else
+				{
+					projectLink = project.Link
+				}
+
+				if (project.HideLink)
+				{
+					projectLink = null;
+				}
 				%>
 
 
-				<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;">
-					<h4 class="timelineTitle"> <%=project.Title %> </h4>
+				<a class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>"
+					<%if (projectLink){%>
+					href="<%= projectLink %>"
+					<%}%>
+					>
+					<h4 class="timelineTitle"> <%=project.Title %></h4>
 					<div class="line"></div>
 					<div class="tick large" style="--dateOffset: 0;">
 						<%if (showEventStartEndDates){%>
@@ -180,7 +199,7 @@ for (const projectKey of TimelineData.Projects)
 							</div>
 						<%}%>
 					<%}%>
-				</div>
+						</a>
 
 		<%}%>
 	</div>
