@@ -12,6 +12,53 @@
 		return Math.ceil((end - start) / (1000 * 60 * 60 * 24));
 	}
 
+	function FormatDateFromStr(dateStr)
+	{
+		if (!dateStr)
+			return "";
+
+		<!-- was month defined in the string -->
+		<!-- example string "October 15, 2020" -->
+		let lowerDateStr = dateStr.toLowerCase();
+
+		let showMonth = (lowerDateStr.indexOf("january") != -1 ||
+			lowerDateStr.indexOf("february") != -1 ||
+			lowerDateStr.indexOf("march") != -1 ||
+			lowerDateStr.indexOf("april") != -1 ||
+			lowerDateStr.indexOf("may") != -1 ||
+			lowerDateStr.indexOf("june") != -1 ||
+			lowerDateStr.indexOf("july") != -1 ||
+			lowerDateStr.indexOf("august") != -1 ||
+			lowerDateStr.indexOf("september") != -1 ||
+			lowerDateStr.indexOf("october") != -1 ||
+			lowerDateStr.indexOf("november") != -1 ||
+			lowerDateStr.indexOf("december") != -1);
+
+
+		let showDay = false;
+
+		let commaIdx = dateStr.indexOf(",");
+		if (commaIdx != -1)
+		{
+			let preCommaStr = dateStr.substring(0, commaIdx);
+			showDay = (preCommaStr.indexOf("1") != -1 ||
+				preCommaStr.indexOf("2") != -1 ||
+				preCommaStr.indexOf("3") != -1 ||
+				preCommaStr.indexOf("4") != -1 ||
+				preCommaStr.indexOf("5") != -1 ||
+				preCommaStr.indexOf("6") != -1 ||
+				preCommaStr.indexOf("7") != -1 ||
+				preCommaStr.indexOf("8") != -1 ||
+				preCommaStr.indexOf("9") != -1 ||
+				preCommaStr.indexOf("0") != -1);
+		}
+
+
+
+		let date = new Date(dateStr);
+		return FormatDate(date, showYear=true, showMonth=showMonth, showDay=showDay);
+	}
+
 	function FormatDate(date, showYear = true, showMonth = true, showDay = true)
 	{
 		let format = {};
@@ -211,12 +258,12 @@ if (TimelineData.ShowEventSubs)
 					<div class="line"></div>
 					<div class="tick large" style="--dateOffset: 0;">
 						<%if (showEventStartEndDates){%>
-							<h5><%= FormatDate(startDate, false, true, true) %></h5>
+							<h5><%= FormatDateFromStr(project.StartDate) %></h5>
 						<%}%>
 					</div>
 					<div class="tick large" style="--dateOffset: <%= duration %>;">
 						<%if (showEventStartEndDates){%>
-							<h5><%= FormatDate(endDate, false, true, true) %></h5>
+							<h5><%= FormatDateFromStr(project.EndDate) %></h5>
 						<%}%>
 					</div>
 
