@@ -93,8 +93,8 @@
 	"EPQProject": {
 		"Title": "EPQ",
 		"Thumbnail": "Public/Assets/EPQ/thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2016",
+		"EndDate": "October, 2017",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -175,8 +175,8 @@
 	"IntroToProgramming1": {
 		"Title": "Introduction To Programming I",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2020",
+		"EndDate": "March, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -199,8 +199,8 @@
 	"DiscreteMaths": {
 		"Title": "Discrete Mathematics",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2020",
+		"EndDate": "March, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -222,8 +222,8 @@
 	"FundamentalsOfComputerScience": {
 		"Title": "Fundamentals Of Computer Science",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2020",
+		"EndDate": "March, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -245,8 +245,8 @@
 	"HowComputersWork": {
 		"Title": "How Computers Work",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2020",
+		"EndDate": "March, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -268,8 +268,8 @@
 	"IntroToProgramming2": {
 		"Title": "Introduction To Programming II",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2021",
+		"EndDate": "September, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -294,8 +294,8 @@
 	"ComputationalMaths": {
 		"Title": "Computational Mathematics",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2021",
+		"EndDate": "September, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -317,8 +317,8 @@
 	"AlgorithmsAndDataStructures1": {
 		"Title": "Algorithms And Data Structures I",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2021",
+		"EndDate": "September, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -341,8 +341,8 @@
 	"WebDevelopment": {
 		"Title": "Web Development",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2021",
+		"EndDate": "September, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -369,8 +369,8 @@
 	"ObjectOrientedProgramming": {
 		"Title": "Object Oriented Programming",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2021",
+		"EndDate": "March, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -393,8 +393,8 @@
 	"SoftwareDesignAndDevelopment": {
 		"Title": "Software Design And Development",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2021",
+		"EndDate": "March, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -419,8 +419,8 @@
 	"AgileSoftwareProjects": {
 		"Title": "Agile Software Projects",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2021",
+		"EndDate": "March, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -448,8 +448,8 @@
 	"DatabasesNetworksAndTheWeb": {
 		"Title": "Databases, Networks And The Web",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2021",
+		"EndDate": "March, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -477,8 +477,8 @@
 	"ProgrammingWithData": {
 		"Title": "Programming With Data",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2022",
+		"EndDate": "September, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -502,8 +502,8 @@
 	"ComputerSecurity": {
 		"Title": "Computer Security",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2022",
+		"EndDate": "September, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -525,8 +525,8 @@
 	"GraphicsProgramming": {
 		"Title": "Graphics Programming",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2022",
+		"EndDate": "September, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -549,8 +549,8 @@
 	"AlgorithmsAndDataStructures2": {
 		"Title": "Algorithms And Data Structures II",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2022",
+		"EndDate": "September, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -575,8 +575,8 @@
 	"DatabasesAndAdvancedDataTechniques": {
 		"Title": "Databases And Advanced Data Techniques",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2022",
+		"EndDate": "March, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -602,8 +602,8 @@
 	"MachineLearningAndNeuralNetworks": {
 		"Title": "Machine Learning And Neural Networks",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2022",
+		"EndDate": "March, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -628,8 +628,8 @@
 	"ArtificialIntelligence": {
 		"Title": "Artificial Intelligence",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2022",
+		"EndDate": "March, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -654,8 +654,8 @@
 	"IntelligentSignalProcessing": {
 		"Title": "Intelligent Signal Processing",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "October, 2022",
+		"EndDate": "March, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -681,8 +681,8 @@
 	"NaturalLanguageProcessing": {
 		"Title": "Natural Language Processing",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2023",
+		"EndDate": "September, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -706,8 +706,8 @@
 	"DataScience": {
 		"Title": "Data Science",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2023",
+		"EndDate": "September, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -731,8 +731,8 @@
 	"FinalProject": {
 		"Title": "Dissertation",
 		"Thumbnail": null,
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April, 2023",
+		"EndDate": "September, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": "6 months",
@@ -843,8 +843,8 @@
 	"BusinessConsulting": {
 		"Title": "Business Consulting",
 		"Thumbnail": "Public/Assets/BusinessConsulting/thumbnail",
-		"StartDate": "2022",
-		"EndDate": "2023",
+		"StartDate": "October, 2022",
+		"EndDate": "July, 2023",
 		"SubDates": [
 		],
 		"TimeSpent": null,
@@ -942,11 +942,11 @@
 	"EggHuntProject": {
 		"Title": "Office Egg Hunt",
 		"Thumbnail": "Public/Assets/EggHuntGame/thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "March 16, 2021",
+		"EndDate": "April 6, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "2 Weeks",
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
@@ -969,8 +969,8 @@
 	"CubePuzzleProject": {
 		"Title": "Alhambra 4D Cube Puzzle",
 		"Thumbnail": "Public/Assets/CubePuzzle/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "June 27, 2018",
+		"EndDate": "July 18, 2018",
 		"SubDates": [
 		],
 		"TimeSpent": "3 Weeks",
@@ -992,11 +992,11 @@
 	"Minesweeper": {
 		"Title": "Mine Sweeper",
 		"Thumbnail": "Public/Assets/MineSweeper/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "June 7, 2020",
+		"EndDate": "June 14, 2020",
 		"SubDates": [
 		],
-		"TimeSpent": "1 Week",
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "To prepare for my University courses I taught myself JS, HTML and CSS.",
@@ -1019,11 +1019,11 @@
 	"CalculatorSolver": {
 		"Title": "Calculator: The Game Solver",
 		"Thumbnail": "Public/Assets/CalculatorSolver/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "January 25, 2020",
+		"EndDate": "April 19, 2020",
 		"SubDates": [
 		],
-		"TimeSpent": "2 Months",
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "Calculator: The Game Solver.",
@@ -1043,8 +1043,8 @@
 	"MediaStudio": {
 		"Title": "Media Studio",
 		"Thumbnail": "Public/Assets/MediaStudio/thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "September 29, 2022",
+		"EndDate": "December 7, 2022",
 		"SubDates": [
 		],
 		"TimeSpent": "2 Months",
@@ -1069,8 +1069,8 @@
 	"MonsterMash": {
 		"Title": "Monster Mash",
 		"Thumbnail": "Public/Assets/MonsterMash/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "August 28, 2020",
+		"EndDate": "October 15, 2020",
 		"SubDates": [
 		],
 		"TimeSpent": "1 Week",
@@ -1094,8 +1094,8 @@
 	"looking-for-eden": {
 		"Title": "Looking For Eden",
 		"Thumbnail": "Public/Assets/LookingForEden/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "January 30, 2021",
+		"EndDate": "March 6, 2021",
 		"SubDates": [
 		],
 		"TimeSpent": "48 hours",
@@ -1120,11 +1120,11 @@
 	"RougeClicker": {
 		"Title": "Rogue Clicker",
 		"Thumbnail": "Public/Assets/RogueClicker/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "April 2, 2022",
+		"EndDate": "September 11, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "1 Week",
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "A short fast passed clicker with constant upgrades.",
@@ -1146,11 +1146,11 @@
 	"DrPlantenstein": {
 		"Title": "Dr. Plantenstein",
 		"Thumbnail": "Public/Assets/Plantenstein/Thumbnail",
-		"StartDate": null,
-		"EndDate": null,
+		"StartDate": "September 17, 2022",
+		"EndDate": "September 26, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "1 Week",
+		"TimeSpent": null,
 		"NumPeople": 3,
 		"Awards": null,
 		"QuickDescription": "Shop and garden managment game made for GB jam 10. You play as a herbalist who grows plants to heal the villagers.",
