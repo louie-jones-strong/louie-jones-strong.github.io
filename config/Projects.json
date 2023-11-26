@@ -109,10 +109,104 @@
 		},
 		"SubProjects": [
 			"Degree",
-			"EPQProject"
+			"EPQProject",
+			"ALevels"
 		]
 	},
 
+	"ALevels": {
+		"Title": "A Levels",
+		"Thumbnail": null,
+		"StartDate": "September, 2016",
+		"EndDate": "June, 2018",
+		"SubDates": [
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": null,
+		"PagePath": null,
+		"Link": null,
+		"HideLink": true,
+		"Hide": true,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"EPQProject",
+			"PhysicsALevel",
+			"MathsALevel",
+			"ComputerScienceALevel"
+		]
+	},
+	"PhysicsALevel": {
+		"Title": "Physics A Level",
+		"Thumbnail": null,
+		"StartDate": "September, 2016",
+		"EndDate": "June, 2018",
+		"SubDates": [
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": null,
+		"PagePath": null,
+		"Link": null,
+		"HideLink": true,
+		"Hide": true,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"MathsALevel": {
+		"Title": "Maths A Level",
+		"Thumbnail": null,
+		"StartDate": "September, 2016",
+		"EndDate": "June, 2018",
+		"SubDates": [
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": null,
+		"PagePath": null,
+		"Link": null,
+		"HideLink": true,
+		"Hide": true,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"ComputerScienceALevel": {
+		"Title": "Computer Science A Level",
+		"Thumbnail": null,
+		"StartDate": "September, 2016",
+		"EndDate": "June, 2018",
+		"SubDates": [
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": null,
+		"PagePath": null,
+		"Link": null,
+		"HideLink": true,
+		"Hide": true,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
 
 	"EPQProject": {
 		"Title": "EPQ",
