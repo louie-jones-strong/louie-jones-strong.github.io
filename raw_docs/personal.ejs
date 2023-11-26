@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Timeline.css">
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+
+		<hr class="gap">
+
+		<%- include(PageData.PathToRoot+'Components/Timeline', {PageData: PageData, TimelineData: {
+			Projects: Object.keys(PageData.Projects),
+			DateScale: 0.1,
+			ShowEventSubs: true
+		}}); %>
+
+
+
+		<hr class="gap">
+
+
+		<%- include(PageData.PathToRoot+'Components/ContentFilter', {PageData: PageData,
+			FilterData:{HolderId: "filter", Tags: {"Education":0, "Solo":0, "Art":0, "Game":0, "Degree":0}}}); %>
+		<div class="cardHolder" id="filter">
+			<%for (const [projectKey, project] of Object.entries(PageData.Projects)){%>
+				<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
+			<%}%>
+		</div>
+
+
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+	</div>
+</body>
+</html>

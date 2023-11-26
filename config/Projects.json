@@ -51,6 +51,30 @@
 		]
 	},
 
+	"personal": {
+		"Title": null,
+		"Thumbnail": null,
+		"StartDate": null,
+		"EndDate": null,
+		"SubDates": [
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": "personal",
+		"Link": null,
+		"HideLink": true,
+		"Hide": true,
+		"Tags": "",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+
 	"Education": {
 		"Title": "Education",
 		"Thumbnail": null,

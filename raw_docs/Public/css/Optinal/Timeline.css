@@ -37,7 +37,7 @@
 .timeline,
 .timelineHeader{
 	--tileHight: 1.75em;
-	--Colour: var(--Colour-Text1);
+	--Colour: var(--Colour-Text3);
 
 
 	position: absolute;
@@ -82,6 +82,20 @@ a.timeline:hover{
 	left: -0.5em;
 	margin: 0px;
 	padding: 0px;
+
+	height: 1.2em;
+	width: 100%;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-shadow: 0px 0px 4px var(--BackgroundColour);
+}
+
+.timeline:hover > .timelineTitle{
+	/* width: max-content; */
+	white-space: normal;
+	overflow: visible;
 }
 
 

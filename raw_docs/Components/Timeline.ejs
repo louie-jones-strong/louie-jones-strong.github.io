@@ -29,11 +29,23 @@
 		return date.toLocaleDateString("en-US", format);
 	}
 
+<!-- filter out all projects that don't have a timeline -->
+let projects = [];
+for (const projectKey of TimelineData.Projects)
+{
+	const project = PageData.Projects[projectKey];
+
+	if (project.StartDate && project.EndDate)
+	{
+		projects.push(projectKey);
+	}
+}
+
 
 <!-- find the range of the timeline header -->
 let headerStart = -1;
 let headerEnd = -1;
-for (const projectKey of TimelineData.Projects)
+for (const projectKey of projects)
 {
 	const project = PageData.Projects[projectKey];
 
@@ -60,7 +72,7 @@ const headerDays = GetDelta(headerStart, headerEnd);
 
 <!-- squash timelines into the indents -->
 let indents = [];
-for (const projectKey of TimelineData.Projects)
+for (const projectKey of projects)
 {
 	const projectToFit = PageData.Projects[projectKey];
 	const projectStartDate = new Date(projectToFit.StartDate);
@@ -70,39 +82,62 @@ for (const projectKey of TimelineData.Projects)
 	let indent = 0;
 	while (indents[indent] != undefined)
 	{
+		let indentStart = new Date(headerEnd);
 		let indentEnd = new Date(headerStart);
 		for (const intentProjectKey of indents[indent])
 		{
 			const intentProject = PageData.Projects[intentProjectKey];
+			const startDate = new Date(intentProject.StartDate);
 			const endDate = new Date(intentProject.EndDate);
 
+			if (startDate < indentStart)
+			{
+				indentStart = startDate;
+			}
+
 			if (endDate > indentEnd)
+			{
 				indentEnd = endDate;
+			}
+		}
+
+		if (projectEndDate < indentStart)
+		{
+			break;
 		}
 
 		if (projectStartDate > indentEnd)
+		{
 			break;
+		}
 
 		indent++;
 	}
-
-
-
 
 
 	if (indents[indent] == undefined)
 		indents[indent] = [];
 
 	indents[indent].push(projectKey);
+}
 
 
+<!-- add constants -->
 
-	<!-- add constants -->
-	var dateScale = 0.05;
-	var hybridScroll = false;
-	var showEventStartEndDates = true;
-	var showEventSubs = false;
-	var showEventSubDates = false;
+var hybridScroll = false;
+var showEventStartEndDates = true;
+var showEventSubDates = false;
+
+var dateScale = 0.05;
+if (TimelineData.DateScale)
+{
+	dateScale = TimelineData.DateScale;
+}
+
+var showEventSubs = false;
+if (TimelineData.ShowEventSubs)
+{
+	showEventSubs = TimelineData.ShowEventSubs;
 }
 %>
 
@@ -172,7 +207,7 @@ for (const projectKey of TimelineData.Projects)
 				<%}else{%>
 					<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>">
 				<%}%>
-					<h4 class="timelineTitle"> <%=project.Title %></h4>
+
 					<div class="line"></div>
 					<div class="tick large" style="--dateOffset: 0;">
 						<%if (showEventStartEndDates){%>
@@ -198,6 +233,7 @@ for (const projectKey of TimelineData.Projects)
 							</div>
 						<%}%>
 					<%}%>
+					<h4 class="timelineTitle"> <%=project.Title %></h4>
 				<%if (projectLink){%>
 				</a>
 				<%}else{%>
