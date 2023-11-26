@@ -100,7 +100,7 @@ for (const projectKey of TimelineData.Projects)
 	<!-- add constants -->
 	var dateScale = 0.05;
 	var hybridScroll = false;
-	var showEventStartEndDates = false;
+	var showEventStartEndDates = true;
 	var showEventSubs = false;
 	var showEventSubDates = false;
 }
@@ -167,12 +167,11 @@ for (const projectKey of TimelineData.Projects)
 				}
 				%>
 
-
-				<a class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>"
-					<%if (projectLink){%>
-					href="<%= projectLink %>"
-					<%}%>
-					>
+				<%if (projectLink){%>
+					<a class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>" href="<%= projectLink %>">
+				<%}else{%>
+					<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>">
+				<%}%>
 					<h4 class="timelineTitle"> <%=project.Title %></h4>
 					<div class="line"></div>
 					<div class="tick large" style="--dateOffset: 0;">
@@ -199,7 +198,11 @@ for (const projectKey of TimelineData.Projects)
 							</div>
 						<%}%>
 					<%}%>
-						</a>
+				<%if (projectLink){%>
+				</a>
+				<%}else{%>
+					</div>
+				<%}%>
 
 		<%}%>
 	</div>
