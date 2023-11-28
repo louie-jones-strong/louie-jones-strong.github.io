@@ -22,10 +22,10 @@
 }
 
 .indent{
-	--timelineHeight: 5em;
+	--timelineHeight: 4em;
 	height: var(--timelineHeight);
 	width: 100%;
-	margin-block: 0.25em;
+	margin-block: 0.5em;
 
 	position: relative;
 }
@@ -116,6 +116,7 @@ a.timeline:hover{
 	height: calc(var(--tickHeight) * var(--tickScale, 1));
 
 	background-color: var(--Colour);
+	border: 1px solid var(--ColourAccent-Contrast);
 
 	top: calc(var(--tileHight) + 0.5*var(--tickHeight) - 0.5*(var(--tickHeight)*var(--tickScale, 1)));
 

@@ -225,67 +225,69 @@ if (TimelineData.ShowEventSubs)
 		<%for (const projectKey of indentProjects)
 		{%>
 
-				<%
-				const project = PageData.Projects[projectKey];
-				const startDate = new Date(project.StartDate);
-				const endDate = new Date(project.EndDate);
+			<%
+			const project = PageData.Projects[projectKey];
+			const startDate = new Date(project.StartDate);
+			const endDate = new Date(project.EndDate);
 
-				const offset = GetDelta(headerStart, startDate);
-				const duration = GetDelta(startDate, endDate);
+			const offset = GetDelta(headerStart, startDate);
+			const duration = GetDelta(startDate, endDate);
 
-				var projectLink = null;
-				if (project.PagePath)
-				{
-					projectLink = PageData.PathToRoot + project.PagePath + ".html"
-				}
-				else
-				{
-					projectLink = project.Link
-				}
+			var projectLink = null;
+			if (project.PagePath)
+			{
+				projectLink = PageData.PathToRoot + project.PagePath + ".html"
+			}
+			else
+			{
+				projectLink = project.Link
+			}
 
-				if (project.HideLink)
-				{
-					projectLink = null;
-				}
-				%>
+			if (project.HideLink)
+			{
+				projectLink = null;
+			}
+			%>
 
-				<%if (projectLink){%>
-					<a class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>" href="<%= projectLink %>">
-				<%}else{%>
-					<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>">
-				<%}%>
+			<%if (projectLink){%>
+				<a class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>" href="<%= projectLink %>">
+			<%}else{%>
+				<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>">
+			<%}%>
 
-					<div class="line"></div>
-					<div class="tick large" style="--dateOffset: 0;">
-						<%if (showEventStartEndDates){%>
-							<h5><%= FormatDateFromStr(project.StartDate) %></h5>
-						<%}%>
-					</div>
-					<div class="tick large" style="--dateOffset: <%= duration %>;">
-						<%if (showEventStartEndDates){%>
-							<h5><%= FormatDateFromStr(project.EndDate) %></h5>
-						<%}%>
-					</div>
+				<div class="line"></div>
 
-					<%if (showEventSubs){%>
-						<%for (const subDateStr of project.SubDates)
-						{
-							const subDate = new Date(subDateStr);
-							const subDateOffset = GetDelta(startDate, subDate);
-							%>
-							<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
-								<%if (showEventSubDates){%>
-									<%= FormatDate(subDate) %>
-								<%}%>
-							</div>
-						<%}%>
+				<%if (showEventSubs){%>
+					<%for (const subDateStr of project.SubDates)
+					{
+						const subDate = new Date(subDateStr);
+						const subDateOffset = GetDelta(startDate, subDate);
+						%>
+						<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
+							<%if (showEventSubDates){%>
+								<%= FormatDate(subDate) %>
+							<%}%>
+						</div>
 					<%}%>
-					<h4 class="timelineTitle"> <%=project.Title %></h4>
-				<%if (projectLink){%>
-				</a>
-				<%}else{%>
-					</div>
 				<%}%>
+
+				<div class="tick large" style="--dateOffset: 0;">
+					<%if (showEventStartEndDates){%>
+						<h5><%= FormatDateFromStr(project.StartDate) %></h5>
+					<%}%>
+				</div>
+				<div class="tick large" style="--dateOffset: <%= duration %>;">
+					<%if (showEventStartEndDates){%>
+						<h5><%= FormatDateFromStr(project.EndDate) %></h5>
+					<%}%>
+				</div>
+
+				<h4 class="timelineTitle"> <%=project.Title %></h4>
+			<%if (projectLink){%>
+			</a>
+			<%}else{%>
+				</div>
+			<%}%>
 
 		<%}%>
 	</div>
