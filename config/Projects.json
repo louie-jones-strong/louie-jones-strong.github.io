@@ -12,8 +12,8 @@
 		"QuickDescription": "I am a Brighton based hard working, creative, programmer studying machine learning.",
 		"PagePath": "index",
 		"Link": null,
-		"HideLink": false,
-		"Hide": false,
+		"HideLink": true,
+		"Hide": true,
 		"Tags": "",
 		"Skills": [
 			"Unity",
@@ -52,7 +52,7 @@
 	},
 
 	"personal": {
-		"Title": null,
+		"Title": "Personal",
 		"Thumbnail": null,
 		"StartDate": null,
 		"EndDate": null,
@@ -61,7 +61,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Personal page to show off all of the projects I have worked on.",
 		"PagePath": "personal",
 		"Link": null,
 		"HideLink": true,
@@ -103,14 +103,15 @@
 			"Nodejs",
 			"Latex",
 			"Tensorflow",
-			"scikitlearn"
+			"scikitlearn",
+			"Java"
 		],
 		"Links": {
 		},
 		"SubProjects": [
-			"Degree",
-			"EPQProject",
-			"ALevels"
+			"GCSEs",
+			"ALevels",
+			"Degree"
 		]
 	},
 
@@ -124,23 +125,29 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": null,
-		"PagePath": null,
+		"QuickDescription": "GCSEs studied at Blatchington Mill School.",
+		"PagePath": "Education/GCSEs/index",
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
 		"Links": {
 		},
 		"SubProjects": [
+			"LawGCSE",
 			"MathsGCSE",
-			"ICTGCSE"
+			"ICTGCSE",
+			"AdditionalScienceGCSE",
+			"FurtherAdditionalGCSE",
+			"EnglishGCSE",
+			"ComputingGCSE",
+			"PerformingArtsProductionGCSE"
 		]
 	},
 	"LawGCSE": {
-		"Title": "Law GCSE",
+		"Title": "Law",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "October, 2015",
@@ -149,11 +156,11 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": null,
+		"QuickDescription": "Covered foundational legal principles, providing an understanding of the British legal system and highlighting its distinctions from the American legal systems. Explored key legislation and case law, encompassing both criminal and civil law. Examined the court system, human rights, and the role of legal professionals. Developed analytical and evaluative skills through the exploration of real-life legal scenarios.",
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -162,7 +169,7 @@
 		"SubProjects": []
 	},
 	"MathsGCSE": {
-		"Title": "Maths GCSE",
+		"Title": "Maths",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "June, 2016",
@@ -174,8 +181,8 @@
 		"QuickDescription": null,
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -184,7 +191,7 @@
 		"SubProjects": []
 	},
 	"ICTGCSE": {
-		"Title": "ICT GCSE",
+		"Title": "ICT",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "June, 2016",
@@ -196,8 +203,8 @@
 		"QuickDescription": null,
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -206,7 +213,7 @@
 		"SubProjects": []
 	},
 	"AdditionalScienceGCSE": {
-		"Title": "Additional Science GCSE",
+		"Title": "Additional Science",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "June, 2016",
@@ -218,8 +225,8 @@
 		"QuickDescription": null,
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -228,7 +235,7 @@
 		"SubProjects": []
 	},
 	"FurtherAdditionalGCSE": {
-		"Title": "Further Additional GCSE",
+		"Title": "Further Additional",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "June, 2016",
@@ -240,8 +247,8 @@
 		"QuickDescription": null,
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -250,7 +257,7 @@
 		"SubProjects": []
 	},
 	"EnglishGCSE": {
-		"Title": "English GCSE",
+		"Title": "English",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "June, 2016",
@@ -262,8 +269,8 @@
 		"QuickDescription": null,
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -272,7 +279,7 @@
 		"SubProjects": []
 	},
 	"ComputingGCSE": {
-		"Title": "Computing GCSE",
+		"Title": "Computing",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "June, 2016",
@@ -284,8 +291,8 @@
 		"QuickDescription": null,
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -294,7 +301,7 @@
 		"SubProjects": []
 	},
 	"PerformingArtsProductionGCSE": {
-		"Title": "Performing Arts Production GCSE",
+		"Title": "Performing Arts Production",
 		"Thumbnail": null,
 		"StartDate": "September, 2014",
 		"EndDate": "June, 2016",
@@ -306,8 +313,8 @@
 		"QuickDescription": null,
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -326,13 +333,18 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": null,
-		"PagePath": null,
+		"QuickDescription": "A Levels studied at UTC@Harbourside.",
+		"PagePath": "Education/ALevel/index",
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
+			"SQL",
+			"Git",
+			"Java",
+			"Python",
+			"Tensorflow"
 		],
 		"Links": {
 		},
@@ -341,11 +353,35 @@
 			"PhysicsALevel",
 			"MathsALevel",
 			"ComputerScienceALevel",
-			"HeadBoyALevel"
+			"HeadBoyALevel",
+			"GlobalSocialLeaders"
+		]
+	},
+	"GlobalSocialLeaders": {
+		"Title": "Global Social Leaders",
+		"Thumbnail": null,
+		"StartDate": "October, 2016",
+		"EndDate": null,
+		"SubDates": [
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "2nd Place",
+		"QuickDescription": "Three others and I led a team of 15 engineers, repurposing aluminum cans into wind turbines, sprinkler systems, and birdhouses to enhance the local community. We were awarded with 2nd place in the global competition with 100+ teams.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
 		]
 	},
 	"PhysicsALevel": {
-		"Title": "Physics A Level",
+		"Title": "Physics",
 		"Thumbnail": null,
 		"StartDate": "September, 2016",
 		"EndDate": "June, 2018",
@@ -354,11 +390,11 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": null,
+		"QuickDescription": "In A level physics I learned: mechanics, materials, waves, electricity, magnetism, and quantum physics. Using a range of experimental methods to collect data and to test hypotheses. I applied vectors, calculus, and trigonometry to describe and analyse the behaviour of real systems.",
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -367,7 +403,7 @@
 		"SubProjects": []
 	},
 	"MathsALevel": {
-		"Title": "Maths A Level",
+		"Title": "Maths",
 		"Thumbnail": null,
 		"StartDate": "September, 2016",
 		"EndDate": "June, 2018",
@@ -376,11 +412,11 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": null,
+		"QuickDescription": "In A level maths I learned: calculus, algebra, and geometry. Differential and integral calculus for function analysis. Applied algebra to solve complex equations and manipulate matrices. Advanced geometry and trigonometry for spatial reasoning. Covered statistical methods, probability, and mathematical modelling. Developed strong analytical and problem-solving skills.",
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -389,7 +425,7 @@
 		"SubProjects": []
 	},
 	"ComputerScienceALevel": {
-		"Title": "Computer Science A Level",
+		"Title": "Computer Science",
 		"Thumbnail": null,
 		"StartDate": "September, 2016",
 		"EndDate": "June, 2018",
@@ -398,13 +434,16 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": null,
+		"QuickDescription": "Covered the fundamentals of computer science, including: programming, algorithms, data structures, data representation, computer systems, computer organisation and architecture, communication and networking, databases, discrete maths, and the consequences of uses of computing.",
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
+			"SQL",
+			"Git",
+			"Java"
 		],
 		"Links": {
 		},
@@ -420,11 +459,11 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": null,
+		"QuickDescription": "As Head Boy of a STEM college, I actively collaborated with local companies, chambers of commerce and the local community bridging the gap between academia and industry. I showcased our institution's achievements, programs, and the talents of our students. Representing the college, I played a pivotal role in fostering positive relationships between the institution and external stakeholders.",
 		"PagePath": null,
 		"Link": null,
-		"HideLink": true,
-		"Hide": true,
+		"HideLink": false,
+		"Hide": false,
 		"Tags": "Education",
 		"Skills": [
 		],
@@ -439,11 +478,11 @@
 		"EndDate": "October, 2017",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "My college EPQ dissertation on multi-technique supervised machine learning.",
-		"PagePath": "Education/EPQProject",
+		"PagePath": "Education/ALevel/EPQProject",
 		"Link": null,
 		"HideLink": false,
 		"Hide": false,
@@ -464,7 +503,7 @@
 		"EndDate": "September, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "3 Years",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track for: First Class",
 		"QuickDescription": "BSc Computer Science (Machine Learning And Artificial Intelligence).",
@@ -522,7 +561,7 @@
 		"EndDate": "March, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered core programming techniques, including variables, conditionals, functions, and loops. It emphasized interactive, graphical program creation and introduced basic object-oriented programming.",
@@ -546,7 +585,7 @@
 		"EndDate": "March, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "Covered sets, logic (propositional and predicate), functions, relations, graphs, trees, induction and recursion. This module builds a foundation to describe problems and algorithms in a mathematical way.",
@@ -569,7 +608,7 @@
 		"EndDate": "March, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered binary representations and logic, complexity theory and theories of computation, finite state machines and Turing machines. These are then applied to databases, artificial intelligence and machine learning.",
@@ -592,7 +631,7 @@
 		"EndDate": "March, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "Second Class Honours",
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
@@ -615,7 +654,7 @@
 		"EndDate": "September, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "Focused on maintainable code, defensive coding techniques, program testing techniques, cyclical approaches to software development, encapsulation, developing code across multiple files and using third-party libraries.",
@@ -641,7 +680,7 @@
 		"EndDate": "September, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
@@ -664,7 +703,7 @@
 		"EndDate": "September, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered linear data structures such as arrays, vectors and lists. Expressing algorithms as flowcharts and pseudocode. Sorting and searching algorithms.",
@@ -688,7 +727,7 @@
 		"EndDate": "September, 2021",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": 4,
 		"Awards": "First Class",
 		"QuickDescription": "This module introduced me to HTML, CSS and JavaScript. It covered the document object model and how you can dynamically manipulate it with JavaScript to create interactive web pages. It also covered accessibility and usability issues.",
@@ -716,7 +755,7 @@
 		"EndDate": "March, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered objects and classes, inheritance, abstraction and polymorphism. It also covered code documentation and style.",
@@ -740,7 +779,7 @@
 		"EndDate": "March, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered defensive coding, exception handling, unit testing, test driven development and collaboration using version control.",
@@ -766,7 +805,7 @@
 		"EndDate": "March, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": 6,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered project management, requirements gathering, user centred design, agile software development methodologies, test driven software development, software validation and user testing. It also covered professional practices and software documentation.",
@@ -795,7 +834,7 @@
 		"EndDate": "March, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered networking concepts, socket architectures, HTTP servers, relational databases, querying a database, representing data in a database.",
@@ -824,7 +863,7 @@
 		"EndDate": "September, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered data-driven programming, visualising data, descriptive statistics, getting data, processing data, classification and clustering.",
@@ -849,7 +888,7 @@
 		"EndDate": "September, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered security threats, access control and authentication, security models, operating system security, network security, cryptography, cryptographic protocols and key management, public key cryptography and blockchain protocols.",
@@ -872,7 +911,7 @@
 		"EndDate": "September, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered coordinate transformations, number generators, images, pixels, colors, image processing, computer vision, simulating physical systems and 3D graphics.",
@@ -896,7 +935,7 @@
 		"EndDate": "September, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered stacks, queues, binary trees, heaps, priority queues, implicit array algorithms, recursion, iteration, graphs, shortest-path algorithms, sets, maps, hash tables and collections.",
@@ -922,7 +961,7 @@
 		"EndDate": "March, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered basic databases and data schemas for a website, CRUD/RESTful APIs, websockets, user authentication and security, working with external APIs and scalability.",
@@ -949,7 +988,7 @@
 		"EndDate": "March, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered regression, classification, clustering, matrix completion, pattern recognition, neural networks, multi-layer perceptrons, back propagation, network optimisers, deep and recurrent networks.",
@@ -975,7 +1014,7 @@
 		"EndDate": "March, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered reinforcement learning, problem solving, knowledge representation and ontologies, reasoning under uncertainty,optimal decisions in games, robotics and automated scientific discovery.",
@@ -1001,7 +1040,7 @@
 		"EndDate": "March, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered capturing, representing and processing audio and camera inputs as well as video. It covered LTI systems and impulse responses, frequency domain representations, extracting features from signals, speech recognition, computer vision, compressing signals.",
@@ -1028,7 +1067,7 @@
 		"EndDate": "September, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "This module covered information retrieval and curation in NLP, formal grammars, rule based NLP, statistical NLP, NER, stemmers, taggers and parsers, software packages for NLP and applications of NLP.",
@@ -1053,7 +1092,7 @@
 		"EndDate": "September, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "This module covered working with different types of data, correlation and regression, distributions and significance, processing text data, decision making based on data analysis, data visualisation, time-series data visualisation, scientific data visualisation and case studies.",
@@ -1078,7 +1117,7 @@
 		"EndDate": "September, 2023",
 		"SubDates": [
 		],
-		"TimeSpent": "6 months",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "My dissertation involved independently planning, managing, researching, designing, developing, testing and evaluating my own software project. For this project I designed a new machine learning framework for creating agents for the games industry.",
@@ -1113,7 +1152,7 @@
 		"EndDate": "September, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "4 Years",
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "Develop Star: Best Mobile Game",
 		"QuickDescription": "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
@@ -1315,7 +1354,7 @@
 		"EndDate": "July 18, 2018",
 		"SubDates": [
 		],
-		"TimeSpent": "3 Weeks",
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
@@ -1389,7 +1428,7 @@
 		"EndDate": "December 7, 2022",
 		"SubDates": [
 		],
-		"TimeSpent": "2 Months",
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.",

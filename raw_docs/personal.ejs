@@ -28,6 +28,21 @@
 		<%- include(PageData.PathToRoot+'Components/Header'); %>
 
 
+
+		<hr class="gap">
+
+		<h3 class="center reveal fromBottom">My Skills:</h3>
+
+		<div class="centeredFrame">
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
+				PageData:PageData,
+				QuickInfoData: {
+					"HideSkillTitle": true,
+					Skills: Object.keys(PageData.Icons)
+				}
+			}); %>
+		</div>
+
 		<hr class="gap">
 
 		<%- include(PageData.PathToRoot+'Components/Timeline', {PageData: PageData, TimelineData: {
@@ -53,5 +68,6 @@
 		<!-- Shared common footer -->
 		<%- include(PageData.PathToRoot+'Components/Footer'); %>
 	</div>
+	<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
 </body>
 </html>
