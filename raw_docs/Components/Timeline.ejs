@@ -129,31 +129,22 @@ for (const projectKey of projects)
 	let indent = 0;
 	while (indents[indent] != undefined)
 	{
-		let indentStart = new Date(headerEnd);
-		let indentEnd = new Date(headerStart);
+		let isOverlapping = false;
 		for (const intentProjectKey of indents[indent])
 		{
 			const intentProject = PageData.Projects[intentProjectKey];
 			const startDate = new Date(intentProject.StartDate);
 			const endDate = new Date(intentProject.EndDate);
 
-			if (startDate < indentStart)
+			<!-- does the intent range overlap with the project range -->
+			if (startDate <= projectEndDate && endDate >= projectStartDate)
 			{
-				indentStart = startDate;
-			}
-
-			if (endDate > indentEnd)
-			{
-				indentEnd = endDate;
+				isOverlapping = true;
+				break;
 			}
 		}
 
-		if (projectEndDate < indentStart)
-		{
-			break;
-		}
-
-		if (projectStartDate > indentEnd)
+		if (!isOverlapping)
 		{
 			break;
 		}
