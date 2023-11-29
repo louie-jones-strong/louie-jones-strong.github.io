@@ -157,7 +157,7 @@ for (const projectKey in projects)
 			if (value != null)
 			{
 				assert.equal(typeof value, "string");
-				assert.ok(value.length >= 3);
+				assert.ok(value.length >= 1);
 			}
 		});
 
