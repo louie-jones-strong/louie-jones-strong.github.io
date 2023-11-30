@@ -9,15 +9,15 @@ const ffmpegCommand  = require('fluent-ffmpeg');
 
 class AssetCompressor
 {
-	constructor(compress, onlyCopyNew, pathToRoot)
+	constructor(compress, onlyCopyNew, pathToRoot, siteConfig, projectConfig, iconsConfig)
 	{
 		this.Compress = compress;
 		this.OnlyCopyNew = onlyCopyNew;
 		this.PathToRoot = pathToRoot;
 
-		let rootConfigPath = path.join(this.PathToRoot, "config");
-		let sitePath = path.join(rootConfigPath, "Site.json");
-		this.SiteConfig = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
+		this.SiteConfig = siteConfig;
+		this.ProjectConfig = projectConfig;
+		this.IconsConfig = iconsConfig;
 	}
 
 

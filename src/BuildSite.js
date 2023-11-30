@@ -30,6 +30,8 @@ class Main
 		this.ProjectConfig = JSON.parse(fs.readFileSync(projectPath, 'utf8'));
 		this.IconsConfig = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));
 
+		this.PostProcessConfig()
+
 		console.log("=".repeat(20));
 		console.log("Is Release: ", this.IsRelease);
 		console.log("Clean Build: ", this.CleanBuild);
@@ -37,7 +39,75 @@ class Main
 		console.log("Only Copy New: ", this.OnlyCopyNew);
 		console.log("=".repeat(20));
 		console.log();
+
+		this.PageBuilder = new PageBuilder.PageBuilder(this.IsRelease, this.Compress, this.PathToRoot,
+				this.SiteConfig, this.ProjectConfig, this.IconsConfig);
+
+		this.Compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot,
+				this.SiteConfig, this.ProjectConfig, this.IconsConfig);
 	}
+
+	PostProcessConfig()
+	{
+		this.PostProcessProjectConfig();
+	}
+
+	PostProcessProjectConfig()
+	{
+		for (const projectKey of Object.keys(this.ProjectConfig))
+		{
+			let project = this.ProjectConfig[projectKey];
+
+			// add project duration
+			let startDate = new Date(project.StartDate);
+			let endDate = new Date(project.EndDate);
+
+			if (isNaN(startDate) || isNaN(endDate))
+			{
+				continue;
+			}
+
+			let duration = endDate - startDate;
+
+			if (duration <= 0)
+			{
+				continue;
+			}
+
+			let days = duration / (1000 * 60 * 60 * 24);
+			let weeks = days / 7;
+			let months = days / 30;
+			let years = months / 12;
+
+			let durationStr = "";
+			if (years >= 1)
+			{
+				// round down to the nearest half a year
+				years = Math.round(years * 2) / 2;
+				durationStr = years + " Years";
+			}
+			else if (months >= 1)
+			{
+				months = Math.round(months);
+				durationStr = months + " Months";
+			}
+			else if (weeks >= 1)
+			{
+				weeks = Math.round(weeks);
+				durationStr = weeks + " Weeks";
+			}
+			else
+			{
+				days = Math.round(days);
+				durationStr = days + " Days";
+			}
+
+			project.Duration = durationStr;
+		}
+	}
+
+
+
 
 
 	BuildSite()
@@ -78,17 +148,14 @@ class Main
 
 	BuildAssets()
 	{
-		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot);
-
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_StaticFolder);
 
-		compressor.HandleFolder(sourcePath, outputPath);
+		this.Compressor.HandleFolder(sourcePath, outputPath);
 	}
 
 	BuildPages()
 	{
-		let pageBuilder = new PageBuilder.PageBuilder(this.IsRelease, this.Compress, this.PathToRoot);
 
 		// build project pages
 		for (const projectKey of Object.keys(this.ProjectConfig))
@@ -98,18 +165,16 @@ class Main
 			let config = {ProjectData: this.ProjectConfig[projectKey]}
 
 			if (pagePath != null)
-				pageBuilder.BuildPage(pagePath, config);
+			this.PageBuilder.BuildPage(pagePath, config);
 		}
 	}
 
 	CopyNonEJSFiles()
 	{
-		let compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot);
-
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_ViewsFolder);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
 
-		compressor.HandleFolder(sourcePath, outputPath);
+		this.Compressor.HandleFolder(sourcePath, outputPath);
 	}
 
 

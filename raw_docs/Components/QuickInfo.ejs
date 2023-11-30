@@ -1,5 +1,13 @@
 <div class="quickInfoHolder delayRevealChildren center">
 
+	<% if (QuickInfoData.StartDate) { %>
+		<!-- time spent -->
+		<!-- <div class="quickInfo">
+			<i class="material-icons">date_range</i>
+			<h5><%= QuickInfoData.StartDate %></h5>
+		</div> -->
+	<% }%>
+
 	<% if (QuickInfoData.TimeSpent) { %>
 		<!-- time spent -->
 		<div class="quickInfo">
@@ -8,11 +16,11 @@
 		</div>
 	<% }%>
 
-	<% if (QuickInfoData.StartDate) { %>
+	<% if (QuickInfoData.Duration) { %>
 		<!-- time spent -->
 		<div class="quickInfo">
-			<i class="material-icons">date_range</i>
-			<h5><%= QuickInfoData.StartDate %></h5>
+			<i class="material-icons">schedule</i>
+			<h5><%= QuickInfoData.Duration %></h5>
 		</div>
 	<% }%>
 
