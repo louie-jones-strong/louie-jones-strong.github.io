@@ -14,9 +14,8 @@
 			<i class="material-icons">schedule</i>
 			<h5><%= QuickInfoData.TimeSpent %></h5>
 		</div>
-	<% }%>
-
-	<% if (QuickInfoData.Duration) { %>
+	<% }
+	else if (QuickInfoData.Duration) { %>
 		<!-- time spent -->
 		<div class="quickInfo">
 			<i class="material-icons">schedule</i>

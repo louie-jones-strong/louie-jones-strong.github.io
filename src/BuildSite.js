@@ -79,26 +79,43 @@ class Main
 			let months = days / 30;
 			let years = months / 12;
 
+
+			years = Math.round(years * 2) / 2;
+			months = Math.round(months);
+			weeks = Math.round(weeks);
+			days = Math.round(days);
+
 			let durationStr = "";
-			if (years >= 1)
+			if (years == 1)
 			{
-				// round down to the nearest half a year
-				years = Math.round(years * 2) / 2;
+				durationStr = years + " Year";
+			}
+			else if (years >= 1)
+			{
 				durationStr = years + " Years";
+			}
+			else if (months == 1)
+			{
+				durationStr = months + " Month";
 			}
 			else if (months >= 1)
 			{
-				months = Math.round(months);
 				durationStr = months + " Months";
+			}
+			else if (weeks == 1)
+			{
+				durationStr = weeks + " Week";
 			}
 			else if (weeks >= 1)
 			{
-				weeks = Math.round(weeks);
 				durationStr = weeks + " Weeks";
+			}
+			else if (days == 1)
+			{
+				durationStr = days + " Day";
 			}
 			else
 			{
-				days = Math.round(days);
 				durationStr = days + " Days";
 			}
 
