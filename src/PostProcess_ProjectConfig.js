@@ -63,31 +63,74 @@ function AddProjectStartEndDates(project)
 
 function AddProjectDuration(project)
 {
-	if (project.EndDate == "Current")
+	let duration = null;
+	for (const timeline of project.Timelines)
 	{
-		return;
+		let timelineStartDate = new Date(timeline.StartDate);
+		let timelineEndDate = new Date(timeline.EndDate);
+
+		if (timeline.EndDate == "Current")
+		{
+			timelineEndDate = new Date();
+		}
+
+		if (isNaN(timelineStartDate) || isNaN(timelineEndDate))
+		{
+			continue;
+		}
+
+		let timelineDuration = timelineEndDate - timelineStartDate;
+
+		if (timelineDuration <= 0)
+		{
+			continue;
+		}
+
+		if (duration == null)
+		{
+			duration = 0;
+		}
+
+		duration += timelineDuration;
 	}
 
-	// add project duration
-	let startDate = new Date(project.StartDate);
-	let endDate = new Date(project.EndDate);
-
-	if (isNaN(startDate) || isNaN(endDate))
+	// calculate duration from start/end dates
+	if (duration == null)
 	{
-		return;
+		let startDate = new Date(project.StartDate);
+		let endDate = new Date(project.EndDate);
+
+		if (project.EndDate == "Current")
+		{
+			endDate = new Date();
+		}
+
+		if (isNaN(startDate) || isNaN(endDate))
+		{
+			return;
+		}
+
+		duration = endDate - startDate;
 	}
 
-	let duration = endDate - startDate;
 
 	if (duration <= 0)
 	{
 		return;
 	}
 
+	let durationStr = FormatDurationStr(duration);
+
+	project.Duration = durationStr;
+}
+
+
+function FormatDurationStr(duration)
+{
 	let days = duration / (1000 * 60 * 60 * 24);
 	let weeks = days / 7;
 	let months = days / 30;
-	let years = months / 12;
+	let years = days / 365;
 
 
 	years = Math.round(years * 2) / 2;
@@ -129,7 +172,7 @@ function AddProjectDuration(project)
 		durationStr = days + " Days";
 	}
 
-	project.Duration = durationStr;
+	return durationStr;
 }
 
 
