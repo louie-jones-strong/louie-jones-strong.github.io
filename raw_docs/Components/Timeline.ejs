@@ -4,7 +4,20 @@
 
 	var hybridScroll = false;
 	var showEventStartEndDates = false;
+
 	var showEventStartName = true;
+	if (TimelineData.ShowEventStartName != undefined)
+	{
+		showEventStartName = TimelineData.ShowEventStartName;
+	}
+
+	var scrollToEnd = true;
+	if (TimelineData.ScrollToEnd != undefined)
+	{
+		scrollToEnd = TimelineData.ScrollToEnd;
+	}
+
+
 
 	var dateScale = 0.05;
 	if (TimelineData.DateScale)
@@ -17,8 +30,6 @@
 	{
 		minGap = TimelineData.MinGap;
 	}
-
-
 
 	<!-- define helper functions -->
 
@@ -338,4 +349,15 @@ for (const projectKey of projects)
 <%}else{%>
 </div>
 </div>
+<%}%>
+
+
+<%if (scrollToEnd){%>
+<script>
+	<!-- scroll to the end of the timeline -->
+	window.addEventListener('load', function() {
+		let timelineHolder = document.querySelector(".timelineHolder");
+		timelineHolder.scrollLeft = timelineHolder.scrollWidth;
+	});
+</script>
 <%}%>
