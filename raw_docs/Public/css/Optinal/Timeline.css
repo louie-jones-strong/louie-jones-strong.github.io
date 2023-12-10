@@ -152,5 +152,5 @@ a.timeline:hover{
 }
 
 .timeline > .tick > *{
-	opacity: var(--timelineHovered, 0);
+	/* opacity: var(--timelineHovered, 0); */
 }

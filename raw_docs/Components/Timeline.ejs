@@ -3,7 +3,8 @@
 	<!-- add constants -->
 
 	var hybridScroll = false;
-	var showEventStartEndDates = true;
+	var showEventStartEndDates = false;
+	var showEventStartName = true;
 
 	var dateScale = 0.05;
 	if (TimelineData.DateScale)
@@ -299,6 +300,10 @@ for (const projectKey of projects)
 							<%if (showEventStartEndDates){%>
 								<h5><%= FormatDateFromStr(timeline.StartDate) %></h5>
 							<%}%>
+							<%if (showEventStartName && timeline.Name){%>
+								<h5><%= timeline.Name %></h5>
+							<%}%>
+
 						</div>
 
 

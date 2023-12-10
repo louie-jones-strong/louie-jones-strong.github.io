@@ -1224,22 +1224,27 @@
 		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
 		"Timelines": [
 			{
+				"Name": "Work Experience",
 				"StartDate": "April 10, 2018",
 				"EndDate": "April 16, 2018"
 			},
 			{
+				"Name": "Intern",
 				"StartDate": "August 7, 2018",
 				"EndDate": "May, 2019"
 			},
 			{
+				"Name": "Junior",
 				"StartDate": "May, 2019",
 				"EndDate": "November, 2021"
 			},
 			{
+				"Name": "Part-Time",
 				"StartDate": "November, 2021",
 				"EndDate": "September, 2022"
 			},
 			{
+				"Name": "Standard",
 				"StartDate": "October, 2023",
 				"EndDate": "Current"
 			}
