@@ -3,7 +3,7 @@ const fs = require('fs');
 const PageBuilder = require('./PageBuilder.js');
 const Compressor = require('./AssetCompressor.js');
 const Utils = require('./Utils.js');
-
+const ProjectConfigPostProcessor = require('./PostProcess_ProjectConfig.js');
 
 
 class Main
@@ -49,83 +49,8 @@ class Main
 
 	PostProcessConfig()
 	{
-		this.PostProcessProjectConfig();
+		ProjectConfigPostProcessor.PostProcessProjectConfig(this.ProjectConfig);
 	}
-
-	PostProcessProjectConfig()
-	{
-		for (const projectKey of Object.keys(this.ProjectConfig))
-		{
-			let project = this.ProjectConfig[projectKey];
-
-			// add project duration
-			let startDate = new Date(project.StartDate);
-			let endDate = new Date(project.EndDate);
-
-			if (isNaN(startDate) || isNaN(endDate))
-			{
-				continue;
-			}
-
-			let duration = endDate - startDate;
-
-			if (duration <= 0)
-			{
-				continue;
-			}
-
-			let days = duration / (1000 * 60 * 60 * 24);
-			let weeks = days / 7;
-			let months = days / 30;
-			let years = months / 12;
-
-
-			years = Math.round(years * 2) / 2;
-			months = Math.round(months);
-			weeks = Math.round(weeks);
-			days = Math.round(days);
-
-			let durationStr = "";
-			if (years == 1)
-			{
-				durationStr = years + " Year";
-			}
-			else if (years >= 1)
-			{
-				durationStr = years + " Years";
-			}
-			else if (months == 1)
-			{
-				durationStr = months + " Month";
-			}
-			else if (months >= 1)
-			{
-				durationStr = months + " Months";
-			}
-			else if (weeks == 1)
-			{
-				durationStr = weeks + " Week";
-			}
-			else if (weeks >= 1)
-			{
-				durationStr = weeks + " Weeks";
-			}
-			else if (days == 1)
-			{
-				durationStr = days + " Day";
-			}
-			else
-			{
-				durationStr = days + " Days";
-			}
-
-			project.Duration = durationStr;
-		}
-	}
-
-
-
-
 
 	BuildSite()
 	{

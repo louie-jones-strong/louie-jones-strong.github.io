@@ -1,4 +1,24 @@
 <%
+
+	<!-- add constants -->
+
+	var hybridScroll = false;
+	var showEventStartEndDates = true;
+
+	var dateScale = 0.05;
+	if (TimelineData.DateScale)
+	{
+		dateScale = TimelineData.DateScale;
+	}
+
+	var minGap = 14;
+	if (TimelineData.MinGap)
+	{
+		minGap = TimelineData.MinGap;
+	}
+
+
+
 	<!-- define helper functions -->
 
 	function RoundDate(date)
@@ -12,10 +32,25 @@
 		return Math.ceil((end - start) / (1000 * 60 * 60 * 24));
 	}
 
+	function GetDateWithCurrent(dateStr)
+	{
+		if (dateStr == "Current")
+		{
+			return headerEnd;
+		}
+		else
+		{
+			return new Date(dateStr);
+		}
+	}
+
 	function FormatDateFromStr(dateStr)
 	{
 		if (!dateStr)
 			return "";
+
+		if (dateStr == "Current")
+			return "Present";
 
 		<!-- was month defined in the string -->
 		<!-- example string "October 15, 2020" -->
@@ -89,6 +124,7 @@ for (const projectKey of TimelineData.Projects)
 }
 
 
+
 <!-- find the range of the timeline header -->
 let headerStart = -1;
 let headerEnd = -1;
@@ -98,6 +134,10 @@ for (const projectKey of projects)
 
 	let projectStartDate = new Date(project.StartDate);
 	let projectEndDate = new Date(project.EndDate);
+	if (project.EndDate == "Current")
+	{
+		projectEndDate = new Date();
+	}
 
 	if (headerStart == -1 || projectStartDate < headerStart)
 	{
@@ -116,14 +156,14 @@ headerEnd = new Date(headerEnd.getFullYear() + 1, 0, 1);
 const headerDays = GetDelta(headerStart, headerEnd);
 
 
-
 <!-- squash timelines into the indents -->
 let indents = [];
 for (const projectKey of projects)
 {
 	const projectToFit = PageData.Projects[projectKey];
 	const projectStartDate = new Date(projectToFit.StartDate);
-	const projectEndDate = new Date(projectToFit.EndDate);
+	const projectEndDate = GetDateWithCurrent(projectToFit.EndDate);
+
 
 	<!-- pack the project into the first indent that has spare space for it -->
 	let indent = 0;
@@ -134,7 +174,7 @@ for (const projectKey of projects)
 		{
 			const intentProject = PageData.Projects[intentProjectKey];
 			const startDate = new Date(intentProject.StartDate);
-			const endDate = new Date(intentProject.EndDate);
+			const endDate = GetDateWithCurrent(intentProject.EndDate);
 
 			<!-- does the intent range overlap with the project range -->
 			if (startDate <= projectEndDate && endDate >= projectStartDate)
@@ -142,6 +182,18 @@ for (const projectKey of projects)
 				isOverlapping = true;
 				break;
 			}
+
+			<!-- is the intent range within the min gap of the project range -->
+			let startDelta = Math.abs(GetDelta(projectStartDate, startDate));
+			let endDelta = Math.abs(GetDelta(projectStartDate, endDate));
+
+			if (startDelta <= minGap || endDelta <= minGap)
+			{
+				isOverlapping = true;
+				break;
+			}
+
+
 		}
 
 		if (!isOverlapping)
@@ -160,23 +212,6 @@ for (const projectKey of projects)
 }
 
 
-<!-- add constants -->
-
-var hybridScroll = false;
-var showEventStartEndDates = true;
-var showEventSubDates = false;
-
-var dateScale = 0.05;
-if (TimelineData.DateScale)
-{
-	dateScale = TimelineData.DateScale;
-}
-
-var showEventSubs = false;
-if (TimelineData.ShowEventSubs)
-{
-	showEventSubs = TimelineData.ShowEventSubs;
-}
 %>
 
 
@@ -218,8 +253,8 @@ if (TimelineData.ShowEventSubs)
 
 			<%
 			const project = PageData.Projects[projectKey];
-			const startDate = new Date(project.StartDate);
-			const endDate = new Date(project.EndDate);
+			const startDate = GetDateWithCurrent(project.StartDate);
+			const endDate = GetDateWithCurrent(project.EndDate);
 
 			const offset = GetDelta(headerStart, startDate);
 			const duration = GetDelta(startDate, endDate);
@@ -246,32 +281,39 @@ if (TimelineData.ShowEventSubs)
 				<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>">
 			<%}%>
 
-				<div class="line"></div>
 
-				<%if (showEventSubs){%>
-					<%for (const subDateStr of project.SubDates)
+				<%for (const timeline of project.Timelines)
+				{
+					const subStartDate = GetDateWithCurrent(timeline.StartDate);
+					const subStartDateOffset = GetDelta(startDate, subStartDate);
+					if (timeline.EndDate != null)
 					{
-						const subDate = new Date(subDateStr);
-						const subDateOffset = GetDelta(startDate, subDate);
+						const subEndDate = GetDateWithCurrent(timeline.EndDate);
+						const subEndDateOffset = GetDelta(startDate, subEndDate);
+						const duration = GetDelta(subStartDate, subEndDate);
 						%>
-						<div class="tick" style="--dateOffset: <%= subDateOffset %>;">
-							<%if (showEventSubDates){%>
-								<%= FormatDate(subDate) %>
+						<!-- date range -->
+						<div class="line" style="--dateOffset: <%=subStartDateOffset %>; --duration: <%=duration %>;"></div>
+
+						<div class="tick large" style="--dateOffset: <%= subStartDateOffset %>;">
+							<%if (showEventStartEndDates){%>
+								<h5><%= FormatDateFromStr(timeline.StartDate) %></h5>
 							<%}%>
+						</div>
+
+
+						<div class="tick large <%if (timeline.EndDate == "Current"){%>current<%}%>" style="--dateOffset: <%= subEndDateOffset %>;">
+							<%if (showEventStartEndDates){%>
+								<h5><%= FormatDateFromStr(timeline.EndDate) %></h5>
+							<%}%>
+						</div>
+
+					<%}else{%>
+						<!-- single day date -->
+						<div class="tick" style="--dateOffset: <%= subStartDateOffset %>;">
 						</div>
 					<%}%>
 				<%}%>
-
-				<div class="tick large" style="--dateOffset: 0;">
-					<%if (showEventStartEndDates){%>
-						<h5><%= FormatDateFromStr(project.StartDate) %></h5>
-					<%}%>
-				</div>
-				<div class="tick large" style="--dateOffset: <%= duration %>;">
-					<%if (showEventStartEndDates){%>
-						<h5><%= FormatDateFromStr(project.EndDate) %></h5>
-					<%}%>
-				</div>
 
 				<h4 class="timelineTitle"> <%=project.Title %></h4>
 			<%if (projectLink){%>

@@ -68,77 +68,63 @@ for (const projectKey in projects)
 			let latestDate = new Date();
 			latestDate.setFullYear(latestDate.getFullYear() + 1);
 
-
-			// start date
-			if (project.StartDate != null)
+			function DateCheck(dateStr)
 			{
-				assert.ok(typeof project.StartDate == "string");
-				var startDate = new Date(project.StartDate);
-				assert.ok(startDate instanceof Date);
-				assert.ok(!isNaN(startDate), `Start date: (${startDate}) is not a valid date`);
-				assert.ok(startDate >= earliestDate, `Start date: (${startDate}) is before earliest date (${earliestDate})`);
-			}
-
-			// end date
-			if (project.EndDate != null)
-			{
-				assert.notEqual(project.StartDate, null);
-				assert.notEqual(startDate, null);
-
-
-				var endDate = new Date(project.EndDate);
-				assert.ok(typeof project.EndDate == "string");
-				assert.ok(endDate instanceof Date);
-				assert.ok(endDate >= startDate);
-				assert.ok(endDate <= latestDate);
-			}
-
-
-			// sub dates
-			assert.notEqual(project.SubDates, null);
-			assert.ok(Array.isArray(project.SubDates));
-			if (project.StartDate == null || project.EndDate == null)
-			{
-				assert.ok(project.SubDates.length == 0);
-			}
-			else
-			{
-				let subDateSet = new Set();
-				for (const subDateStr of project.SubDates)
+				if (dateStr == null)
 				{
-					assert.notEqual(subDateStr, null);
-					let subDate = new Date(subDateStr);
-					assert.ok(subDate instanceof Date);
-					assert.ok(subDate >= startDate);
-					assert.ok(subDate <= endDate);
-
-					// check for duplicates
-					assert.ok(!subDateSet.has(subDateStr));
+					return null;
 				}
+
+				assert.ok(typeof dateStr == "string");
+				var date = new Date(dateStr);
+				assert.ok(date instanceof Date);
+				assert.ok(!isNaN(date), `date: (${date}) is not a valid date`);
+
+				assert.ok(date >= earliestDate, `date: (${date}) is before earliest date (${earliestDate})`);
+				assert.ok(date <= latestDate, `date: (${date}) is after latest date (${latestDate})`);
+				return date;
 			}
 
-			// check subprojects dates are contained within the main project dates
-			let subProjects = project.SubProjects;
-			if (subProjects != null)
+
+			assert.notEqual(project.Timelines, null);
+			assert.ok(Array.isArray(project.Timelines));
+
+			let lastStartDate = null;
+			let lastEndDate = null;
+			for (const timeline of project.Timelines)
 			{
-				for (const subProject of subProjects)
+				let startDate = DateCheck(timeline.StartDate);
+
+				let endDate = DateCheck(timeline.EndDate);
+				if (timeline.EndDate == "Current")
 				{
-					let subProjectConfig = projects[subProject];
-					assert.notEqual(subProjectConfig, null);
+					endDate = latestDate;
+				}
 
-					if (subProjectConfig.StartDate != null && project.StartDate != null)
+				assert.ok(startDate != null, "Timeline should have a start date");
+				if (lastStartDate != null)
+				{
+					if (lastEndDate != null)
 					{
-						let subProjectStartDate = new Date(subProjectConfig.StartDate);
-						assert.ok(subProjectStartDate >= startDate,
-							`${subProject} start date:(${subProjectStartDate}) earlier main project start date:(${startDate})`);
+						assert.notEqual(endDate, null, "Timeline should have an end date");
+
+						// check no overlapping timelines
+						assert.ok(startDate >= lastEndDate, `startDate: (${startDate}) is before lastEndDate (${lastEndDate})`);
 					}
-
-					if (subProjectConfig.EndDate != null && project.EndDate != null)
+					else
 					{
-						let subProjectEndDate = new Date(subProjectConfig.EndDate);
-						assert.ok(subProjectEndDate <= endDate);
+						// check no overlapping timelines
+						assert.ok(startDate >= lastStartDate, `startDate: (${startDate}) is before lastStartDate (${lastStartDate})`);
 					}
 				}
+
+				if (endDate != null)
+				{
+					assert.ok(startDate <= endDate, `startDate: (${startDate}) is after endDate (${endDate})`);
+				}
+
+				lastStartDate = startDate;
+				lastEndDate = endDate;
 			}
 		});
 
