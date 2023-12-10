@@ -77,6 +77,10 @@ for (const projectKey in projects)
 
 				assert.ok(typeof dateStr == "string");
 				var date = new Date(dateStr);
+				if (dateStr == "Current")
+				{
+					date = new Date();
+				}
 				assert.ok(date instanceof Date);
 				assert.ok(!isNaN(date), `date: (${date}) is not a valid date`);
 
