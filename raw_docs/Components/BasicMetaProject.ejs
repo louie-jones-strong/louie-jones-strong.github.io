@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include("Head", {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+</head>
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include("Loader"); %>
+	<div class="content">
+		<!-- shared common header -->
+		<%- include("AccessibilityHelper"); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include("Header"); %>
+
+			<hr class="gap">
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
+
+				<%- include('QuickInfo', {QuickInfoData: ProjectData}); %>
+
+				<p class="center reveal fromLeft">
+					<%=ProjectData.QuickDescription %>
+				</p>
+
+				<hr class="gap">
+
+				<div class="cardHolder">
+					<%
+					for (const projectKey of ProjectData.SubProjects)
+					{
+						const project = PageData.Projects[projectKey];%>
+						<%- include('Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
+					<%}
+					%>
+				</div>
+			</div>
+
+			<!-- Shared common footer -->
+			<%- include("Footer"); %>
+		</div>
+
+		<%- include('VanillaTilt', {PageData: PageData, TiltData: {}}); %>
+	</div>
+</body>
+</html>

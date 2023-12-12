@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Gallery.css">
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+		<!-- cover image slide show -->
+		<div class="slide-holder">
+			<div class="slide">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/EggHuntGame/GamePlay/yPzUzd",
+					ClassList: "",
+					Alt:"In game lower floor screen shot",
+					LoadingType: "eager"
+				}}); %>
+				<div class="slide-caption">
+					<h4>Game Play Screenshots</h4>
+				</div>
+			</div>
+			<div class="slide">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/EggHuntGame/GamePlay/NPihBC",
+					ClassList: "",
+					Alt:"In game upper floor screen shot",
+					LoadingType: "eager"
+				}}); %>
+				<div class="slide-caption">
+					<h4>Game Play Screenshots</h4>
+				</div>
+			</div>
+			<div class="slide">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/EggHuntGame/GamePlay/mgAzdG",
+					ClassList: "",
+					Alt:"In game Menu screen shot",
+					LoadingType: "eager"
+				}}); %>
+				<div class="slide-caption">
+					<h4>Game Play Screenshots</h4>
+				</div>
+			</div>
+			<span class="slide-dot"></span>
+			<span class="slide-dot"></span>
+			<span class="slide-dot"></span>
+		</div>
+		<script src="<%=PageData.PathToRoot%>Public/js/Carousel.js"></script>
+
+		<div class="centeredFrame">
+			<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
+
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+			<h2 class="reveal fromBottom center">Starting Point</h2>
+			<p class="reveal fromBottom center">At the start of lockdown and working from home, I created a model of our office in blender.
+				My goal of making this model was to make some custom zoom backgrounds for people at work, as well as reminding them about the office.
+			</p>
+
+			<h3 class="reveal fromBottom center">Blender Renders</h3>
+
+
+			<div class="gallery glass reveal">
+				<div class="glass reveal">
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/EggHuntGame/Blender/ray0001",
+						ClassList: "expandable",
+						Alt:"A render of the upper floor of the office"
+					}}); %>
+				</div>
+				<div class="glass reveal">
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/EggHuntGame/Blender/ray0002",
+						ClassList: "expandable",
+						Alt:"A render of main meeting room"
+					}}); %>
+				</div>
+				<div class="glass reveal">
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/EggHuntGame/Blender/ray0003",
+						ClassList: "expandable",
+						Alt:"A render of the lower floor of the office"
+					}}); %>
+				</div>
+				<div class="glass reveal">
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/EggHuntGame/Blender/ray0004",
+						ClassList: "expandable",
+						Alt:"A render of my desk"
+					}}); %>
+				</div>
+				<div class="glass reveal">
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/EggHuntGame/Blender/ray0005",
+						ClassList: "expandable",
+						Alt:"A render of the kitchen"
+					}}); %>
+				</div>
+			</div>
+
+			<h2 class="reveal fromBottom center">Making the Game</h2>
+			<p class="reveal fromBottom">At the start of 2021 I wanted to improve my unity skills further.</p>
+			<ul class="reveal fromBottom">
+				<li>Working on a project by myself to release quality</li>
+				<li>Learn how to make a 3D Game</li>
+				<li>Lighting</li>
+				<li>How to create 3D assets for games</li>
+				<li>Optimization</li>
+			</ul>
+ </div>
+
+
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+		<%- include(PageData.PathToRoot+'Components/Expandable'); %>
+
+
+
+	</div>
+</body>
+</html>

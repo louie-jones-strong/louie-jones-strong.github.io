@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+</head>
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content">
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+		<div class="background">
+			<!-- shared common header -->
+			<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+			<!-- cover image slide show -->
+			<div class="slide-holder">
+				<div class="slide">
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/cards/xmas/card1",
+						ClassList: "",
+						Alt:"First Xmas Render",
+						LoadingType: "eager"
+					}}); %>
+				</div>
+			</div>
+			<script src="<%=PageData.PathToRoot%>Public/js/Carousel.js"></script>
+
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">Cards</h1>
+
+
+				<div class="cardHolder">
+
+					<%
+					for (const projectKey of ProjectData.SubProjects)
+					{
+						const project = PageData.Projects[projectKey];%>
+						<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
+					<%}
+					%>
+				</div>
+
+
+				<hr class="gap">
+				<hr class="gap">
+				<a href="/index.html"><h3 class="center reveal fromBottom">Check Out My Portfolio</h3></a>
+
+			</div>
+
+
+
+
+			<!-- Shared common footer -->
+			<%- include(PageData.PathToRoot+'Components/Footer'); %>
+		</div>
+
+		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
+	</div>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<%
+
+	<!-- add constants -->
+
+	var hybridScroll = false;
+	var showEventStartEndDates = false;
+
+	var showEventStartName = true;
+	if (TimelineData.ShowEventStartName != undefined)
+	{
+		showEventStartName = TimelineData.ShowEventStartName;
+	}
+
+	var scrollToEnd = true;
+	if (TimelineData.ScrollToEnd != undefined)
+	{
+		scrollToEnd = TimelineData.ScrollToEnd;
+	}
+
+
+
+	var dateScale = 0.05;
+	if (TimelineData.DateScale)
+	{
+		dateScale = TimelineData.DateScale;
+	}
+
+	var minGap = 14;
+	if (TimelineData.MinGap)
+	{
+		minGap = TimelineData.MinGap;
+	}
+
+	<!-- define helper functions -->
+
+	function RoundDate(date)
+	{
+		<!-- round the date to the nearest resolution -->
+
+	}
+
+	function GetDelta(start, end)
+	{
+		return Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+	}
+
+	function GetDateWithCurrent(dateStr)
+	{
+		if (dateStr == "Current")
+		{
+			return headerEnd;
+		}
+		else
+		{
+			return new Date(dateStr);
+		}
+	}
+
+	function FormatDateFromStr(dateStr)
+	{
+		if (!dateStr)
+			return "";
+
+		if (dateStr == "Current")
+			return "Present";
+
+		<!-- was month defined in the string -->
+		<!-- example string "October 15, 2020" -->
+		let lowerDateStr = dateStr.toLowerCase();
+
+		let showMonth = (lowerDateStr.indexOf("january") != -1 ||
+			lowerDateStr.indexOf("february") != -1 ||
+			lowerDateStr.indexOf("march") != -1 ||
+			lowerDateStr.indexOf("april") != -1 ||
+			lowerDateStr.indexOf("may") != -1 ||
+			lowerDateStr.indexOf("june") != -1 ||
+			lowerDateStr.indexOf("july") != -1 ||
+			lowerDateStr.indexOf("august") != -1 ||
+			lowerDateStr.indexOf("september") != -1 ||
+			lowerDateStr.indexOf("october") != -1 ||
+			lowerDateStr.indexOf("november") != -1 ||
+			lowerDateStr.indexOf("december") != -1);
+
+
+		let showDay = false;
+
+		let commaIdx = dateStr.indexOf(",");
+		if (commaIdx != -1)
+		{
+			let preCommaStr = dateStr.substring(0, commaIdx);
+			showDay = (preCommaStr.indexOf("1") != -1 ||
+				preCommaStr.indexOf("2") != -1 ||
+				preCommaStr.indexOf("3") != -1 ||
+				preCommaStr.indexOf("4") != -1 ||
+				preCommaStr.indexOf("5") != -1 ||
+				preCommaStr.indexOf("6") != -1 ||
+				preCommaStr.indexOf("7") != -1 ||
+				preCommaStr.indexOf("8") != -1 ||
+				preCommaStr.indexOf("9") != -1 ||
+				preCommaStr.indexOf("0") != -1);
+		}
+
+
+
+		let date = new Date(dateStr);
+		return FormatDate(date, showYear=true, showMonth=showMonth, showDay=showDay);
+	}
+
+	function FormatDate(date, showYear = true, showMonth = true, showDay = true)
+	{
+		let format = {};
+
+		if (showYear)
+			format.year = 'numeric';
+
+		if (showMonth)
+			format.month = 'long';
+
+		if (showDay)
+			format.day = 'numeric';
+
+		<!-- { year: 'numeric', month: 'long', day: 'numeric' } -->
+		return date.toLocaleDateString("en-US", format);
+	}
+
+<!-- filter out all projects that don't have a timeline -->
+let projects = [];
+for (const projectKey of TimelineData.Projects)
+{
+	const project = PageData.Projects[projectKey];
+
+	if (project.StartDate && project.EndDate)
+	{
+		projects.push(projectKey);
+	}
+}
+
+
+
+<!-- find the range of the timeline header -->
+let headerStart = -1;
+let headerEnd = -1;
+for (const projectKey of projects)
+{
+	const project = PageData.Projects[projectKey];
+
+	let projectStartDate = new Date(project.StartDate);
+	let projectEndDate = new Date(project.EndDate);
+	if (project.EndDate == "Current")
+	{
+		projectEndDate = new Date();
+	}
+
+	if (headerStart == -1 || projectStartDate < headerStart)
+	{
+		headerStart = projectStartDate;
+	}
+
+	if (headerEnd == -1 || projectEndDate > headerEnd)
+	{
+		headerEnd = projectEndDate;
+	}
+}
+
+headerStart = new Date(headerStart.getFullYear(), 0, 1);
+headerEnd = new Date(headerEnd.getFullYear() + 1, 0, 1);
+
+if (TimelineData.HeaderStartOverride)
+{
+	headerStart = TimelineData.HeaderStartOverride;
+}
+
+if (TimelineData.HeaderEndOverride)
+{
+	headerEnd = TimelineData.HeaderEndOverride;
+}
+
+
+const headerDays = GetDelta(headerStart, headerEnd);
+
+
+<!-- squash timelines into the indents -->
+let indents = [];
+for (const projectKey of projects)
+{
+	const projectToFit = PageData.Projects[projectKey];
+	const projectStartDate = new Date(projectToFit.StartDate);
+	const projectEndDate = GetDateWithCurrent(projectToFit.EndDate);
+
+
+	<!-- pack the project into the first indent that has spare space for it -->
+	let indent = 0;
+	while (indents[indent] != undefined)
+	{
+		let isOverlapping = false;
+		for (const intentProjectKey of indents[indent])
+		{
+			const intentProject = PageData.Projects[intentProjectKey];
+			const startDate = new Date(intentProject.StartDate);
+			const endDate = GetDateWithCurrent(intentProject.EndDate);
+
+			<!-- does the intent range overlap with the project range -->
+			if (startDate <= projectEndDate && endDate >= projectStartDate)
+			{
+				isOverlapping = true;
+				break;
+			}
+
+			<!-- is the intent range within the min gap of the project range -->
+			let startDelta = Math.abs(GetDelta(projectStartDate, startDate));
+			let endDelta = Math.abs(GetDelta(projectStartDate, endDate));
+
+			if (startDelta <= minGap || endDelta <= minGap)
+			{
+				isOverlapping = true;
+				break;
+			}
+
+
+		}
+
+		if (!isOverlapping)
+		{
+			break;
+		}
+
+		indent++;
+	}
+
+
+	if (indents[indent] == undefined)
+		indents[indent] = [];
+
+	indents[indent].push(projectKey);
+}
+
+
+%>
+
+
+<%if (hybridScroll){%>
+<div class="hybridScroll_Container">
+	<div class="hybridScroll_StickyContainer">
+		<div class="hybridScroll_HorizontalScroll timelineHolder" style="--dateScale: <%=dateScale %>em; --duration: <%=headerDays %>;">
+
+<%}else{%>
+	<div class="timelineWrapper">
+	<div class="timelineHolder" style="--dateScale: <%=dateScale %>em; --duration: <%=headerDays %>;">
+<%}%>
+
+<div class="indent">
+	<div class="timelineHeader" style="--dateOffset: <%=headerStart %>; --duration: <%=headerDays %>;">
+		<div class="line"></div>
+		<%var subDate = new Date(headerStart);
+		while (subDate <= headerEnd)
+		{
+			const subDateOffset = GetDelta(headerStart, new Date(subDate));
+
+			if (subDate.getMonth() == 0){%>
+				<div class="tick large" style="--dateOffset: <%= subDateOffset %>;">
+					<h4><%= FormatDate(subDate, showYear=true, showMonth=false, showDay=false) %></h4>
+				</div>
+			<%}else{%>
+				<div class="tick" style="--dateOffset: <%= subDateOffset %>;"></div>
+			<%}
+			subDate.setMonth(subDate.getMonth() + 1);
+		}%>
+	</div>
+</div>
+
+<%for (const indentProjects of indents)
+{%>
+	<div class="indent">
+		<%for (const projectKey of indentProjects)
+		{%>
+
+			<%
+			const project = PageData.Projects[projectKey];
+			let startDate = GetDateWithCurrent(project.StartDate);
+			const endDate = GetDateWithCurrent(project.EndDate);
+
+			if (startDate < headerStart)
+			{
+				startDate = headerStart;
+			}
+
+			const offset = GetDelta(headerStart, startDate);
+			const duration = GetDelta(startDate, endDate);
+
+			var projectLink = null;
+			if (project.PagePath)
+			{
+				projectLink = PageData.PathToRoot + project.PagePath + ".html"
+			}
+			else
+			{
+				projectLink = project.Link
+			}
+
+			if (project.HideLink)
+			{
+				projectLink = null;
+			}
+			%>
+
+			<%if (projectLink){%>
+				<a class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>" href="<%= projectLink %>">
+			<%}else{%>
+				<div class="timeline" style="--dateOffset: <%=offset %>; --duration: <%=duration %>;" tags="<%=project.Tags%>">
+			<%}%>
+
+
+				<%for (const timeline of project.Timelines)
+				{
+					const subStartDate = GetDateWithCurrent(timeline.StartDate);
+					const subStartDateOffset = GetDelta(startDate, subStartDate);
+					if (timeline.EndDate != null)
+					{
+						const subEndDate = GetDateWithCurrent(timeline.EndDate);
+						const subEndDateOffset = GetDelta(startDate, subEndDate);
+						const duration = GetDelta(subStartDate, subEndDate);
+						%>
+						<!-- date range -->
+
+						<%if (subEndDate >= headerStart && subEndDate <= headerEnd){%>
+							<div class="line" style="--dateOffset: <%=subStartDateOffset %>; --duration: <%=duration %>;"></div>
+							<div class="tick large <%if (timeline.EndDate == "Current"){%>current<%}%>" style="--dateOffset: <%= subEndDateOffset %>;">
+								<%if (showEventStartEndDates){%>
+									<h5><%= FormatDateFromStr(timeline.EndDate) %></h5>
+								<%}%>
+							</div>
+						<%}%>
+
+						<%if (subStartDate >= headerStart && subStartDate <= headerEnd){%>
+							<div class="tick large" style="--dateOffset: <%= subStartDateOffset %>;">
+								<%if (showEventStartEndDates){%>
+									<h5><%= FormatDateFromStr(timeline.StartDate) %></h5>
+								<%}%>
+								<%if (showEventStartName && timeline.Name){%>
+									<h5><%= timeline.Name %></h5>
+								<%}%>
+							</div>
+						<%}%>
+
+
+
+
+					<%}else{%>
+						<!-- single day date -->
+						<div class="tick" style="--dateOffset: <%= subStartDateOffset %>;">
+						</div>
+					<%}%>
+				<%}%>
+
+				<h4 class="timelineTitle"> <%=project.Title %></h4>
+			<%if (projectLink){%>
+			</a>
+			<%}else{%>
+				</div>
+			<%}%>
+
+		<%}%>
+	</div>
+<%}%>
+
+<%if (hybridScroll){%>
+</div>
+</div>
+</div>
+<%}else{%>
+</div>
+</div>
+<%}%>
+
+
+<%if (scrollToEnd){%>
+<script>
+	<!-- scroll to the end of the timeline -->
+	window.addEventListener('load', function() {
+		let timelineHolder = document.querySelector(".timelineHolder");
+		timelineHolder.scrollLeft = timelineHolder.scrollWidth;
+	});
+</script>
+<%}%>

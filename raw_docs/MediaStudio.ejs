@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/ZipperCard.css">
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+		<div class="centeredFrame">
+			<h1 class="reveal fromBottom center"><%=ProjectData.Title %></h1>
+			<p class="reveal fromBottom center">Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.</p>
+
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+		</div>
+
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard shaded glass reveal fromRight">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/MediaStudio/template",
+					ClassList: "expandable",
+					Alt:"Screenshot of Media Studio"
+				}}); %>
+				<div>
+					<h3>Templates</h3>
+					<p>I often found that I apply the same layout and effects to images. So I created a templates (json) that will ask the user input the basic info and then does the rest.</p>
+				</div>
+			</div>
+			<div class="ZipperCard shaded glass reveal fromLeft">
+				<div>
+					<h3>Layers</h3>
+					<p>Layers are a very important feature of any power user image editing tool.</p>
+				</div>
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/MediaStudio/layers",
+					ClassList: "expandable",
+					Alt:"Screenshot of Media Studio"
+				}}); %>
+			</div>
+			<div class="ZipperCard shaded glass reveal fromRight">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/MediaStudio/screenshot",
+					ClassList: "expandable",
+					Alt:"Screenshot of Media Studio"
+				}}); %>
+				<div>
+					<h3>Effects</h3>
+					<p>Being able to add non destructive image affects allow for more control as speed in iteration, to help with the creative process.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+	</div>
+</body>
+</html>

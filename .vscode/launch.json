@@ -22,16 +22,7 @@
 				"<node_internals>/**"
 			],
 			"program": "${workspaceFolder}\\src\\BuildSite.js",
-			"args": ["compress"]
-		},
-		{
-			"type": "node",
-			"request": "launch",
-			"name": "debug",
-			"skipFiles": [
-				"<node_internals>/**"
-			],
-			"program": "${workspaceFolder}\\src\\BuildSite.js"
-		},
+			"args": ["compress", "onlyNew"]
+		}
 	]
 }

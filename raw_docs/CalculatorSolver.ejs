@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/ZipperCard.css">
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+		<div class="centeredFrame">
+
+			<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
+
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {
+				QuickInfoData: {
+					TimeSpent: "2 Months",
+					NumPeople: 1,
+					Links: {
+						GithubLink: "https://github.com/louie-jones-strong/CalculatorGame-Solver"
+					},
+					Skills: {
+						UsedPython: true
+					}
+				}
+			}); %>
+
+
+			<h2 class="center reveal fromBottom">Calculator: The Game</h2>
+			<p class="reveal fromLeft center">
+				"Calculator: The Game" is a mobile puzzle game,
+				where the aim is to modify a starting number using maths operations to get to a target number.
+				<br> Check out the game with the links below:</p>
+
+				<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+			<h2 class="center reveal fromBottom">Solver</h2>
+			<p class="reveal fromLeft center">I wanted to create a simple python app that will calculate the correct solution to each puzzle.</p>
+
+			<div class="ZipperCardsHolder glass centeredFrame">
+				<div class="ZipperCard shaded glass reveal fromRight">
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/CalculatorSolver/Tests",
+						ClassList: "expandable",
+						Alt:"Unit Tests for each puzzle"
+					}}); %>
+					<div>
+						<h3>Units Tests</h3>
+						<P>I took this project as an opportunity to learn how to setup unit tests in python.</P>
+						<P>As there are a large number of puzzles and operations in the game,
+							I found these tests very useful to spot edge case issues.</P>
+
+					</div>
+				</div>
+				<div class="ZipperCard shaded glass reveal fromLeft">
+					<div>
+						<h3>UX Polishing</h3>
+						<p>
+							I started by creating a terminal program that could solve inputted puzzles.<br>
+							But I soon expanded it to save and load the puzzles to json, to allow for quick back testing.<br>
+							I then continue to improve on it to add a graphic user interface, similar to the game, to allow to easier inputting of the puzzles.
+						</p>
+					</div>
+					<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						Path:"Public/Assets/CalculatorSolver/level_64",
+						ClassList: "expandable",
+						Alt:"Calculator Solver UI"
+					}}); %>
+				</div>
+			</div>
+
+		</div>
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+
+	</div>
+</body>
+</html>

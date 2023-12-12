@@ -1,0 +1,20 @@
+.hybridScroll_Container {
+	height: 100vh;
+}
+
+.hybridScroll_StickyContainer {
+	overflow: hidden;
+	position: sticky;
+	top: 0px;
+	height: 100vh;
+}
+
+
+.hybridScroll_HorizontalScroll {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: max-content;
+	will-change: transform;
+}
+

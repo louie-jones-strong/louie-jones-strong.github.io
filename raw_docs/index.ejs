@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Timeline.css">
+</head>
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content hide">
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<div class="cover parallaxHolder">
+			<div class="parallaxObj">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/IndexCover/output",
+					ClassList: "",
+					Alt:"Cover photo",
+					LoadingType: "eager"
+				}}); %>
+			</div>
+			<div class="coverOverlay glass">
+				<h1 id="cover_name" class=" reveal fromLeft" >Louie <wbr> Jones&#8209;Strong</h1>
+				<h3 id="cover_title" class=" reveal fromLeft shaded rounded" >Creative Programmer</h3>
+			</div>
+		</div>
+
+		<div class="background">
+			<!-- shared common header -->
+			<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+			<hr class="gap">
+			<hr class="gap">
+
+			<div class="">
+				<h1 class="center reveal fromBottom">Who Am I?</h1>
+				<p class="center reveal fromBottom">I am a <a href="https://goo.gl/maps/uww4cWv48GgdQC719" target="_blank">Brighton, England</a> based, programmer with a passion for learning and problem solving.</p>
+				<p class="center reveal fromBottom">
+					Graduated from University of London studying <abbr title="Machine Learning">ML</abbr> & <abbr title="Artificial Intelligence">AI</abbr>. (<a href="/Education/Degree/index.html">More Info</a>)
+				</p>
+
+				<h3 class="center reveal fromBottom">My Skills:</h3>
+
+				<div class="centeredFrame">
+					<%- include(PageData.PathToRoot+'Components/QuickInfo', {
+						PageData:PageData,
+						QuickInfoData: {
+							"HideSkillTitle": true,
+							Skills: ProjectData.Skills
+						}
+					}); %>
+				</Div>
+
+				<%- include(PageData.PathToRoot+'Components/Timeline', {PageData: PageData, TimelineData: {
+						Projects: ["LSWB", "Degree", "EnglishTutor", "MathsTutor"],
+						ShowEventStartName: true,
+						HeaderStartOverride: new Date(2018, 6, 1),
+					}}); %>
+
+
+
+				<hr class="gap">
+				<!-- work -->
+				<h2 id="Work" class="center reveal fromBottom">Work:</h2>
+				<div class="cardHolder">
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["LSWB"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["EnglishTutor"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["MathsTutor"]}}); %>
+
+				</div>
+
+				<hr class="gap">
+				<!-- Projects -->
+				<h2 id="Projects" class="center reveal fromBottom">Projects:</h2>
+				<p class="center reveal fromBottom">
+					I enjoy pushing myself to learn new skills and technologies, these are some of my projects that I developed in my spare time.
+					Each project was focused on challenging me in different ways and learning new skills, technologies and techniques.
+				</p>
+
+
+				<%- include(PageData.PathToRoot+'Components/ContentFilter', {PageData: PageData,
+					FilterData:{HolderId: "filter", Tags: {"Education":0, "Solo":0, "Art":-1, "Game":0}}}); %>
+				<div class="cardHolder" id="filter">
+					<%
+					for (const projectKey of ProjectData.SubProjects)
+					{
+						const project = PageData.Projects[projectKey];%>
+						<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: project}}); %>
+					<%}
+					%>
+				</div>
+			</div>
+
+
+			<!-- Shared common footer -->
+			<%- include(PageData.PathToRoot+'Components/Footer'); %>
+		</div>
+
+
+		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
+	</div>
+</body>
+</html>

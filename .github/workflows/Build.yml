@@ -1,7 +1,8 @@
 name: Build
 
 on:
-  - push
+  push:
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -34,6 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      # - uses: FedericoCarboni/setup-ffmpeg@v2
+      #   id: setup-ffmpeg
       - uses: actions/setup-node@v3
         with:
           node-version: ''
@@ -50,6 +53,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      # - uses: FedericoCarboni/setup-ffmpeg@v2
+      #   id: setup-ffmpeg
       - uses: actions/setup-node@v3
         with:
           node-version: ''

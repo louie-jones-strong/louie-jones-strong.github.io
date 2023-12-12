@@ -60,10 +60,77 @@ for (const projectKey in projects)
 			}
 		});
 
-		// it("Date", function () {
-		// 	let value = project.Date;
-		// 	assert.notEqual(value, null);
-		// });
+		it("Dates", function () {
+			// year 2000
+			let earliestDate = new Date(2000, 0, 1);
+
+			// current date + 1 year
+			let latestDate = new Date();
+			latestDate.setFullYear(latestDate.getFullYear() + 1);
+
+			function DateCheck(dateStr)
+			{
+				if (dateStr == null)
+				{
+					return null;
+				}
+
+				assert.ok(typeof dateStr == "string");
+				var date = new Date(dateStr);
+				if (dateStr == "Current")
+				{
+					date = new Date();
+				}
+				assert.ok(date instanceof Date);
+				assert.ok(!isNaN(date), `date: (${date}) is not a valid date`);
+
+				assert.ok(date >= earliestDate, `date: (${date}) is before earliest date (${earliestDate})`);
+				assert.ok(date <= latestDate, `date: (${date}) is after latest date (${latestDate})`);
+				return date;
+			}
+
+
+			assert.notEqual(project.Timelines, null);
+			assert.ok(Array.isArray(project.Timelines));
+
+			let lastStartDate = null;
+			let lastEndDate = null;
+			for (const timeline of project.Timelines)
+			{
+				let startDate = DateCheck(timeline.StartDate);
+
+				let endDate = DateCheck(timeline.EndDate);
+				if (timeline.EndDate == "Current")
+				{
+					endDate = latestDate;
+				}
+
+				assert.ok(startDate != null, "Timeline should have a start date");
+				if (lastStartDate != null)
+				{
+					if (lastEndDate != null)
+					{
+						assert.notEqual(endDate, null, "Timeline should have an end date");
+
+						// check no overlapping timelines
+						assert.ok(startDate >= lastEndDate, `startDate: (${startDate}) is before lastEndDate (${lastEndDate})`);
+					}
+					else
+					{
+						// check no overlapping timelines
+						assert.ok(startDate >= lastStartDate, `startDate: (${startDate}) is before lastStartDate (${lastStartDate})`);
+					}
+				}
+
+				if (endDate != null)
+				{
+					assert.ok(startDate <= endDate, `startDate: (${startDate}) is after endDate (${endDate})`);
+				}
+
+				lastStartDate = startDate;
+				lastEndDate = endDate;
+			}
+		});
 
 		// it("TimeSpent", function () {
 		// 	let value = project.TimeSpent;
@@ -80,7 +147,7 @@ for (const projectKey in projects)
 			if (value != null)
 			{
 				assert.equal(typeof value, "string");
-				assert.ok(value.length >= 3);
+				assert.ok(value.length >= 1);
 			}
 		});
 

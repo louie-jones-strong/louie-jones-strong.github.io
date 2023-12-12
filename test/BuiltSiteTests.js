@@ -216,6 +216,29 @@ describe("BuiltTests", function ()
 			let srcExists = fs.existsSync(localFile);
 			let message = "doesn't exist: " + localFile;
 			assert.ok(srcExists, message);
+			assert.ok(localFile.startsWith(outDir), "Not in output folder: " + localPath);
+
+			// check that the file is an allowed type
+			let allowedExtensions = [
+				".js", ".css", ".html",
+				".ico", ".svg", ".png", ".webp",
+				".mp4", ".webm",
+				".pdf"
+
+			]
+			let hasAllowedExtension = false;
+			for (let i = 0; i < allowedExtensions.length; i++)
+			{
+				if (localFile.endsWith(allowedExtensions[i]))
+				{
+					hasAllowedExtension = true;
+					break;
+				}
+			}
+
+			assert.ok(hasAllowedExtension, "Not an allowed extension: " + localFile);
+
+
 		}
 	}
 

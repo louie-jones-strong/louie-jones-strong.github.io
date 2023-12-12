@@ -1,0 +1,43 @@
+
+<% if (!VideoData.LoadingType) {
+	VideoData.LoadingType = "lazy"
+}%>
+
+<% if (VideoData.Autoplay) {
+	VideoData.Muted = true
+}%>
+
+<video
+<% if (VideoData.Controls) { %> controls <% }%>
+<% if (VideoData.Autoplay) { %> autoplay <% }%>
+<% if (VideoData.Muted) { %> muted <% }%>
+<% if (VideoData.Loop) { %> loop <% }%>
+
+loading=<%= VideoData.LoadingType %>
+<% if (VideoData.ClassList) { %> class="<%= VideoData.ClassList %>" <% }%>
+>
+
+
+
+<!-- <%
+let videoConfig = PageData.SiteConfig.AssetConfig.VideoConfig;
+let outputFormats = videoConfig.OutputFormats;
+let resGroups = videoConfig.HorizontalResolutionsGroups;
+for (const outputFormat of outputFormats)
+{%>
+	<source src="
+	<% for (const resGroup of resGroups)
+	{%>
+		<%= PageData.PathToRoot %><%= VideoData.Path %>_<%= resGroup %>.<%= outputFormat %>
+	<%}%>
+	" type="video/<%= outputFormat %>"
+<%}%> -->
+
+<source src="<%= PageData.PathToRoot %><%= VideoData.Path %>.mp4" type="video/mp4">
+
+
+
+I'm sorry, your browser doesn't support HTML5 video.
+</video>
+
+

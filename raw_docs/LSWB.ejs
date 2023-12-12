@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/Gallery.css">
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+		<!-- cover image slide show -->
+		<div class="slide-holder">
+			<div class="slide">
+				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
+					Autoplay: true, Muted: true, Loop: true,
+					Path:"Public/Assets/LSWB/LaunchTrailer",
+					ClassList: ""
+				}}); %>
+			</div>
+		</div>
+		<script src="<%=PageData.PathToRoot%>Public/js/Carousel.js"></script>
+
+		<div class="centeredFrame">
+			<h1 class="center center reveal fromBottom"><%=ProjectData.Title %></h1>
+
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+			<p class="center center reveal fromBottom">
+				While working on <abbr title="LEGO® Star Wars™ Battles">LSWB</abbr> I contributed to multiple areas of the game's development.
+			</p>
+
+			<h3 class="center reveal fromRight"><abbr title="Artificial Intelligence">AI</abbr> Feature Lead</h3>
+			<p class="center reveal fromLeft">
+				I designed, implemented and supported our <abbr title="Artificial Intelligence">AI</abbr> systems that caters for a number of different requirements.
+				<ul class="center">
+					<li class="left reveal fromLeft">Teach players how to play the game</li>
+					<li class="left reveal fromLeft">Human skill level opponent at each skill level for times of low liquidity</li>
+					<li class="left reveal fromLeft">Give the player an opponent to play when offline</li>
+					<li class="left reveal fromLeft">Automated testing of the game</li>
+				</ul>
+			</p>
+
+
+			<h3 class="center reveal fromRight">Audio Feature Lead</h3>
+			<p class="center reveal fromLeft">
+				This role involved:
+			</p>
+			<ul class="center">
+				<li class="left reveal fromLeft">Capturing new audio assets and systems required for each feature</li>
+				<li class="left reveal fromLeft">Reviewing created audio</li>
+				<li class="left reveal fromLeft">Creating or overseeing creation of audio event triggers </li>
+				<li class="left reveal fromLeft">Coding audio systems</li>
+				<li class="left reveal fromLeft">Designing our audio creation workflows</li>
+				<li class="left reveal fromLeft">Maintaining and updating our <a href="https://www.fmod.com/" target="_blank">FMOD</a> integration</li>
+			</ul>
+
+
+			<h3 class="center reveal fromRight">improving Studio work flows</h3>
+			<p class="center reveal fromLeft">
+				During my time at TT Odyssey, I have been recognised for improving multiple workflows across the studio.
+				<ul class="center">
+					<li class="left reveal fromLeft">Unit testing</li>
+					<li class="left reveal fromLeft">Code reviews using github's pull request workflow</li>
+					<li class="left reveal fromLeft">Automated integration testing using my <abbr title="Artificial Intelligence">AI</abbr></li>
+					<li class="left reveal fromLeft">Improving pre-production documents</li>
+					<li class="left reveal fromLeft">How we onboard new starters</li>
+					<li class="left reveal fromLeft">How we hand over from leaving employees</li>
+					<li class="left reveal fromLeft">Made our stand-up meetings more streamlined</li>
+					<li class="left reveal fromLeft">Contributed heavily to retrospectives</li>
+					<li class="left reveal fromLeft">Client side unit testing</li>
+				</ul>
+			</p>
+
+			<h3 class="center reveal fromRight">Server Tools</h3>
+			<p class="center reveal fromLeft">We created multiple web tools to help support our develop of the game.</p>
+			<p class="center reveal fromLeft">I create a tool to capture snapshots of players profiles in both dev and live environments from any version, this tool dramatical reduced time needed to fix bugs.</p>
+
+			<h3 class="center reveal fromRight">New Unit Creation</h3>
+			<p class="center reveal fromLeft">
+				I was the Lead on the unit creation of some of our most popular units.
+			</p>
+
+			<div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path: "Public/Assets/LSWB/GamorreanGuardCard",
+					ClassList: "center reveal fromLeft card",
+					Style: "height: 10em;",
+					Alt: "Gamorrean Guard Card render"
+				}}); %>
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path: "Public/Assets/LSWB/Klatoonian_Raider",
+					ClassList: "center reveal fromLeft card",
+					Style: "height: 10em;",
+					Alt: "Klatoonian Raider Card render"
+				}}); %>
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path: "Public/Assets/LSWB/Mandalorian",
+					ClassList: "center reveal fromLeft card",
+					Style: "height: 10em;",
+					Alt: "Mandalorian Card render"
+				}}); %>
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path: "Public/Assets/LSWB/Projection",
+					ClassList: "center reveal fromLeft card",
+					Style: "height: 10em;",
+					Alt: "Projection Card render"
+				}}); %>
+			</div>
+
+
+			<h3 class="center reveal fromRight">Localisation</h3>
+			<p class="center reveal fromLeft">
+				I created our localisation system that supports 17 languages.
+			</p>
+			<p class="center reveal fromLeft">
+				This system also caterers for each language's cultures differences such as:
+			</p>
+			<ul class="center">
+				<li class="left reveal fromLeft">pluralisations</li>
+				<li class="left reveal fromLeft">Genders</li>
+				<li class="left reveal fromLeft">Punctuation</li>
+				<li class="left reveal fromLeft"><abbr title="Right To Left">RTL</abbr> / <abbr title="Left To Right">LTR</abbr></li>
+				<li class="left reveal fromLeft">Making the UI responsive to extreme string lengths</li>
+			</ul>
+
+			<h3 class="center reveal fromRight">Optimisation</h3>
+			<p class="center reveal fromLeft">
+				As our game has to run on low spec mobile devices it is critical that we test and optimize the performance of are app on devices regularly to maintain a shippable build.
+			</p>
+			<ul class="center">
+				<li class="left reveal fromLeft">Profiling</li>
+				<li class="left reveal fromLeft">Cleaning up garbage allocations</li>
+				<li class="left reveal fromLeft">Caching</li>
+				<li class="left reveal fromLeft">Pooling</li>
+				<li class="left reveal fromLeft">reducing Code run time</li>
+			</ul>
+
+
+			<h3 class="center reveal fromBottom">As well As much more...</h3>
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+
+
+		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {GlareOverride:false, ScaleOverride:1.5}}); %>
+
+	</div>
+</body>
+</html>

@@ -8,21 +8,15 @@ const Utils = require('./Utils.js');
 
 class PageBuilder
 {
-	constructor(isRelease, compress, pathToRoot)
+	constructor(isRelease, compress, pathToRoot, siteConfig, projectConfig, iconsConfig)
 	{
 		this.IsRelease = isRelease;
 		this.Compress = compress;
 		this.PathToRoot = pathToRoot;
 
-
-		let rootConfigPath = path.join(this.PathToRoot, "config");
-		let sitePath = path.join(rootConfigPath, "Site.json");
-		let projectPath = path.join(rootConfigPath, "Projects.json");
-		let iconsPath = path.join(rootConfigPath, "Icons.json");
-
-		this.SiteConfig = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
-		this.ProjectConfig = JSON.parse(fs.readFileSync(projectPath, 'utf8'));
-		this.IconsConfig = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));
+		this.SiteConfig = siteConfig;
+		this.ProjectConfig = projectConfig;
+		this.IconsConfig = iconsConfig;
 
 	}
 

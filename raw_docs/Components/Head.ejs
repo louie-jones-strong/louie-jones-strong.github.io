@@ -1,0 +1,58 @@
+<!-- shared for all pages -->
+<meta charset="UTF-8">
+<link rel="icon greyScale" href="<%= PageData.PathToRoot %>Public/Assets/Logo/favicon.ico" type="image/x-icon">
+<meta name="keywords" content="Louie, Jones-Strong, js, j-s, portfolio, cv, code, game, dev, gameplay, mobile, desktop,
+	coding, programmer, c#, python, sql, java, aws, html, css, JavaScript, asp.net, git, c, arduino, json, unity,
+	blender, ai, machine learning, first aid, itch, epq, Alhambra, 4d puzzle, egg hunt">
+
+<meta name="theme-color" content="#4285f4">
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Louie Jones-Strong"/>
+<meta name="author" content="Louie Jones-Strong">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="refresh" content="600">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="<%= PageData.PathToRoot %>Public/css/Shared.css">
+<link rel="preload" as="image" href="<%= PageData.PathToRoot %>Public/css/BackgroundDark.svg">
+
+<script src="<%= PageData.PathToRoot %>Public/js/AnimateOnAppear.js"></script>
+<script src="<%= PageData.PathToRoot %>Public/js/HybridScroll.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<% if (PageData.IsRelease) { %>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6MK7D2H38"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-B6MK7D2H38');
+	</script>
+<% }
+else { %>
+	<!-- add data as js object for debugging -->
+	<!-- <script>
+		let PageData = <%- JSON.stringify(PageData) %>;
+		let ProjectData = <%- JSON.stringify(ProjectData) %>;
+	</script> -->
+
+
+<%} %>
+
+
+<%
+	let thumbnail = ProjectData.Thumbnail;
+	if (thumbnail == null) {
+		thumbnail = PageData.SiteConfig.DefaultThumbnail;
+	}
+%>
+
+<!-- just this page -->
+<title><%= ProjectData.Title %></title>
+<meta property="og:title" content="Louie J-S: <%= ProjectData.Title %>" />
+
+<meta name="description" content="Louie Jones-Strong's portfolio. <%= ProjectData.QuickDescription %>">
+<meta name="og:description " content="Louie Jones-Strong's portfolio. <%= ProjectData.QuickDescription %>">
+
+<meta property="og:url" content="<%= PageData.SiteConfig.HostURL %><%= ProjectData.PagePath %>.html"/>
+<meta property="og:image" content="<%= PageData.SiteConfig.HostURL %><%= thumbnail %>_512.png" />

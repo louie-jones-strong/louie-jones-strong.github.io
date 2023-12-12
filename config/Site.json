@@ -1,7 +1,7 @@
 {
-	"Raw_ViewsFolder": "Views",
+	"Raw_ViewsFolder": "raw_docs",
 	"Output_ViewsFolder": "docs",
-	"Raw_StaticFolder": "Public_Raw",
+	"Raw_StaticFolder": "raw_docs/Public",
 	"Output_StaticFolder": "docs/Public",
 
 	"HostURL": "https://louie-jones-strong.github.io/",
@@ -21,8 +21,12 @@
 	},
 	"AssetConfig":{
 		"ImageConfig": {
-			"ImageSizes": [128, 256, 512, 1024],
-			"ImageFormats_Outputs": [".webp", ".png"]
+			"HorizontalResolutionsGroups": [128, 256, 512, 1024],
+			"OutputFormats": ["webp", "png"]
+		},
+		"VideoConfig": {
+			"HorizontalResolutionsGroups": [1024],
+			"OutputFormats": ["mp4"]
 		},
 		"NoCopyFolders": [
 			"css/Shared"

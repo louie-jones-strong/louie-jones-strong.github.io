@@ -2,15 +2,16 @@
 	"Home": {
 		"Title": "Louie Jones-Strong",
 		"Thumbnail": "Public/Assets/PortfolioProject/Thumbnail",
-		"Date": null,
+		"Timelines": [
+		],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
 		"QuickDescription": "I am a Brighton based hard working, creative, programmer studying machine learning.",
 		"PagePath": "index",
 		"Link": null,
-		"HideLink": false,
-		"Hide": false,
+		"HideLink": true,
+		"Hide": true,
 		"Tags": "",
 		"Skills": [
 			"Unity",
@@ -48,12 +49,33 @@
 		]
 	},
 
-
+	"personal": {
+		"Title": "Personal",
+		"Thumbnail": null,
+		"Timelines": [
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "Personal page to show off all of the projects I have worked on.",
+		"PagePath": "personal",
+		"Link": null,
+		"HideLink": true,
+		"Hide": true,
+		"Tags": "",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
 
 	"Education": {
 		"Title": "Education",
 		"Thumbnail": null,
-		"Date": null,
+		"Timelines": [
+		],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
@@ -75,26 +97,418 @@
 			"Nodejs",
 			"Latex",
 			"Tensorflow",
-			"scikitlearn"
+			"scikitlearn",
+			"Java"
 		],
 		"Links": {
 		},
 		"SubProjects": [
-			"Degree",
-			"EPQProject"
+			"GCSEs",
+			"ALevels",
+			"Degree"
 		]
 	},
 
+	"GCSEs": {
+		"Title": "GCSEs",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "GCSEs studied at Blatchington Mill School.",
+		"PagePath": "Education/GCSEs/index",
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"LawGCSE",
+			"MathsGCSE",
+			"ICTGCSE",
+			"AdditionalScienceGCSE",
+			"FurtherAdditionalScienceGCSE",
+			"EnglishGCSE",
+			"ComputingGCSE",
+			"PerformingArtsProductionGCSE"
+		]
+	},
+	"LawGCSE": {
+		"Title": "Law",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "October, 2015"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "Covered foundational legal principles, providing an understanding of the British legal system and highlighting its distinctions from the American legal systems. Explored key legislation and case law, encompassing both criminal and civil law. Examined the court system, human rights, and the role of legal professionals. Developed analytical and evaluative skills through the exploration of real-life legal scenarios.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"MathsGCSE": {
+		"Title": "Maths",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "B",
+		"QuickDescription": "Covered: algebra, geometry, measures, trigonometry, statistics, and probability.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"ICTGCSE": {
+		"Title": "ICT",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "A",
+		"QuickDescription": "Focused on Microsoft Office tools, HTML and python, and understanding computer systems, graphic design, and communication tools.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"AdditionalScienceGCSE": {
+		"Title": "Additional Science",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "B",
+		"QuickDescription": "Covered essential principles of biology, chemistry, and physics. Topics included ecosystems, chemical reactions, and forces. This course provided a foundational understanding of scientific concepts, laying the groundwork for more advanced studies in each discipline.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"FurtherAdditionalScienceGCSE": {
+		"Title": "Further Additional Science",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "B",
+		"QuickDescription": "Covered concepts in biology, chemistry, and physics. Exploring topics such as: genetics, organic chemistry, and quantum physics.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"EnglishGCSE": {
+		"Title": "English",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "C",
+		"QuickDescription": "Covered: reading, writing, speaking and listening. Studied a range of texts from different time periods and genres. Developed creative writing skills through the creation of original pieces of writing.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"ComputingGCSE": {
+		"Title": "Computing",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "A",
+		"QuickDescription": "Covered: programming, algorithms, data representation, computer systems, computer communication and networking, databases, and the consequences of uses of computing.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"PerformingArtsProductionGCSE": {
+		"Title": "Performing Arts Production",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2014",
+				"EndDate": "June, 2016"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "D2",
+		"QuickDescription": "Covered the fundamentals of performing arts production, including: lighting, sound, set design, rigging, health and safety, and stage management. As part of the course I worked on a number of productions.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
 
+	"ALevels": {
+		"Title": "A Levels",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2016",
+				"EndDate": "June, 2018"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "A Levels studied at UTC@Harbourside.",
+		"PagePath": "Education/ALevel/index",
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+			"SQL",
+			"Git",
+			"Java",
+			"Python",
+			"Tensorflow"
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"EPQProject",
+			"PhysicsALevel",
+			"MathsALevel",
+			"ComputerScienceALevel",
+			"HeadBoyALevel",
+			"GlobalSocialLeaders"
+		]
+	},
+	"GlobalSocialLeaders": {
+		"Title": "Global Social Leaders",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "October, 2016",
+				"EndDate": "March 25, 2017"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": "2nd Place",
+		"QuickDescription": "Three others and I led a team of 15 engineers, repurposing aluminum cans into wind turbines, sprinkler systems, and birdhouses to enhance the local community. We were awarded with 2nd place in the global competition with 100+ teams.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+		]
+	},
+	"PhysicsALevel": {
+		"Title": "Physics",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2016",
+				"EndDate": "June, 2018"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "In A level physics I learned: mechanics, materials, waves, electricity, magnetism, and quantum physics. Using a range of experimental methods to collect data and to test hypotheses. I applied vectors, calculus, and trigonometry to describe and analyse the behaviour of real systems.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"MathsALevel": {
+		"Title": "Maths",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2016",
+				"EndDate": "June, 2018"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "In A level maths I learned: calculus, algebra, and geometry. Differential and integral calculus for function analysis. Applied algebra to solve complex equations and manipulate matrices. Advanced geometry and trigonometry for spatial reasoning. Covered statistical methods, probability, and mathematical modelling. Developed strong analytical and problem-solving skills.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"ComputerScienceALevel": {
+		"Title": "Computer Science",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September, 2016",
+				"EndDate": "June, 2018"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "Covered the fundamentals of computer science, including: programming, algorithms, data structures, data representation, computer systems, computer organisation and architecture, communication and networking, databases, discrete maths, and the consequences of uses of computing.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+			"SQL",
+			"Git",
+			"Java"
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
+	"HeadBoyALevel": {
+		"Title": "Head Boy",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "November, 2017",
+				"EndDate": "June, 2018"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "As Head Boy of a STEM college, I actively collaborated with local companies, chambers of commerce and the local community bridging the gap between academia and industry. I showcased our institution's achievements, programs, and the talents of our students. Representing the college, I played a pivotal role in fostering positive relationships between the institution and external stakeholders.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Education",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
 	"EPQProject": {
 		"Title": "EPQ",
 		"Thumbnail": "Public/Assets/EPQ/thumbnail",
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2016",
+				"EndDate": "October, 2017"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "My college EPQ dissertation on multi-technique supervised machine learning.",
-		"PagePath": "Education/EPQProject",
+		"PagePath": "Education/ALevel/EPQProject",
 		"Link": null,
 		"HideLink": false,
 		"Hide": false,
@@ -108,12 +522,16 @@
 		"SubProjects": []
 	},
 
-
 	"Degree": {
 		"Title": "Degree",
 		"Thumbnail": null,
-		"Date": "October 2020 - 2023",
-		"TimeSpent": "3 Years",
+		"Timelines": [
+			{
+				"StartDate": "October, 2020",
+				"EndDate": "September, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track for: First Class",
 		"QuickDescription": "BSc Computer Science (Machine Learning And Artificial Intelligence).",
@@ -167,8 +585,13 @@
 	"IntroToProgramming1": {
 		"Title": "Introduction To Programming I",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2020",
+				"EndDate": "March, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered core programming techniques, including variables, conditionals, functions, and loops. It emphasized interactive, graphical program creation and introduced basic object-oriented programming.",
@@ -188,8 +611,13 @@
 	"DiscreteMaths": {
 		"Title": "Discrete Mathematics",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2020",
+				"EndDate": "March, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "Covered sets, logic (propositional and predicate), functions, relations, graphs, trees, induction and recursion. This module builds a foundation to describe problems and algorithms in a mathematical way.",
@@ -208,8 +636,13 @@
 	"FundamentalsOfComputerScience": {
 		"Title": "Fundamentals Of Computer Science",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2020",
+				"EndDate": "March, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered binary representations and logic, complexity theory and theories of computation, finite state machines and Turing machines. These are then applied to databases, artificial intelligence and machine learning.",
@@ -228,8 +661,13 @@
 	"HowComputersWork": {
 		"Title": "How Computers Work",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2020",
+				"EndDate": "March, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "Second Class Honours",
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
@@ -248,8 +686,13 @@
 	"IntroToProgramming2": {
 		"Title": "Introduction To Programming II",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2021",
+				"EndDate": "September, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "Focused on maintainable code, defensive coding techniques, program testing techniques, cyclical approaches to software development, encapsulation, developing code across multiple files and using third-party libraries.",
@@ -271,8 +714,13 @@
 	"ComputationalMaths": {
 		"Title": "Computational Mathematics",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2021",
+				"EndDate": "September, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered computer systems, computer architecture, operating systems, networks, databases and data representation.",
@@ -291,8 +739,13 @@
 	"AlgorithmsAndDataStructures1": {
 		"Title": "Algorithms And Data Structures I",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2021",
+				"EndDate": "September, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered linear data structures such as arrays, vectors and lists. Expressing algorithms as flowcharts and pseudocode. Sorting and searching algorithms.",
@@ -312,8 +765,13 @@
 	"WebDevelopment": {
 		"Title": "Web Development",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2021",
+				"EndDate": "September, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 4,
 		"Awards": "First Class",
 		"QuickDescription": "This module introduced me to HTML, CSS and JavaScript. It covered the document object model and how you can dynamically manipulate it with JavaScript to create interactive web pages. It also covered accessibility and usability issues.",
@@ -337,8 +795,13 @@
 	"ObjectOrientedProgramming": {
 		"Title": "Object Oriented Programming",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2021",
+				"EndDate": "March, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered objects and classes, inheritance, abstraction and polymorphism. It also covered code documentation and style.",
@@ -358,8 +821,13 @@
 	"SoftwareDesignAndDevelopment": {
 		"Title": "Software Design And Development",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2021",
+				"EndDate": "March, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered defensive coding, exception handling, unit testing, test driven development and collaboration using version control.",
@@ -381,8 +849,13 @@
 	"AgileSoftwareProjects": {
 		"Title": "Agile Software Projects",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2021",
+				"EndDate": "March, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 6,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered project management, requirements gathering, user centred design, agile software development methodologies, test driven software development, software validation and user testing. It also covered professional practices and software documentation.",
@@ -407,8 +880,13 @@
 	"DatabasesNetworksAndTheWeb": {
 		"Title": "Databases, Networks And The Web",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2021",
+				"EndDate": "March, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered networking concepts, socket architectures, HTTP servers, relational databases, querying a database, representing data in a database.",
@@ -433,8 +911,13 @@
 	"ProgrammingWithData": {
 		"Title": "Programming With Data",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2022",
+				"EndDate": "September, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered data-driven programming, visualising data, descriptive statistics, getting data, processing data, classification and clustering.",
@@ -455,8 +938,13 @@
 	"ComputerSecurity": {
 		"Title": "Computer Security",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2022",
+				"EndDate": "September, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered security threats, access control and authentication, security models, operating system security, network security, cryptography, cryptographic protocols and key management, public key cryptography and blockchain protocols.",
@@ -475,8 +963,13 @@
 	"GraphicsProgramming": {
 		"Title": "Graphics Programming",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2022",
+				"EndDate": "September, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered coordinate transformations, number generators, images, pixels, colors, image processing, computer vision, simulating physical systems and 3D graphics.",
@@ -496,8 +989,13 @@
 	"AlgorithmsAndDataStructures2": {
 		"Title": "Algorithms And Data Structures II",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2022",
+				"EndDate": "September, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered stacks, queues, binary trees, heaps, priority queues, implicit array algorithms, recursion, iteration, graphs, shortest-path algorithms, sets, maps, hash tables and collections.",
@@ -519,8 +1017,13 @@
 	"DatabasesAndAdvancedDataTechniques": {
 		"Title": "Databases And Advanced Data Techniques",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2022",
+				"EndDate": "March, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered basic databases and data schemas for a website, CRUD/RESTful APIs, websockets, user authentication and security, working with external APIs and scalability.",
@@ -543,8 +1046,13 @@
 	"MachineLearningAndNeuralNetworks": {
 		"Title": "Machine Learning And Neural Networks",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2022",
+				"EndDate": "March, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered regression, classification, clustering, matrix completion, pattern recognition, neural networks, multi-layer perceptrons, back propagation, network optimisers, deep and recurrent networks.",
@@ -566,8 +1074,13 @@
 	"ArtificialIntelligence": {
 		"Title": "Artificial Intelligence",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2022",
+				"EndDate": "March, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered reinforcement learning, problem solving, knowledge representation and ontologies, reasoning under uncertainty,optimal decisions in games, robotics and automated scientific discovery.",
@@ -589,8 +1102,13 @@
 	"IntelligentSignalProcessing": {
 		"Title": "Intelligent Signal Processing",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "October, 2022",
+				"EndDate": "March, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "First Class",
 		"QuickDescription": "This module covered capturing, representing and processing audio and camera inputs as well as video. It covered LTI systems and impulse responses, frequency domain representations, extracting features from signals, speech recognition, computer vision, compressing signals.",
@@ -613,8 +1131,13 @@
 	"NaturalLanguageProcessing": {
 		"Title": "Natural Language Processing",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2023",
+				"EndDate": "September, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "This module covered information retrieval and curation in NLP, formal grammars, rule based NLP, statistical NLP, NER, stemmers, taggers and parsers, software packages for NLP and applications of NLP.",
@@ -635,8 +1158,13 @@
 	"DataScience": {
 		"Title": "Data Science",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2023",
+				"EndDate": "September, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "This module covered working with different types of data, correlation and regression, distributions and significance, processing text data, decision making based on data analysis, data visualisation, time-series data visualisation, scientific data visualisation and case studies.",
@@ -657,8 +1185,13 @@
 	"FinalProject": {
 		"Title": "Dissertation",
 		"Thumbnail": null,
-		"Date": null,
-		"TimeSpent": "6 months",
+		"Timelines": [
+			{
+				"StartDate": "April, 2023",
+				"EndDate": "September, 2023"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": "On Track For: First Class",
 		"QuickDescription": "My dissertation involved independently planning, managing, researching, designing, developing, testing and evaluating my own software project. For this project I designed a new machine learning framework for creating agents for the games industry.",
@@ -689,16 +1222,42 @@
 	"LSWB": {
 		"Title": "TT Odyssey",
 		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
-		"Date": "April 2018 - September 2022",
-		"TimeSpent": "4 Years",
-		"NumPeople": "Avg ~25",
+		"Timelines": [
+			{
+				"Name": "Work Experience",
+				"StartDate": "April 10, 2018",
+				"EndDate": "April 16, 2018"
+			},
+			{
+				"Name": "Intern",
+				"StartDate": "August 7, 2018",
+				"EndDate": "May, 2019"
+			},
+			{
+				"Name": "Junior",
+				"StartDate": "May, 2019",
+				"EndDate": "November, 2021"
+			},
+			{
+				"Name": "Part-Time",
+				"StartDate": "November, 2021",
+				"EndDate": "September, 2022"
+			},
+			{
+				"Name": "Standard",
+				"StartDate": "October, 2023",
+				"EndDate": "Current"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
 		"Awards": "Develop Star: Best Mobile Game",
 		"QuickDescription": "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
 		"PagePath": "LSWB",
 		"Link": null,
 		"HideLink": false,
 		"Hide": false,
-		"Tags": "Work",
+		"Tags": "Work Game",
 		"Skills": [
 			"Unity",
 			"Csharp",
@@ -719,7 +1278,12 @@
 	"EnglishTutor": {
 		"Title": "English Tutor",
 		"Thumbnail": "Public/Assets/EnglishTutor/thumbnail",
-		"Date": "2018 - 2019",
+		"Timelines": [
+			{
+				"StartDate": "September 30, 2018",
+				"EndDate": "April, 2019"
+			}
+		],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
@@ -738,7 +1302,12 @@
 	"MathsTutor": {
 		"Title": "Maths Tutor",
 		"Thumbnail": "Public/Assets/MathsTutor/thumbnail",
-		"Date": "2020 - 2021",
+		"Timelines": [
+			{
+				"StartDate": "March, 2020",
+				"EndDate": "June, 2021"
+			}
+		],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
@@ -757,7 +1326,12 @@
 	"BusinessConsulting": {
 		"Title": "Business Consulting",
 		"Thumbnail": "Public/Assets/BusinessConsulting/thumbnail",
-		"Date": "2022 - 2023",
+		"Timelines": [
+			{
+				"StartDate": "October, 2022",
+				"EndDate": "July, 2023"
+			}
+		],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
@@ -785,7 +1359,223 @@
 	"BlenderProjects": {
 		"Title": "24 Hour Blender Challenge",
 		"Thumbnail": "Public/Assets/BlenderProjects/Images/blender_6",
-		"Date": null,
+		"Timelines": [
+			{
+				"Name": null,
+				"StartDate": "December 18, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 19, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 20, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 24, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 25, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 26, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 27, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 28, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 29, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 30, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "December 31, 2019",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 6, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 12, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 14, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 17, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 18, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 19, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 20, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 22, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 24, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 25, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 26, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 27, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 29, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 5, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 9, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 22, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 23, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 24, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 25, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 26, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "February 27, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "March 2, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "March 11, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "March 24, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "March 25, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "March 26, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "June 17, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "June 19, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "July 20, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "October 27, 2020",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 23, 2021",
+				"EndDate": null
+			},
+			{
+				"Name": null,
+				"StartDate": "January 24, 2021",
+				"EndDate": null
+			}
+		],
 		"TimeSpent": "Day Each",
 		"NumPeople": 1,
 		"Awards": null,
@@ -806,8 +1596,13 @@
 	"EggHuntProject": {
 		"Title": "Office Egg Hunt",
 		"Thumbnail": "Public/Assets/EggHuntGame/thumbnail",
-		"Date": null,
-		"TimeSpent": "2 Weeks",
+		"Timelines": [
+			{
+				"StartDate": "March 16, 2021",
+				"EndDate": "April 6, 2021"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "A 3D game for my colleagues to play in lockdown, set within my model of our office.",
@@ -830,8 +1625,13 @@
 	"CubePuzzleProject": {
 		"Title": "Alhambra 4D Cube Puzzle",
 		"Thumbnail": "Public/Assets/CubePuzzle/Thumbnail",
-		"Date": null,
-		"TimeSpent": "3 Weeks",
+		"Timelines": [
+			{
+				"StartDate": "June 27, 2018",
+				"EndDate": "July 18, 2018"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
@@ -850,8 +1650,13 @@
 	"Minesweeper": {
 		"Title": "Mine Sweeper",
 		"Thumbnail": "Public/Assets/MineSweeper/Thumbnail",
-		"Date": null,
-		"TimeSpent": "1 Week",
+		"Timelines": [
+			{
+				"StartDate": "June 7, 2020",
+				"EndDate": "June 14, 2020"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "To prepare for my University courses I taught myself JS, HTML and CSS.",
@@ -874,8 +1679,13 @@
 	"CalculatorSolver": {
 		"Title": "Calculator: The Game Solver",
 		"Thumbnail": "Public/Assets/CalculatorSolver/Thumbnail",
-		"Date": null,
-		"TimeSpent": "2 Months",
+		"Timelines": [
+			{
+				"StartDate": "January 25, 2020",
+				"EndDate": "April 19, 2020"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "Calculator: The Game Solver.",
@@ -895,8 +1705,13 @@
 	"MediaStudio": {
 		"Title": "Media Studio",
 		"Thumbnail": "Public/Assets/MediaStudio/thumbnail",
-		"Date": null,
-		"TimeSpent": "2 Months",
+		"Timelines": [
+			{
+				"StartDate": "September 29, 2022",
+				"EndDate": "December 7, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.",
@@ -918,7 +1733,12 @@
 	"MonsterMash": {
 		"Title": "Monster Mash",
 		"Thumbnail": "Public/Assets/MonsterMash/Thumbnail",
-		"Date": null,
+		"Timelines": [
+			{
+				"StartDate": "August 28, 2020",
+				"EndDate": "October 15, 2020"
+			}
+		],
 		"TimeSpent": "1 Week",
 		"NumPeople": 4,
 		"Awards": null,
@@ -940,7 +1760,12 @@
 	"looking-for-eden": {
 		"Title": "Looking For Eden",
 		"Thumbnail": "Public/Assets/LookingForEden/Thumbnail",
-		"Date": null,
+		"Timelines": [
+			{
+				"StartDate": "January 30, 2021",
+				"EndDate": "March 6, 2021"
+			}
+		],
 		"TimeSpent": "48 hours",
 		"NumPeople": 3,
 		"Awards": null,
@@ -963,8 +1788,13 @@
 	"RougeClicker": {
 		"Title": "Rogue Clicker",
 		"Thumbnail": "Public/Assets/RogueClicker/Thumbnail",
-		"Date": null,
-		"TimeSpent": "1 Week",
+		"Timelines": [
+			{
+				"StartDate": "April 2, 2022",
+				"EndDate": "September 11, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "A short fast passed clicker with constant upgrades.",
@@ -986,8 +1816,13 @@
 	"DrPlantenstein": {
 		"Title": "Dr. Plantenstein",
 		"Thumbnail": "Public/Assets/Plantenstein/Thumbnail",
-		"Date": null,
-		"TimeSpent": "1 Week",
+		"Timelines": [
+			{
+				"StartDate": "September 17, 2022",
+				"EndDate": "September 26, 2022"
+			}
+		],
+		"TimeSpent": null,
 		"NumPeople": 3,
 		"Awards": null,
 		"QuickDescription": "Shop and garden managment game made for GB jam 10. You play as a herbalist who grows plants to heal the villagers.",
@@ -1013,7 +1848,8 @@
 	"Cards": {
 		"Title": "Cards",
 		"Thumbnail": null,
-		"Date": null,
+		"Timelines": [
+		],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
@@ -1036,7 +1872,8 @@
 	"LandscapeCards": {
 		"Title": "Landscape Cards",
 		"Thumbnail": "Public/Assets/cards/landscape/card1",
-		"Date": null,
+		"Timelines": [
+		],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
@@ -1056,7 +1893,8 @@
 	"XmasCards": {
 		"Title": "Christmas Cards",
 		"Thumbnail": "Public/Assets/cards/xmas/card1",
-		"Date": null,
+		"Timelines": [
+		],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,

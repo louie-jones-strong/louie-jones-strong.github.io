@@ -3,19 +3,21 @@ const fs = require('fs');
 const sharp = require('sharp');
 const sass = require('sass');
 const Utils = require('./Utils.js');
+const ffmpegCommand  = require('fluent-ffmpeg');
+
 
 
 class AssetCompressor
 {
-	constructor(compress, onlyCopyNew, pathToRoot)
+	constructor(compress, onlyCopyNew, pathToRoot, siteConfig, projectConfig, iconsConfig)
 	{
 		this.Compress = compress;
 		this.OnlyCopyNew = onlyCopyNew;
 		this.PathToRoot = pathToRoot;
 
-		let rootConfigPath = path.join(this.PathToRoot, "config");
-		let sitePath = path.join(rootConfigPath, "Site.json");
-		this.SiteConfig = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
+		this.SiteConfig = siteConfig;
+		this.ProjectConfig = projectConfig;
+		this.IconsConfig = iconsConfig;
 	}
 
 
@@ -79,6 +81,10 @@ class AssetCompressor
 		{
 			this.CompressImage(itemInputPath, itemOutputPath)
 		}
+		else if (itemInputPath.endsWith('.mp4')) // Videos
+		{
+			this.CompressVideo(itemInputPath, itemOutputPath)
+		}
 		else if (this.Compress && itemInputPath.endsWith('.js')) // JS
 		{
 			this.TextFiles(itemInputPath, itemOutputPath, CompressJs);
@@ -123,12 +129,7 @@ class AssetCompressor
 		}
 		else // others just copy
 		{
-			fs.copyFile(itemInputPath, itemOutputPath, (error) => {
-				if (error)
-				{
-					console.log("File copy error: " + error)
-				}
-			});
+			this.CopyFile(itemInputPath, itemOutputPath)
 		}
 	}
 
@@ -167,10 +168,10 @@ class AssetCompressor
 		let noExtensionPath = Utils.RemoveExtension(outputPath)
 
 		let imageConfig = this.SiteConfig.AssetConfig.ImageConfig;
-		let imageFormats = imageConfig.ImageFormats_Outputs;
-		let imageSizes = imageConfig.ImageSizes;
+		let imageFormats = imageConfig.OutputFormats;
+		let horizontalResGroups = imageConfig.HorizontalResolutionsGroups;
 
-		let outputFilePath = noExtensionPath + "_" + imageSizes[0] + imageFormats[0];
+		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + "." + imageFormats[0];
 
 		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
 		{
@@ -188,10 +189,10 @@ class AssetCompressor
 
 				let width = metadata.width
 
-				let outputRezIndex = imageSizes.length - 1
-				while (width < imageSizes[outputRezIndex])
+				let outputRezIndex = horizontalResGroups.length - 1
+				while (width < horizontalResGroups[outputRezIndex])
 				{
-					let outputPath = noExtensionPath + "_" + imageSizes[outputRezIndex] + imageFormats[f];
+					let outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
 
 					sharp(inputPath)
 						.toFile(outputPath, (error, info) =>
@@ -209,9 +210,9 @@ class AssetCompressor
 				let newWidth = width;
 				while (outputRezIndex >= 0)
 				{
-					if (newWidth < imageSizes[outputRezIndex])
+					if (newWidth < horizontalResGroups[outputRezIndex])
 					{
-						outputPath = noExtensionPath + "_" + imageSizes[outputRezIndex] + imageFormats[f];
+						outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
 
 						sharp(inputPath)
 							.resize(width)
@@ -235,6 +236,62 @@ class AssetCompressor
 		});
 	}
 
+	CompressVideo(inputPath, outputPath)
+	{
+		this.CopyFile(inputPath, outputPath)
+
+		// todo add this back
+		// this was removed because converting the videos was taking to many resources on the github actions jobs
+		// there is a limit of 7gb per job and this was using 15gb when ran locally
+
+		// let noExtensionPath = Utils.RemoveExtension(outputPath)
+
+		// let videoConfig = this.SiteConfig.AssetConfig.VideoConfig;
+		// let outputFormats = videoConfig.OutputFormats;
+		// let horizontalResGroups = videoConfig.HorizontalResolutionsGroups;
+
+		// let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + "." + outputFormats[0];
+
+		// if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
+		// {
+		// 	return;
+		// }
+
+		// for (let r = 0; r < horizontalResGroups.length; r++)
+		// {
+		// 	for (let f = 0; f < outputFormats.length; f++)
+		// 	{
+		// 		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[r] + "." + outputFormats[f];
+
+		// 		let ffmpeg = ffmpegCommand(inputPath);
+		// 		ffmpeg.addOption('-threads', 2);
+
+		// 		ffmpeg.withAudioChannels(1);
+		// 		ffmpeg.audioBitrate('128k');
+
+		// 		ffmpeg.videoCodec('libx264');
+		// 		ffmpeg.addOption('-x264opts', 'keyint=24:min-keyint=24:no-scenecut')
+		// 		ffmpeg.videoBitrate('4000k');
+
+		// 		ffmpeg.output(outputFilePath);
+		// 		ffmpeg.on('error', function(error)
+		// 		{
+		// 			console.log("Error "+error.message+" converting video: " + inputPath + " to " + outputFormats[f]);
+		// 		});
+		// 		ffmpeg.run();
+		// 	}
+		// }
+	}
+
+	CopyFile(inputPath, outputPath)
+	{
+		fs.copyFile(inputPath, outputPath, (error) => {
+			if (error)
+			{
+				console.log("File copy error: " + error)
+			}
+		});
+	}
 }
 
 
