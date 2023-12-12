@@ -165,6 +165,17 @@ for (const projectKey of projects)
 headerStart = new Date(headerStart.getFullYear(), 0, 1);
 headerEnd = new Date(headerEnd.getFullYear() + 1, 0, 1);
 
+if (TimelineData.HeaderStartOverride)
+{
+	headerStart = TimelineData.HeaderStartOverride;
+}
+
+if (TimelineData.HeaderEndOverride)
+{
+	headerEnd = TimelineData.HeaderEndOverride;
+}
+
+
 const headerDays = GetDelta(headerStart, headerEnd);
 
 
@@ -265,8 +276,13 @@ for (const projectKey of projects)
 
 			<%
 			const project = PageData.Projects[projectKey];
-			const startDate = GetDateWithCurrent(project.StartDate);
+			let startDate = GetDateWithCurrent(project.StartDate);
 			const endDate = GetDateWithCurrent(project.EndDate);
+
+			if (startDate < headerStart)
+			{
+				startDate = headerStart;
+			}
 
 			const offset = GetDelta(headerStart, startDate);
 			const duration = GetDelta(startDate, endDate);
@@ -305,24 +321,29 @@ for (const projectKey of projects)
 						const duration = GetDelta(subStartDate, subEndDate);
 						%>
 						<!-- date range -->
-						<div class="line" style="--dateOffset: <%=subStartDateOffset %>; --duration: <%=duration %>;"></div>
 
-						<div class="tick large" style="--dateOffset: <%= subStartDateOffset %>;">
-							<%if (showEventStartEndDates){%>
-								<h5><%= FormatDateFromStr(timeline.StartDate) %></h5>
-							<%}%>
-							<%if (showEventStartName && timeline.Name){%>
-								<h5><%= timeline.Name %></h5>
-							<%}%>
+						<%if (subEndDate >= headerStart && subEndDate <= headerEnd){%>
+							<div class="line" style="--dateOffset: <%=subStartDateOffset %>; --duration: <%=duration %>;"></div>
+							<div class="tick large <%if (timeline.EndDate == "Current"){%>current<%}%>" style="--dateOffset: <%= subEndDateOffset %>;">
+								<%if (showEventStartEndDates){%>
+									<h5><%= FormatDateFromStr(timeline.EndDate) %></h5>
+								<%}%>
+							</div>
+						<%}%>
 
-						</div>
+						<%if (subStartDate >= headerStart && subStartDate <= headerEnd){%>
+							<div class="tick large" style="--dateOffset: <%= subStartDateOffset %>;">
+								<%if (showEventStartEndDates){%>
+									<h5><%= FormatDateFromStr(timeline.StartDate) %></h5>
+								<%}%>
+								<%if (showEventStartName && timeline.Name){%>
+									<h5><%= timeline.Name %></h5>
+								<%}%>
+							</div>
+						<%}%>
 
 
-						<div class="tick large <%if (timeline.EndDate == "Current"){%>current<%}%>" style="--dateOffset: <%= subEndDateOffset %>;">
-							<%if (showEventStartEndDates){%>
-								<h5><%= FormatDateFromStr(timeline.EndDate) %></h5>
-							<%}%>
-						</div>
+
 
 					<%}else{%>
 						<!-- single day date -->

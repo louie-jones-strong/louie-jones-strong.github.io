@@ -64,7 +64,8 @@
 
 				<%- include(PageData.PathToRoot+'Components/Timeline', {PageData: PageData, TimelineData: {
 						Projects: ["LSWB", "Degree", "EnglishTutor", "MathsTutor"],
-						ShowEventStartName: false
+						ShowEventStartName: true,
+						HeaderStartOverride: new Date(2018, 6, 1),
 					}}); %>
 
 
