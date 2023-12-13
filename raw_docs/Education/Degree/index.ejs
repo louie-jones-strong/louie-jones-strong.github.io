@@ -27,14 +27,17 @@
 
 			<div class="centeredFrame">
 				<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
-				<h3 class="center reveal fromBottom">BSc Computer Science <br> (Machine Learning and Artificial Intelligence)</h3>
+				<h3 class="center reveal fromBottom">
+					Bachelor of Science in<br>
+					Machine Learning and Artificial Intelligence
+				</h3>
 				<h4 class="center reveal fromBottom">From the <a href="https://www.london.ac.uk/" target="_blank">University of London</a></h4>
 
 				<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 				<!-- 3rd year -->
 				<h2 class="center reveal Bottom">Year 3:</h2>
-				<%- include(PageData.PathToRoot+"Components/QuickInfo", {QuickInfoData: {Awards: "On Track for: First Class", StartDate: "October 2022"}}); %>
+				<%- include(PageData.PathToRoot+"Components/QuickInfo", {QuickInfoData: {Awards: "First Class", StartDate: "October 2022"}}); %>
 				<p class="center reveal fromBottom">
 					For my final year of university I stopped working to allow me to spend my full time on my degree to help maintain a healthy life balance.</p>
 				<div class="cardHolder">
