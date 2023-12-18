@@ -55,6 +55,7 @@ class PageBuilder
 			SiteConfig: this.SiteConfig,
 			Projects: this.ProjectConfig,
 			Icons: this.IconsConfig,
+			CurrentDate: new Date().toISOString().slice(0, 10)
 		}
 
 		this.RenderFile(sourceFilePath, outputFilePath, config);

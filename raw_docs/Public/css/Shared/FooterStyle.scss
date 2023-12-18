@@ -25,7 +25,17 @@ footer{
 	transform: scale(1.25);
 }
 
-#copyRight{
+#smallPrint{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+#smallPrint>*{
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	padding-left: 1em;
