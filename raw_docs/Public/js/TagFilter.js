@@ -3,7 +3,6 @@ class TagFilter
 //#region Init
 	constructor(holderId, tags)
 	{
-		console.log("TagFilter constructor holderId: ", holderId);
 		this.Tags = tags;
 		this.HolderId = holderId;
 		this.FilterOptionsId = holderId + "-Options";
