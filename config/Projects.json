@@ -1352,6 +1352,65 @@
 		},
 		"SubProjects": []
 	},
+	"Talks": {
+		"Title": "Talks",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"Name": null,
+				"StartDate": "March 5, 2024",
+				"EndDate": null
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": true,
+		"Hide": false,
+		"Tags": "Solo Work",
+		"Skills": [
+		],
+		"Links": {
+		},
+		"SubProjects": [
+			"AITalks"
+		]
+	},
+	"AITalks": {
+		"Title": "AI Talks",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"Name": null,
+				"StartDate": "March 5, 2024",
+				"EndDate": null
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": true,
+		"Hide": false,
+		"Tags": "Solo Work",
+		"Skills": [
+			"Python",
+			"Git",
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"Tensorflow",
+			"scikitlearn"
+		],
+		"Links": {
+		},
+		"SubProjects": []
+	},
 
 
 
@@ -1856,7 +1915,7 @@
 		"QuickDescription": "Collection of cards I have made for different occasions, in blender.",
 		"PagePath": "cards/index",
 		"Link": null,
-		"HideLink": true,
+		"HideLink": false,
 		"Hide": false,
 		"Tags": "Solo Art",
 		"Skills": [
@@ -1880,7 +1939,7 @@
 		"QuickDescription": "Cards I have made of landscapes, in blender.",
 		"PagePath": "cards/landscape/index",
 		"Link": null,
-		"HideLink": true,
+		"HideLink": false,
 		"Hide": false,
 		"Tags": "Solo Art",
 		"Skills": [
@@ -1901,7 +1960,7 @@
 		"QuickDescription": "Cards I have made for Christmas, in blender.",
 		"PagePath": "cards/xmas/index",
 		"Link": null,
-		"HideLink": true,
+		"HideLink": false,
 		"Hide": false,
 		"Tags": "Solo Art",
 		"Skills": [
