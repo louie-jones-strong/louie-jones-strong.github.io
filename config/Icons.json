@@ -88,5 +88,10 @@
 		"IconPath": "Public/Assets/Icons/scikitlearn",
 		"Label": "scikit-learn",
 		"ClassList": ""
+	},
+	"Golang":{
+		"IconPath": "Public/Assets/Icons/golang",
+		"Label": "Go",
+		"ClassList": ""
 	}
 }
