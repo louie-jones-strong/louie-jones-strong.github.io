@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+		<div class="centeredFrame">
+			<h1 class="reveal fromBottom center"><%=ProjectData.Title %></h1>
+
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+	</div>
+</body>
+</html>

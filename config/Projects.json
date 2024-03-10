@@ -42,6 +42,7 @@
 			"MediaStudio",
 			"Minesweeper",
 			"FinalProject",
+			"Talks",
 			"MonsterMash",
 			"looking-for-eden",
 			"RougeClicker",
@@ -1354,7 +1355,7 @@
 	},
 	"Talks": {
 		"Title": "Talks",
-		"Thumbnail": null,
+		"Thumbnail": "Public/Assets/Talks/talks",
 		"Timelines": [
 			{
 				"Name": null,
@@ -1366,7 +1367,7 @@
 		"NumPeople": 1,
 		"Awards": null,
 		"QuickDescription": "",
-		"PagePath": null,
+		"PagePath": "Talks",
 		"Link": null,
 		"HideLink": true,
 		"Hide": false,
@@ -1376,45 +1377,8 @@
 		"Links": {
 		},
 		"SubProjects": [
-			"AITalks"
 		]
 	},
-	"AITalks": {
-		"Title": "AI Talks",
-		"Thumbnail": null,
-		"Timelines": [
-			{
-				"Name": null,
-				"StartDate": "March 5, 2024",
-				"EndDate": null
-			}
-		],
-		"TimeSpent": null,
-		"NumPeople": 1,
-		"Awards": null,
-		"QuickDescription": "",
-		"PagePath": null,
-		"Link": null,
-		"HideLink": true,
-		"Hide": false,
-		"Tags": "Solo Work",
-		"Skills": [
-			"Python",
-			"Git",
-			"HTML",
-			"CSS",
-			"JavaScript",
-			"Tensorflow",
-			"scikitlearn"
-		],
-		"Links": {
-		},
-		"SubProjects": []
-	},
-
-
-
-
 	"BlenderProjects": {
 		"Title": "24 Hour Blender Challenge",
 		"Thumbnail": "Public/Assets/BlenderProjects/Images/blender_6",
