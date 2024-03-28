@@ -63,7 +63,7 @@
 				</Div>
 
 				<%- include(PageData.PathToRoot+'Components/Timeline', {PageData: PageData, TimelineData: {
-						Projects: ["LSWB", "Degree", "EnglishTutor", "MathsTutor", "BusinessConsulting"],
+						Projects: ["odyssey", "Degree", "EnglishTutor", "MathsTutor", "BusinessConsulting"],
 						ShowEventStartName: true,
 						HeaderStartOverride: new Date(2018, 6, 1),
 					}}); %>
@@ -74,7 +74,7 @@
 				<!-- work -->
 				<h2 id="Work" class="center reveal fromBottom">Work:</h2>
 				<div class="cardHolder">
-					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["LSWB"]}}); %>
+					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["odyssey"]}}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["EnglishTutor"]}}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["MathsTutor"]}}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {PageData:PageData, CardData: {ProjectData: PageData.Projects["BusinessConsulting"]}}); %>

@@ -31,7 +31,8 @@
 			"Docker",
 			"Latex",
 			"Tensorflow",
-			"scikitlearn"
+			"scikitlearn",
+			"Golang"
 		],
 		"Links": {
 		},
@@ -1219,8 +1220,7 @@
 	},
 
 
-
-	"LSWB": {
+	"odyssey": {
 		"Title": "TT Odyssey",
 		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
 		"Timelines": [
@@ -1252,6 +1252,28 @@
 		],
 		"TimeSpent": null,
 		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "My time at TT Odyssey.",
+		"PagePath": "odyssey",
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Work Game",
+		"Skills": [],
+		"Links": {},
+		"SubProjects": [
+			"LSWB",
+			"odyssey_GameJams",
+			"odyssey_project1",
+			"odyssey_project2"
+		]
+	},
+	"LSWB": {
+		"Title": "LEGO® Star Wars™ Battles",
+		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
+		"Timelines": [],
+		"TimeSpent": null,
+		"NumPeople": null,
 		"Awards": "Develop Star: Best Mobile Game",
 		"QuickDescription": "My time at TT Odyssey working on LEGO® Star Wars™ Battles.",
 		"PagePath": "LSWB",
@@ -1276,6 +1298,74 @@
 		},
 		"SubProjects": []
 	},
+	"odyssey_GameJams": {
+		"Title": "Next Project Prototyping",
+		"Thumbnail": null,
+		"Timelines": [],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Work Game",
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Git"
+		],
+		"Links": {},
+		"SubProjects": []
+	},
+	"odyssey_project1": {
+		"Title": "NDA Project 1",
+		"Thumbnail": null,
+		"Timelines": [],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Work Game",
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Git",
+			"Python"
+		],
+		"Links": {},
+		"SubProjects": []
+	},
+	"odyssey_project2": {
+		"Title": "NDA Project 2",
+		"Thumbnail": null,
+		"Timelines": [],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Work Game",
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Golang",
+			"Git",
+			"Docker"
+		],
+		"Links": {},
+		"SubProjects": []
+	},
+
+
 	"EnglishTutor": {
 		"Title": "English Tutor",
 		"Thumbnail": "Public/Assets/EnglishTutor/thumbnail",
