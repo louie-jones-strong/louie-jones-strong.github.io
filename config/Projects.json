@@ -2,8 +2,7 @@
 	"Home": {
 		"Title": "Louie Jones-Strong",
 		"Thumbnail": "Public/Assets/PortfolioProject/Thumbnail",
-		"Timelines": [
-		],
+		"Timelines": [],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
@@ -34,8 +33,7 @@
 			"scikitlearn",
 			"Golang"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": [
 			"BlenderProjects",
 			"EPQProject",
@@ -50,12 +48,10 @@
 			"DrPlantenstein"
 		]
 	},
-
 	"personal": {
 		"Title": "Personal",
 		"Thumbnail": null,
-		"Timelines": [
-		],
+		"Timelines": [],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
@@ -65,19 +61,14 @@
 		"HideLink": true,
 		"Hide": true,
 		"Tags": "",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
-
 	"Education": {
 		"Title": "Education",
 		"Thumbnail": null,
-		"Timelines": [
-		],
+		"Timelines": [],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
@@ -102,15 +93,13 @@
 			"scikitlearn",
 			"Java"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": [
 			"GCSEs",
 			"ALevels",
 			"Degree"
 		]
 	},
-
 	"GCSEs": {
 		"Title": "GCSEs",
 		"Thumbnail": null,
@@ -129,10 +118,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": [
 			"LawGCSE",
 			"MathsGCSE",
@@ -162,10 +149,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"MathsGCSE": {
@@ -186,10 +171,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"ICTGCSE": {
@@ -210,10 +193,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"AdditionalScienceGCSE": {
@@ -234,10 +215,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"FurtherAdditionalScienceGCSE": {
@@ -258,10 +237,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"EnglishGCSE": {
@@ -282,10 +259,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"ComputingGCSE": {
@@ -306,10 +281,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"PerformingArtsProductionGCSE": {
@@ -330,13 +303,10 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
-
 	"ALevels": {
 		"Title": "A Levels",
 		"Thumbnail": null,
@@ -362,8 +332,7 @@
 			"Python",
 			"Tensorflow"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": [
 			"EPQProject",
 			"PhysicsALevel",
@@ -391,12 +360,9 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
 	"PhysicsALevel": {
 		"Title": "Physics",
@@ -416,10 +382,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"MathsALevel": {
@@ -440,10 +404,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"ComputerScienceALevel": {
@@ -469,8 +431,7 @@
 			"Git",
 			"Java"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": []
 	},
 	"HeadBoyALevel": {
@@ -491,10 +452,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Education",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"EPQProject": {
@@ -519,11 +478,9 @@
 			"Python",
 			"Tensorflow"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": []
 	},
-
 	"Degree": {
 		"Title": "Degree",
 		"Thumbnail": null,
@@ -556,8 +513,7 @@
 			"Tensorflow",
 			"scikitlearn"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": [
 			"IntroToProgramming1",
 			"DiscreteMaths",
@@ -605,10 +561,8 @@
 		"Skills": [
 			"JavaScript"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"DiscreteMaths": {
 		"Title": "Discrete Mathematics",
@@ -628,12 +582,9 @@
 		"HideLink": true,
 		"Hide": false,
 		"Tags": "Education Degree Solo",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
 	"FundamentalsOfComputerScience": {
 		"Title": "Fundamentals Of Computer Science",
@@ -653,12 +604,9 @@
 		"HideLink": true,
 		"Hide": false,
 		"Tags": "Education Degree Solo",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
 	"HowComputersWork": {
 		"Title": "How Computers Work",
@@ -678,12 +626,9 @@
 		"HideLink": true,
 		"Hide": false,
 		"Tags": "Education Degree Solo",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
 	"IntroToProgramming2": {
 		"Title": "Introduction To Programming II",
@@ -708,10 +653,8 @@
 			"HTML",
 			"CSS"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"ComputationalMaths": {
 		"Title": "Computational Mathematics",
@@ -731,12 +674,9 @@
 		"HideLink": true,
 		"Hide": false,
 		"Tags": "Education Degree Solo",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
 	"AlgorithmsAndDataStructures1": {
 		"Title": "Algorithms And Data Structures I",
@@ -759,10 +699,8 @@
 		"Skills": [
 			"JavaScript"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"WebDevelopment": {
 		"Title": "Web Development",
@@ -788,12 +726,9 @@
 			"CSS",
 			"Git"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
-
 	"ObjectOrientedProgramming": {
 		"Title": "Object Oriented Programming",
 		"Thumbnail": null,
@@ -815,10 +750,8 @@
 		"Skills": [
 			"CPlusPlus"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"SoftwareDesignAndDevelopment": {
 		"Title": "Software Design And Development",
@@ -843,10 +776,8 @@
 			"Python",
 			"Git"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"AgileSoftwareProjects": {
 		"Title": "Agile Software Projects",
@@ -874,10 +805,8 @@
 			"Git",
 			"SQL"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"DatabasesNetworksAndTheWeb": {
 		"Title": "Databases, Networks And The Web",
@@ -905,10 +834,8 @@
 			"CSS",
 			"SQL"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"ProgrammingWithData": {
 		"Title": "Programming With Data",
@@ -932,10 +859,8 @@
 			"Python",
 			"SQL"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"ComputerSecurity": {
 		"Title": "Computer Security",
@@ -955,12 +880,9 @@
 		"HideLink": true,
 		"Hide": false,
 		"Tags": "Education Degree Solo",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
 	"GraphicsProgramming": {
 		"Title": "Graphics Programming",
@@ -983,10 +905,8 @@
 		"Skills": [
 			"JavaScript"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"AlgorithmsAndDataStructures2": {
 		"Title": "Algorithms And Data Structures II",
@@ -1010,12 +930,9 @@
 			"CPlusPlus",
 			"Python"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
-
 	"DatabasesAndAdvancedDataTechniques": {
 		"Title": "Databases And Advanced Data Techniques",
 		"Thumbnail": null,
@@ -1040,10 +957,8 @@
 			"JavaScript",
 			"SQL"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"MachineLearningAndNeuralNetworks": {
 		"Title": "Machine Learning And Neural Networks",
@@ -1068,10 +983,8 @@
 			"Tensorflow",
 			"scikitlearn"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"ArtificialIntelligence": {
 		"Title": "Artificial Intelligence",
@@ -1096,10 +1009,8 @@
 			"Tensorflow",
 			"scikitlearn"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"IntelligentSignalProcessing": {
 		"Title": "Intelligent Signal Processing",
@@ -1125,10 +1036,8 @@
 			"HTML",
 			"CSS"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"NaturalLanguageProcessing": {
 		"Title": "Natural Language Processing",
@@ -1152,10 +1061,8 @@
 			"Python",
 			"scikitlearn"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"DataScience": {
 		"Title": "Data Science",
@@ -1179,10 +1086,8 @@
 			"Python",
 			"scikitlearn"
 		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Links": {},
+		"SubProjects": []
 	},
 	"FinalProject": {
 		"Title": "Dissertation",
@@ -1215,11 +1120,8 @@
 		"Links": {
 			"GithubLink": "https://github.com/louie-jones-strong/DECAF"
 		},
-		"SubProjects": [
-		]
+		"SubProjects": []
 	},
-
-
 	"odyssey": {
 		"Title": "TT Odyssey",
 		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
@@ -1259,13 +1161,27 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Work Game",
-		"Skills": [],
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"DotNet",
+			"SQL",
+			"Python",
+			"Git",
+			"HTML",
+			"ObjectiveC",
+			"Java",
+			"Docker",
+			"Golang",
+			"CPlusPlus"
+		],
 		"Links": {},
 		"SubProjects": [
 			"LSWB",
 			"odyssey_GameJams",
 			"odyssey_project1",
-			"odyssey_project2"
+			"odyssey_project2",
+			"odyssey_GraphicsCourse"
 		]
 	},
 	"LSWB": {
@@ -1290,8 +1206,7 @@
 			"Git",
 			"HTML",
 			"ObjectiveC",
-			"Java",
-			"Docker"
+			"Java"
 		],
 		"Links": {
 			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
@@ -1305,7 +1220,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "I helped prototype a number of projects at TT Odyssey.",
 		"PagePath": null,
 		"Link": null,
 		"HideLink": false,
@@ -1326,7 +1241,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Worked on currently unannounced project.",
 		"PagePath": null,
 		"Link": null,
 		"HideLink": false,
@@ -1348,7 +1263,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "",
+		"QuickDescription": "Worked on currently unannounced project.",
 		"PagePath": null,
 		"Link": null,
 		"HideLink": false,
@@ -1364,8 +1279,25 @@
 		"Links": {},
 		"SubProjects": []
 	},
-
-
+	"odyssey_GraphicsCourse": {
+		"Title": "Graphics Course",
+		"Thumbnail": null,
+		"Timelines": [],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "I took a course on graphics programming at TT Odyssey.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Work",
+		"Skills": [
+			"CPlusPlus"
+		],
+		"Links": {},
+		"SubProjects": []
+	},
 	"EnglishTutor": {
 		"Title": "English Tutor",
 		"Thumbnail": "Public/Assets/EnglishTutor/thumbnail",
@@ -1384,10 +1316,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Solo Work",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"MathsTutor": {
@@ -1408,10 +1338,8 @@
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Solo Work",
-		"Skills": [
-		],
-		"Links": {
-		},
+		"Skills": [],
+		"Links": {},
 		"SubProjects": []
 	},
 	"BusinessConsulting": {
@@ -1439,8 +1367,7 @@
 			"CSS",
 			"JavaScript"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": []
 	},
 	"Talks": {
@@ -1462,12 +1389,9 @@
 		"HideLink": true,
 		"Hide": false,
 		"Tags": "Solo Work",
-		"Skills": [
-		],
-		"Links": {
-		},
-		"SubProjects": [
-		]
+		"Skills": [],
+		"Links": {},
+		"SubProjects": []
 	},
 	"BlenderProjects": {
 		"Title": "24 Hour Blender Challenge",
@@ -1756,8 +1680,7 @@
 		"Skills": [
 			"Python"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": []
 	},
 	"Minesweeper": {
@@ -1954,15 +1877,10 @@
 		},
 		"SubProjects": []
 	},
-
-
-
-
 	"Cards": {
 		"Title": "Cards",
 		"Thumbnail": null,
-		"Timelines": [
-		],
+		"Timelines": [],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
@@ -1975,8 +1893,7 @@
 		"Skills": [
 			"Blender"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": [
 			"LandscapeCards",
 			"XmasCards"
@@ -1985,8 +1902,7 @@
 	"LandscapeCards": {
 		"Title": "Landscape Cards",
 		"Thumbnail": "Public/Assets/cards/landscape/card1",
-		"Timelines": [
-		],
+		"Timelines": [],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
@@ -1999,15 +1915,13 @@
 		"Skills": [
 			"Blender"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": []
 	},
 	"XmasCards": {
 		"Title": "Christmas Cards",
 		"Thumbnail": "Public/Assets/cards/xmas/card1",
-		"Timelines": [
-		],
+		"Timelines": [],
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
@@ -2020,9 +1934,7 @@
 		"Skills": [
 			"Blender"
 		],
-		"Links": {
-		},
+		"Links": {},
 		"SubProjects": []
 	}
-
 }
