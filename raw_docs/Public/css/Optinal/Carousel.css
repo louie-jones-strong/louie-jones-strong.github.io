@@ -1,6 +1,6 @@
 /* slide Holder */
 
-.slide-holder{
+.slide-holder {
 	position: relative;
 	overflow: hidden;
 	height: fit-content;
@@ -9,7 +9,7 @@
 }
 
 /* slide */
-.slide{
+.slide {
 	object-fit: cover;
 	width: 100%;
 	height: fit-content;
@@ -23,9 +23,9 @@
 }
 
 /* slide  Content */
-.slide > img,
-.slide > picture,
-.slide > video{
+.slide>img,
+.slide>picture,
+.slide>video {
 	max-height: 80vh;
 	object-fit: cover;
 	width: 100%;
@@ -33,20 +33,20 @@
 }
 
 /* slide Transition states */
-.active{
+.active {
 	opacity: 1;
-	position:unset;
+	position: unset;
 }
 
 
-.inactive{
+.inactive {
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
 }
 
 /* slide dot */
-.slide-dot{
+.slide-dot {
 	height: 15px;
 	width: 15px;
 	border-radius: 100%;
@@ -54,18 +54,18 @@
 	transition-duration: 0.5s;
 }
 
-.activeDot{
+.activeDot {
 	background-color: var(--ColourAccent);
 }
 
 
-.inactiveDot{
+.inactiveDot {
 	background-color: var(--DarkenBackground);
 }
 
 
 /* slide captions */
-.slide-caption{
+.slide-caption {
 	position: absolute;
 	bottom: 30px;
 	left: 20px;
@@ -75,9 +75,10 @@
 	text-align: left;
 }
 
-.slide-caption h3{
+.slide-caption h3 {
 	color: var(--LightText);
 }
-.slide-caption p{
+
+.slide-caption p {
 	color: var(--LightText);
 }

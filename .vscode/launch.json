@@ -12,7 +12,10 @@
 				"<node_internals>/**"
 			],
 			"program": "${workspaceFolder}\\src\\BuildSite.js",
-			"args": ["clean", "compress"]
+			"args": [
+				"clean",
+				"compress"
+			]
 		},
 		{
 			"type": "node",
@@ -22,7 +25,10 @@
 				"<node_internals>/**"
 			],
 			"program": "${workspaceFolder}\\src\\BuildSite.js",
-			"args": ["compress", "onlyNew"]
+			"args": [
+				"compress",
+				"onlyNew"
+			]
 		}
 	]
 }

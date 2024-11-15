@@ -1,8 +1,6 @@
-class TagFilter
-{
-//#region Init
-	constructor(holderId, tags)
-	{
+class TagFilter {
+	//#region Init
+	constructor(holderId, tags) {
 		this.Tags = tags;
 		this.HolderId = holderId;
 		this.FilterOptionsId = holderId + "-Options";
@@ -15,28 +13,23 @@ class TagFilter
 		this.Filter();
 	}
 
-	SetupHolderChildren()
-	{
+	SetupHolderChildren() {
 		// add filterable class to all children
 		let holder = document.getElementById(this.HolderId);
-		if (holder == null)
-		{
+		if (holder == null) {
 			console.warn("TagFilter.constructor: holder is null");
 			return;
 		}
 		let items = holder.children;
-		for (let index = 0; index < items.length; index++)
-		{
+		for (let index = 0; index < items.length; index++) {
 			const item = items[index];
 			item.classList.add("filterable");
 		}
 	}
 
-	AddNonShownLabel()
-	{
+	AddNonShownLabel() {
 		let holder = document.getElementById(this.HolderId);
-		if (holder == null)
-		{
+		if (holder == null) {
 			console.warn("TagFilter.constructor: holder is null");
 			return;
 		}
@@ -49,21 +42,18 @@ class TagFilter
 		holder.appendChild(nonShownLabel);
 	}
 
-//#endregion Init
+	//#endregion Init
 
 
 
-	ToggleTag(tag)
-	{
-		if (this.Tags[tag] == null)
-		{
+	ToggleTag(tag) {
+		if (this.Tags[tag] == null) {
 			console.error("TagFilter.ToggleTag: tag not found: ", tag);
 			return;
 		}
 		this.Tags[tag] -= 1;
 
-		if (this.Tags[tag] < -1)
-		{
+		if (this.Tags[tag] < -1) {
 			this.Tags[tag] = 1;
 		}
 
@@ -71,86 +61,69 @@ class TagFilter
 		this.Filter();
 	}
 
-	Filter()
-	{
+	Filter() {
 		let holder = document.getElementById(this.HolderId);
-		if (holder == null)
-		{
+		if (holder == null) {
 			console.warn("TagFilter.Filter: holder is null");
 			return;
 		}
 
 		let numItemsShown = 0;
 		let items = holder.children;
-		for (let index = 0; index < items.length; index++)
-		{
+		for (let index = 0; index < items.length; index++) {
 			const item = items[index];
 			let show = true;
-			if (item.id == this.HolderId + "-NonShown")
-			{
+			if (item.id == this.HolderId + "-NonShown") {
 				continue;
 			}
 
 			let tagsAttribute = item.getAttribute("tags");
-			if (tagsAttribute != null)
-			{
+			if (tagsAttribute != null) {
 				let tags = tagsAttribute.split(" ");
 				show = this.ItemMatches(tags, this.Tags);
 			}
 
 
-			if (show)
-			{
+			if (show) {
 				item.classList.remove("filtered");
 				numItemsShown += 1;
 			}
-			else
-			{
+			else {
 				item.classList.add("filtered");
 			}
 		}
 
 		let nonShownLabel = document.getElementById(this.HolderId + "-NonShown");
-		if (numItemsShown == 0)
-		{
+		if (numItemsShown == 0) {
 			nonShownLabel.classList.remove("filtered");
 		}
-		else
-		{
+		else {
 			nonShownLabel.classList.add("filtered");
 		}
 	}
 
-	ItemMatches(itemTags, filterTags)
-	{
+	ItemMatches(itemTags, filterTags) {
 		let matches = true;
-		if (filterTags.size == 0)
-		{
+		if (filterTags.size == 0) {
 			return matches;
 		}
 
 		let itemTagsSet = new Set(itemTags);
 
-		for (const filterTag in filterTags)
-		{
+		for (const filterTag in filterTags) {
 			let filterValue = filterTags[filterTag];
 
-			if (filterValue == 0)
-			{
+			if (filterValue == 0) {
 				continue;
 			}
-			else if (filterValue == 1)
-			{
-				if (!itemTagsSet.has(filterTag))
-				{
+			else if (filterValue == 1) {
+				if (!itemTagsSet.has(filterTag)) {
 					matches = false;
 					break;
 				}
 			}
-			else if (filterValue == -1)
-			{
-				if (itemTagsSet.has(filterTag))
-				{
+			else if (filterValue == -1) {
+				if (itemTagsSet.has(filterTag)) {
 					matches = false;
 					break;
 				}
@@ -160,43 +133,35 @@ class TagFilter
 		return matches;
 	}
 
-	UpdateToggles()
-	{
+	UpdateToggles() {
 		let options = document.getElementById(this.FilterOptionsId);
-		if (options == null)
-		{
+		if (options == null) {
 			console.warn("TagFilter.UpdateToggles: options is null");
 			return;
 		}
 
 		let items = options.children;
-		for (let index = 0; index < items.length; index++)
-		{
+		for (let index = 0; index < items.length; index++) {
 			const item = items[index];
 			let tag = item.getAttribute("tag");
-			if (tag != null)
-			{
+			if (tag != null) {
 				let tagValue = this.Tags[tag];
-				if (tagValue == 1)
-				{
+				if (tagValue == 1) {
 					item.classList.add("positive");
 					item.classList.remove("neutral");
 					item.classList.remove("negative");
 				}
-				else if (tagValue == 0)
-				{
+				else if (tagValue == 0) {
 					item.classList.remove("positive");
 					item.classList.add("neutral");
 					item.classList.remove("negative");
 				}
-				else if (tagValue == -1)
-				{
+				else if (tagValue == -1) {
 					item.classList.remove("positive");
 					item.classList.remove("neutral");
 					item.classList.add("negative");
 				}
-				else
-				{
+				else {
 					console.error("TagFilter.UpdateToggles: tagValue not found: ", tagValue);
 				}
 			}

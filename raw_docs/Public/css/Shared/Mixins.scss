@@ -1,30 +1,30 @@
 // mixins
 
 
-@mixin shaded($bgColour){
+@mixin shaded($bgColour) {
 
-	box-shadow: 0em 0.125em 0.25em 0 rgba(0,0,0,50%);
+	box-shadow: 0em 0.125em 0.25em 0 rgba(0, 0, 0, 50%);
 	background: linear-gradient(to bottom,
-		mix($bgColour, white, 40%) 0%,
-		$bgColour 50%,
-		mix($bgColour, black, 40%) 100%);
+			mix($bgColour, white, 40%) 0%,
+			$bgColour 50%,
+			mix($bgColour, black, 40%) 100%);
 }
 
 
-@mixin shaded_Top($bgColour){
+@mixin shaded_Top($bgColour) {
 
-	box-shadow: 0em 0.125em 0.25em 0 rgba(0,0,0,50%);
+	box-shadow: 0em 0.125em 0.25em 0 rgba(0, 0, 0, 50%);
 	background: linear-gradient(to bottom,
-		mix($bgColour, white, 40%) 0%,
-		$bgColour 50%,
-		$bgColour 100%);
+			mix($bgColour, white, 40%) 0%,
+			$bgColour 50%,
+			$bgColour 100%);
 }
 
-@mixin shaded_Bottom($bgColour){
+@mixin shaded_Bottom($bgColour) {
 
-	box-shadow: 0em 0.125em 0.25em 0 rgba(0,0,0,50%);
+	box-shadow: 0em 0.125em 0.25em 0 rgba(0, 0, 0, 50%);
 	background: linear-gradient(to bottom,
-		$bgColour 0%,
-		$bgColour 50%,
-		mix($bgColour, black, 40%) 100%);
+			$bgColour 0%,
+			$bgColour 50%,
+			mix($bgColour, black, 40%) 100%);
 }

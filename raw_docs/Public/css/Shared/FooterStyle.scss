@@ -1,17 +1,17 @@
-footer{
-	width:100%;
+footer {
+	width: 100%;
 	padding-top: 100px;
 	overflow-x: hidden;
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
 
-.ContactLinkHolder a{
+.ContactLinkHolder a {
 	text-decoration: none;
 }
 
 
-.brandLogo{
+.brandLogo {
 	width: 2.5em;
 	height: 2.5em;
 	padding: 0.5em;
@@ -21,11 +21,11 @@ footer{
 }
 
 .brandLogo:hover,
-.brandLogo:focus{
+.brandLogo:focus {
 	transform: scale(1.25);
 }
 
-#smallPrint{
+#smallPrint {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -35,7 +35,7 @@ footer{
 	margin: 0px;
 }
 
-#smallPrint>*{
+#smallPrint>* {
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	padding-left: 1em;

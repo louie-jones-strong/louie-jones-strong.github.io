@@ -1,5 +1,5 @@
 /* cardHolder */
-.cardHolder{
+.cardHolder {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -7,7 +7,7 @@
 }
 
 /* card */
-.card{
+.card {
 	width: 100%;
 	max-width: 350px;
 	padding-bottom: 2.5em;
@@ -20,9 +20,9 @@
 	text-decoration: none;
 }
 
-.card > .cardImage,
-.card > img,
-.card > picture{
+.card>.cardImage,
+.card>img,
+.card>picture {
 	width: 100%;
 	height: auto;
 	max-height: 20em;
@@ -31,9 +31,9 @@
 	position: relative;
 }
 
-.cardImage > img,
-.cardImage > picture,
-.cardImage > picture > img{
+.cardImage>img,
+.cardImage>picture,
+.cardImage>picture>img {
 	width: 100%;
 	height: auto;
 	max-height: 14em;
@@ -42,12 +42,12 @@
 	position: relative;
 }
 
-.card p{
+.card p {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-.card h3{
+.card h3 {
 	margin-top: 0.1em;
 	margin-bottom: 0.1em;
 }
@@ -55,47 +55,47 @@
 /* quick info */
 
 
-.card > .cardImage > .quickInfoHolder,
-.card > .cardImage > .quickLinkHolder{
+.card>.cardImage>.quickInfoHolder,
+.card>.cardImage>.quickLinkHolder {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	position: absolute;
 	flex-wrap: nowrap;
 }
 
-.card > .cardImage > .quickInfoHolder{
+.card>.cardImage>.quickInfoHolder {
 	top: 0px;
 }
 
-.card > .cardImage > .quickLinkHolder{
+.card>.cardImage>.quickLinkHolder {
 	bottom: 0px;
 	right: 0px;
 }
 
 /* only hide when not being hovered if this device supports hover state */
 @media (hover: hover) {
-	.card > .cardImage > .quickInfoHolder > .quickInfo{
+	.card>.cardImage>.quickInfoHolder>.quickInfo {
 		transform: translateY(-5em);
 		opacity: 0;
 		transition: opacity 0.35s, transform 0.35s;
 	}
 
-	.card > .cardImage > .quickLinkHolder > .quickInfo{
+	.card>.cardImage>.quickLinkHolder>.quickInfo {
 		transform: translateY(5em);
 		opacity: 0;
 		transition: opacity 0.35s, transform 0.35s;
 	}
 }
 
-.card:hover > .cardImage > .quickInfoHolder > .quickInfo,
-.card:hover > .cardImage > .quickLinkHolder > .quickInfo,
-.card:focus > .cardImage > .quickInfoHolder > .quickInfo,
-.card:focus > .cardImage > .quickLinkHolder > .quickInfo{
+.card:hover>.cardImage>.quickInfoHolder>.quickInfo,
+.card:hover>.cardImage>.quickLinkHolder>.quickInfo,
+.card:focus>.cardImage>.quickInfoHolder>.quickInfo,
+.card:focus>.cardImage>.quickLinkHolder>.quickInfo {
 	opacity: 1;
 	transform: translateY(0px);
 }
 
-.card > .cardImage > .quickInfoHolder > .quickInfo{
+.card>.cardImage>.quickInfoHolder>.quickInfo {
 	padding-top: 5px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
@@ -104,6 +104,6 @@
 }
 
 
-.card > .quickSkills{
+.card>.quickSkills {
 	margin-bottom: 0.5em;
 }

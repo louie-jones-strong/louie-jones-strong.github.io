@@ -1,44 +1,49 @@
 $RevealTime: 1s;
 
 
-.reveal{
-	transition: opacity #{$RevealTime} ease-out, transform #{$RevealTime} ease-out;
+.reveal {
+	transition: opacity #{$RevealTime} ease-out,
+	transform #{$RevealTime} ease-out;
 }
 
-.reveal.hidden{
+.reveal.hidden {
 	opacity: 0;
 }
 
-.reveal.hidden.fromLeft{
+.reveal.hidden.fromLeft {
 	transform: translateX(-15vw);
 }
 
-.reveal.hidden.fromRight{
+.reveal.hidden.fromRight {
 	transform: translateX(15vw);
 }
 
-.reveal.hidden.fromBottom{
+.reveal.hidden.fromBottom {
 	transform: translateY(5vh);
 }
 
-.reveal.hidden.fromTop{
+.reveal.hidden.fromTop {
 	transform: translateY(-5vh);
 }
 
-.reveal.shown{
+.reveal.shown {
 	opacity: 1;
 }
 
 
 @for $i from 2 through 30 {
-	$delay: ($i - 1) * 0.1s;
-	$slow-delay: ($i - 1) * 0.2s;
+	$delay: (
+		$i - 1) * 0.1s;
+	$slow-delay: (
+		$i - 1) * 0.2s;
 
-	.delayRevealChildren > *:nth-child(#{$i}) {
-		transition: opacity #{$RevealTime} ease-out #{$delay}, transform #{$RevealTime} ease-out #{$delay};
+	.delayRevealChildren>*:nth-child(#{$i}) {
+		transition: opacity #{$RevealTime} ease-out #{$delay},
+		transform #{$RevealTime} ease-out #{$delay};
 	}
 
-	.delayRevealChildren.slow > *:nth-child(#{$i}) {
-		transition: opacity #{$RevealTime} ease-out #{$slow-delay}, transform #{$RevealTime} ease-out #{$slow-delay};
+	.delayRevealChildren.slow>*:nth-child(#{$i}) {
+		transition: opacity #{$RevealTime} ease-out #{$slow-delay},
+		transform #{$RevealTime} ease-out #{$slow-delay};
 	}
 }

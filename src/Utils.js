@@ -1,8 +1,7 @@
 
 const fs = require('fs');
 
-function TryMakeDir(path)
-{
+function TryMakeDir(path) {
 	try {
 		fs.mkdirSync(path)
 	} catch (err) {
@@ -10,19 +9,16 @@ function TryMakeDir(path)
 	}
 }
 
-function RemoveExtension(path)
-{
+function RemoveExtension(path) {
 	let filePath = path;
 	let lastDotIndex = path.lastIndexOf(".");
-	if (lastDotIndex >= 0)
-	{
+	if (lastDotIndex >= 0) {
 		filePath = path.slice(0, lastDotIndex);
 	}
 	return filePath
 }
 
-function MakePathRelative(fullPath)
-{
+function MakePathRelative(fullPath) {
 	let rootPath = process.cwd();
 	let path = fullPath.replace(rootPath, "");
 

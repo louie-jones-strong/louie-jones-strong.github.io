@@ -1,21 +1,21 @@
 {
-  "name": "precompiledpages",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha",
-    "PreTests": "mocha --grep BuiltTests* -i",
-    "PostTests": "mocha --grep BuiltTests*"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "sass": "^1.55.0",
-    "sharp": "^0.31.0",
-    "mocha": "^9.2.1",
-	"fluent-ffmpeg": "^2.1.2",
-	"ffmpeg-static": "^4.4.0"
-  }
+	"name": "precompiledpages",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha",
+		"PreTests": "mocha --grep BuiltTests* -i",
+		"PostTests": "mocha --grep BuiltTests*"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"ejs": "^3.1.10",
+		"sass": "^1.55.0",
+		"sharp": "^0.31.0",
+		"mocha": "^9.2.1",
+		"fluent-ffmpeg": "^2.1.2",
+		"ffmpeg-static": "^4.4.0"
+	}
 }

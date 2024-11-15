@@ -6,10 +6,8 @@ const fs = require('fs');
 const Compressor = require('./AssetCompressor.js');
 const Utils = require('./Utils.js');
 
-class PageBuilder
-{
-	constructor(isRelease, compress, pathToRoot, siteConfig, projectConfig, iconsConfig)
-	{
+class PageBuilder {
+	constructor(isRelease, compress, pathToRoot, siteConfig, projectConfig, iconsConfig) {
 		this.IsRelease = isRelease;
 		this.Compress = compress;
 		this.PathToRoot = pathToRoot;
@@ -20,8 +18,7 @@ class PageBuilder
 
 	}
 
-	BuildPage(pagePath, config)
-	{
+	BuildPage(pagePath, config) {
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_ViewsFolder, pagePath);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder, pagePath);
 
@@ -31,8 +28,7 @@ class PageBuilder
 
 		// check is file
 		let stat = fs.statSync(sourceFilePath);
-		if (!stat.isFile())
-		{
+		if (!stat.isFile()) {
 			console.error("Cannot build folder: " + sourceFilePath);
 			return;
 		}
@@ -61,38 +57,35 @@ class PageBuilder
 		this.RenderFile(sourceFilePath, outputFilePath, config);
 	}
 
-	RenderFile(sourceFile, outputFile, config)
-	{
+	RenderFile(sourceFile, outputFile, config) {
 		console.log(Utils.MakePathRelative(sourceFile), "->", Utils.MakePathRelative(outputFile));
 
 		let compress = this.Compress;
 
 		//render selected file
 		ejs.renderFile(sourceFile, config,
-			function(renderError, builtHtml) {
-
-			// error handling
-			if (renderError)
-			{
-				console.error(renderError);
-				return;
-			}
-
-
-			if (compress)
-				builtHtml = Compressor.CompressHtml(builtHtml);
-
-			// write rendered page to output path
-			fs.writeFile(outputFile, builtHtml, function (fileError) {
+			function (renderError, builtHtml) {
 
 				// error handling
-				if (fileError)
-				{
-					console.error(fileError);
+				if (renderError) {
+					console.error(renderError);
 					return;
 				}
+
+
+				if (compress)
+					builtHtml = Compressor.CompressHtml(builtHtml);
+
+				// write rendered page to output path
+				fs.writeFile(outputFile, builtHtml, function (fileError) {
+
+					// error handling
+					if (fileError) {
+						console.error(fileError);
+						return;
+					}
+				});
 			});
-		});
 	}
 }
 

@@ -1,6 +1,6 @@
-Header{
+Header {
 	width: 100%;
-	z-index:1000;
+	z-index: 1000;
 	height: 0;
 	position: sticky;
 	top: -1px;
@@ -8,55 +8,56 @@ Header{
 	display: flex;
 }
 
-#headerLogo{
+#headerLogo {
 	height: 5em;
 	width: 5em;
-	border-bottom-right-radius:1.5em;
+	border-bottom-right-radius: 1.5em;
 	overflow: hidden;
 }
-#headerLogo > img{
+
+#headerLogo>img {
 	height: 5em;
 	width: 5em;
 }
 
-nav{
+nav {
 	padding-left: 5em;
 	height: 4em;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: right;
-	background: linear-gradient(
-		rgba(var(--BackgroundColour-RGB), 0.6) 0%,
-		rgba(var(--BackgroundColour-RGB), 0.4) 65%,
-		rgba(var(--BackgroundColour-RGB), 0) 100%);
+	background: linear-gradient(rgba(var(--BackgroundColour-RGB), 0.6) 0%,
+			rgba(var(--BackgroundColour-RGB), 0.4) 65%,
+			rgba(var(--BackgroundColour-RGB), 0) 100%);
 }
 
-.navLink{
+.navLink {
 	margin-block: 0.25em;
 	margin-inline: 1em;
 	text-decoration: none;
-	text-transform:uppercase;
+	text-transform: uppercase;
 	color: var(--Colour-Text1);
 	font-size: 1.5rem;
 
 
-	text-shadow: 4px 2px 8px var(--BackgroundColour);;
+	text-shadow: 4px 2px 8px var(--BackgroundColour);
+	;
 }
 
 .navLink.selected,
 .navLink:hover,
-.navLink:focus{
+.navLink:focus {
 	text-decoration: underline;
 	text-decoration-thickness: 0.2em;
 }
 
 .navLink:hover,
-.navLink:focus{
+.navLink:focus {
 	text-decoration-color: var(--ColourAccentRGB);
 }
 
-.cvButton{
+.cvButton {
 	height: 1em;
 	padding-inline: 1.5em;
 	padding-block: 1em;
@@ -74,7 +75,7 @@ nav{
 }
 
 .cvButton,
-.cvButton *{
+.cvButton * {
 	color: var(--PositiveColour-Contrast);
 	text-shadow: 1px 2px black;
 	text-decoration: none;
@@ -82,27 +83,27 @@ nav{
 
 
 
-@media only screen and (max-width: 1070px){
-	#headerLogo{
+@media only screen and (max-width: 1070px) {
+	#headerLogo {
 		display: none;
 	}
 
-	nav{
+	nav {
 		padding-left: 0em;
 	}
 }
 
 
 
-@media only screen and (max-width: 775px){
-	.navLink:not(#homeNavLink){
+@media only screen and (max-width: 775px) {
+	.navLink:not(#homeNavLink) {
 		display: none;
 	}
 
 }
 
-@media only screen and (max-width: 150px){
-	.cvButton{
+@media only screen and (max-width: 150px) {
+	.cvButton {
 		display: none;
 	}
 

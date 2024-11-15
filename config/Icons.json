@@ -1,95 +1,95 @@
 {
-	"Unity":{
+	"Unity": {
 		"IconPath": "Public/Assets/Icons/unity",
 		"Label": "Unity",
 		"ClassList": "greyScale"
 	},
-	"Csharp":{
+	"Csharp": {
 		"IconPath": "Public/Assets/Icons/cSharp",
 		"Label": "C#",
 		"ClassList": ""
 	},
-	"CPlusPlus":{
+	"CPlusPlus": {
 		"IconPath": "Public/Assets/Icons/cpp",
 		"Label": "C++",
 		"ClassList": ""
 	},
-	"Python":{
+	"Python": {
 		"IconPath": "Public/Assets/Icons/python",
 		"Label": "Python",
 		"ClassList": ""
 	},
-	"Nodejs":{
+	"Nodejs": {
 		"IconPath": "Public/Assets/Icons/nodejs",
 		"Label": "node.js",
 		"ClassList": ""
 	},
-	"JavaScript":{
+	"JavaScript": {
 		"IconPath": "Public/Assets/Icons/js",
 		"Label": "Java Script",
 		"ClassList": ""
 	},
-	"HTML":{
+	"HTML": {
 		"IconPath": "Public/Assets/Icons/HTML",
 		"Label": "HTML",
 		"ClassList": ""
 	},
-	"CSS":{
+	"CSS": {
 		"IconPath": "Public/Assets/Icons/css",
 		"Label": "CSS",
 		"ClassList": ""
 	},
-	"Blender":{
+	"Blender": {
 		"IconPath": "Public/Assets/Icons/blender",
 		"Label": "Blender",
 		"ClassList": ""
 	},
-	"SQL":{
+	"SQL": {
 		"IconPath": "Public/Assets/Icons/sql",
 		"Label": "SQL",
 		"ClassList": ""
 	},
-	"DotNet":{
+	"DotNet": {
 		"IconPath": "Public/Assets/Icons/dotNet",
 		"Label": ".Net",
 		"ClassList": ""
 	},
-	"Git":{
+	"Git": {
 		"IconPath": "Public/Assets/Icons/Git",
 		"Label": "Git",
 		"ClassList": ""
 	},
-	"ObjectiveC":{
+	"ObjectiveC": {
 		"IconPath": "Public/Assets/Icons/Objective-C",
 		"Label": "Objective C",
 		"ClassList": ""
 	},
-	"Java":{
+	"Java": {
 		"IconPath": "Public/Assets/Icons/java",
 		"Label": "Java",
 		"ClassList": ""
 	},
-	"Docker":{
+	"Docker": {
 		"IconPath": "Public/Assets/Icons/Docker",
 		"Label": "Docker",
 		"ClassList": ""
 	},
-	"Latex":{
+	"Latex": {
 		"IconPath": "Public/Assets/Icons/latex",
 		"Label": "Latex",
 		"ClassList": "greyScale"
 	},
-	"Tensorflow":{
+	"Tensorflow": {
 		"IconPath": "Public/Assets/Icons/tensorflow",
 		"Label": "Tensorflow",
 		"ClassList": ""
 	},
-	"scikitlearn":{
+	"scikitlearn": {
 		"IconPath": "Public/Assets/Icons/scikitlearn",
 		"Label": "scikit-learn",
 		"ClassList": ""
 	},
-	"Golang":{
+	"Golang": {
 		"IconPath": "Public/Assets/Icons/golang",
 		"Label": "Go",
 		"ClassList": ""
