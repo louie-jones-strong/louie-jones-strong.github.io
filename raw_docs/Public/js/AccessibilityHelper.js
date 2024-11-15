@@ -32,28 +32,24 @@ SetGreyScale(GrayScaleIsOn == "on");
 SetFontSize(FontScale);
 
 
-function Reset()
-{
+function Reset() {
 	SetTheme(DefaultTheme == "dark");
 	SetGreyScale(DefaultGrayScale == "on");
 	SetFontSize(DefaultFontSize);
 }
 
 //#region Theme
-function ToggleTheme()
-{
+function ToggleTheme() {
 	let currentTheme = localStorage.getItem("theme");
 
 	SetTheme(currentTheme == "light");
 }
 
-function SetTheme(isDarkTheme)
-{
+function SetTheme(isDarkTheme) {
 	let darkModeIcon = document.getElementById("darkModeIcon");
 	let lightModeIcon = document.getElementById("lightModeIcon");
 
-	if (isDarkTheme)
-	{
+	if (isDarkTheme) {
 		document.body.classList.remove("light");
 		document.body.classList.add("dark");
 
@@ -61,8 +57,7 @@ function SetTheme(isDarkTheme)
 		lightModeIcon.classList.add("hide");
 
 	}
-	else
-	{
+	else {
 		document.body.classList.add("light");
 		document.body.classList.remove("dark");
 
@@ -75,21 +70,18 @@ function SetTheme(isDarkTheme)
 
 
 //#region GreyScale
-function ToggleGreyScale()
-{
+function ToggleGreyScale() {
 	let currentTheme = localStorage.getItem("grayScale");
 
 	SetGreyScale(currentTheme == "off");
 }
 
 
-function SetGreyScale(isOn)
-{
+function SetGreyScale(isOn) {
 	let greyScaleOffIcon = document.getElementById("greyScaleOffIcon");
 	let greyScaleOnIcon = document.getElementById("greyScaleOnIcon");
 
-	if (isOn)
-	{
+	if (isOn) {
 		document.body.classList.add("greyScale");
 
 		if (greyScaleOffIcon != null)
@@ -99,8 +91,7 @@ function SetGreyScale(isOn)
 			greyScaleOnIcon.classList.add("hide");
 
 	}
-	else
-	{
+	else {
 		document.body.classList.remove("greyScale");
 
 		if (greyScaleOffIcon != null)
@@ -116,25 +107,20 @@ function SetGreyScale(isOn)
 
 
 //#region FontSize
-function IncreaseFontSize()
-{
+function IncreaseFontSize() {
 	SetFontSize(FontScale + 0.25);
 }
 
-function DecreaseFontSize()
-{
+function DecreaseFontSize() {
 	SetFontSize(FontScale - 0.25);
 }
 
-function SetFontSize(fontScale)
-{
-	if (fontScale > MaxFontScale)
-	{
+function SetFontSize(fontScale) {
+	if (fontScale > MaxFontScale) {
 		fontScale = MaxFontScale;
 	}
 
-	if (fontScale < MinFontScale)
-	{
+	if (fontScale < MinFontScale) {
 		fontScale = MinFontScale;
 	}
 

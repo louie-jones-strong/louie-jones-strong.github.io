@@ -1,13 +1,12 @@
-
 // filtering
 
-.filterable{
+.filterable {
 	opacity: 1;
 	transition: opacity 0.2s linear, max-width 0.2s linear, max-height 0.2s linear, margin 0.2s linear, border-width 0.2s linear;
 
 }
 
-.filterable.filtered{
+.filterable.filtered {
 	opacity: 0;
 	margin: 0px;
 	max-height: 0px;
@@ -17,7 +16,7 @@
 
 
 
-.FilterOptions{
+.FilterOptions {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -29,8 +28,8 @@
 	border-radius: 1em;
 }
 
-.FilterOptions > *,
-.filterButton *{
+.FilterOptions>*,
+.filterButton * {
 	margin: 0px;
 	padding: 0px;
 	margin-inline: 0.25em;
@@ -40,7 +39,7 @@
 
 
 // filter buttons
-.filterButton{
+.filterButton {
 	border-width: 4px;
 	border-style: solid;
 
@@ -66,7 +65,8 @@
 	opacity: 0.7;
 	cursor: pointer;
 }
-.filterButtonIcons{
+
+.filterButtonIcons {
 	margin-left: -3px;
 	padding: 0px;
 	display: flex;
@@ -78,15 +78,15 @@
 
 	// set background to gradient between positive and negative
 	background: linear-gradient(180deg,
-		var(--PositiveColour) 25%,
-		#555 35%,
-		#555 65%,
-		var(--InvalidColour) 75%);
+			var(--PositiveColour) 25%,
+			#555 35%,
+			#555 65%,
+			var(--InvalidColour) 75%);
 
 	transition: transform 0.2s;
 }
 
-.filterButtonIcons>*{
+.filterButtonIcons>* {
 	padding-block: 0.2em;
 	// color: var(--BackgroundColour);
 	color: var(--Colour-Text1);
@@ -94,28 +94,32 @@
 
 
 
-.filterButton.positive{
+.filterButton.positive {
 	border-color: var(--PositiveColour);
 	color: var(--PositiveColour-Contrast);
 	opacity: 1;
 }
-.filterButton.neutral{
+
+.filterButton.neutral {
 	border-color: #555;
 	color: var(--Colour-Text1);
 	opacity: 0.7;
 }
-.filterButton.negative{
+
+.filterButton.negative {
 	border-color: var(--InvalidColour);
 	color: var(--InvalidColour-Contrast);
 	opacity: 1;
 }
 
-.filterButton.positive>.filterButtonIcons{
+.filterButton.positive>.filterButtonIcons {
 	transform: translateY(33%);
 }
-.filterButton.neutral>.filterButtonIcons{
+
+.filterButton.neutral>.filterButtonIcons {
 	transform: translateY(0%);
 }
-.filterButton.negative>.filterButtonIcons{
+
+.filterButton.negative>.filterButtonIcons {
 	transform: translateY(-33%);
 }

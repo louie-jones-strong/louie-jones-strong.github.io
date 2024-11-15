@@ -3,14 +3,12 @@ const fs = require('fs');
 const sharp = require('sharp');
 const sass = require('sass');
 const Utils = require('./Utils.js');
-const ffmpegCommand  = require('fluent-ffmpeg');
+const ffmpegCommand = require('fluent-ffmpeg');
 
 
 
-class AssetCompressor
-{
-	constructor(compress, onlyCopyNew, pathToRoot, siteConfig, projectConfig, iconsConfig)
-	{
+class AssetCompressor {
+	constructor(compress, onlyCopyNew, pathToRoot, siteConfig, projectConfig, iconsConfig) {
 		this.Compress = compress;
 		this.OnlyCopyNew = onlyCopyNew;
 		this.PathToRoot = pathToRoot;
@@ -21,10 +19,8 @@ class AssetCompressor
 	}
 
 
-	HandleFolder(inputPath, outputPath)
-	{
-		if (this.IsFolderToSkip(inputPath))
-		{
+	HandleFolder(inputPath, outputPath) {
+		if (this.IsFolderToSkip(inputPath)) {
 			console.log("Skip folder: " + inputPath)
 			return;
 		}
@@ -32,17 +28,14 @@ class AssetCompressor
 		Utils.TryMakeDir(outputPath)
 		let self = this;
 
-		fs.readdir(inputPath, function (error, items)
-		{
+		fs.readdir(inputPath, function (error, items) {
 			// error handling
-			if (error)
-			{
+			if (error) {
 				console.log('Unable to scan directory: ' + error);
 				return;
 			}
 
-			for (let i = 0; i < items.length; i++)
-			{
+			for (let i = 0; i < items.length; i++) {
 				let item = items[i];
 
 				let itemInputPath = path.join(inputPath, item);
@@ -50,20 +43,17 @@ class AssetCompressor
 
 
 				let stat = fs.statSync(itemInputPath);
-				if (stat.isFile())
-				{
+				if (stat.isFile()) {
 					self.HandleFile(itemInputPath, itemOutputPath)
 				}
-				else
-				{
+				else {
 					self.HandleFolder(itemInputPath, itemOutputPath)
 				}
 			}
 		});
 	}
 
-	IsFolderToSkip(folderPath)
-	{
+	IsFolderToSkip(folderPath) {
 		let pathStart = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
 		pathStart += path.sep
 		let removedFront = folderPath.replace(pathStart, "");
@@ -75,8 +65,7 @@ class AssetCompressor
 		return noCopyFolders.includes(removedFront)
 	}
 
-	HandleFile(itemInputPath, itemOutputPath)
-	{
+	HandleFile(itemInputPath, itemOutputPath) {
 		if (itemInputPath.endsWith('.png') || itemInputPath.endsWith('.jpg')) // Images
 		{
 			this.CompressImage(itemInputPath, itemOutputPath)
@@ -105,25 +94,21 @@ class AssetCompressor
 
 			let self = this;
 			let result = sass.compile(itemInputPath);
-			fs.writeFile(itemOutputPath, result.css, function (fileError)
-			{
+			fs.writeFile(itemOutputPath, result.css, function (fileError) {
 
 				// error handling
-				if (fileError)
-				{
+				if (fileError) {
 					console.log("Write File: " + fileError);
 					return;
 				}
 
-				if (self.Compress)
-				{
+				if (self.Compress) {
 					self.TextFiles(itemOutputPath, itemOutputPath, CompressCss);
 				}
 			});
 
 		}
-		else if (itemInputPath.endsWith('.ejs') | itemInputPath.endsWith('.html'))
-		{
+		else if (itemInputPath.endsWith('.ejs') | itemInputPath.endsWith('.html')) {
 			// skip these files
 
 		}
@@ -133,29 +118,24 @@ class AssetCompressor
 		}
 	}
 
-	TextFiles(inputPath, outputPath, compressorFunc)
-	{
+	TextFiles(inputPath, outputPath, compressorFunc) {
 		// if (fs.existsSync(outputPath) && this.OnlyCopyNew)
 		// {
 		// 	return;
 		// }
 
-		fs.readFile(inputPath, 'utf8', function(fileError, data)
-		{
-			if (fileError)
-			{
+		fs.readFile(inputPath, 'utf8', function (fileError, data) {
+			if (fileError) {
 				console.log("Read File: " + fileError);
 				return;
 			}
 
 			data = compressorFunc(data)
 
-			fs.writeFile(outputPath, data, function (fileError)
-			{
+			fs.writeFile(outputPath, data, function (fileError) {
 
 				// error handling
-				if (fileError)
-				{
+				if (fileError) {
 					console.log("Write File: " + fileError);
 					return;
 				}
@@ -163,8 +143,7 @@ class AssetCompressor
 		});
 	}
 
-	CompressImage(inputPath, outputPath)
-	{
+	CompressImage(inputPath, outputPath) {
 		let noExtensionPath = Utils.RemoveExtension(outputPath)
 
 		let imageConfig = this.SiteConfig.AssetConfig.ImageConfig;
@@ -173,71 +152,59 @@ class AssetCompressor
 
 		let outputFilePath = noExtensionPath + "_" + horizontalResGroups[0] + "." + imageFormats[0];
 
-		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew)
-		{
+		if (fs.existsSync(outputFilePath) && this.OnlyCopyNew) {
 			return;
 		}
 
 
 		sharp(inputPath)
 			.metadata()
-			.then(function(metadata)
-		{
+			.then(function (metadata) {
 
-			for (let f = 0; f < imageFormats.length; f++)
-			{
+				for (let f = 0; f < imageFormats.length; f++) {
 
-				let width = metadata.width
+					let width = metadata.width
 
-				let outputRezIndex = horizontalResGroups.length - 1
-				while (width < horizontalResGroups[outputRezIndex])
-				{
-					let outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
-
-					sharp(inputPath)
-						.toFile(outputPath, (error, info) =>
-					{
-						if (error)
-						{
-							console.error("Image Convert Error: " + error)
-						}
-					});
-
-					outputRezIndex -= 1;
-				}
-
-
-				let newWidth = width;
-				while (outputRezIndex >= 0)
-				{
-					if (newWidth < horizontalResGroups[outputRezIndex])
-					{
-						outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
+					let outputRezIndex = horizontalResGroups.length - 1
+					while (width < horizontalResGroups[outputRezIndex]) {
+						let outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
 
 						sharp(inputPath)
-							.resize(width)
-							.toFile(outputPath, (error, info) =>
-						{
-							if (error)
-							{
-								console.error("Image Convert Error: " + error)
-							}
-						});
-						width = newWidth;
+							.toFile(outputPath, (error, info) => {
+								if (error) {
+									console.error("Image Convert Error: " + error)
+								}
+							});
+
 						outputRezIndex -= 1;
 					}
-					else
-					{
-						width = newWidth;
-						newWidth = Math.round(newWidth * 0.5);
+
+
+					let newWidth = width;
+					while (outputRezIndex >= 0) {
+						if (newWidth < horizontalResGroups[outputRezIndex]) {
+							outputPath = noExtensionPath + "_" + horizontalResGroups[outputRezIndex] + "." + imageFormats[f];
+
+							sharp(inputPath)
+								.resize(width)
+								.toFile(outputPath, (error, info) => {
+									if (error) {
+										console.error("Image Convert Error: " + error)
+									}
+								});
+							width = newWidth;
+							outputRezIndex -= 1;
+						}
+						else {
+							width = newWidth;
+							newWidth = Math.round(newWidth * 0.5);
+						}
 					}
 				}
-			}
-		});
+			});
 	}
 
-	CompressVideo(inputPath, outputPath)
-	{
+	CompressVideo(inputPath, outputPath) {
 		this.CopyFile(inputPath, outputPath)
 
 		// todo add this back
@@ -283,11 +250,9 @@ class AssetCompressor
 		// }
 	}
 
-	CopyFile(inputPath, outputPath)
-	{
+	CopyFile(inputPath, outputPath) {
 		fs.copyFile(inputPath, outputPath, (error) => {
-			if (error)
-			{
+			if (error) {
 				console.log("File copy error: " + error)
 			}
 		});
@@ -295,8 +260,7 @@ class AssetCompressor
 }
 
 
-function CompressHtml(text)
-{
+function CompressHtml(text) {
 	// remove comments
 	text = text.replace(/<!--([\s\S]*?)-->/g, '');
 
@@ -308,36 +272,34 @@ function CompressHtml(text)
 	text = text.replace(/[\r\n]/gm, '');
 
 	// remove tabs
-	text = text.replace(/\t/g,'');
+	text = text.replace(/\t/g, '');
 	return text
 }
 
-function CompressCss(text)
-{
+function CompressCss(text) {
 	// remove comments
-	text = text.replace(/\/\*.+?\*\//g,'');
+	text = text.replace(/\/\*.+?\*\//g, '');
 
 	// remove new lines
 	text = text.replace(/[\r\n]/g, '');
 
 	// remove tabs
-	text = text.replace(/\t/g,'');
+	text = text.replace(/\t/g, '');
 
 	// remove spaces
-	text = text.replace(' ','');
+	text = text.replace(' ', '');
 	return text;
 }
 
-function CompressJs(text)
-{
+function CompressJs(text) {
 	// remove comments
-	text = text.replace(/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g,'');
+	text = text.replace(/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g, '');
 
 	// remove new lines
 	text = text.replace(/[\r\n]/gm, ' ');
 
 	// remove tabs
-	text = text.replace(/\t/g,'');
+	text = text.replace(/\t/g, '');
 
 	return text;
 }

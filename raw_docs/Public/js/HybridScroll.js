@@ -5,15 +5,13 @@ window.addEventListener('load', function () {
 	const hybridScrolls = [...document.querySelectorAll('.hybridScroll_Container')];
 
 	window.addEventListener('scroll', (e) => {
-		for(let i = 0; i < hybridScrolls.length; i++)
-		{
+		for (let i = 0; i < hybridScrolls.length; i++) {
 			UpdateScroll(hybridScrolls[i]);
 		}
 	});
 
 	window.addEventListener('resize', (e) => {
-		for(let i = 0; i < hybridScrolls.length; i++)
-		{
+		for (let i = 0; i < hybridScrolls.length; i++) {
 			RefreshSize(hybridScrolls[i]);
 
 			UpdateScroll(hybridScrolls[i]);
@@ -21,8 +19,7 @@ window.addEventListener('load', function () {
 	});
 
 
-	for(let i = 0; i < hybridScrolls.length; i++)
-	{
+	for (let i = 0; i < hybridScrolls.length; i++) {
 		RefreshSize(hybridScrolls[i]);
 
 		UpdateScroll(hybridScrolls[i]);
@@ -32,8 +29,7 @@ window.addEventListener('load', function () {
 
 
 
-function RefreshSize(hybridScrollContainer)
-{
+function RefreshSize(hybridScrollContainer) {
 	var stickyContainer = hybridScrollContainer.querySelector('.hybridScroll_StickyContainer');
 	var horizontalScroll = hybridScrollContainer.querySelector('.hybridScroll_HorizontalScroll');
 
@@ -48,8 +44,7 @@ function RefreshSize(hybridScrollContainer)
 
 
 
-function UpdateScroll(hybridScrollContainer)
-{
+function UpdateScroll(hybridScrollContainer) {
 	var stickyContainer = hybridScrollContainer.querySelector('.hybridScroll_StickyContainer');
 	var horizontalScroll = hybridScrollContainer.querySelector('.hybridScroll_HorizontalScroll');
 
@@ -59,17 +54,14 @@ function UpdateScroll(hybridScrollContainer)
 
 	let multiplierOfScreenSize = horizontalScroll.scrollWidth / window.innerWidth;
 
-	var maxPercentage = multiplierOfScreenSize * 100 -100;
-	if (percentage < 0)
-	{
+	var maxPercentage = multiplierOfScreenSize * 100 - 100;
+	if (percentage < 0) {
 		percentage = 0;
 	}
-	else if (percentage > maxPercentage)
-	{
+	else if (percentage > maxPercentage) {
 		percentage = maxPercentage;
 	}
-	else
-	{
+	else {
 		percentage = percentage;
 	}
 

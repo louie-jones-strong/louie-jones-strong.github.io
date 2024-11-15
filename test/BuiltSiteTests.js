@@ -5,8 +5,7 @@ const utils = require("../src/Utils.js");
 
 
 
-describe("BuiltTests", function ()
-{
+describe("BuiltTests", function () {
 	var siteConfig = require("../config/Site.json");
 	var projects = require("../config/Projects.json");
 	var outDir = siteConfig.Output_ViewsFolder
@@ -19,28 +18,22 @@ describe("BuiltTests", function ()
 		assert.notEqual(projects, null);
 	});
 
-	it("Check CV Download", function ()
-	{
-		if (siteConfig.ContactLinks.CVDownloadAllowed)
-		{
+	it("Check CV Download", function () {
+		if (siteConfig.ContactLinks.CVDownloadAllowed) {
 			assert.ok(fs.existsSync(outDir + "/CV.pdf"));
 		}
-		else
-		{
+		else {
 			assert.ok(!fs.existsSync(outDir + "/CV.pdf"));
 		}
 	});
 
 
-	describe("Check project pages", function ()
-	{
+	describe("Check project pages", function () {
 		assert.ok(projects);
-		for (const projectKey in projects)
-		{
+		for (const projectKey in projects) {
 			var project = projects[projectKey];
-			if (project.PagePath != null)
-			{
-				let pagePath = path.join(outDir, project.PagePath+".html");
+			if (project.PagePath != null) {
+				let pagePath = path.join(outDir, project.PagePath + ".html");
 				CheckPage(pagePath);
 			}
 		}
@@ -48,139 +41,114 @@ describe("BuiltTests", function ()
 
 
 
-	function CheckPage(pagePath)
-	{
-	describe("Check page: " + pagePath, function ()
-	{
-		it("Exists", function ()
-		{
-			let exists = fs.existsSync(pagePath);
-			let message = "Page does not exist: " + pagePath;
-			assert.ok(exists, message);
-		});
-
-		let page = fs.readFileSync(pagePath, "utf8");
-
-		assert.notEqual(page, null);
-
-		describe("Links: " + pagePath, function ()
-		{
-			it("href", function ()
-			{
-				let srcs = FindOccurrences(page, /href="([^"]*)"/g);
-				for (const src of srcs)
-				{
-					let srcPath = src.replace("href=\"", "").replace("\"", "");
-					CheckLocalPath(pagePath, srcPath);
-				}
+	function CheckPage(pagePath) {
+		describe("Check page: " + pagePath, function () {
+			it("Exists", function () {
+				let exists = fs.existsSync(pagePath);
+				let message = "Page does not exist: " + pagePath;
+				assert.ok(exists, message);
 			});
 
-			it("src", function ()
-			{
-				let srcs = FindOccurrences(page, /src="([^"]*)"/g);
-				for (const src of srcs)
-				{
-					let srcPath = src.replace("src=\"", "").replace("\"", "");
-					CheckLocalPath(pagePath, srcPath);
-				}
-			});
+			let page = fs.readFileSync(pagePath, "utf8");
 
-			it("srcset", function ()
-			{
-				let srcsets = FindOccurrences(page, /srcset="([^"]*)"/g);
-				for (const srcset of srcsets)
-				{
-					let srcs = srcset.replace("srcset=\"", "").replace("\"", "").split(",");
-					for (const src of srcs)
-					{
-						let srcPath = src.trim().split(" ")[0];
+			assert.notEqual(page, null);
+
+			describe("Links: " + pagePath, function () {
+				it("href", function () {
+					let srcs = FindOccurrences(page, /href="([^"]*)"/g);
+					for (const src of srcs) {
+						let srcPath = src.replace("href=\"", "").replace("\"", "");
 						CheckLocalPath(pagePath, srcPath);
 					}
-				}
+				});
 
-			});
-		});
+				it("src", function () {
+					let srcs = FindOccurrences(page, /src="([^"]*)"/g);
+					for (const src of srcs) {
+						let srcPath = src.replace("src=\"", "").replace("\"", "");
+						CheckLocalPath(pagePath, srcPath);
+					}
+				});
 
-
-		describe("Text: " + pagePath, function ()
-		{
-			it("alt", function ()
-			{
-				let items = FindOccurrences(page, /alt="([^"]*)"/g);
-				for (const item of items)
-				{
-					let alt = item.replace("alt=\"", "").replace("\"", "");
-					CheckText(alt, "alt", 5, true, false);
-
-				}
-			});
-
-
-			describe("Text Tags: " + pagePath, function ()
-			{
-				let textTypes = [
-					["h1", 5, false, false],
-					["h2", 4, false, false],
-					["h3", 3, false, false],
-					["h4", 4, false, false],
-					["h5", 1, false, false],
-					["h6", 4, false, false],
-					["p", 4, true, true],
-					["a", 4, false, false]];
-
-
-				for (const kvp of textTypes)
-				{
-					let textType = kvp[0];
-					let minLen = kvp[1];
-					let oneWord = kvp[2];
-					let punctuation = kvp[3];
-
-					it(textType, function ()
-					{
-						let items = FindOccurrences(page, new RegExp("<" + textType + "[^>]*>[^<]*</" + textType + ">", "g"));
-						if (items != null)
-						{
-							for (const item of items)
-							{
-								// get only the inner text
-								let text = item.replace(new RegExp("<" + textType + "[^>]*>", "g"), "").replace(new RegExp("</" + textType + ">", "g"), "");
-								context = "(" + textType + ") " + item;
-								CheckText(text, context, minLen, oneWord=oneWord, punctuation=punctuation);
-							}
+				it("srcset", function () {
+					let srcsets = FindOccurrences(page, /srcset="([^"]*)"/g);
+					for (const srcset of srcsets) {
+						let srcs = srcset.replace("srcset=\"", "").replace("\"", "").split(",");
+						for (const src of srcs) {
+							let srcPath = src.trim().split(" ")[0];
+							CheckLocalPath(pagePath, srcPath);
 						}
-					});
-				}
-			});
-		});
+					}
 
-		describe("Images: " + pagePath, function ()
-		{
-			it("Must have alt", function ()
-			{
-				let items = FindOccurrences(page, /<img[^>]*>/g);
-				for (const item of items)
-				{
-					let alt = item.match(/alt="([^"]*)"/g);
-					let message = "Missing alt: " + item;
-					assert.ok(alt, message);
-				}
+				});
 			});
-		});
 
-	});
+
+			describe("Text: " + pagePath, function () {
+				it("alt", function () {
+					let items = FindOccurrences(page, /alt="([^"]*)"/g);
+					for (const item of items) {
+						let alt = item.replace("alt=\"", "").replace("\"", "");
+						CheckText(alt, "alt", 5, true, false);
+
+					}
+				});
+
+
+				describe("Text Tags: " + pagePath, function () {
+					let textTypes = [
+						["h1", 5, false, false],
+						["h2", 4, false, false],
+						["h3", 3, false, false],
+						["h4", 4, false, false],
+						["h5", 1, false, false],
+						["h6", 4, false, false],
+						["p", 4, true, true],
+						["a", 4, false, false]];
+
+
+					for (const kvp of textTypes) {
+						let textType = kvp[0];
+						let minLen = kvp[1];
+						let oneWord = kvp[2];
+						let punctuation = kvp[3];
+
+						it(textType, function () {
+							let items = FindOccurrences(page, new RegExp("<" + textType + "[^>]*>[^<]*</" + textType + ">", "g"));
+							if (items != null) {
+								for (const item of items) {
+									// get only the inner text
+									let text = item.replace(new RegExp("<" + textType + "[^>]*>", "g"), "").replace(new RegExp("</" + textType + ">", "g"), "");
+									context = "(" + textType + ") " + item;
+									CheckText(text, context, minLen, oneWord = oneWord, punctuation = punctuation);
+								}
+							}
+						});
+					}
+				});
+			});
+
+			describe("Images: " + pagePath, function () {
+				it("Must have alt", function () {
+					let items = FindOccurrences(page, /<img[^>]*>/g);
+					for (const item of items) {
+						let alt = item.match(/alt="([^"]*)"/g);
+						let message = "Missing alt: " + item;
+						assert.ok(alt, message);
+					}
+				});
+			});
+
+		});
 	}
 
-	function FindOccurrences(content, regex)
-	{
+	function FindOccurrences(content, regex) {
 		let matches = content.match(regex);
 		return matches;
 	}
 
-	function CheckLocalPath(pagePath, localPath)
-	{
-		if (localPath.startsWith("http"))
-		{
+	function CheckLocalPath(pagePath, localPath) {
+		if (localPath.startsWith("http")) {
 			// todo check that the url exists
 			// check that the url is valid
 			let validRegex = /https?:\/\/[^\s$.?#].[^\s]*$/gm;
@@ -189,8 +157,7 @@ describe("BuiltTests", function ()
 			assert.ok(valid, message);
 
 		}
-		else if (localPath.startsWith("mailto"))
-		{
+		else if (localPath.startsWith("mailto")) {
 			// check that the email is valid
 			let email = localPath.replace("mailto:", "");
 			let validRegex = /\S+@\S+\.\S+/;
@@ -198,17 +165,15 @@ describe("BuiltTests", function ()
 			let message = "Invalid email: " + email;
 			assert.ok(valid, message);
 		}
-		else if (localPath.startsWith("#"))
-		{
+		else if (localPath.startsWith("#")) {
 			// todo check that the section exists
 
 		}
-		else
-		{
+		else {
 			let localFile = localPath;
 
 			if (localPath.startsWith("../"))
-				localFile = path.join(pagePath, "../"+localPath);
+				localFile = path.join(pagePath, "../" + localPath);
 			else
 				localFile = path.join(outDir, localPath);
 
@@ -227,10 +192,8 @@ describe("BuiltTests", function ()
 
 			]
 			let hasAllowedExtension = false;
-			for (let i = 0; i < allowedExtensions.length; i++)
-			{
-				if (localFile.endsWith(allowedExtensions[i]))
-				{
+			for (let i = 0; i < allowedExtensions.length; i++) {
+				if (localFile.endsWith(allowedExtensions[i])) {
 					hasAllowedExtension = true;
 					break;
 				}
@@ -242,8 +205,7 @@ describe("BuiltTests", function ()
 		}
 	}
 
-	function CheckText(text, message, minLen, oneWord=true, punctuation=true)
-	{
+	function CheckText(text, message, minLen, oneWord = true, punctuation = true) {
 		if (text == null)
 			return;
 
@@ -255,8 +217,7 @@ describe("BuiltTests", function ()
 		if (oneWord)
 			assert.ok(text.includes(" "), "Only one word: " + message);
 
-		if (punctuation)
-		{
+		if (punctuation) {
 			let validPunctuation =
 				text.endsWith(".") ||
 				text.endsWith(". ") ||

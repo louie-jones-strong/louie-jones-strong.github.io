@@ -1,24 +1,24 @@
 .quickInfoHolder,
-.quickLinkHolder{
+.quickLinkHolder {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content:center;
+	justify-content: center;
 	max-width: 50em;
 }
 
-.quickSkills{
+.quickSkills {
 	margin-bottom: 3em;
 }
 
-.quickSkills > h4{
+.quickSkills>h4 {
 	margin-top: 1em;
 }
 
-.quickSkills > .quickInfoHolder{
+.quickSkills>.quickInfoHolder {
 	flex-direction: row;
 }
 
-.quickInfo{
+.quickInfo {
 	display: flex;
 	text-align: center;
 	margin-block: 0.25em;
@@ -29,18 +29,18 @@
 	border: 2px solid var(--Colour-Text1);
 }
 
-.quickInfo button{
+.quickInfo button {
 	display: flex;
 }
 
-.quickInfo *{
+.quickInfo * {
 	margin: 0px;
 	padding: 0px;
 	margin-inline: 0.25em;
 	color: var(--Colour-Text1);
 }
 
-.quickLinkHolder .quickInfo{
+.quickLinkHolder .quickInfo {
 	border-bottom-left-radius: 0px;
 	border-top-right-radius: 0px;
 	border-width: 0.2em;
@@ -50,7 +50,7 @@
 }
 
 .quickLinkHolder .quickInfo:hover,
-.quickLinkHolder .quickInfo:focus{
+.quickLinkHolder .quickInfo:focus {
 	transform: scale(1.2);
 	border-color: var(--ColourAccent);
 	border-bottom-left-radius: 0.25em;

@@ -6,10 +6,8 @@ const Utils = require('./Utils.js');
 const ProjectConfigPostProcessor = require('./PostProcess_ProjectConfig.js');
 
 
-class Main
-{
-	constructor()
-	{
+class Main {
+	constructor() {
 		this.IsRelease = process.argv.includes("release");
 		this.CleanBuild = process.argv.includes("clean");
 		this.Compress = process.argv.includes("compress");
@@ -41,37 +39,32 @@ class Main
 		console.log();
 
 		this.PageBuilder = new PageBuilder.PageBuilder(this.IsRelease, this.Compress, this.PathToRoot,
-				this.SiteConfig, this.ProjectConfig, this.IconsConfig);
+			this.SiteConfig, this.ProjectConfig, this.IconsConfig);
 
 		this.Compressor = new Compressor.AssetCompressor(this.Compress, this.OnlyCopyNew, this.PathToRoot,
-				this.SiteConfig, this.ProjectConfig, this.IconsConfig);
+			this.SiteConfig, this.ProjectConfig, this.IconsConfig);
 	}
 
-	PostProcessConfig()
-	{
+	PostProcessConfig() {
 		ProjectConfigPostProcessor.PostProcessProjectConfig(this.ProjectConfig);
 	}
 
-	BuildSite()
-	{
-		if (this.CleanBuild)
-		{
+	BuildSite() {
+		if (this.CleanBuild) {
 			console.log();
 			console.log("Cleaning Output Folder...");
 			let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
-			fs.rmSync(outputPath, {recursive: true});
+			fs.rmSync(outputPath, { recursive: true });
 		}
 
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
 		Utils.TryMakeDir(outputPath)
 
 		// build assets
-		if (this.SiteConfig.Raw_StaticFolder.includes(this.SiteConfig.Raw_ViewsFolder))
-		{
+		if (this.SiteConfig.Raw_StaticFolder.includes(this.SiteConfig.Raw_ViewsFolder)) {
 			// console.log("Static Folder is a subfolder of Views Folder. Skipping Asset Build.");
 		}
-		else
-		{
+		else {
 			console.log();
 			console.log("Building Assets...");
 			this.BuildAssets();
@@ -88,31 +81,27 @@ class Main
 		this.CopyNonEJSFiles();
 	}
 
-	BuildAssets()
-	{
+	BuildAssets() {
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_StaticFolder);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_StaticFolder);
 
 		this.Compressor.HandleFolder(sourcePath, outputPath);
 	}
 
-	BuildPages()
-	{
+	BuildPages() {
 
 		// build project pages
-		for (const projectKey of Object.keys(this.ProjectConfig))
-		{
+		for (const projectKey of Object.keys(this.ProjectConfig)) {
 			let pagePath = this.ProjectConfig[projectKey].PagePath;
 
-			let config = {ProjectData: this.ProjectConfig[projectKey]}
+			let config = { ProjectData: this.ProjectConfig[projectKey] }
 
 			if (pagePath != null)
-			this.PageBuilder.BuildPage(pagePath, config);
+				this.PageBuilder.BuildPage(pagePath, config);
 		}
 	}
 
-	CopyNonEJSFiles()
-	{
+	CopyNonEJSFiles() {
 		let sourcePath = path.join(this.PathToRoot, this.SiteConfig.Raw_ViewsFolder);
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
 

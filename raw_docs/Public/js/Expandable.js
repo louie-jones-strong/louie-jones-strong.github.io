@@ -3,11 +3,9 @@ let ExpandableList = document.getElementsByClassName("expandable");
 WrapExpandableObjects();
 
 
-function WrapExpandableObjects()
-{
+function WrapExpandableObjects() {
 
-	for (let index = 0; index < ExpandableList.length; index++)
-	{
+	for (let index = 0; index < ExpandableList.length; index++) {
 		let expandable = ExpandableList[index];
 
 		let expandableHolder = document.createElement('div');
@@ -24,13 +22,12 @@ function WrapExpandableObjects()
 		expandableHolder.appendChild(icon);
 
 
-		expandableHolder.onclick = function(){Expand(index)};
+		expandableHolder.onclick = function () { Expand(index) };
 	}
 }
 
 
-function Expand(index)
-{
+function Expand(index) {
 	const clone = ExpandableList[index].cloneNode(true);
 	clone.classList.remove("expandable");
 	OpenOverlay(clone, true);
@@ -38,8 +35,7 @@ function Expand(index)
 
 
 // popup api
-function OpenPopup(bodyHtml)
-{
+function OpenPopup(bodyHtml) {
 	let content = `
 		<div class="centeredFrame">
 			<div class="glass popup">
@@ -59,23 +55,19 @@ function OpenPopup(bodyHtml)
 
 
 // overlay
-function OpenOverlay(content, isDomElement)
-{
+function OpenOverlay(content, isDomElement) {
 	let overlayHolder = document.getElementById("overlayHolder");
 	overlayHolder.classList.add("overlayShowing");
 
-	if (!content)
-	{
+	if (!content) {
 		content = "";
 		isDomElement = false;
 	}
 
-	if (isDomElement)
-	{
+	if (isDomElement) {
 		overlayHolder.appendChild(content);
 	}
-	else
-	{
+	else {
 		overlayHolder.innerHTML = content;
 	}
 
@@ -89,18 +81,15 @@ function OpenOverlay(content, isDomElement)
 	overlayHolder.appendChild(closeIcon);
 }
 
-function CloseOverlay()
-{
+function CloseOverlay() {
 	let overlayHolder = document.getElementById("overlayHolder");
 	overlayHolder.classList.remove("overlayShowing");
 	overlayHolder.innerHTML = "";
 }
 
 
-document.onkeydown = function(key)
-{
-	if(key.key === "Escape")
-	{
+document.onkeydown = function (key) {
+	if (key.key === "Escape") {
 		CloseOverlay();
 	}
 }

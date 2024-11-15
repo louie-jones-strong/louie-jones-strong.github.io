@@ -3,11 +3,8 @@
 	"Output_ViewsFolder": "docs",
 	"Raw_StaticFolder": "raw_docs/Public",
 	"Output_StaticFolder": "docs/Public",
-
 	"HostURL": "https://louie-jones-strong.github.io/",
-
 	"DefaultThumbnail": "Public/Assets/PortfolioProject/Thumbnail",
-
 	"ContactLinks": {
 		"LinkedIn": "https://www.linkedin.com/in/louie-jones-strong",
 		"GitHub": "https://github.com/louie-jones-strong",
@@ -19,14 +16,26 @@
 		"Kaggle": null,
 		"CVDownloadAllowed": true
 	},
-	"AssetConfig":{
+	"AssetConfig": {
 		"ImageConfig": {
-			"HorizontalResolutionsGroups": [128, 256, 512, 1024],
-			"OutputFormats": ["webp", "png"]
+			"HorizontalResolutionsGroups": [
+				128,
+				256,
+				512,
+				1024
+			],
+			"OutputFormats": [
+				"webp",
+				"png"
+			]
 		},
 		"VideoConfig": {
-			"HorizontalResolutionsGroups": [1024],
-			"OutputFormats": ["mp4"]
+			"HorizontalResolutionsGroups": [
+				1024
+			],
+			"OutputFormats": [
+				"mp4"
+			]
 		},
 		"NoCopyFolders": [
 			"css/Shared"

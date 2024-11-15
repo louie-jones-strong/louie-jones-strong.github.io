@@ -1,8 +1,6 @@
 
-function PostProcessProjectConfig(projectConfig)
-{
-	for (const projectKey of Object.keys(projectConfig))
-	{
+function PostProcessProjectConfig(projectConfig) {
+	for (const projectKey of Object.keys(projectConfig)) {
 		let project = projectConfig[projectKey];
 
 		AddProjectStartEndDates(project);
@@ -10,47 +8,39 @@ function PostProcessProjectConfig(projectConfig)
 	}
 }
 
-function AddProjectStartEndDates(project)
-{
+function AddProjectStartEndDates(project) {
 	let startDate = null;
 	let endDate = null;
 
 	let startDateStr = null;
 	let endDateStr = null;
-	for (const timeline of project.Timelines)
-	{
+	for (const timeline of project.Timelines) {
 		let timelineStartDate = new Date(timeline.StartDate);
 		let timelineEndDate = new Date(timeline.EndDate);
 
-		if (timeline.EndDate == "Current")
-		{
+		if (timeline.EndDate == "Current") {
 			timelineEndDate = new Date();
 			endDate = new Date();
 			endDateStr = "Current";
 		}
 
-		if (isNaN(timelineStartDate) || isNaN(timelineEndDate))
-		{
+		if (isNaN(timelineStartDate) || isNaN(timelineEndDate)) {
 			continue;
 		}
 
-		if (timeline.StartDate != null)
-		{
-			if (startDate == null || timelineStartDate < startDate)
-			{
+		if (timeline.StartDate != null) {
+			if (startDate == null || timelineStartDate < startDate) {
 				startDate = timelineStartDate;
 				startDateStr = timeline.StartDate;
 			}
 
-			if (endDate == null || (timelineStartDate > endDate && endDateStr != "Current"))
-			{
+			if (endDate == null || (timelineStartDate > endDate && endDateStr != "Current")) {
 				endDate = timelineStartDate;
 				endDateStr = timeline.StartDate;
 			}
 		}
 
-		if (timeline.EndDate != null && (endDate == null || (timelineEndDate > endDate && endDateStr != "Current")))
-		{
+		if (timeline.EndDate != null && (endDate == null || (timelineEndDate > endDate && endDateStr != "Current"))) {
 			endDate = timelineStartDate;
 			endDateStr = timeline.EndDate;
 		}
@@ -61,33 +51,27 @@ function AddProjectStartEndDates(project)
 	project.EndDate = endDateStr;
 }
 
-function AddProjectDuration(project)
-{
+function AddProjectDuration(project) {
 	let duration = null;
-	for (const timeline of project.Timelines)
-	{
+	for (const timeline of project.Timelines) {
 		let timelineStartDate = new Date(timeline.StartDate);
 		let timelineEndDate = new Date(timeline.EndDate);
 
-		if (timeline.EndDate == "Current")
-		{
+		if (timeline.EndDate == "Current") {
 			timelineEndDate = new Date();
 		}
 
-		if (isNaN(timelineStartDate) || isNaN(timelineEndDate))
-		{
+		if (isNaN(timelineStartDate) || isNaN(timelineEndDate)) {
 			continue;
 		}
 
 		let timelineDuration = timelineEndDate - timelineStartDate;
 
-		if (timelineDuration <= 0)
-		{
+		if (timelineDuration <= 0) {
 			continue;
 		}
 
-		if (duration == null)
-		{
+		if (duration == null) {
 			duration = 0;
 		}
 
@@ -95,18 +79,15 @@ function AddProjectDuration(project)
 	}
 
 	// calculate duration from start/end dates
-	if (duration == null)
-	{
+	if (duration == null) {
 		let startDate = new Date(project.StartDate);
 		let endDate = new Date(project.EndDate);
 
-		if (project.EndDate == "Current")
-		{
+		if (project.EndDate == "Current") {
 			endDate = new Date();
 		}
 
-		if (isNaN(startDate) || isNaN(endDate))
-		{
+		if (isNaN(startDate) || isNaN(endDate)) {
 			return;
 		}
 
@@ -114,8 +95,7 @@ function AddProjectDuration(project)
 	}
 
 
-	if (duration <= 0)
-	{
+	if (duration <= 0) {
 		return;
 	}
 
@@ -125,8 +105,7 @@ function AddProjectDuration(project)
 }
 
 
-function FormatDurationStr(duration)
-{
+function FormatDurationStr(duration) {
 	let days = duration / (1000 * 60 * 60 * 24);
 	let weeks = days / 7;
 	let months = days / 30;
@@ -139,36 +118,28 @@ function FormatDurationStr(duration)
 	days = Math.round(days);
 
 	let durationStr = "";
-	if (years == 1)
-	{
+	if (years == 1) {
 		durationStr = years + " Year";
 	}
-	else if (years >= 1)
-	{
+	else if (years >= 1) {
 		durationStr = years + " Years";
 	}
-	else if (months == 1)
-	{
+	else if (months == 1) {
 		durationStr = months + " Month";
 	}
-	else if (months >= 1)
-	{
+	else if (months >= 1) {
 		durationStr = months + " Months";
 	}
-	else if (weeks == 1)
-	{
+	else if (weeks == 1) {
 		durationStr = weeks + " Week";
 	}
-	else if (weeks >= 1)
-	{
+	else if (weeks >= 1) {
 		durationStr = weeks + " Weeks";
 	}
-	else if (days == 1)
-	{
+	else if (days == 1) {
 		durationStr = days + " Day";
 	}
-	else
-	{
+	else {
 		durationStr = days + " Days";
 	}
 

@@ -1,5 +1,4 @@
-
-.gallery{
+.gallery {
 	width: 100%;
 	height: 100%;
 	align-items: center;
@@ -11,7 +10,7 @@
 	justify-content: space-around;
 }
 
-.gallery > *{
+.gallery>* {
 	border-radius: 2em;
 
 	margin: 1em;
@@ -25,7 +24,7 @@
 
 .gallery video,
 .gallery img,
-.gallery picture{
+.gallery picture {
 	object-fit: cover;
 	width: 100%;
 	height: auto;
