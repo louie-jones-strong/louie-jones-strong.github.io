@@ -93,5 +93,10 @@
 		"IconPath": "Public/Assets/Icons/golang",
 		"Label": "Go",
 		"ClassList": ""
+	},
+	"OpenGL": {
+		"IconPath": "Public/Assets/Icons/opengl",
+		"Label": "OpenGL",
+		"ClassList": ""
 	}
 }

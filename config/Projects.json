@@ -1293,7 +1293,9 @@
 		"Hide": false,
 		"Tags": "Work",
 		"Skills": [
-			"CPlusPlus"
+			"CPlusPlus",
+			"OpenGL",
+			"Git"
 		],
 		"Links": {},
 		"SubProjects": []
