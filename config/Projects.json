@@ -1173,7 +1173,8 @@
 			"Java",
 			"Docker",
 			"Golang",
-			"CPlusPlus"
+			"CPlusPlus",
+			"OpenGL"
 		],
 		"Links": {},
 		"SubProjects": [
@@ -1181,7 +1182,8 @@
 			"odyssey_GameJams",
 			"odyssey_project1",
 			"odyssey_project2",
-			"odyssey_GraphicsCourse"
+			"odyssey_GraphicsCourse",
+			"odyssey_product_scrapper"
 		]
 	},
 	"LSWB": {
@@ -1237,7 +1239,12 @@
 	"odyssey_project1": {
 		"Title": "NDA Project 1",
 		"Thumbnail": null,
-		"Timelines": [],
+		"Timelines": [
+			{
+				"StartDate": "October, 2023",
+				"EndDate": "January, 2024"
+			}
+		],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
@@ -1259,7 +1266,18 @@
 	"odyssey_project2": {
 		"Title": "NDA Project 2",
 		"Thumbnail": null,
-		"Timelines": [],
+		"Timelines": [
+			{
+				"Name": "Client",
+				"StartDate": "January, 2024",
+				"EndDate": "March 17, 2024"
+			},
+			{
+				"Name": "Micro Services",
+				"StartDate": "March 17, 2024",
+				"EndDate": "Current"
+			}
+		],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
@@ -1279,14 +1297,44 @@
 		"Links": {},
 		"SubProjects": []
 	},
-	"odyssey_GraphicsCourse": {
-		"Title": "Graphics Course",
+	"odyssey_product_scrapper": {
+		"Title": "Product Scraper",
 		"Thumbnail": null,
-		"Timelines": [],
+		"Timelines": [
+			{
+				"StartDate": "February 12, 2024",
+				"EndDate": "March 19, 2024"
+			}
+		],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "I took a course on graphics programming at TT Odyssey.",
+		"QuickDescription": "Golang project to scrape product details from a manufacturer's website and exports the data to a CSV file.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Work",
+		"Skills": [
+			"Golang",
+			"Git"
+		],
+		"Links": {},
+		"SubProjects": []
+	},
+	"odyssey_GraphicsCourse": {
+		"Title": "Graphics Course",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "September 18, 2024",
+				"EndDate": "January, 10 2025"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "Learned how to create a graphics and physics sandbox in OpenGL and C++.",
 		"PagePath": null,
 		"Link": null,
 		"HideLink": false,
@@ -1766,6 +1814,90 @@
 		"Links": {
 			"WebsiteLink": "https://louie-jones-strong.github.io/MediaStudio"
 		},
+		"SubProjects": []
+	},
+	"HouseFinder": {
+		"Title": "House Finder",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "December 28, 2023",
+				"EndDate": "November, 16 2024"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": null,
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo",
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Python",
+			"Git"
+		],
+		"Links": {},
+		"SubProjects": []
+	},
+	"FoodFinder": {
+		"Title": "Food Finder",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "August 25, 2024",
+				"EndDate": "Current"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": null,
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo",
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Python",
+			"Git"
+		],
+		"Links": {},
+		"SubProjects": []
+	},
+	"MnistDraw": {
+		"Title": "Mnist Draw",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "February 26, 2024",
+				"EndDate": "March 5, 2024"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": null,
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo",
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Python",
+			"Git"
+		],
+		"Links": {},
 		"SubProjects": []
 	},
 	"MonsterMash": {
