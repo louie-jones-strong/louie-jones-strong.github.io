@@ -124,7 +124,7 @@
 		"SubProjects": [
 			"LawGCSE",
 			"MathsGCSE",
-			"ICTGCSE",
+			"ICT-GCSE",
 			"AdditionalScienceGCSE",
 			"FurtherAdditionalScienceGCSE",
 			"EnglishGCSE",
@@ -176,7 +176,7 @@
 		"Links": {},
 		"SubProjects": []
 	},
-	"ICTGCSE": {
+	"ICT-GCSE": {
 		"Title": "ICT",
 		"Thumbnail": null,
 		"Timelines": [
@@ -1913,7 +1913,7 @@
 		"TimeSpent": "1 Week",
 		"NumPeople": 4,
 		"Awards": null,
-		"QuickDescription": "Roguelike made with the limitations of the Gameboy. You upgrade you monster with the body parts of creatures you defeat.",
+		"QuickDescription": "Rogue-like made with the limitations of the Game boy. You upgrade you monster with the body parts of creatures you defeat.",
 		"PagePath": null,
 		"Link": "https://tatltuae.itch.io/monstermash",
 		"HideLink": false,

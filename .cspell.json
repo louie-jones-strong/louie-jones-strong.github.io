@@ -1,0 +1,41 @@
+{
+	"language": "en-gb",
+	"words": [
+		"arduino",
+		"centered",
+		"FMOD",
+		"Gamorrean",
+		"glassmorphism",
+		"gtag",
+		"Kaggle",
+		"keyint",
+		"Klatoonian",
+		"Leet",
+		"libx",
+		"LSWB",
+		"Mandalorian",
+		"Mnist",
+		"Neumorphism",
+		"perceptrons",
+		"Plantenstein",
+		"sass",
+		"scenecut",
+		"scikit",
+		"scikitlearn",
+		"Skeuomorphismis",
+		"srcs",
+		"tensorflow",
+		"Zipper"
+	],
+	"dictionaries": [
+		"en-gb",
+		"softwareTerms",
+		"css",
+		"html",
+		"node",
+		"typescript"
+	],
+	"ignorePaths": [
+		"**.svg"
+	]
+}
