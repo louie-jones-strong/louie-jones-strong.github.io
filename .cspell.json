@@ -36,6 +36,8 @@
 		"typescript"
 	],
 	"ignorePaths": [
-		"**.svg"
+		"**.svg",
+		"raw_docs/Public/js/external/**",
+		"docs/Public/js/external/**",
 	]
 }
