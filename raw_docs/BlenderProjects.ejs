@@ -9,8 +9,8 @@
 		ProjectData: ProjectData
 	}); %>
 
-	<!-- extra links if needed -->
-	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/ZipperCard.css">
+		<!-- extra links if needed -->
+		<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/ZipperCard.css">
 </head>
 
 
@@ -18,216 +18,216 @@
 
 	<!-- Shared common loader -->
 	<%- include(PageData.PathToRoot+'Components/Loader'); %>
-	<div class="content background">
+		<div class="content background">
 
-		<!-- shared common header -->
-		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+			<!-- shared common header -->
+			<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
 
-		<!-- shared common header -->
-		<%- include(PageData.PathToRoot+'Components/Header'); %>
+				<!-- shared common header -->
+				<%- include(PageData.PathToRoot+'Components/Header'); %>
 
-		<div class="centeredFrame">
+					<div class="centeredFrame">
 			<h1 class="center"><%=ProjectData.Title %></h1>
 
-			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+						<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
-			<p>When Blender 2.8 came out I wanted to learn it for a few reasons:</p>
-			<ul>
-				<li>To get a better appreciation of what the artists I work with do.</li>
-				<li>Gain skills in the assets creation pipeline.</li>
-				<li>To have a creative outlet from programming at work.</li>
-				<li>I enjoy learning new things.</li>
-			</ul>
+							<p>When Blender 2.8 came out I wanted to learn it for a few reasons:</p>
+							<ul>
+								<li>To get a better appreciation of what the artists I work with do.</li>
+								<li>Gain skills in the assets creation pipeline.</li>
+								<li>To have a creative outlet from programming at work.</li>
+								<li>I enjoy learning new things.</li>
+							</ul>
 			<p>To achieve these goals I set myself the challenge to learn a new system in blender and produce an art work based on that system in only 24 hours.</p>
 
 			<p>This is a hand picked sub set of all the renders I have done as part of this challenge. You can see the full collection on my <a href="https://www.instagram.com/louie_j.s/" target="_blank">Instagram.</a>
-			</p>
-		</div>
+							</p>
+					</div>
 
 
-		<div class="ZipperCardsHolder glass centeredFrame">
-			<div class="ZipperCard shaded reveal fromLeft">
-				<div>
-					<h3>Neon Wave</h3>
+					<div class="ZipperCardsHolder glass centeredFrame">
+						<div class="ZipperCard shaded reveal fromLeft">
+							<div>
+								<h3>Neon Wave</h3>
 					<p>This was the first render I did in Blender. My goal was just to learn how the interface worked.
 						To do this I followed along with <a href="https://youtu.be/W9eAVW4G8ws" target="_blank">this YouTube tutorial.</a>
-					</p>
-				</div>
+								</p>
+							</div>
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_1",
 					ClassList: "expandable"
 				}}); %>
-			</div>
-			<div class="ZipperCard shaded reveal fromRight">
+						</div>
+						<div class="ZipperCard shaded reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_4",
 					ClassList: "expandable"
 				}}); %>
-				<div>
-					<h3>Zooming Boxes</h3>
-					<p>My goal in this render was to make a looping video.
-						But I also ended up learning: </p>
-					<ul>
-						<li>Precise modelling</li>
-						<li>Camera Perspectives</li>
-						<li>Animation Curves</li>
-					</ul>
-				</div>
-			</div>
-			<div class="ZipperCard shaded reveal fromLeft">
-				<div>
-					<h3>Cup of Tea</h3>
+								<div>
+									<h3>Zooming Boxes</h3>
+									<p>My goal in this render was to make a looping video.
+										But I also ended up learning: </p>
+									<ul>
+										<li>Precise modelling</li>
+										<li>Camera Perspectives</li>
+										<li>Animation Curves</li>
+									</ul>
+								</div>
+						</div>
+						<div class="ZipperCard shaded reveal fromLeft">
+							<div>
+								<h3>Cup of Tea</h3>
 					<p>My goal in this render was to learn how to model complex shapes. I also created some other tea-set models.</p>
-				</div>
-				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+							</div>
+							<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/BlenderProjects/Images/blender_5",
 					ClassList: "expandable",
 					Alt:"A render of a cup of tea"
 				}}); %>
-			</div>
-			<div class="ZipperCard shaded reveal fromRight">
+						</div>
+						<div class="ZipperCard shaded reveal fromRight">
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_36",
 					ClassList: "expandable"
 				}}); %>
-				<div>
-					<h3>Water Splash</h3>
+								<div>
+									<h3>Water Splash</h3>
 					<p>In this render my goal was to learn about Blender's new FLIP fluid simulation.</p>
-				</div>
-			</div>
-			<div class="ZipperCard shaded reveal fromLeft">
-				<div>
-					<h3><abbr title="Augmented Reality">AR</abbr></h3>
-					<p>In this render I learnt about: </p>
-					<ul>
-						<li>Compositing</li>
-						<li>Finding camera settings from an image</li>
-						<li>Matching the lighting in an image</li>
+								</div>
+						</div>
+						<div class="ZipperCard shaded reveal fromLeft">
+							<div>
+								<h3><abbr title="Augmented Reality">AR</abbr></h3>
+								<p>In this render I learnt about: </p>
+								<ul>
+									<li>Compositing</li>
+									<li>Finding camera settings from an image</li>
+									<li>Matching the lighting in an image</li>
 
-					</ul>
-				</div>
+								</ul>
+							</div>
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_35",
 					ClassList: "expandable"
 				}}); %>
-			</div>
-			<div class="ZipperCard shaded reveal fromRight">
-				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						</div>
+						<div class="ZipperCard shaded reveal fromRight">
+							<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/BlenderProjects/Images/blender_13",
 					ClassList: "expandable",
 					Alt:"A render of some glass objects"
 				}}); %>
-				<div>
-					<h3>Glass</h3>
-					<p>My goal in this render was to learn about glass shaders.</p>
-				</div>
-			</div>
-			<div class="ZipperCard shaded reveal fromLeft">
-				<div>
-					<h3>IPhone</h3>
+								<div>
+									<h3>Glass</h3>
+									<p>My goal in this render was to learn about glass shaders.</p>
+								</div>
+						</div>
+						<div class="ZipperCard shaded reveal fromLeft">
+							<div>
+								<h3>IPhone</h3>
 					<p>My goal in this render was to learn about adding textures to materials. In this example I started with a screenshot and modelled everything else.</p>
-				</div>
+							</div>
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_14",
 					ClassList: "expandable"
 				}}); %>
-			</div>
-			<div class="ZipperCard shaded reveal fromRight">
-				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						</div>
+						<div class="ZipperCard shaded reveal fromRight">
+							<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/BlenderProjects/Images/blender_16",
 					ClassList: "expandable",
 					Alt:"A render of a Planet Generator"
 				}}); %>
-				<div>
-					<h3>Procedural Planet Generator</h3>
-					<p>In this render I learnt about: </p>
+								<div>
+									<h3>Procedural Planet Generator</h3>
+									<p>In this render I learnt about: </p>
 
-					<ul>
-						<li>Displacements</li>
-						<li>Bump maps</li>
-						<li>Normals</li>
-						<li>More complex procedural materials</li>
-					</ul>
-				</div>
-			</div>
-			<div class="ZipperCard shaded reveal fromLeft">
-				<div>
-					<h3>Rusting Chain</h3>
-					<p>In this render my goal was to learn about animating material properties.</p>
-				</div>
+									<ul>
+										<li>Displacements</li>
+										<li>Bump maps</li>
+										<li>Normals</li>
+										<li>More complex procedural materials</li>
+									</ul>
+								</div>
+						</div>
+						<div class="ZipperCard shaded reveal fromLeft">
+							<div>
+								<h3>Rusting Chain</h3>
+								<p>In this render my goal was to learn about animating material properties.</p>
+							</div>
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_17",
 					ClassList: "expandable"
 				}}); %>
-			</div>
-			<div class="ZipperCard shaded reveal fromRight">
-				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						</div>
+						<div class="ZipperCard shaded reveal fromRight">
+							<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/BlenderProjects/Images/blender_25",
 					ClassList: "expandable",
 					Alt:"A render of a Brighton Bus"
 				}}); %>
-				<div>
-					<h3>Brighton Bus</h3>
+								<div>
+									<h3>Brighton Bus</h3>
 					<p>In this render I was trying to learn how to model a large number of assets in the limited amount of time.</p>
-				</div>
-			</div>
-			<div class="ZipperCard shaded reveal fromLeft">
-				<div>
-					<h3>Pool Table</h3>
-					<p>In this render my goal was to learn more about Blender's physics.</p>
-				</div>
+								</div>
+						</div>
+						<div class="ZipperCard shaded reveal fromLeft">
+							<div>
+								<h3>Pool Table</h3>
+								<p>In this render my goal was to learn more about Blender's physics.</p>
+							</div>
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_30",
 					ClassList: "expandable"
 				}}); %>
-			</div>
-			<div class="ZipperCard shaded reveal fromRight">
-				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						</div>
+						<div class="ZipperCard shaded reveal fromRight">
+							<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/BlenderProjects/Images/blender_32",
 					ClassList: "expandable",
 					Alt:"A render of the Greek Parthenon"
 				}}); %>
-				<div>
-					<h3>Greek Parthenon</h3>
+								<div>
+									<h3>Greek Parthenon</h3>
 					<p>In this render my goal was to learn about non destructive modelling by using modifiers.</p>
-				</div>
-			</div>
-			<div class="ZipperCard shaded reveal fromLeft">
-				<div>
-					<h3>Magic Monkey</h3>
-					<p>My goal in this render was to learn about Blender's cloth simulation.</p>
-				</div>
+								</div>
+						</div>
+						<div class="ZipperCard shaded reveal fromLeft">
+							<div>
+								<h3>Magic Monkey</h3>
+								<p>My goal in this render was to learn about Blender's cloth simulation.</p>
+							</div>
 
 				<%- include(PageData.PathToRoot+'Components/Video', {VideoData: {
 					Autoplay: true, Muted: true, Loop: true,
 					Path:"Public/Assets/BlenderProjects/Videos/blender_7",
 					ClassList: "expandable"
 				}}); %>
-			</div>
-			<div class="ZipperCard shaded reveal fromRight">
-				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+						</div>
+						<div class="ZipperCard shaded reveal fromRight">
+							<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
 					Path:"Public/Assets/BlenderProjects/Images/blender_34",
 					ClassList: "expandable",
 					Alt:"A render of a Desktop Background"
 				}}); %>
-				<div>
-					<h3>8K Desktop Background</h3>
-					<p>In this render I learnt about optimizing render times.</p>
-				</div>
-			</div>
+								<div>
+									<h3>8K Desktop Background</h3>
+									<p>In this render I learnt about optimizing render times.</p>
+								</div>
+						</div>
+					</div>
+
+					<!-- Shared common footer -->
+					<%- include(PageData.PathToRoot+'Components/Footer'); %>
+						<%- include(PageData.PathToRoot+'Components/Expandable'); %>
+
 		</div>
-
-		<!-- Shared common footer -->
-		<%- include(PageData.PathToRoot+'Components/Footer'); %>
-		<%- include(PageData.PathToRoot+'Components/Expandable'); %>
-
-	</div>
 </body>
 </html>
