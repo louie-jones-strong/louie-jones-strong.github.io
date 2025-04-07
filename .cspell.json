@@ -3,29 +3,33 @@
 	"words": [
 		"arduino",
 		"centered",
-		"FMOD",
-		"Gamorrean",
+		"fmod",
+		"gamorrean",
 		"glassmorphism",
 		"gtag",
-		"Kaggle",
+		"kaggle",
 		"keyint",
-		"Klatoonian",
-		"Leet",
+		"klatoonian",
+		"leet",
 		"libx",
-		"LSWB",
-		"Mandalorian",
-		"Mnist",
-		"Neumorphism",
+		"lswb",
+		"mandalorian",
+		"mnist",
+		"neumorphism",
+		"opengl",
 		"perceptrons",
-		"Plantenstein",
+		"plantenstein",
+		"precompiledpages",
 		"sass",
 		"scenecut",
 		"scikit",
 		"scikitlearn",
-		"Skeuomorphismis",
+		"skeuomorphismis",
 		"srcs",
+		"stemmers",
 		"tensorflow",
-		"Zipper"
+		"zipper",
+		"optimizelegibility"
 	],
 	"dictionaries": [
 		"en-gb",
@@ -38,6 +42,6 @@
 	"ignorePaths": [
 		"**.svg",
 		"raw_docs/Public/js/external/**",
-		"docs/Public/js/external/**",
+		"docs/Public/js/external/**"
 	]
 }
