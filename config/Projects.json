@@ -1182,7 +1182,7 @@
 			"LSWB",
 			"odyssey_GameJams",
 			"odyssey_project1",
-			"odyssey_project2",
+			"boston_project_1",
 			"odyssey_GraphicsCourse",
 			"odyssey_product_scrapper"
 		]
@@ -1264,8 +1264,8 @@
 		"Links": {},
 		"SubProjects": []
 	},
-	"odyssey_project2": {
-		"Title": "NDA Project 2",
+	"boston_project_1": {
+		"Title": "Game Of Thrones: Dragonfire",
 		"Thumbnail": null,
 		"Timelines": [
 			{
@@ -1282,7 +1282,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "Worked on currently unannounced project.",
+		"QuickDescription": "Contracting for WB Games Boston on Game Of Thrones: Dragonfire.",
 		"PagePath": null,
 		"Link": null,
 		"HideLink": false,
@@ -1295,7 +1295,9 @@
 			"Git",
 			"Docker"
 		],
-		"Links": {},
+		"Links": {
+			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.wb.goog.hotd.socialstrategy&pcampaignid=web_share"
+		},
 		"SubProjects": []
 	},
 	"odyssey_product_scrapper": {

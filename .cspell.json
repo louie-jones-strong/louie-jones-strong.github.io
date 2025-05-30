@@ -3,6 +3,7 @@
 	"words": [
 		"arduino",
 		"centered",
+		"Dragonfire",
 		"fmod",
 		"gamorrean",
 		"glassmorphism",
@@ -17,6 +18,7 @@
 		"mnist",
 		"neumorphism",
 		"opengl",
+		"optimizelegibility",
 		"perceptrons",
 		"plantenstein",
 		"precompiledpages",
@@ -28,8 +30,7 @@
 		"srcs",
 		"stemmers",
 		"tensorflow",
-		"zipper",
-		"optimizelegibility"
+		"zipper"
 	],
 	"dictionaries": [
 		"en-gb",
