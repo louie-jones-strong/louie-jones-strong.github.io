@@ -1156,7 +1156,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "My time at TT Odyssey.",
+		"QuickDescription": "My time at TT Odyssey working on: LEGO® Star Wars™ Battles & Game Of Thrones: Dragonfire.",
 		"PagePath": "odyssey",
 		"Link": null,
 		"HideLink": false,
@@ -1182,7 +1182,7 @@
 			"LSWB",
 			"odyssey_GameJams",
 			"odyssey_project1",
-			"boston_project_1",
+			"got_df",
 			"odyssey_GraphicsCourse",
 			"odyssey_product_scrapper"
 		]
@@ -1264,7 +1264,7 @@
 		"Links": {},
 		"SubProjects": []
 	},
-	"boston_project_1": {
+	"got_df": {
 		"Title": "Game Of Thrones: Dragonfire",
 		"Thumbnail": null,
 		"Timelines": [
