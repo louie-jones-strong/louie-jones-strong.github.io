@@ -1,0 +1,48 @@
+{
+	"language": "en-gb",
+	"words": [
+		"arduino",
+		"centered",
+		"Dragonfire",
+		"fmod",
+		"gamorrean",
+		"glassmorphism",
+		"gtag",
+		"kaggle",
+		"keyint",
+		"klatoonian",
+		"leet",
+		"libx",
+		"lswb",
+		"mandalorian",
+		"mnist",
+		"neumorphism",
+		"opengl",
+		"optimizelegibility",
+		"perceptrons",
+		"plantenstein",
+		"precompiledpages",
+		"sass",
+		"scenecut",
+		"scikit",
+		"scikitlearn",
+		"skeuomorphismis",
+		"srcs",
+		"stemmers",
+		"tensorflow",
+		"zipper"
+	],
+	"dictionaries": [
+		"en-gb",
+		"softwareTerms",
+		"css",
+		"html",
+		"node",
+		"typescript"
+	],
+	"ignorePaths": [
+		"**.svg",
+		"raw_docs/Public/js/external/**",
+		"docs/Public/js/external/**"
+	]
+}

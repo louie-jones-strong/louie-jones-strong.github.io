@@ -1,0 +1,48 @@
+{
+	"version": "2.0.0",
+	"problemMatcher": [],
+	"presentation": {
+		"clear": true
+	},
+	"tasks": [
+		{
+			"label": "Run Pre Tests",
+			"type": "shell",
+			"command": "npm run PreTests",
+		},
+		{
+			"label": "Build Content",
+			"type": "shell",
+			"command": "node src/BuildSite.js compress onlyNew",
+		},
+		{
+			"label": "Run Post Tests",
+			"type": "shell",
+			"command": "npm run PostTests",
+		},
+		{
+			"label": "Spell Check",
+			"type": "shell",
+			"command": "cspell \".\" --no-progress",
+		},
+		{
+			"label": "Build And Test",
+			"type": "shell",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"Run Pre Tests",
+				"Build Content",
+				"Run Post Tests"
+			],
+		},
+		{
+			"label": "Run All",
+			"type": "shell",
+			"dependsOrder": "parallel",
+			"dependsOn": [
+				"Build And Test",
+				"Spell Check"
+			],
+		},
+	]
+}

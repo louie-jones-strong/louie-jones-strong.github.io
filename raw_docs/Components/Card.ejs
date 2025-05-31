@@ -57,7 +57,7 @@ if (!CardData.Hide)
 if (CardData.Link) { %>
 <a class="card glass reveal neonOutline" tags="<%=CardData.Tags%>" href="<%= CardData.Link %>" <% if (CardData.OpenInNewTab) { %> target="_blank" <% }%> >
 <% }else{%>
-<a class="card glass reveal" tags="<%=CardData.Tags%>">
+<div class="card glass reveal" tags="<%=CardData.Tags%>">
 <% }%>
 
 	<% if (CardData.Thumbnail) { %>
@@ -102,6 +102,11 @@ if (CardData.Link) { %>
 	<% if (CardData.Link) { %>
 	<h4 class="bottom"><u>More Info</u></h4>
 	<% }%>
+
+<%if (CardData.Link) { %>
 </a>
+<% }else{%>
+</div>
+<% }%>
 
 <% } %>

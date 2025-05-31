@@ -8,41 +8,41 @@
 		ProjectData: ProjectData
 	}); %>
 
-	<!-- extra links if needed -->
-	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+		<!-- extra links if needed -->
+		<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/CardHolder.css">
 </head>
 
 <body class="dark">
 
 	<!-- Shared common loader -->
 	<%- include(PageData.PathToRoot+'Components/Loader'); %>
-	<div class="content">
-		<!-- shared common header -->
-		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
-		<div class="background">
+		<div class="content">
 			<!-- shared common header -->
-			<%- include(PageData.PathToRoot+'Components/Header'); %>
+			<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+				<div class="background">
+					<!-- shared common header -->
+					<%- include(PageData.PathToRoot+'Components/Header'); %>
 
-			<hr class="gap">
+						<hr class="gap">
 
-			<div class="centeredFrame">
+						<div class="centeredFrame">
 				<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
-				<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
-				<h2 class="center reveal fromBottom">What is Natural Language Processing?</h2>
-				<p class="center reveal fromBottom">
+							<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+								<h2 class="center reveal fromBottom">What is Natural Language Processing?</h2>
+								<p class="center reveal fromBottom">
 					Natural Language Processing (NLP) is a field of Artificial Intelligence that gives the machines the ability to read, understand and derive meaning from human languages. It is the process through which computers understand and manipulate human language to perform tasks.
-				</p>
+								</p>
 
-				<h2 class="center reveal fromBottom">Mid Term Project</h2>
-				<p class="center reveal fromBottom">
+								<h2 class="center reveal fromBottom">Mid Term Project</h2>
+								<p class="center reveal fromBottom">
 					For my mid term course work I was tasked with creating a text classifier. I took this opportunity to explore sarcasm detection across a collection of text sources.
-				</p>
-			</div>
+								</p>
+						</div>
 
-			<!-- Shared common footer -->
-			<%- include(PageData.PathToRoot+'Components/Footer'); %>
+						<!-- Shared common footer -->
+						<%- include(PageData.PathToRoot+'Components/Footer'); %>
+				</div>
+				<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
 		</div>
-		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
-	</div>
 </body>
 </html>

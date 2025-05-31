@@ -71,8 +71,8 @@ describe("BuiltTests", function () {
 				});
 
 				it("srcset", function () {
-					let srcsets = FindOccurrences(page, /srcset="([^"]*)"/g);
-					for (const srcset of srcsets) {
+					let srcSets = FindOccurrences(page, /srcset="([^"]*)"/g);
+					for (const srcset of srcSets) {
 						let srcs = srcset.replace("srcset=\"", "").replace("\"", "").split(",");
 						for (const src of srcs) {
 							let srcPath = src.trim().split(" ")[0];

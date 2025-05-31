@@ -8,42 +8,42 @@
 		ProjectData: ProjectData
 	}); %>
 
-	<!-- extra links if needed -->
-	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optinal/CardHolder.css">
+		<!-- extra links if needed -->
+		<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/CardHolder.css">
 </head>
 
 <body class="dark">
 
 	<!-- Shared common loader -->
 	<%- include(PageData.PathToRoot+'Components/Loader'); %>
-	<div class="content">
-		<!-- shared common header -->
-		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
-		<div class="background">
+		<div class="content">
 			<!-- shared common header -->
-			<%- include(PageData.PathToRoot+'Components/Header'); %>
+			<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+				<div class="background">
+					<!-- shared common header -->
+					<%- include(PageData.PathToRoot+'Components/Header'); %>
 
-			<hr class="gap">
+						<hr class="gap">
 
-			<div class="centeredFrame">
+						<div class="centeredFrame">
 				<h1 class="center reveal fromBottom"><%=ProjectData.Title %></h1>
-				<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+							<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
 
 
-				<h2 class="center reveal fromBottom">Learning Outcomes</h2>
-				<ul class="center">
-					<li class="left reveal fromLeft">Introduction to graphics</li>
-					<li class="left reveal fromLeft">Coordinate transformations</li>
-					<li class="left reveal fromLeft">Number generators: noise/sine</li>
-					<li class="left reveal fromLeft">Images, pixels, colors</li>
-					<li class="left reveal fromLeft">Image processing</li>
-					<li class="left reveal fromLeft">Computer Vision: introduction</li>
-					<li class="left reveal fromLeft">Computer Vision: advanced</li>
-					<li class="left reveal fromLeft">Simulating physical systems</li>
-					<li class="left reveal fromLeft">3D graphics</li>
-				</ul>
+								<h2 class="center reveal fromBottom">Learning Outcomes</h2>
+								<ul class="center">
+									<li class="left reveal fromLeft">Introduction to graphics</li>
+									<li class="left reveal fromLeft">Coordinate transformations</li>
+									<li class="left reveal fromLeft">Number generators: noise/sine</li>
+									<li class="left reveal fromLeft">Images, pixels, colors</li>
+									<li class="left reveal fromLeft">Image processing</li>
+									<li class="left reveal fromLeft">Computer Vision: introduction</li>
+									<li class="left reveal fromLeft">Computer Vision: advanced</li>
+									<li class="left reveal fromLeft">Simulating physical systems</li>
+									<li class="left reveal fromLeft">3D graphics</li>
+								</ul>
 
-				<h2 class="center reveal fromBottom">Mid Term Project</h2>
+								<h2 class="center reveal fromBottom">Mid Term Project</h2>
 				<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 					QuickInfoData: {
 						TimeSpent: "Month",
@@ -51,10 +51,10 @@
 					},
 				}); %>
 
-				<div class="cardHolder">
+									<div class="cardHolder">
 					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
-							OpenInNewTab: true,
+												OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/MidTerm/AngryBirds/",
 							Title: "Angry Birds",
 							Body: "",
@@ -63,7 +63,7 @@
 					}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
-							OpenInNewTab: true,
+													OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/MidTerm/AsteroidGame/",
 							Title: "Asteroid Game",
 							Body: "",
@@ -72,7 +72,7 @@
 					}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
-							OpenInNewTab: true,
+														OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/MidTerm/NoisyGrid/",
 							Title: "Noisy Grid",
 							Body: "",
@@ -88,19 +88,19 @@
 							Thumbnail: ""
 						}
 					}); %>
-				</div>
+									</div>
 
-				<h2 class="center reveal fromBottom">Final Project</h2>
+									<h2 class="center reveal fromBottom">Final Project</h2>
 				<%- include(PageData.PathToRoot+'Components/QuickInfo', {
 					QuickInfoData: {
 						TimeSpent: "Month",
 						NumPeople: 1
 					},
 				}); %>
-				<div class="cardHolder">
+										<div class="cardHolder">
 					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
-							OpenInNewTab: true,
+												OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/3DSinGames/",
 							Title: "3D Sin Games",
 							Body: "",
@@ -109,7 +109,7 @@
 					}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
-							OpenInNewTab: true,
+													OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/averageFace/",
 							Title: "Average Face",
 							Body: "",
@@ -118,7 +118,7 @@
 					}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
-							OpenInNewTab: true,
+														OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/instagramFilter/",
 							Title: "Instagram Filter",
 							Body: "",
@@ -127,21 +127,21 @@
 					}); %>
 					<%- include(PageData.PathToRoot+'Components/Card', {
 						CardData: {
-							OpenInNewTab: true,
+															OpenInNewTab: true,
 							Link: "https://louie-jones-strong.github.io/Uni-Year-2-Term-2/GraphicsProgramming/Graded/Final/WebcamPiano/",
 							Title: "Webcam Piano",
 							Body: "",
 							Thumbnail: ""
 						}
 					}); %>
+										</div>
+						</div>
+
+						<!-- Shared common footer -->
+						<%- include(PageData.PathToRoot+'Components/Footer'); %>
 				</div>
-			</div>
 
-			<!-- Shared common footer -->
-			<%- include(PageData.PathToRoot+'Components/Footer'); %>
+				<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
 		</div>
-
-		<%- include(PageData.PathToRoot+'Components/VanillaTilt', {PageData: PageData, TiltData: {}}); %>
-	</div>
 </body>
 </html>
