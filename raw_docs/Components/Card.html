@@ -1,0 +1,37 @@
+{{ define "Components/Card" }}
+{{ $builtCard := buildCard .CardData .PageData }}
+{{ if not (index $builtCard "Hide") }}
+{{ if index $builtCard "Link" }}
+<a class="card glass reveal neonOutline" tags="{{ index $builtCard "Tags" }}" href="{{ index $builtCard "Link" }}"{{ if index $builtCard "OpenInNewTab" }} target="_blank"{{ end }}>
+{{ else }}
+<div class="card glass reveal" tags="{{ index $builtCard "Tags" }}">
+{{ end }}
+
+{{ if index $builtCard "Thumbnail" }}
+<div class="cardImage">
+	{{ template "Components/Picture" (dict "ImgData" (dict "Path" (index $builtCard "Thumbnail") "ClassList" "" "Alt" (printf "%s Thumbnail" (index $builtCard "Title")) "Sizes" "350px") "PageData" .PageData) }}
+	{{ if notNil (index $builtCard "QuickInfoData") }}
+	{{ template "Components/QuickInfo" (dict "QuickInfoData" (asMap (index $builtCard "QuickInfoData")) "PageData" .PageData) }}
+	{{ end }}
+</div>
+<h3>{{ index $builtCard "Title" }}</h3>
+{{ if index $builtCard "Body" }}
+<p>{{ index $builtCard "Body" }}</p>
+{{ end }}
+{{ else }}
+<h3>{{ index $builtCard "Title" }}</h3>
+{{ if notNil (index $builtCard "QuickInfoData") }}
+{{ template "Components/QuickInfo" (dict "QuickInfoData" (asMap (index $builtCard "QuickInfoData")) "PageData" .PageData) }}
+{{ end }}
+{{ if index $builtCard "Body" }}
+<p>{{ index $builtCard "Body" }}</p>
+{{ end }}
+{{ end }}
+
+{{ if index $builtCard "Link" }}
+<h4 class="bottom"><u>More Info</u></h4>
+{{ end }}
+
+{{ if index $builtCard "Link" }}</a>{{ else }}</div>{{ end }}
+{{ end }}
+{{ end }}

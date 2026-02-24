@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/CardHolder.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<hr class="gap">
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">{{ .ProjectData.Title }}</h1>
+				<h3 class="center reveal fromBottom">
+					Bachelor of Science in<br>
+					Machine Learning and Artificial Intelligence
+				</h3>
+				<h4 class="center reveal fromBottom">From the <a href="https://www.london.ac.uk/" target="_blank">University of London</a></h4>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+
+				<h2 class="center reveal Bottom">Year 3:</h2>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (dict "Awards" "First Class" "StartDate" "October 2022") "PageData" .PageData) }}
+				<p class="center reveal fromBottom">
+					For my final year of university I stopped working to allow me to spend my full time on my degree to help maintain a healthy life balance.</p>
+				<div class="cardHolder">
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "DatabasesAndAdvancedDataTechniques")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "MachineLearningAndNeuralNetworks")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "ArtificialIntelligence")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "IntelligentSignalProcessing")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "NaturalLanguageProcessing")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "DataScience")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "FinalProject")) "PageData" .PageData) }}
+				</div>
+
+				<h2 class="center reveal Bottom">Year 2:</h2>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (dict "Awards" "First Class" "StartDate" "October 2021") "PageData" .PageData) }}
+				<p class="center reveal fromBottom">During my second year of university I continued to work at the same time,
+					but went to part time at <a href="{{ .PageData.PathToRoot }}LSWB.html">TT Odyssey</a> (working 3 days a week).
+					This was to help maintain a healthy work, studies and life balance.</p>
+				<div class="cardHolder">
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "ObjectOrientedProgramming")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "SoftwareDesignAndDevelopment")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "AgileSoftwareProjects")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "DatabasesNetworksAndTheWeb")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "ProgrammingWithData")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "ComputerSecurity")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "GraphicsProgramming")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "AlgorithmsAndDataStructures2")) "PageData" .PageData) }}
+				</div>
+
+				<h2 class="center reveal Bottom">Year 1:</h2>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (dict "Awards" "First Class" "StartDate" "October 2020") "PageData" .PageData) }}
+				<p class="center reveal fromBottom">During my first year of university I continued to also work full time at <a href="{{ .PageData.PathToRoot }}LSWB.html">TT Odyssey</a>.</p>
+				<div class="cardHolder">
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "IntroToProgramming1")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "DiscreteMaths")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "FundamentalsOfComputerScience")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "HowComputersWork")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "IntroToProgramming2")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "ComputationalMaths")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "AlgorithmsAndDataStructures1")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "WebDevelopment")) "PageData" .PageData) }}
+				</div>
+			</div>
+			{{ template "Components/Footer" . }}
+		</div>
+		{{ template "Components/VanillaTilt" (dict "TiltData" (dict) "PageData" .PageData) }}
+	</div>
+</body>
+</html>

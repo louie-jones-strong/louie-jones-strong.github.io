@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/Carousel.css">
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/Gallery.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<div class="slide-holder">
+				<div class="slide">
+					{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/cards/landscape/card1" "ClassList" "" "Alt" "First Landscape Render" "LoadingType" "eager") "PageData" .PageData) }}
+				</div>
+			</div>
+			<script src="{{ .PageData.PathToRoot }}Public/js/Carousel.js"></script>
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">Landscape Cards</h1>
+				<div class="gallery glass reveal">
+					<div class="glass reveal">
+						{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/cards/landscape/card1" "ClassList" "expandable" "Alt" "The first landscape card") "PageData" .PageData) }}
+					</div>
+				</div>
+				<hr class="gap">
+				<hr class="gap">
+				<a href="/index.html"><h3 class="center reveal fromBottom">Check Out My Portfolio</h3></a>
+			</div>
+			{{ template "Components/Footer" . }}
+			{{ template "Components/Expandable" . }}
+		</div>
+	</div>
+</body>
+</html>

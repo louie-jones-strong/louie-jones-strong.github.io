@@ -1,0 +1,137 @@
+{{ define "Components/QuickInfo" }}
+{{ $qi := .QuickInfoData }}
+{{ $pageData := .PageData }}
+<div class="quickInfoHolder delayRevealChildren center">
+	{{ if index $qi "TimeSpent" }}
+	<div class="quickInfo">
+		<i class="material-icons">schedule</i>
+		<h5>{{ index $qi "TimeSpent" }}</h5>
+	</div>
+	{{ else if index $qi "Duration" }}
+	<div class="quickInfo">
+		<i class="material-icons">schedule</i>
+		<h5>{{ index $qi "Duration" }}</h5>
+	</div>
+	{{ end }}
+	{{ if notNil (index $qi "NumPeople") }}
+	{{ $np := index $qi "NumPeople" }}
+	{{ if numEq $np 1 }}
+	<div class="quickInfo">
+		<i class="material-icons">person</i>
+		<h5>Solo</h5>
+	</div>
+	{{ else if numEq $np 2 }}
+	<div class="quickInfo">
+		<i class="material-icons">people</i>
+		<h5>2</h5>
+	</div>
+	{{ else }}
+	<div class="quickInfo">
+		<i class="material-icons">groups</i>
+		<h5>{{ $np }}</h5>
+	</div>
+	{{ end }}
+	{{ end }}
+	{{ if notNil (index $qi "Awards") }}
+	{{ $aw := index $qi "Awards" }}
+	{{ if numEq $aw 1 }}
+	<div class="quickInfo">
+		<i class="material-icons">workspace_premium</i>
+		<h5>Award Winning</h5>
+	</div>
+	{{ else if numGt $aw 1 }}
+	<div class="quickInfo">
+		<i class="material-icons">workspace_premium</i>
+		<h5>Multi Award Winning</h5>
+	</div>
+	{{ else }}
+	<div class="quickInfo">
+		<i class="material-icons">workspace_premium</i>
+		<h5>{{ $aw }}</h5>
+	</div>
+	{{ end }}
+	{{ end }}
+</div>
+
+{{ if notNil (index $qi "Links") }}
+{{ $links := asMap (index $qi "Links") }}
+<div class="quickLinkHolder delayRevealChildren center">
+	{{ if index $links "GithubLink" }}{{ if notNil $pageData.SiteConfig.ContactLinks.GitHub }}
+	<form action="{{ index $links "GithubLink" }}" target="_blank" class="quickInfo sheen">
+		<button>
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/github" "ClassList" "icon greyScale" "Alt" "Github Logo" "IsSvg" true) "PageData" $pageData) }}
+			<h5>Code</h5>
+		</button>
+	</form>
+	{{ end }}{{ end }}
+	{{ if index $links "ItchLink" }}{{ if notNil $pageData.SiteConfig.ContactLinks.ItchIo }}
+	<form action="{{ index $links "ItchLink" }}" target="_blank" class="quickInfo sheen">
+		<button>
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/itch-dot-io" "ClassList" "icon greyScale" "Alt" "Itch Logo" "IsSvg" true) "PageData" $pageData) }}
+			<h5>Play</h5>
+		</button>
+	</form>
+	{{ end }}{{ end }}
+	{{ if index $links "WebsiteLink" }}
+	<form action="{{ index $links "WebsiteLink" }}" target="_blank" class="quickInfo sheen">
+		<button>
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/website" "ClassList" "icon greyScale" "Alt" "Website Icon" "IsSvg" true) "PageData" $pageData) }}
+			<h5>Website</h5>
+		</button>
+	</form>
+	{{ end }}
+	{{ if index $links "InstagramLink" }}{{ if notNil $pageData.SiteConfig.ContactLinks.Instagram }}
+	<form action="{{ index $links "InstagramLink" }}" target="_blank" class="quickInfo sheen">
+		<button>
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/Instagram" "ClassList" "icon greyScale" "Alt" "Instagram Logo" "IsSvg" true) "PageData" $pageData) }}
+			<h5>Instagram</h5>
+		</button>
+	</form>
+	{{ end }}{{ end }}
+	{{ if index $links "GooglePlayLink" }}
+	<a href="{{ index $links "GooglePlayLink" }}" target="_blank" class="quickInfo sheen noUnderLine">
+		{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/GooglePlayStore" "ClassList" "icon greyScale" "Alt" "Google Play Store Logo" "IsSvg" true) "PageData" $pageData) }}
+		<h5>Google Play</h5>
+	</a>
+	{{ end }}
+	{{ if index $links "AppleArcadeLink" }}
+	<form action="{{ index $links "AppleArcadeLink" }}" target="_blank" class="quickInfo sheen">
+		<button>
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/Apple" "ClassList" "icon greyScale" "Alt" "Apple Logo" "IsSvg" true) "PageData" $pageData) }}
+			<h5>Apple Arcade</h5>
+		</button>
+	</form>
+	{{ end }}
+	{{ if index $links "AppStoreLink" }}
+	<form action="{{ index $links "AppStoreLink" }}" target="_blank" class="quickInfo sheen">
+		<button>
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/Apple" "ClassList" "icon greyScale" "Alt" "Apple Logo" "IsSvg" true) "PageData" $pageData) }}
+			<h5>App Store</h5>
+		</button>
+	</form>
+	{{ end }}
+</div>
+{{ end }}
+
+{{ if notNil (index $qi "Skills") }}
+{{ $skills := toStringSlice (index $qi "Skills") }}
+{{ if $skills }}
+<div class="quickSkills">
+	{{ if not (index $qi "HideSkillTitle") }}
+	<h4 class="center reveal fromLeft">Skills Used:</h4>
+	{{ end }}
+	<div class="quickInfoHolder delayRevealChildren center">
+		{{ range $skills }}
+		{{ $icon := index $pageData.Icons . }}
+		{{ if notNil $icon }}
+		<div class="quickInfo reveal fromLeft">
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" $icon.IconPath "ClassList" (printf "icon %s" $icon.ClassList) "Alt" (printf "%s Logo" $icon.Label) "IsSvg" true) "PageData" $pageData) }}
+			<h5>{{ $icon.Label }}</h5>
+		</div>
+		{{ end }}
+		{{ end }}
+	</div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}

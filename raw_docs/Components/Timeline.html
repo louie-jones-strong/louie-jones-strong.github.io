@@ -1,0 +1,66 @@
+{{ define "Components/Timeline" }}
+{{ $data := buildTimeline .TimelineData .PageData }}
+{{ if $data.HybridScroll }}
+<div class="hybridScroll_Container">
+<div class="hybridScroll_StickyContainer">
+<div class="hybridScroll_HorizontalScroll timelineHolder" style="--dateScale: {{ $data.DateScale }}em; --duration: {{ $data.HeaderDays }};">
+{{ else }}
+<div class="timelineWrapper">
+<div class="timelineHolder" style="--dateScale: {{ $data.DateScale }}em; --duration: {{ $data.HeaderDays }};">
+{{ end }}
+
+<div class="indent">
+	<div class="timelineHeader" style="--duration: {{ $data.HeaderDays }};">
+		<div class="line"></div>
+		{{ range $data.HeaderTicks }}
+		{{ if .IsLargeYear }}
+		<div class="tick large" style="--dateOffset: {{ .Offset }};">
+			<h4>{{ .Label }}</h4>
+		</div>
+		{{ else }}
+		<div class="tick" style="--dateOffset: {{ .Offset }};"></div>
+		{{ end }}
+		{{ end }}
+	</div>
+</div>
+
+{{ range $data.Indents }}
+<div class="indent">
+	{{ range . }}
+	{{ if .Link }}
+	<a class="timeline" style="--dateOffset: {{ .Offset }}; --duration: {{ .Duration }};" tags="{{ .Tags }}" href="{{ safeURL .Link }}">
+	{{ else }}
+	<div class="timeline" style="--dateOffset: {{ .Offset }}; --duration: {{ .Duration }};" tags="{{ .Tags }}">
+	{{ end }}
+		{{ range .Timelines }}
+		{{ if .IsRange }}
+		<div class="line" style="--dateOffset: {{ .StartOffset }}; --duration: {{ .Duration }};"></div>
+		<div class="tick large{{ if .EndIsCurrent }} current{{ end }}" style="--dateOffset: {{ .EndOffset }};"></div>
+		<div class="tick large" style="--dateOffset: {{ .StartOffset }};">
+			{{ if .ShowStartName }}{{ if .Name }}<h5>{{ .Name }}</h5>{{ end }}{{ end }}
+		</div>
+		{{ else }}
+		<div class="tick" style="--dateOffset: {{ .StartOffset }};"></div>
+		{{ end }}
+		{{ end }}
+		<h4 class="timelineTitle">{{ .Title }}</h4>
+	{{ if .Link }}</a>{{ else }}</div>{{ end }}
+	{{ end }}
+</div>
+{{ end }}
+
+{{ if $data.HybridScroll }}
+</div></div></div>
+{{ else }}
+</div></div>
+{{ end }}
+
+{{ if $data.ScrollToEnd }}
+<script>
+	window.addEventListener('load', function() {
+		let timelineHolder = document.querySelector(".timelineHolder");
+		timelineHolder.scrollLeft = timelineHolder.scrollWidth;
+	});
+</script>
+{{ end }}
+{{ end }}

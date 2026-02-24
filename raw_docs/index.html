@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/Timeline.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content hide">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="cover parallaxHolder">
+			<div class="parallaxObj">
+				{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/IndexCover/output" "ClassList" "" "Alt" "Cover photo" "LoadingType" "eager") "PageData" .PageData) }}
+			</div>
+			<div class="coverOverlay glass">
+				<h1 id="cover_name" class="reveal fromLeft">Louie <wbr> Jones&#8209;Strong</h1>
+				<h3 id="cover_title" class="reveal fromLeft shaded rounded">Creative Programmer</h3>
+			</div>
+		</div>
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<hr class="gap">
+			<hr class="gap">
+			<div class="">
+				<h1 class="center reveal fromBottom">Who Am I?</h1>
+				<p class="center reveal fromBottom">I am a <a href="https://goo.gl/maps/uww4cWv48GgdQC719" target="_blank">Brighton, England</a> based, programmer with a passion for learning and problem solving.</p>
+				<p class="center reveal fromBottom">
+					Graduated with First Class Honours in <abbr title="Machine Learning">ML</abbr> &amp; <abbr title="Artificial Intelligence">AI</abbr> from The University of London. (<a href="/Education/Degree/index.html">More Info</a>)
+				</p>
+				<h3 class="center reveal fromBottom">My Skills:</h3>
+				<div class="centeredFrame">
+					{{ template "Components/QuickInfo" (dict "QuickInfoData" (dict "HideSkillTitle" true "Skills" .ProjectData.Skills) "PageData" .PageData) }}
+				</div>
+				{{ template "Components/Timeline" (dict "TimelineData" (dict "Projects" (list "odyssey" "Degree" "EnglishTutor" "MathsTutor" "BusinessConsulting" "HouseFinder") "ShowEventStartName" true "HeaderStartOverride" (date 2018 7 1)) "PageData" .PageData) }}
+				<hr class="gap">
+				<h2 id="Work" class="center reveal fromBottom">Work:</h2>
+				<div class="cardHolder">
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "odyssey")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "EnglishTutor")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "MathsTutor")) "PageData" .PageData) }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" (index .PageData.Projects "BusinessConsulting")) "PageData" .PageData) }}
+				</div>
+				<hr class="gap">
+				<h2 id="Projects" class="center reveal fromBottom">Projects:</h2>
+				<p class="center reveal fromBottom">
+					I enjoy pushing myself to learn new skills and technologies, these are some of my projects that I developed in my spare time.
+					Each project was focused on challenging me in different ways and learning new skills, technologies and techniques.
+				</p>
+				{{ template "Components/ContentFilter" (dict "FilterData" (dict "HolderId" "filter" "Tags" (dict "Education" 0 "Solo" 0 "Art" -1 "Game" 0)) "PageData" .PageData) }}
+				<div class="cardHolder" id="filter">
+					{{ range .ProjectData.SubProjects }}
+					{{ $project := index $.PageData.Projects . }}
+					{{ template "Components/Card" (dict "CardData" (dict "ProjectData" $project) "PageData" $.PageData) }}
+					{{ end }}
+				</div>
+			</div>
+			{{ template "Components/Footer" . }}
+		</div>
+		{{ template "Components/VanillaTilt" (dict "TiltData" (dict) "PageData" .PageData) }}
+	</div>
+</body>
+</html>

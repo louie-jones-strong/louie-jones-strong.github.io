@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<hr class="gap">
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">{{ .ProjectData.Title }}</h1>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+				<h2 class="center reveal fromBottom">Abstract</h2>
+				<p class="center reveal fromBottom">
+					Reinforcement Learning (RL) is a Machine Learning (ML) approach that enables computers to solve complex sequences of interdependent decisions. RL learns through trial and error, which allows it to excel in tasks where explicit programming or labelled data is impractical. In recent years RL has seen significant strides in efficiency and capability across a diverse set of problems. However, the adoption of RL has struggled to gain traction by game designers. This is due the lack of curation of the agents behaviours and the requirements of technical expertise and time to implement and iterate the agents. These features have not been the focus of RL research, as academia's primary focus has been on achieving the most competitive Artificial Intelligence (AI). This is misaligned with game designers who prioritise utilising AI agents as tools to enhance the overall player experience. To address the games industry's requirements, this paper introduces the Dynamic Exploration of Curated Agents Framework (DECAF). On average DECAF was able to achieve 98% of the performance in 20% less time, compared to hand coded approaches. DECAF also achieved 80% of the replays predicted as human by multiple human observers. This paper demonstrates DECAF allows non-technical users to curate skilled, human-like agents, with the potential to be cheaper and faster.
+				</p>
+			</div>
+			{{ template "Components/Footer" . }}
+		</div>
+	</div>
+</body>
+</html>

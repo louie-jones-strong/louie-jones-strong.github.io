@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content background">
+		{{ template "Components/AccessibilityHelper" . }}
+		{{ template "Components/Header" . }}
+		<div class="centeredFrame">
+			<h1 class="center center reveal fromBottom">{{ .ProjectData.Title }}</h1>
+			{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+			<p class="center reveal fromBottom">
+				During my last year of university I worked part time as a business consultant for a number of small businesses.
+				With a focus on enabling them to scale their business and increase their online presence.
+				I helped them with a number of tasks including:
+			</p>
+			<ul class="center">
+				<li class="left reveal fromLeft"> <abbr title="Search Engine Optimization">SEO</abbr> </li>
+				<li class="left reveal fromLeft"> Integrating payment processing </li>
+				<li class="left reveal fromLeft"> Marketing </li>
+				<li class="left reveal fromLeft"> Process Automation </li>
+				<li class="left reveal fromLeft"> Setup Stock Management Systems </li>
+				<li class="left reveal fromLeft"> Creating Models To predict seasonal stock requirements </li>
+				<li class="left reveal fromLeft"> IT Support </li>
+			</ul>
+			<p class="center reveal fromBottom">
+				These tasks were a great way to apply my skills to real world problems and help small businesses grow.
+				They also helped me develop my communication skills and learn how to explain technical concepts to non-technical people.
+			</p>
+		</div>
+		{{ template "Components/Footer" . }}
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{{ define "Components/VanillaTilt" }}
+{{ $glare := true }}
+{{ $scale := 1.1 }}
+{{ if notNil (index .TiltData "GlareOverride") }}{{ $glare = index .TiltData "GlareOverride" }}{{ end }}
+{{ if notNil (index .TiltData "ScaleOverride") }}{{ $scale = index .TiltData "ScaleOverride" }}{{ end }}
+<script src="{{ .PageData.PathToRoot }}Public/js/external/vanilla-tilt.min.js"></script>
+<script>
+	VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 10,
+		speed: 1000,
+		glare: {{ $glare }},
+		"max-glare": 0.3,
+		reverse: true,
+		scale: {{ $scale }},
+	});
+</script>
+{{ end }}

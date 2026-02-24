@@ -1,0 +1,27 @@
+{{ define "Components/ContentFilter" }}
+{{ $filterData := .FilterData }}
+<script src="{{ .PageData.PathToRoot }}Public/js/TagFilter.js"></script>
+<script>
+	var tagFilter = null;
+	window.addEventListener('load', function () {
+		tagFilter = new TagFilter("{{ index $filterData "HolderId" }}", {{ toJSON (index $filterData "Tags") }})
+	});
+</script>
+<div class="center FilterOptions glass frosted" id="{{ index $filterData "HolderId" }}-Options">
+	<h4>Filters:</h4>
+	{{ range $tag, $val := asMap (index $filterData "Tags") }}
+	{{ $icon := index $.PageData.Icons $tag }}
+	<button class="filterButton scaleOnFocus" tag="{{ $tag }}" onclick="tagFilter.ToggleTag('{{ $tag }}')">
+		<div class="filterButtonIcons">
+			<span class="material-icons">thumb_up</span>
+			<span class="material-icons">filter_alt_off</span>
+			<span class="material-icons">thumb_down</span>
+		</div>
+		{{ if notNil $icon }}
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" $icon.IconPath "ClassList" (printf "icon %s" $icon.ClassList) "Alt" (printf "%s Logo" $icon.Label) "IsSvg" true) "PageData" $.PageData) }}
+		{{ end }}
+		<h5>{{ $tag }}</h5>
+	</button>
+	{{ end }}
+</div>
+{{ end }}

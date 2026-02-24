@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<hr class="gap">
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">{{ .ProjectData.Title }}</h1>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+				<h2 class="center reveal fromBottom">Learning Outcomes</h2>
+				<ul class="center">
+					<li class="left reveal fromLeft">Variable and types</li>
+					<li class="left reveal fromLeft">Control flow: conditionals and iteration</li>
+					<li class="left reveal fromLeft">Functions</li>
+					<li class="left reveal fromLeft">Objects and classes</li>
+					<li class="left reveal fromLeft">Interaction between objects</li>
+					<li class="left reveal fromLeft">Inheritance: extending a parent class</li>
+					<li class="left reveal fromLeft">Inheritance: defining a class hierarchy</li>
+					<li class="left reveal fromLeft">Code documentation and style</li>
+					<li class="left reveal fromLeft">Abstraction and polymorphism: implementing an abstract class</li>
+					<li class="left reveal fromLeft">Abstraction and polymorphism: defining an interface</li>
+				</ul>
+				<h2 class="center reveal fromBottom">Mid Term Project</h2>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (dict "TimeSpent" "Month" "NumPeople" 1) "PageData" .PageData) }}
+				<hr class="gap">
+				<h2 class="center reveal fromBottom">Final Project</h2>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (dict "TimeSpent" "Month" "NumPeople" 1) "PageData" .PageData) }}
+			</div>
+			{{ template "Components/Footer" . }}
+		</div>
+	</div>
+</body>
+</html>

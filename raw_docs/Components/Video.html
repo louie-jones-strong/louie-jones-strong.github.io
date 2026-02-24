@@ -1,0 +1,11 @@
+{{ define "Components/Video" }}
+{{ $v := .VideoData }}
+{{ $loadingType := "lazy" }}
+{{ if index $v "LoadingType" }}{{ $loadingType = index $v "LoadingType" }}{{ end }}
+{{ $muted := index $v "Muted" }}
+{{ if index $v "Autoplay" }}{{ $muted = true }}{{ end }}
+<video{{ if index $v "Controls" }} controls{{ end }}{{ if index $v "Autoplay" }} autoplay{{ end }}{{ if $muted }} muted{{ end }}{{ if index $v "Loop" }} loop{{ end }} loading="{{ $loadingType }}"{{ if index $v "ClassList" }} class="{{ index $v "ClassList" }}"{{ end }}>
+<source src="{{ .PageData.PathToRoot }}{{ index $v "Path" }}.mp4" type="video/mp4">
+I&#39;m sorry, your browser doesn&#39;t support HTML5 video.
+</video>
+{{ end }}

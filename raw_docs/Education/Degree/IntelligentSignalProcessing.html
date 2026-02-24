@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/ZipperCard.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<hr class="gap">
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">{{ .ProjectData.Title }}</h1>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+				<p class="center reveal fromBottom">
+					In this module, I learned about the fundamentals of capturing, processing, storing and presenting signals applied to real world problems.
+					This module covered <abbr title="Linear time-invariant">LTI</abbr> systems and impulse responses, frequency domain representations, extracting features from signals, speech recognition, computer vision, compressing signals.
+				</p>
+				<h2 class="center reveal fromBottom">Mid Term</h2>
+				<p class="center reveal fromBottom">
+					For the mid term coursework, I was asked to create a collection of applications, each demonstrating a different aspect of signal processing.
+				</p>
+			</div>
+			<div class="ZipperCardsHolder glass centeredFrame">
+				<div class="ZipperCard shaded glass reveal fromLeft">
+					<div>
+					</div>
+					{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Degree/IntelligentSignalProcessing/Midterm-Exercise-1" "ClassList" "expandable" "Alt" "Screenshot of dj website running in a browser") "PageData" .PageData) }}
+				</div>
+				<div class="ZipperCard shaded glass reveal fromRight">
+					<div>
+						{{ template "Components/Video" (dict "VideoData" (dict "Autoplay" true "Muted" true "Loop" true "Path" "Public/Assets/Degree/IntelligentSignalProcessing/MusicVis" "ClassList" "") "PageData" .PageData) }}
+					</div>
+					<div>
+						<h3>Music Visualisation</h3>
+					</div>
+				</div>
+				<div class="ZipperCard shaded glass reveal fromLeft">
+					<div>
+						<h3>Audio steganography</h3>
+					</div>
+				</div>
+				<div class="ZipperCard shaded glass reveal fromRight">
+					<div>
+						<h3>speech recognition</h3>
+					</div>
+				</div>
+			</div>
+			<div class="centeredFrame">
+				<h2 class="center reveal fromBottom">Final</h2>
+				<p class="center reveal fromBottom">
+					For the final coursework, I again was asked to create a collection of applications.
+				</p>
+			</div>
+			<div class="ZipperCardsHolder glass centeredFrame">
+				<div class="ZipperCard shaded glass reveal fromLeft">
+					<div>
+						<h3>Car Detection &amp; Tracking system</h3>
+					</div>
+					{{ template "Components/Video" (dict "VideoData" (dict "Autoplay" true "Muted" true "Loop" true "Controls" true "Path" "Public/Assets/Degree/IntelligentSignalProcessing/CarDetection" "ClassList" "") "PageData" .PageData) }}
+				</div>
+				<div class="ZipperCard shaded glass reveal fromRight">
+					<div>
+						<h3>Lossless compression</h3>
+					</div>
+				</div>
+				<div class="ZipperCard shaded glass reveal fromLeft">
+					<div>
+						<h3>video Ingest pipeline</h3>
+					</div>
+				</div>
+			</div>
+			{{ template "Components/Footer" . }}
+		</div>
+	</div>
+</body>
+</html>

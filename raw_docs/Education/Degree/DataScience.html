@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/ZipperCard.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<hr class="gap">
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">{{ .ProjectData.Title }}</h1>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+				<h2 class="center reveal fromBottom">Mid term</h2>
+				<p class="center reveal fromBottom">
+					For the mid term project, I was tasked with building a linear regression model. I took this opportunity create a model to predict the number of sales of products from a number of chain of stores. This was based on the data from the Kaggle competition <a href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting">Store Sales - Time Series Forecasting</a>.
+				</p>
+			</div>
+			{{ template "Components/Footer" . }}
+		</div>
+		{{ template "Components/VanillaTilt" (dict "TiltData" (dict) "PageData" .PageData) }}
+	</div>
+</body>
+</html>

@@ -37,6 +37,8 @@ func FuncMap() template.FuncMap {
 		"iconKeys":           IconKeys,
 		"projectKeys":        ProjectKeys,
 		"sprintf":            fmt.Sprintf,
+		"asMap":              AsMap,
+		"toStringSlice":      ToStringSlice,
 	}
 }
 
@@ -160,26 +162,31 @@ func ProjectToQuickInfo(p config.Project) map[string]interface{} {
 		duration = *p.Duration
 	}
 
-	links := map[string]interface{}{
-		"GithubLink":      p.Links.GithubLink,
-		"ItchLink":        p.Links.ItchLink,
-		"WebsiteLink":     p.Links.WebsiteLink,
-		"InstagramLink":   p.Links.InstagramLink,
-		"GooglePlayLink":  p.Links.GooglePlayLink,
-		"AppleArcadeLink": p.Links.AppleArcadeLink,
-		"AppStoreLink":    p.Links.AppStoreLink,
+	links := map[string]interface{}{}
+	if p.Links.GithubLink != nil {
+		links["GithubLink"] = *p.Links.GithubLink
 	}
-
-	hasLinks := false
-	for _, v := range links {
-		if v != nil {
-			hasLinks = true
-			break
-		}
+	if p.Links.ItchLink != nil {
+		links["ItchLink"] = *p.Links.ItchLink
+	}
+	if p.Links.WebsiteLink != nil {
+		links["WebsiteLink"] = *p.Links.WebsiteLink
+	}
+	if p.Links.InstagramLink != nil {
+		links["InstagramLink"] = *p.Links.InstagramLink
+	}
+	if p.Links.GooglePlayLink != nil {
+		links["GooglePlayLink"] = *p.Links.GooglePlayLink
+	}
+	if p.Links.AppleArcadeLink != nil {
+		links["AppleArcadeLink"] = *p.Links.AppleArcadeLink
+	}
+	if p.Links.AppStoreLink != nil {
+		links["AppStoreLink"] = *p.Links.AppStoreLink
 	}
 
 	var linksVal interface{}
-	if hasLinks {
+	if len(links) > 0 {
 		linksVal = links
 	}
 
@@ -209,4 +216,33 @@ func ProjectKeys(projects map[string]config.Project) []string {
 		keys = append(keys, k)
 	}
 	return keys
+}
+
+func AsMap(v interface{}) map[string]interface{} {
+	if v == nil {
+		return nil
+	}
+	if m, ok := v.(map[string]interface{}); ok {
+		return m
+	}
+	return nil
+}
+
+func ToStringSlice(v interface{}) []string {
+	if v == nil {
+		return nil
+	}
+	if s, ok := v.([]string); ok {
+		return s
+	}
+	if s, ok := v.([]interface{}); ok {
+		result := make([]string, 0, len(s))
+		for _, item := range s {
+			if str, ok := item.(string); ok {
+				result = append(result, str)
+			}
+		}
+		return result
+	}
+	return nil
 }

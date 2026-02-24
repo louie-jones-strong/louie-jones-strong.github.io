@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/Timeline.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content background">
+		{{ template "Components/AccessibilityHelper" . }}
+		{{ template "Components/Header" . }}
+		<hr class="gap">
+		<h3 class="center reveal fromBottom">My Skills:</h3>
+		<div class="centeredFrame">
+			{{ template "Components/QuickInfo" (dict "QuickInfoData" (dict "HideSkillTitle" true "Skills" (iconKeys .PageData.Icons)) "PageData" .PageData) }}
+		</div>
+		<hr class="gap">
+		{{ template "Components/Timeline" (dict "TimelineData" (dict "Projects" (projectKeys .PageData.Projects) "DateScale" 0.1) "PageData" .PageData) }}
+		<hr class="gap">
+		{{ template "Components/ContentFilter" (dict "FilterData" (dict "HolderId" "filter" "Tags" (dict "Education" 0 "Solo" 0 "Art" 0 "Game" 0 "Degree" 0)) "PageData" .PageData) }}
+		<div class="cardHolder" id="filter">
+			{{ range $key, $project := .PageData.Projects }}
+			{{ template "Components/Card" (dict "CardData" (dict "ProjectData" $project) "PageData" $.PageData) }}
+			{{ end }}
+		</div>
+		{{ template "Components/Footer" . }}
+	</div>
+	{{ template "Components/VanillaTilt" (dict "TiltData" (dict) "PageData" .PageData) }}
+</body>
+</html>

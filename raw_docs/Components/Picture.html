@@ -1,0 +1,17 @@
+{{ define "Components/Picture" }}
+{{ $imgData := .ImgData }}
+{{ $pageData := .PageData }}
+{{ $loadingType := "lazy" }}
+{{ if index $imgData "LoadingType" }}{{ $loadingType = index $imgData "LoadingType" }}{{ end }}
+{{ if index $imgData "IsSvg" }}
+<img src="{{ $pageData.PathToRoot }}{{ index $imgData "Path" }}.svg" alt="{{ index $imgData "Alt" }}" loading="{{ $loadingType }}"{{ if index $imgData "ClassList" }} class="{{ index $imgData "ClassList" }}"{{ end }}{{ if index $imgData "Style" }} style="{{ index $imgData "Style" }}"{{ end }}>
+{{ else }}
+<picture{{ if index $imgData "ClassList" }} class="{{ index $imgData "ClassList" }}"{{ end }}{{ if index $imgData "Style" }} style="{{ index $imgData "Style" }}"{{ end }}>
+{{ $imageConfig := $pageData.SiteConfig.AssetConfig.ImageConfig }}
+{{ range $imageConfig.OutputFormats }}{{ $fmt := . }}
+<source srcset="{{ range $i, $res := $imageConfig.HorizontalResolutionsGroups }}{{ if $i }}, {{ end }}{{ $pageData.PathToRoot }}{{ index $imgData "Path" }}_{{ $res }}.{{ $fmt }} {{ $res }}w{{ end }}" type="image/{{ $fmt }}"{{ if index $imgData "Sizes" }} sizes="{{ index $imgData "Sizes" }}"{{ end }}>
+{{ end }}
+<img src="{{ $pageData.PathToRoot }}{{ index $imgData "Path" }}_{{ lastElem $imageConfig.HorizontalResolutionsGroups }}.{{ lastElem $imageConfig.OutputFormats }}" alt="{{ index $imgData "Alt" }}" loading="{{ $loadingType }}"{{ if index $imgData "Sizes" }} sizes="{{ index $imgData "Sizes" }}"{{ end }}>
+</picture>
+{{ end }}
+{{ end }}

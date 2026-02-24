@@ -1,0 +1,38 @@
+{{ define "Components/Footer" }}
+{{ $contactLinks := .PageData.SiteConfig.ContactLinks }}
+<hr class="gap">
+<footer class="glass noBorder">
+	<h2 class="reveal fromTop center">Find Me On:</h2>
+	<div class="delayRevealChildren slow center ContactLinkHolder">
+		{{ if notNil $contactLinks.LinkedIn }}
+		<a class="reveal" href="{{ deref $contactLinks.LinkedIn }}" target="_blank">
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/linkedin-flat" "ClassList" "brandLogo glass neonOutline" "Alt" "Linkedin Logo" "IsSvg" true) "PageData" .PageData) }}
+		</a>
+		{{ end }}
+		{{ if notNil $contactLinks.ItchIo }}
+		<a class="reveal" href="{{ deref $contactLinks.ItchIo }}" target="_blank">
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/itch-dot-io" "ClassList" "brandLogo glass neonOutline" "Alt" "Itch Logo" "IsSvg" true) "PageData" .PageData) }}
+		</a>
+		{{ end }}
+		{{ if notNil $contactLinks.GitHub }}
+		<a class="reveal" href="{{ deref $contactLinks.GitHub }}" target="_blank">
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/github" "ClassList" "brandLogo glass neonOutline" "Alt" "Github Logo" "IsSvg" true) "PageData" .PageData) }}
+		</a>
+		{{ end }}
+		{{ if notNil $contactLinks.Instagram }}
+		<a class="reveal" href="{{ deref $contactLinks.Instagram }}" target="_blank">
+			{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Icons/Instagram" "ClassList" "brandLogo glass neonOutline" "Alt" "Instagram Logo" "IsSvg" true) "PageData" .PageData) }}
+		</a>
+		{{ end }}
+	</div>
+	{{ if notNil $contactLinks.Email }}
+	<div class="reveal fromRight center">
+		<label for="email">Email: </label>
+		<a href="mailto:{{ deref $contactLinks.Email }}" id="email">{{ deref $contactLinks.Email }}</a>
+	</div>
+	{{ end }}
+	<div id="smallPrint">
+		<p class="reveal fromLeft left">&#169;2021 Louie Jones-Strong.</p>
+	</div>
+</footer>
+{{ end }}

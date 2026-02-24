@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/ZipperCard.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content background">
+		{{ template "Components/AccessibilityHelper" . }}
+		{{ template "Components/Header" . }}
+		<div class="centeredFrame">
+			<h1 class="reveal fromBottom center">{{ .ProjectData.Title }}</h1>
+			<p class="reveal fromBottom center">Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.</p>
+			{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+		</div>
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard shaded glass reveal fromRight">
+				{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/MediaStudio/template" "ClassList" "expandable" "Alt" "Screenshot of Media Studio") "PageData" .PageData) }}
+				<div>
+					<h3>Templates</h3>
+					<p>I often found that I apply the same layout and effects to images. So I created a templates (json) that will ask the user input the basic info and then does the rest.</p>
+				</div>
+			</div>
+			<div class="ZipperCard shaded glass reveal fromLeft">
+				<div>
+					<h3>Layers</h3>
+					<p>Layers are a very important feature of any power user image editing tool.</p>
+				</div>
+				{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/MediaStudio/layers" "ClassList" "expandable" "Alt" "Screenshot of Media Studio") "PageData" .PageData) }}
+			</div>
+			<div class="ZipperCard shaded glass reveal fromRight">
+				{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/MediaStudio/screenshot" "ClassList" "expandable" "Alt" "Screenshot of Media Studio") "PageData" .PageData) }}
+				<div>
+					<h3>Effects</h3>
+					<p>Being able to add non destructive image affects allow for more control as speed in iteration, to help with the creative process.</p>
+				</div>
+			</div>
+		</div>
+		{{ template "Components/Footer" . }}
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{ template "Components/Head" (dict "PageData" .PageData "ProjectData" .ProjectData) }}
+	<link rel="stylesheet" type="text/css" href="{{ .PageData.PathToRoot }}Public/css/Optional/CardHolder.css">
+</head>
+<body class="dark">
+	{{ template "Components/Loader" . }}
+	<div class="content">
+		{{ template "Components/AccessibilityHelper" . }}
+		<div class="background">
+			{{ template "Components/Header" . }}
+			<hr class="gap">
+			<div class="centeredFrame">
+				<h1 class="center reveal fromBottom">{{ .ProjectData.Title }}</h1>
+				{{ template "Components/QuickInfo" (dict "QuickInfoData" (projectToQuickInfo .ProjectData) "PageData" .PageData) }}
+				<h2 class="center reveal fromBottom">What is Natural Language Processing?</h2>
+				<p class="center reveal fromBottom">
+					Natural Language Processing (NLP) is a field of Artificial Intelligence that gives the machines the ability to read, understand and derive meaning from human languages. It is the process through which computers understand and manipulate human language to perform tasks.
+				</p>
+				<h2 class="center reveal fromBottom">Mid Term Project</h2>
+				<p class="center reveal fromBottom">
+					For my mid term course work I was tasked with creating a text classifier. I took this opportunity to explore sarcasm detection across a collection of text sources.
+				</p>
+			</div>
+			{{ template "Components/Footer" . }}
+		</div>
+		{{ template "Components/VanillaTilt" (dict "TiltData" (dict) "PageData" .PageData) }}
+	</div>
+</body>
+</html>

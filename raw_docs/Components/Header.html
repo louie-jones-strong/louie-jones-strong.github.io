@@ -1,0 +1,24 @@
+{{ define "Components/Header" }}
+<Header>
+	<a id="headerLogo" href="/index.html">
+		{{ template "Components/Picture" (dict "ImgData" (dict "Path" "Public/Assets/Logo/Logo" "ClassList" "" "Alt" "Portfolio Logo" "Sizes" "5em") "PageData" .PageData) }}
+	</a>
+	<nav>
+		{{ if and (eq .PageData.PageName "index") (eq .PageData.PageParent ".") }}
+			<a href="/Education/Degree/index.html" class="navLink scaleOnFocus">Degree</a>
+			<a href="#Work" class="navLink scaleOnFocus">Work</a>
+			<a href="#Projects" class="navLink scaleOnFocus">Projects</a>
+		{{ else }}
+			<a href="/index.html" id="homeNavLink" class="navLink scaleOnFocus{{ if eq .PageData.PageName "index" }} selected{{ end }}">Home</a>
+			{{ if and (eq .PageData.PageParent "Education/Degree") (ne .PageData.PageName "index") }}
+				<a href="/Education/Degree/index.html" class="navLink scaleOnFocus">Degree</a>
+			{{ end }}
+		{{ end }}
+		{{ if .PageData.SiteConfig.ContactLinks.CVDownloadAllowed }}
+		<a href="{{ .PageData.PathToRoot }}CV.pdf" target="_blank" class="cvButton shaded sheen scaleOnFocus right">
+			CV <span class="material-icons">download</span>
+		</a>
+		{{ end }}
+	</nav>
+</Header>
+{{ end }}
