@@ -17,7 +17,7 @@
 			<span class="material-icons">filter_alt_off</span>
 			<span class="material-icons">thumb_down</span>
 		</div>
-		{{ if notNil $icon }}
+		{{ if $icon.IconPath }}
 			{{ template "Components/Picture" (dict "ImgData" (dict "Path" $icon.IconPath "ClassList" (printf "icon %s" $icon.ClassList) "Alt" (printf "%s Logo" $icon.Label) "IsSvg" true) "PageData" $.PageData) }}
 		{{ end }}
 		<h5>{{ $tag }}</h5>
