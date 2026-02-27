@@ -61,6 +61,7 @@
 	margin-bottom: 0px;
 	position: absolute;
 	flex-wrap: nowrap;
+	left: 0px;
 }
 
 .card>.cardImage>.quickInfoHolder {
