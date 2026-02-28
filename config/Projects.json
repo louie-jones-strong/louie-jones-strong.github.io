@@ -1267,7 +1267,7 @@
 	},
 	"got_df": {
 		"Title": "Game Of Thrones: Dragonfire",
-		"Thumbnail": null,
+		"Thumbnail": "Public/Assets/LSWB/game-of-thrones-dragonfire",
 		"Timelines": [
 			{
 				"Name": "Client",
@@ -1304,7 +1304,7 @@
 	},
 	"got_conquest": {
 		"Title": "Game Of Thrones: Conquest",
-		"Thumbnail": null,
+		"Thumbnail": "Public/Assets/LSWB/GOTC",
 		"Timelines": [
 			{
 				"Name": "Micro Services",
