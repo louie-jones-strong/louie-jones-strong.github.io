@@ -1183,6 +1183,7 @@
 			"odyssey_GameJams",
 			"odyssey_project1",
 			"got_df",
+			"got_conquest",
 			"odyssey_GraphicsCourse",
 			"odyssey_product_scrapper"
 		]
@@ -1266,7 +1267,7 @@
 	},
 	"got_df": {
 		"Title": "Game Of Thrones: Dragonfire",
-		"Thumbnail": null,
+		"Thumbnail": "Public/Assets/LSWB/game-of-thrones-dragonfire",
 		"Timelines": [
 			{
 				"Name": "Client",
@@ -1293,10 +1294,43 @@
 			"Csharp",
 			"Golang",
 			"Git",
+			"SQL",
 			"Docker"
 		],
 		"Links": {
 			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.wb.goog.hotd.socialstrategy&pcampaignid=web_share"
+		},
+		"SubProjects": []
+	},
+	"got_conquest": {
+		"Title": "Game Of Thrones: Conquest",
+		"Thumbnail": "Public/Assets/LSWB/GOTC",
+		"Timelines": [
+			{
+				"Name": "Micro Services",
+				"StartDate": "July, 2025",
+				"EndDate": "September, 2025"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": null,
+		"Awards": null,
+		"QuickDescription": "Contracting for WB Games Boston on Game Of Thrones: Conquest.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Work Game",
+		"Skills": [
+			"Unity",
+			"Csharp",
+			"Golang",
+			"Git",
+			"SQL",
+			"Docker"
+		],
+		"Links": {
+			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.wb.goog.got.conquest&hl=en_GB"
 		},
 		"SubProjects": []
 	},
