@@ -1,0 +1,351 @@
+<%
+/* ---- Helper Functions ---- */
+
+function formatDate(dateStr) {
+	if (!dateStr) return '';
+	if (dateStr === 'Current') return 'Present';
+	var d = new Date(dateStr);
+	if (isNaN(d)) return dateStr;
+	return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+}
+
+function formatTimelineRange(timeline) {
+	var start = formatDate(timeline.StartDate);
+	var end   = formatDate(timeline.EndDate);
+	if (start && end) return start + ' \u2013 ' + end;
+	if (start) return 'From ' + start;
+	return '';
+}
+
+/* Build date-range string for a project */
+function projectDateRange(project) {
+	var timelines = project.Timelines || [];
+	if (timelines.length > 0) {
+		var first = formatDate(timelines[0].StartDate);
+		var last  = formatDate(timelines[timelines.length - 1].EndDate);
+		if (first && last) return first + ' \u2013 ' + last;
+		if (first) return 'From ' + first;
+	}
+	if (project.StartDate) {
+		return formatDate(project.StartDate) + ' \u2013 ' + formatDate(project.EndDate);
+	}
+	return '';
+}
+
+/* ---- Derived Data ---- */
+
+var profile     = Projects[CVConfig.ProfileKey] || {};
+var contactLinks = SiteConfig.ContactLinks;
+var allSkills   = (profile.Skills || []).map(function(k) {
+	return Icons[k] ? Icons[k].Label : k;
+});
+
+var workEntries = CVConfig.WorkProjects.map(function(k) {
+	return { key: k, project: Projects[k] };
+}).filter(function(e) { return e.project; });
+
+var educationEntries = CVConfig.EducationProjects.map(function(k) {
+	return { key: k, project: Projects[k] };
+}).filter(function(e) { return e.project; });
+
+var projectEntries = CVConfig.PersonalProjects.map(function(k) {
+	return { key: k, project: Projects[k] };
+}).filter(function(e) { return e.project; });
+%><!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= profile.Title %> – CV</title>
+<style>
+/* ======================================================
+   CV Styles  –  screen + print
+   ====================================================== */
+
+/* --- Reset & base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 11pt; }
+
+body {
+	font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	color: #1a1a1a;
+	background: #f0f0f0;
+	line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* --- A4 page shell (screen only) --- */
+.page {
+	background: #fff;
+	width: 210mm;
+	min-height: 297mm;
+	margin: 24px auto;
+	padding: 18mm 20mm 18mm 20mm;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* --- Colour tokens --- */
+:root {
+	--accent:   #1e6091;
+	--muted:    #555;
+	--rule:     #d4d4d4;
+	--bg-skill: #eef4fb;
+}
+
+/* --- Header --- */
+.cv-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1em;
+	border-bottom: 2px solid var(--accent);
+	padding-bottom: 0.75em;
+	margin-bottom: 1em;
+}
+
+.cv-header-left h1 {
+	font-size: 1.9em;
+	font-weight: 700;
+	color: #111;
+	line-height: 1.1;
+}
+
+.cv-header-left .job-title {
+	font-size: 1em;
+	color: var(--accent);
+	font-weight: 500;
+	margin-top: 0.15em;
+}
+
+.cv-header-right {
+	text-align: right;
+	font-size: 0.82em;
+	color: var(--muted);
+	line-height: 1.8;
+	flex-shrink: 0;
+}
+
+.cv-header-right a { color: var(--accent); }
+
+/* --- Profile summary --- */
+.cv-summary {
+	font-size: 0.9em;
+	color: #333;
+	margin-bottom: 1.1em;
+}
+
+/* --- Section --- */
+.cv-section { margin-bottom: 1.1em; }
+
+.cv-section h2 {
+	font-size: 0.78em;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--accent);
+	font-weight: 700;
+	margin-bottom: 0.25em;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid var(--rule);
+}
+
+/* --- Entry (work / education / project) --- */
+.cv-entry { margin-bottom: 0.7em; }
+
+.cv-entry-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 0.5em;
+}
+
+.cv-entry-title {
+	font-size: 0.95em;
+	font-weight: 600;
+	color: #111;
+}
+
+.cv-entry-date {
+	font-size: 0.78em;
+	color: var(--muted);
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.cv-entry-roles {
+	font-size: 0.75em;
+	color: var(--muted);
+	font-style: italic;
+	margin-top: 0.1em;
+}
+
+.cv-entry-award {
+	font-size: 0.78em;
+	color: var(--accent);
+	font-style: italic;
+	margin-top: 0.1em;
+}
+
+.cv-entry-body {
+	font-size: 0.85em;
+	color: #333;
+	margin-top: 0.2em;
+	padding-left: 0.6em;
+	border-left: 2px solid var(--rule);
+}
+
+/* --- Skills --- */
+.cv-skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35em;
+}
+
+.cv-skill {
+	background: var(--bg-skill);
+	color: var(--accent);
+	font-size: 0.78em;
+	font-weight: 600;
+	padding: 0.15em 0.6em;
+	border-radius: 0.3em;
+}
+
+/* ======================================================
+   Print overrides  –  no shadows, correct margins
+   ====================================================== */
+@media print {
+	body { background: #fff; }
+	.page {
+		width: 100%;
+		min-height: unset;
+		margin: 0;
+		padding: 12mm 16mm;
+		box-shadow: none;
+	}
+	.cv-entry { page-break-inside: avoid; }
+	.cv-section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+	<!-- ========== HEADER ========== -->
+	<header class="cv-header">
+		<div class="cv-header-left">
+			<h1><%= profile.Title %></h1>
+			<div class="job-title"><%= CVConfig.JobTitle %></div>
+		</div>
+		<div class="cv-header-right">
+			<% if (contactLinks.Email) { %>
+				<div><a href="mailto:<%= contactLinks.Email %>"><%= contactLinks.Email %></a></div>
+			<% } %>
+			<% if (contactLinks.LinkedIn) { %>
+				<div><a href="<%= contactLinks.LinkedIn %>"><%= contactLinks.LinkedIn.replace('https://www.','') %></a></div>
+			<% } %>
+			<% if (contactLinks.GitHub) { %>
+				<div><a href="<%= contactLinks.GitHub %>"><%= contactLinks.GitHub.replace('https://','') %></a></div>
+			<% } %>
+			<% if (SiteConfig.HostURL) { %>
+				<div><a href="<%= SiteConfig.HostURL %>"><%= SiteConfig.HostURL.replace(/\/$/, '') %></a></div>
+			<% } %>
+		</div>
+	</header>
+
+	<!-- ========== PROFILE SUMMARY ========== -->
+	<p class="cv-summary"><%= profile.QuickDescription %></p>
+
+	<!-- ========== WORK EXPERIENCE ========== -->
+	<section class="cv-section">
+		<h2>Work Experience</h2>
+
+		<% for (var wi = 0; wi < workEntries.length; wi++) {
+			var we = workEntries[wi];
+			var proj = we.project;
+			var timelines = proj.Timelines || [];
+			var dateRange = projectDateRange(proj);
+		%>
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title"><%= proj.Title %></span>
+				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
+			</div>
+
+			<% if (timelines.length > 1) {
+				var roles = timelines.filter(function(t){ return t.Name; })
+					.map(function(t){ return t.Name + ': ' + formatTimelineRange(t); });
+				if (roles.length > 0) {
+			%>
+			<div class="cv-entry-roles"><%= roles.join(' \u00a0|\u00a0 ') %></div>
+			<%  } } %>
+
+			<% if (proj.Awards) { %>
+			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
+			<% } %>
+
+			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+		</div>
+		<% } %>
+	</section>
+
+	<!-- ========== EDUCATION ========== -->
+	<section class="cv-section">
+		<h2>Education</h2>
+
+		<% for (var ei = 0; ei < educationEntries.length; ei++) {
+			var ee = educationEntries[ei];
+			var proj = ee.project;
+			var timelines = proj.Timelines || [];
+			var dateRange = timelines.length > 0 ? formatTimelineRange(timelines[0]) : '';
+		%>
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title"><%= proj.Title %></span>
+				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
+			</div>
+
+			<% if (proj.Awards) { %>
+			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
+			<% } %>
+
+			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+		</div>
+		<% } %>
+	</section>
+
+	<!-- ========== TECHNICAL SKILLS ========== -->
+	<section class="cv-section">
+		<h2>Technical Skills</h2>
+		<div class="cv-skills">
+			<% for (var si = 0; si < allSkills.length; si++) { %>
+			<span class="cv-skill"><%= allSkills[si] %></span>
+			<% } %>
+		</div>
+	</section>
+
+	<!-- ========== KEY PROJECTS ========== -->
+	<% if (projectEntries.length > 0) { %>
+	<section class="cv-section">
+		<h2>Key Projects</h2>
+
+		<% for (var pi = 0; pi < projectEntries.length; pi++) {
+			var pe = projectEntries[pi];
+			var proj = pe.project;
+			var timelines = proj.Timelines || [];
+			var dateRange = timelines.length > 0 ? formatTimelineRange(timelines[0]) : '';
+		%>
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title"><%= proj.Title %></span>
+				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
+			</div>
+			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+		</div>
+		<% } %>
+	</section>
+	<% } %>
+
+</div><!-- /.page -->
+</body>
+</html>

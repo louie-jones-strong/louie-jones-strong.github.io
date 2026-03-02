@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Louie Jones-Strong – CV</title>
+<style>
+/* ======================================================
+   CV Styles  –  screen + print
+   ====================================================== */
+
+/* --- Reset & base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 11pt; }
+
+body {
+	font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	color: #1a1a1a;
+	background: #f0f0f0;
+	line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* --- A4 page shell (screen only) --- */
+.page {
+	background: #fff;
+	width: 210mm;
+	min-height: 297mm;
+	margin: 24px auto;
+	padding: 18mm 20mm 18mm 20mm;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* --- Colour tokens --- */
+:root {
+	--accent:   #1e6091;
+	--muted:    #555;
+	--rule:     #d4d4d4;
+	--bg-skill: #eef4fb;
+}
+
+/* --- Header --- */
+.cv-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1em;
+	border-bottom: 2px solid var(--accent);
+	padding-bottom: 0.75em;
+	margin-bottom: 1em;
+}
+
+.cv-header-left h1 {
+	font-size: 1.9em;
+	font-weight: 700;
+	color: #111;
+	line-height: 1.1;
+}
+
+.cv-header-left .job-title {
+	font-size: 1em;
+	color: var(--accent);
+	font-weight: 500;
+	margin-top: 0.15em;
+}
+
+.cv-header-right {
+	text-align: right;
+	font-size: 0.82em;
+	color: var(--muted);
+	line-height: 1.8;
+	flex-shrink: 0;
+}
+
+.cv-header-right a { color: var(--accent); }
+
+/* --- Profile summary --- */
+.cv-summary {
+	font-size: 0.9em;
+	color: #333;
+	margin-bottom: 1.1em;
+}
+
+/* --- Section --- */
+.cv-section { margin-bottom: 1.1em; }
+
+.cv-section h2 {
+	font-size: 0.78em;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--accent);
+	font-weight: 700;
+	margin-bottom: 0.25em;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid var(--rule);
+}
+
+/* --- Entry (work / education / project) --- */
+.cv-entry { margin-bottom: 0.7em; }
+
+.cv-entry-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 0.5em;
+}
+
+.cv-entry-title {
+	font-size: 0.95em;
+	font-weight: 600;
+	color: #111;
+}
+
+.cv-entry-date {
+	font-size: 0.78em;
+	color: var(--muted);
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.cv-entry-roles {
+	font-size: 0.75em;
+	color: var(--muted);
+	font-style: italic;
+	margin-top: 0.1em;
+}
+
+.cv-entry-award {
+	font-size: 0.78em;
+	color: var(--accent);
+	font-style: italic;
+	margin-top: 0.1em;
+}
+
+.cv-entry-body {
+	font-size: 0.85em;
+	color: #333;
+	margin-top: 0.2em;
+	padding-left: 0.6em;
+	border-left: 2px solid var(--rule);
+}
+
+/* --- Skills --- */
+.cv-skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35em;
+}
+
+.cv-skill {
+	background: var(--bg-skill);
+	color: var(--accent);
+	font-size: 0.78em;
+	font-weight: 600;
+	padding: 0.15em 0.6em;
+	border-radius: 0.3em;
+}
+
+/* ======================================================
+   Print overrides  –  no shadows, correct margins
+   ====================================================== */
+@media print {
+	body { background: #fff; }
+	.page {
+		width: 100%;
+		min-height: unset;
+		margin: 0;
+		padding: 12mm 16mm;
+		box-shadow: none;
+	}
+	.cv-entry { page-break-inside: avoid; }
+	.cv-section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+	<!-- ========== HEADER ========== -->
+	<header class="cv-header">
+		<div class="cv-header-left">
+			<h1>Louie Jones-Strong</h1>
+			<div class="job-title">Software Engineer</div>
+		</div>
+		<div class="cv-header-right">
+			
+				<div><a href="mailto:louiej-s@hotmail.co.uk">louiej-s@hotmail.co.uk</a></div>
+			
+			
+				<div><a href="https://www.linkedin.com/in/louie-jones-strong">linkedin.com/in/louie-jones-strong</a></div>
+			
+			
+				<div><a href="https://github.com/louie-jones-strong">github.com/louie-jones-strong</a></div>
+			
+			
+				<div><a href="https://louie-jones-strong.github.io/">https://louie-jones-strong.github.io</a></div>
+			
+		</div>
+	</header>
+
+	<!-- ========== PROFILE SUMMARY ========== -->
+	<p class="cv-summary">I am a Brighton based hard working, creative, programmer studying machine learning.</p>
+
+	<!-- ========== WORK EXPERIENCE ========== -->
+	<section class="cv-section">
+		<h2>Work Experience</h2>
+
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">TT Odyssey</span>
+				<span class="cv-entry-date">Apr 2018 – Present</span>
+			</div>
+
+			
+			<div class="cv-entry-roles">Work Experience: Apr 2018 – Apr 2018  |  Intern: Aug 2018 – May 2019  |  Junior: May 2019 – Nov 2021  |  Part-Time: Nov 2021 – Sept 2022  |  Standard: Oct 2023 – Present</div>
+			
+
+			
+
+			<div class="cv-entry-body">My time at TT Odyssey working on: LEGO® Star Wars™ Battles &amp; Game Of Thrones: Dragonfire.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">English Tutor</span>
+				<span class="cv-entry-date">Sept 2018 – Apr 2019</span>
+			</div>
+
+			
+
+			
+
+			<div class="cv-entry-body">I spent my evenings after TT Odyssey working as an English tutor for Arabic students, focusing on preparing them for the IELTS speaking exam.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Maths Tutor</span>
+				<span class="cv-entry-date">Mar 2020 – Jun 2021</span>
+			</div>
+
+			
+
+			
+
+			<div class="cv-entry-body">While at TT Odyssey and studying, I regularly made time at weekends to tutor GCSE maths. This was for a number of students that would have failed otherwise due to lack of class time because covid.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Business Consulting</span>
+				<span class="cv-entry-date">Oct 2022 – Jul 2023</span>
+			</div>
+
+			
+
+			
+
+			<div class="cv-entry-body">During my last year of university I worked as a consultant for a number of small businesses.</div>
+		</div>
+		
+	</section>
+
+	<!-- ========== EDUCATION ========== -->
+	<section class="cv-section">
+		<h2>Education</h2>
+
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Degree</span>
+				<span class="cv-entry-date">Oct 2020 – Sept 2023</span>
+			</div>
+
+			
+			<div class="cv-entry-award">&#127942; First Class Honours</div>
+			
+
+			<div class="cv-entry-body">Bachelor of Science in Machine Learning and Artificial Intelligence.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">A Levels</span>
+				<span class="cv-entry-date">Sept 2016 – Jun 2018</span>
+			</div>
+
+			
+
+			<div class="cv-entry-body">A Levels studied at UTC@Harbourside.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">GCSEs</span>
+				<span class="cv-entry-date">Sept 2014 – Jun 2016</span>
+			</div>
+
+			
+
+			<div class="cv-entry-body">GCSEs studied at Blatchington Mill School.</div>
+		</div>
+		
+	</section>
+
+	<!-- ========== TECHNICAL SKILLS ========== -->
+	<section class="cv-section">
+		<h2>Technical Skills</h2>
+		<div class="cv-skills">
+			
+			<span class="cv-skill">Unity</span>
+			
+			<span class="cv-skill">C#</span>
+			
+			<span class="cv-skill">C++</span>
+			
+			<span class="cv-skill">Python</span>
+			
+			<span class="cv-skill">node.js</span>
+			
+			<span class="cv-skill">Java Script</span>
+			
+			<span class="cv-skill">HTML</span>
+			
+			<span class="cv-skill">CSS</span>
+			
+			<span class="cv-skill">Blender</span>
+			
+			<span class="cv-skill">SQL</span>
+			
+			<span class="cv-skill">.Net</span>
+			
+			<span class="cv-skill">Git</span>
+			
+			<span class="cv-skill">Objective C</span>
+			
+			<span class="cv-skill">Java</span>
+			
+			<span class="cv-skill">Docker</span>
+			
+			<span class="cv-skill">Latex</span>
+			
+			<span class="cv-skill">Tensorflow</span>
+			
+			<span class="cv-skill">scikit-learn</span>
+			
+			<span class="cv-skill">Go</span>
+			
+		</div>
+	</section>
+
+	<!-- ========== KEY PROJECTS ========== -->
+	
+	<section class="cv-section">
+		<h2>Key Projects</h2>
+
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">House Finder</span>
+				<span class="cv-entry-date">Dec 2023 – Nov 2024</span>
+			</div>
+			<div class="cv-entry-body">House Finder aggregates multiple data sources to filter and prioritise property listings based on spatial, financial, and subjective criteria, with a website and server providing an intuitive, interactive way to explore the process and final housing options.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Dissertation</span>
+				<span class="cv-entry-date">Apr 2023 – Sept 2023</span>
+			</div>
+			<div class="cv-entry-body">My dissertation involved independently planning, managing, researching, designing, developing, testing and evaluating my own software project. For this project I designed a new machine learning framework for creating agents for the games industry.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Media Studio</span>
+				<span class="cv-entry-date">Sept 2022 – Dec 2022</span>
+			</div>
+			<div class="cv-entry-body">Web based painting tool with features such as: layers, alpha, webcam overlay and project templates.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Mine Sweeper</span>
+				<span class="cv-entry-date">Jun 2020 – Jun 2020</span>
+			</div>
+			<div class="cv-entry-body">To prepare for my University courses I taught myself JS, HTML and CSS.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Office Egg Hunt</span>
+				<span class="cv-entry-date">Mar 2021 – Apr 2021</span>
+			</div>
+			<div class="cv-entry-body">A 3D game for my colleagues to play in lockdown, set within my model of our office.</div>
+		</div>
+		
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title">Alhambra 4D Cube Puzzle</span>
+				<span class="cv-entry-date">Jun 2018 – Jul 2018</span>
+			</div>
+			<div class="cv-entry-body">My algorithm to discover the solutions to the Alhambra Cube Puzzle.</div>
+		</div>
+		
+	</section>
+	
+
+</div><!-- /.page -->
+</body>
+</html>

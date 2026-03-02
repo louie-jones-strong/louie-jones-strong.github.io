@@ -1,0 +1,23 @@
+{
+	"JobTitle": "Software Engineer",
+	"ProfileKey": "Home",
+	"WorkProjects": [
+		"odyssey",
+		"EnglishTutor",
+		"MathsTutor",
+		"BusinessConsulting"
+	],
+	"EducationProjects": [
+		"Degree",
+		"ALevels",
+		"GCSEs"
+	],
+	"PersonalProjects": [
+		"HouseFinder",
+		"FinalProject",
+		"MediaStudio",
+		"Minesweeper",
+		"EggHuntProject",
+		"CubePuzzleProject"
+	]
+}
