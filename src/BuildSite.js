@@ -4,6 +4,7 @@ const PageBuilder = require('./PageBuilder.js');
 const Compressor = require('./AssetCompressor.js');
 const Utils = require('./Utils.js');
 const ProjectConfigPostProcessor = require('./PostProcess_ProjectConfig.js');
+const CVGenerator = require('./GenerateCV.js');
 
 
 class Main {
@@ -49,7 +50,7 @@ class Main {
 		ProjectConfigPostProcessor.PostProcessProjectConfig(this.ProjectConfig);
 	}
 
-	BuildSite() {
+	async BuildSite() {
 		if (this.CleanBuild) {
 			console.log();
 			console.log("Cleaning Output Folder...");
@@ -59,6 +60,14 @@ class Main {
 
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
 		Utils.TryMakeDir(outputPath)
+
+		// generate CV PDF from config data
+		if (this.SiteConfig.ContactLinks.CVDownloadAllowed) {
+			console.log();
+			console.log("Generating CV...");
+			let cvPath = path.join(this.PathToRoot, this.SiteConfig.Raw_ViewsFolder, 'CV.pdf');
+			await CVGenerator.GenerateCV(this.ProjectConfig, this.SiteConfig, this.IconsConfig, cvPath);
+		}
 
 		// build assets
 		if (this.SiteConfig.Raw_StaticFolder.includes(this.SiteConfig.Raw_ViewsFolder)) {
