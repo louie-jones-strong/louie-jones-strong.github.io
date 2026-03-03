@@ -12,10 +12,11 @@
 	"license": "ISC",
 	"dependencies": {
 		"ejs": "^3.1.10",
-		"sass": "^1.55.0",
-		"sharp": "^0.31.0",
-		"mocha": "^11.7.5",
+		"ffmpeg-static": "^4.4.0",
 		"fluent-ffmpeg": "^2.1.2",
-		"ffmpeg-static": "^4.4.0"
+		"mocha": "^11.7.5",
+		"puppeteer-core": "^24.37.5",
+		"sass": "^1.55.0",
+		"sharp": "^0.31.0"
 	}
 }

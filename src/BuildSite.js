@@ -4,6 +4,7 @@ const PageBuilder = require('./PageBuilder.js');
 const Compressor = require('./AssetCompressor.js');
 const Utils = require('./Utils.js');
 const ProjectConfigPostProcessor = require('./PostProcess_ProjectConfig.js');
+const CVGenerator = require('./GenerateCV.js');
 
 
 class Main {
@@ -23,10 +24,12 @@ class Main {
 		let sitePath = path.join(rootConfigPath, "Site.json");
 		let projectPath = path.join(rootConfigPath, "Projects.json");
 		let iconsPath = path.join(rootConfigPath, "Icons.json");
+		let cvConfigPath = path.join(rootConfigPath, "CV.json");
 
 		this.SiteConfig = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
 		this.ProjectConfig = JSON.parse(fs.readFileSync(projectPath, 'utf8'));
 		this.IconsConfig = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));
+		this.CVConfig = JSON.parse(fs.readFileSync(cvConfigPath, 'utf8'));
 
 		this.PostProcessConfig()
 
@@ -49,7 +52,7 @@ class Main {
 		ProjectConfigPostProcessor.PostProcessProjectConfig(this.ProjectConfig);
 	}
 
-	BuildSite() {
+	async BuildSite() {
 		if (this.CleanBuild) {
 			console.log();
 			console.log("Cleaning Output Folder...");
@@ -59,6 +62,18 @@ class Main {
 
 		let outputPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder);
 		Utils.TryMakeDir(outputPath)
+
+		// generate CV HTML page and PDF from config data
+		if (this.SiteConfig.ContactLinks.CVDownloadAllowed) {
+			console.log();
+			console.log("Generating CV...");
+			let cvHtmlPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder, 'CV.html');
+			let cvPdfPath = path.join(this.PathToRoot, this.SiteConfig.Output_ViewsFolder, 'CV.pdf');
+			await CVGenerator.GenerateCV(
+				this.CVConfig, this.ProjectConfig, this.SiteConfig, this.IconsConfig,
+				this.PathToRoot, cvHtmlPath, cvPdfPath
+			);
+		}
 
 		// build assets
 		if (this.SiteConfig.Raw_StaticFolder.includes(this.SiteConfig.Raw_ViewsFolder)) {

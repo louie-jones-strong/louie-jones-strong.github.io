@@ -1,0 +1,182 @@
+<%
+/* ---- Helper Functions ---- */
+
+function formatDate(dateStr) {
+	if (!dateStr) return '';
+	if (dateStr === 'Current') return 'Present';
+	var d = new Date(dateStr);
+	if (isNaN(d)) return dateStr;
+	return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+}
+
+function formatTimelineRange(timeline) {
+	var start = formatDate(timeline.StartDate);
+	var end   = formatDate(timeline.EndDate);
+	if (start && end) return start + ' \u2013 ' + end;
+	if (start) return 'From ' + start;
+	return '';
+}
+
+/* Build date-range string for a project */
+function projectDateRange(project) {
+	var timelines = project.Timelines || [];
+	if (timelines.length > 0) {
+		var first = formatDate(timelines[0].StartDate);
+		var last  = formatDate(timelines[timelines.length - 1].EndDate);
+		if (first && last) return first + ' \u2013 ' + last;
+		if (first) return 'From ' + first;
+	}
+	if (project.StartDate) {
+		return formatDate(project.StartDate) + ' \u2013 ' + formatDate(project.EndDate);
+	}
+	return '';
+}
+
+/* ---- Derived Data ---- */
+
+var profile     = Projects[CVConfig.ProfileKey] || {};
+var contactLinks = SiteConfig.ContactLinks;
+var allSkills   = (profile.Skills || []).map(function(k) {
+	return Icons[k] ? Icons[k].Label : k;
+});
+
+var workEntries = CVConfig.WorkProjects.map(function(k) {
+	return { key: k, project: Projects[k] };
+}).filter(function(e) { return e.project; });
+
+var educationEntries = CVConfig.EducationProjects.map(function(k) {
+	return { key: k, project: Projects[k] };
+}).filter(function(e) { return e.project; });
+
+var projectEntries = CVConfig.PersonalProjects.map(function(k) {
+	return { key: k, project: Projects[k] };
+}).filter(function(e) { return e.project; });
+%><!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= profile.Title %> – CV</title>
+<link rel="stylesheet" type="text/css" href="Public/css/Optional/CV.css">
+</head>
+<body>
+<div class="page">
+
+	<!-- ========== HEADER ========== -->
+	<header class="cv-header">
+		<div class="cv-header-left">
+			<h1><%= profile.Title %></h1>
+			<div class="job-title"><%= CVConfig.JobTitle %></div>
+		</div>
+		<div class="cv-header-right">
+			<% if (contactLinks.Email) { %>
+				<div><a href="mailto:<%= contactLinks.Email %>"><%= contactLinks.Email %></a></div>
+			<% } %>
+			<% if (contactLinks.LinkedIn) { %>
+				<div><a href="<%= contactLinks.LinkedIn %>"><%= contactLinks.LinkedIn.replace('https://www.','') %></a></div>
+			<% } %>
+			<% if (contactLinks.GitHub) { %>
+				<div><a href="<%= contactLinks.GitHub %>"><%= contactLinks.GitHub.replace('https://','') %></a></div>
+			<% } %>
+			<% if (SiteConfig.HostURL) { %>
+				<div><a href="<%= SiteConfig.HostURL %>"><%= SiteConfig.HostURL.replace(/\/$/, '') %></a></div>
+			<% } %>
+		</div>
+	</header>
+
+	<!-- ========== PROFILE SUMMARY ========== -->
+	<p class="cv-summary"><%= profile.QuickDescription %></p>
+
+	<!-- ========== WORK EXPERIENCE ========== -->
+	<section class="cv-section">
+		<h2>Work Experience</h2>
+
+		<% for (var wi = 0; wi < workEntries.length; wi++) {
+			var we = workEntries[wi];
+			var proj = we.project;
+			var timelines = proj.Timelines || [];
+			var dateRange = projectDateRange(proj);
+		%>
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title"><%= proj.Title %></span>
+				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
+			</div>
+
+			<% if (timelines.length > 1) {
+				var roles = timelines.filter(function(t){ return t.Name; })
+					.map(function(t){ return t.Name + ': ' + formatTimelineRange(t); });
+				if (roles.length > 0) {
+			%>
+			<div class="cv-entry-roles"><%= roles.join(' \u00a0|\u00a0 ') %></div>
+			<%  } } %>
+
+			<% if (proj.Awards) { %>
+			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
+			<% } %>
+
+			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+		</div>
+		<% } %>
+	</section>
+
+	<!-- ========== EDUCATION ========== -->
+	<section class="cv-section">
+		<h2>Education</h2>
+
+		<% for (var ei = 0; ei < educationEntries.length; ei++) {
+			var ee = educationEntries[ei];
+			var proj = ee.project;
+			var timelines = proj.Timelines || [];
+			var dateRange = timelines.length > 0 ? formatTimelineRange(timelines[0]) : '';
+		%>
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title"><%= proj.Title %></span>
+				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
+			</div>
+
+			<% if (proj.Awards) { %>
+			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
+			<% } %>
+
+			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+		</div>
+		<% } %>
+	</section>
+
+	<!-- ========== TECHNICAL SKILLS ========== -->
+	<section class="cv-section">
+		<h2>Technical Skills</h2>
+		<div class="cv-skills">
+			<% for (var si = 0; si < allSkills.length; si++) { %>
+			<span class="cv-skill"><%= allSkills[si] %></span>
+			<% } %>
+		</div>
+	</section>
+
+	<!-- ========== KEY PROJECTS ========== -->
+	<% if (projectEntries.length > 0) { %>
+	<section class="cv-section">
+		<h2>Key Projects</h2>
+
+		<% for (var pi = 0; pi < projectEntries.length; pi++) {
+			var pe = projectEntries[pi];
+			var proj = pe.project;
+			var timelines = proj.Timelines || [];
+			var dateRange = timelines.length > 0 ? formatTimelineRange(timelines[0]) : '';
+		%>
+		<div class="cv-entry">
+			<div class="cv-entry-header">
+				<span class="cv-entry-title"><%= proj.Title %></span>
+				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
+			</div>
+			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+		</div>
+		<% } %>
+	</section>
+	<% } %>
+
+</div><!-- /.page -->
+</body>
+</html>
