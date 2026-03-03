@@ -1125,7 +1125,7 @@
 	},
 	"odyssey": {
 		"Title": "TT Odyssey",
-		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
+		"Thumbnail": "Public/Assets/LSWB/tt-odyssey",
 		"Timelines": [
 			{
 				"Name": "Work Experience",
