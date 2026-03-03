@@ -1,5 +1,5 @@
 {
-	"JobTitle": "Software Engineer",
+	"JobTitle": "Full-Stack Software Engineer",
 	"ProfileKey": "Home",
 	"WorkProjects": [
 		"odyssey",
@@ -8,13 +8,11 @@
 		"BusinessConsulting"
 	],
 	"EducationProjects": [
-		"Degree",
-		"EPQProject"
+		"Degree"
 	],
 	"PersonalProjects": [
 		"HouseFinder",
 		"MediaStudio",
-		"CubePuzzleProject",
-		"EPQProject"
+		"CubePuzzleProject"
 	]
 }

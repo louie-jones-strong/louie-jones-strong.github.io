@@ -6,7 +6,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "I am a Brighton based hard working, creative, programmer studying machine learning.",
+		"QuickDescription": "I am a practical full-stack developer and creative technologist with a First Class Honours in Machine Learning & AI; experienced building games, interactive web apps, and multimedia tools using Unity, C#, C++, Python, GO, JavaScript and Blender.",
 		"PagePath": "index",
 		"Link": null,
 		"HideLink": true,
@@ -48,7 +48,7 @@
 			"RougeClicker",
 			"DrPlantenstein"
 		],
-		"FullDescription": ""
+		"FullDescription": "I am a practical full-stack developer and creative technologist with a First Class Honours in Machine Learning & AI; experienced building games, interactive web apps, and multimedia tools using Unity, C#, C++, Python, GO, JavaScript and Blender."
 	},
 	"personal": {
 		"Title": "Personal",
