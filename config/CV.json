@@ -9,15 +9,12 @@
 	],
 	"EducationProjects": [
 		"Degree",
-		"ALevels",
-		"GCSEs"
+		"EPQProject"
 	],
 	"PersonalProjects": [
 		"HouseFinder",
-		"FinalProject",
 		"MediaStudio",
-		"Minesweeper",
-		"EggHuntProject",
-		"CubePuzzleProject"
+		"CubePuzzleProject",
+		"EPQProject"
 	]
 }

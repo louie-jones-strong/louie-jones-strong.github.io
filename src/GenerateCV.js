@@ -54,6 +54,12 @@ async function GenerateCV(cvConfig, projectConfig, siteConfig, iconsConfig,
 	fs.writeFileSync(htmlOutputPath, html, 'utf8');
 	console.log('  CV HTML written to', htmlOutputPath);
 
+	// ---- 2a. Copy CV.css so the browser (and PDF) can load it ----
+	const cssSourcePath = path.join(pathToRoot, 'raw_docs', 'Public', 'css', 'Optional', 'CV.css');
+	const cssOutputDir = path.join(path.dirname(htmlOutputPath), 'Public', 'css', 'Optional');
+	fs.mkdirSync(cssOutputDir, { recursive: true });
+	fs.copyFileSync(cssSourcePath, path.join(cssOutputDir, 'CV.css'));
+
 	// ---- 3. Convert to PDF via headless Chromium ----
 	const executablePath = findChromePath();
 	if (!executablePath) {
@@ -68,7 +74,7 @@ async function GenerateCV(cvConfig, projectConfig, siteConfig, iconsConfig,
 
 	try {
 		const page = await browser.newPage();
-		await page.setContent(html, { waitUntil: 'networkidle0' });
+		await page.goto('file://' + htmlOutputPath, { waitUntil: 'networkidle0' });
 		const pdfBuffer = await page.pdf({
 			format: 'A4',
 			printBackground: true,
