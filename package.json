@@ -3,10 +3,13 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"packageManager": "bun@1.0.0",
 	"scripts": {
 		"test": "mocha",
 		"PreTests": "mocha --grep BuiltTests* -i",
-		"PostTests": "mocha --grep BuiltTests*"
+		"PostTests": "mocha --grep BuiltTests*",
+		"build": "bun src/BuildSite.js compress onlyNew",
+		"start": "bun src/BuildSite.js"
 	},
 	"author": "",
 	"license": "ISC",

@@ -10,9 +10,12 @@ link: https://louie-jones-strong.github.io/
 
 
 ## Setup
-Install Node: https://nodejs.org/en/download/
-```
-npm install
+This project now uses Bun as the primary runtime and package manager. Install Bun from https://bun.sh and follow the platform instructions.
+
+From the repository root install dependencies with Bun:
+
+```powershell
+bun install
 ```
 
 ### Puppeteer / PDF Generation
@@ -33,16 +36,20 @@ brew install --cask google-chrome
 Alternatively, set the `PUPPETEER_EXECUTABLE_PATH` environment variable to the path of your Chrome/Chromium binary if it is installed in a non-standard location.
 
 ### Run Pre Build Tests
-```
-npm run PreTests
+```bash
+# run tests with Bun
+bun run PreTests
 ```
 
 ### Build
-```
-node src/BuildSite.js compress onlyNew
+```bash
+# build the site
+bun run build
+# or run the runtime directly
+bun src/BuildSite.js compress onlyNew
 ```
 
 ### Run Post Build Tests
-```
-npm run PostTests
+```bash
+bun run PostTests
 ```
