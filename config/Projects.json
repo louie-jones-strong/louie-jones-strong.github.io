@@ -6,7 +6,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "I am a Brighton based hard working, creative, programmer studying machine learning.",
+		"QuickDescription": "I am a practical full-stack developer and creative technologist with a First Class Honours in Machine Learning & AI; experienced building games, interactive web apps, and multimedia tools using Unity, C#, C++, Python, GO, JavaScript and Blender.",
 		"PagePath": "index",
 		"Link": null,
 		"HideLink": true,
@@ -47,7 +47,8 @@
 			"looking-for-eden",
 			"RougeClicker",
 			"DrPlantenstein"
-		]
+		],
+		"FullDescription": "I am a practical full-stack developer and creative technologist with a First Class Honours in Machine Learning & AI; experienced building games, interactive web apps, and multimedia tools using Unity, C#, C++, Python, GO, JavaScript and Blender."
 	},
 	"personal": {
 		"Title": "Personal",
@@ -64,7 +65,8 @@
 		"Tags": "",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Personal portfolio aggregating project highlights, technical skills and links used to present professional work and maintain an up-to-date CV of software and creative projects."
 	},
 	"Education": {
 		"Title": "Education",
@@ -99,7 +101,8 @@
 			"GCSEs",
 			"ALevels",
 			"Degree"
-		]
+		],
+		"FullDescription": "Summary of formal education, modules and achievements demonstrating a First Class Honours degree in Machine Learning and AI alongside relevant technical coursework and practical projects."
 	},
 	"GCSEs": {
 		"Title": "GCSEs",
@@ -130,7 +133,8 @@
 			"EnglishGCSE",
 			"ComputingGCSE",
 			"PerformingArtsProductionGCSE"
-		]
+		],
+		"FullDescription": "Record of GCSE subjects and outcomes demonstrating a broad academic foundation across STEM and humanities, supporting later specialised study in computing and mathematics."
 	},
 	"LawGCSE": {
 		"Title": "Law",
@@ -152,7 +156,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Studied foundational legal concepts and case analysis, developing critical thinking and structured argumentation applicable to regulated and compliance-sensitive projects."
 	},
 	"MathsGCSE": {
 		"Title": "Maths",
@@ -174,7 +179,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Demonstrated proficiency in algebra, geometry and statistics, providing core analytical and quantitative skills used throughout programming and data science work."
 	},
 	"ICT-GCSE": {
 		"Title": "ICT",
@@ -196,7 +202,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Practical experience with Office tools, basic HTML and Python, and an introduction to computer systems and digital communication, forming a technical foundation for software projects."
 	},
 	"AdditionalScienceGCSE": {
 		"Title": "Additional Science",
@@ -218,7 +225,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Covered interdisciplinary scientific principles in biology, chemistry and physics, developing experimental reasoning and data interpretation skills."
 	},
 	"FurtherAdditionalScienceGCSE": {
 		"Title": "Further Additional Science",
@@ -240,7 +248,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Extended study in scientific topics including genetics and chemistry, strengthening analytical problem solving and laboratory-style investigation skills."
 	},
 	"EnglishGCSE": {
 		"Title": "English",
@@ -262,7 +271,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Developed written and verbal communication skills through analysis of varied texts and creation of original written work, supporting clear technical documentation and presentations."
 	},
 	"ComputingGCSE": {
 		"Title": "Computing",
@@ -284,7 +294,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Introduced to programming, algorithms, data representation and computer systems, establishing practical coding skills and theoretical understanding of computing fundamentals."
 	},
 	"PerformingArtsProductionGCSE": {
 		"Title": "Performing Arts Production",
@@ -306,7 +317,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Gained hands-on experience in lighting, sound, set design and stage management, developing project coordination and technical production skills."
 	},
 	"ALevels": {
 		"Title": "A Levels",
@@ -341,7 +353,8 @@
 			"ComputerScienceALevel",
 			"HeadBoyALevel",
 			"GlobalSocialLeaders"
-		]
+		],
+		"FullDescription": "Advanced study across maths, physics and computer science preparing for higher education in machine learning and software engineering, with practical project experience."
 	},
 	"GlobalSocialLeaders": {
 		"Title": "Global Social Leaders",
@@ -363,7 +376,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Led a team to design and deliver community-focused engineering projects, coordinating resources and securing 2nd place in an international competition of 100+ teams."
 	},
 	"PhysicsALevel": {
 		"Title": "Physics",
@@ -385,7 +399,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "A-level physics focused on mechanics, electricity and experimental methods, building quantitative modelling skills and experience with data-driven hypothesis testing."
 	},
 	"MathsALevel": {
 		"Title": "Maths",
@@ -407,7 +422,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Advanced mathematics covering calculus, algebra and statistics, used to inform algorithm design, numerical methods and data analysis tasks in later projects."
 	},
 	"ComputerScienceALevel": {
 		"Title": "Computer Science",
@@ -433,7 +449,8 @@
 			"Java"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Comprehensive study of programming, algorithms and computer architecture, providing a strong theoretical and practical foundation for software development and systems design."
 	},
 	"HeadBoyALevel": {
 		"Title": "Head Boy",
@@ -455,7 +472,8 @@
 		"Tags": "Education",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Represented the college in community and industry engagement activities, developing leadership, stakeholder communication and public-facing presentation experience."
 	},
 	"EPQProject": {
 		"Title": "EPQ",
@@ -480,7 +498,8 @@
 			"Tensorflow"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Independent research dissertation investigating multi-technique supervised machine learning, implementing experiments in Python and TensorFlow and producing a formal written report."
 	},
 	"Degree": {
 		"Title": "Degree",
@@ -539,7 +558,8 @@
 			"NaturalLanguageProcessing",
 			"DataScience",
 			"FinalProject"
-		]
+		],
+		"FullDescription": "Bachelor of Science in Machine Learning and Artificial Intelligence (First Class), combining theoretical coursework with applied projects in ML, data science and software engineering."
 	},
 	"IntroToProgramming1": {
 		"Title": "Introduction To Programming I",
@@ -563,7 +583,8 @@
 			"JavaScript"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Introductory programming module developing interactive graphical applications and basic object-oriented techniques using JavaScript, awarded First Class."
 	},
 	"DiscreteMaths": {
 		"Title": "Discrete Mathematics",
@@ -585,7 +606,8 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Discrete mathematics covering sets, logic and graph theory, enabling formal problem descriptions and correctness reasoning for algorithms and software."
 	},
 	"FundamentalsOfComputerScience": {
 		"Title": "Fundamentals Of Computer Science",
@@ -607,7 +629,8 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Core computing theory covering computation models, complexity and automata, informing efficient algorithm design and system-level thinking."
 	},
 	"HowComputersWork": {
 		"Title": "How Computers Work",
@@ -629,7 +652,8 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Module on computer architecture, operating systems and networking, offering practical understanding of low-level system behaviour relevant to performance and scalability."
 	},
 	"IntroToProgramming2": {
 		"Title": "Introduction To Programming II",
@@ -655,7 +679,8 @@
 			"CSS"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Follow-up programming module emphasising maintainable code, testing and modular design across multi-file projects using JavaScript, HTML and CSS."
 	},
 	"ComputationalMaths": {
 		"Title": "Computational Mathematics",
@@ -677,7 +702,8 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Applied numerical methods and computational techniques supporting simulation, optimisation and analysis tasks used in later machine learning and graphics projects."
 	},
 	"AlgorithmsAndDataStructures1": {
 		"Title": "Algorithms And Data Structures I",
@@ -701,7 +727,8 @@
 			"JavaScript"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Covered core linear data structures and fundamental algorithms, providing the building blocks for efficient software implementations."
 	},
 	"WebDevelopment": {
 		"Title": "Web Development",
@@ -728,7 +755,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Practical web development experience building accessible interactive frontends using HTML, CSS and JavaScript, and collaborating on multi-person projects with version control."
 	},
 	"ObjectOrientedProgramming": {
 		"Title": "Object Oriented Programming",
@@ -752,7 +780,8 @@
 			"CPlusPlus"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Studied object-oriented design, encapsulation and polymorphism with hands-on C++ exercises and attention to code documentation and style."
 	},
 	"SoftwareDesignAndDevelopment": {
 		"Title": "Software Design And Development",
@@ -778,7 +807,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Focused on defensive coding, exception handling, unit testing and TDD, with collaborative development practices using Git for reproducible, reliable software."
 	},
 	"AgileSoftwareProjects": {
 		"Title": "Agile Software Projects",
@@ -807,7 +837,8 @@
 			"SQL"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Team-based projects applying agile methodologies, requirements gathering and user-centred design to deliver iterative web applications and validated user testing."
 	},
 	"DatabasesNetworksAndTheWeb": {
 		"Title": "Databases, Networks And The Web",
@@ -836,7 +867,8 @@
 			"SQL"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Explored networking, HTTP server design and relational databases, implementing backend and data models to support web applications and APIs."
 	},
 	"ProgrammingWithData": {
 		"Title": "Programming With Data",
@@ -861,7 +893,8 @@
 			"SQL"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Data-focused programming module covering data acquisition, processing, visualization and introductory machine learning workflows using Python and SQL."
 	},
 	"ComputerSecurity": {
 		"Title": "Computer Security",
@@ -883,7 +916,8 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Studied security models, cryptography and network security, gaining a practical understanding of authentication, key management and threat mitigation."
 	},
 	"GraphicsProgramming": {
 		"Title": "Graphics Programming",
@@ -907,7 +941,8 @@
 			"JavaScript"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Graphics and image processing module covering 2D/3D transforms, image manipulation and simulation techniques applied in creative software projects."
 	},
 	"AlgorithmsAndDataStructures2": {
 		"Title": "Algorithms And Data Structures II",
@@ -932,7 +967,8 @@
 			"Python"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Advanced data structures and graph algorithms with implementation experience in C++ and Python, used to build performant software systems."
 	},
 	"DatabasesAndAdvancedDataTechniques": {
 		"Title": "Databases And Advanced Data Techniques",
@@ -959,7 +995,8 @@
 			"SQL"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Designed and implemented RESTful APIs, database schemas and authentication flows, focusing on scalable data-driven web services."
 	},
 	"MachineLearningAndNeuralNetworks": {
 		"Title": "Machine Learning And Neural Networks",
@@ -985,7 +1022,8 @@
 			"scikitlearn"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Comprehensive study of supervised and unsupervised learning, neural network architectures and training techniques, implemented in Python with TensorFlow and scikit-learn."
 	},
 	"ArtificialIntelligence": {
 		"Title": "Artificial Intelligence",
@@ -1011,7 +1049,8 @@
 			"scikitlearn"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Explored reinforcement learning, knowledge representation and probabilistic reasoning, applying AI techniques to decision-making and automated problem solving."
 	},
 	"IntelligentSignalProcessing": {
 		"Title": "Intelligent Signal Processing",
@@ -1038,7 +1077,8 @@
 			"CSS"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Worked on signal and image processing techniques for audio and video, including feature extraction and compression methods used in applied ML pipelines."
 	},
 	"NaturalLanguageProcessing": {
 		"Title": "Natural Language Processing",
@@ -1063,7 +1103,8 @@
 			"scikitlearn"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Studied rule-based and statistical NLP methods including tokenisation, NER and parsing, and applied tools for information retrieval and text processing."
 	},
 	"DataScience": {
 		"Title": "Data Science",
@@ -1088,7 +1129,8 @@
 			"scikitlearn"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Practical data science module covering exploratory analysis, visualization and statistical decision making to derive actionable insights from datasets."
 	},
 	"FinalProject": {
 		"Title": "Dissertation",
@@ -1121,11 +1163,12 @@
 		"Links": {
 			"GithubLink": "https://github.com/louie-jones-strong/DECAF"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Dissertation project designing and implementing a machine learning framework for game agent creation, involving end-to-end research, implementation and evaluation."
 	},
 	"odyssey": {
 		"Title": "TT Odyssey",
-		"Thumbnail": "Public/Assets/LSWB/Thumbnail",
+		"Thumbnail": "Public/Assets/LSWB/tt-odyssey",
 		"Timelines": [
 			{
 				"Name": "Work Experience",
@@ -1186,7 +1229,8 @@
 			"got_conquest",
 			"odyssey_GraphicsCourse",
 			"odyssey_product_scrapper"
-		]
+		],
+		"FullDescription": "Professional experience at TT Odyssey contributing to multiple live titles across engineering roles, including gameplay systems, tooling and cross-platform integrations."
 	},
 	"LSWB": {
 		"Title": "LEGO® Star Wars™ Battles",
@@ -1215,7 +1259,8 @@
 		"Links": {
 			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Worked on LEGO Star Wars Battles contributing to core gameplay features and engine-level scripting using Unity and C#, supporting a commercially released mobile title."
 	},
 	"odyssey_GameJams": {
 		"Title": "Next Project Prototyping",
@@ -1236,7 +1281,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Rapid prototyping of game concepts and mechanics in small teams, producing playable prototypes and validating ideas using Unity and iterative design."
 	},
 	"odyssey_project1": {
 		"Title": "NDA Project 1",
@@ -1263,7 +1309,8 @@
 			"Python"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Contributed to a confidential, unannounced project delivering engineering tasks in Unity and cross-team collaboration under NDA."
 	},
 	"got_df": {
 		"Title": "Game Of Thrones: Dragonfire",
@@ -1300,7 +1347,8 @@
 		"Links": {
 			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.wb.goog.hotd.socialstrategy&pcampaignid=web_share"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Contract engineering for WB Games Boston on Game of Thrones Dragonfire, building microservices and gameplay features using Unity, C# and Golang for live operations."
 	},
 	"got_conquest": {
 		"Title": "Game Of Thrones: Conquest",
@@ -1332,7 +1380,8 @@
 		"Links": {
 			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.wb.goog.got.conquest&hl=en_GB"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Contract work on backend microservices and tooling for Game of Thrones Conquest, focusing on scalable services using Golang, Docker and SQL."
 	},
 	"odyssey_product_scrapper": {
 		"Title": "Product Scraper",
@@ -1357,7 +1406,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Implemented a Golang-based web scraper to extract product data and export CSV reports, improving data collection efficiency for product research."
 	},
 	"odyssey_GraphicsCourse": {
 		"Title": "Graphics Course",
@@ -1383,7 +1433,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Completed a graphics and physics sandbox project in C++ and OpenGL, implementing rendering and simulation techniques for performance and correctness."
 	},
 	"EnglishTutor": {
 		"Title": "English Tutor",
@@ -1405,7 +1456,8 @@
 		"Tags": "Solo Work",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Provided one-to-one English tuition for non-native speakers focused on IELTS speaking, improving client confidence and exam readiness through tailored lessons."
 	},
 	"MathsTutor": {
 		"Title": "Maths Tutor",
@@ -1427,7 +1479,8 @@
 		"Tags": "Solo Work",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Private tutoring in GCSE mathematics during the pandemic, delivering targeted lessons that supported students to achieve passing or improved grades."
 	},
 	"BusinessConsulting": {
 		"Title": "Business Consulting",
@@ -1455,7 +1508,8 @@
 			"JavaScript"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Consulted for small businesses on web and data solutions, delivering bespoke Python and frontend implementations to improve workflows and online presence."
 	},
 	"Talks": {
 		"Title": "Talks",
@@ -1478,7 +1532,8 @@
 		"Tags": "Solo Work",
 		"Skills": [],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Delivered public talks on machine learning and AI using accessible analogies, demonstrating ability to communicate complex technical concepts to general audiences."
 	},
 	"BlenderProjects": {
 		"Title": "24 Hour Blender Challenge",
@@ -1715,7 +1770,8 @@
 		"Links": {
 			"InstagramLink": "https://www.instagram.com/louie_j.s/"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Series of time-boxed 24-hour Blender challenges showcasing rapid prototyping of 3D modelling and rendering skills, shared publicly to demonstrate creative and technical capability."
 	},
 	"EggHuntProject": {
 		"Title": "Office Egg Hunt",
@@ -1744,7 +1800,8 @@
 			"ItchLink": "https://louie-js.itch.io/office-egg-hunt",
 			"GithubLink": "https://github.com/louie-jones-strong/OfficeGame"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Designed and developed a 3D office-themed game during lockdown using Unity and Blender to create assets and gameplay, published to itch.io with source on GitHub."
 	},
 	"CubePuzzleProject": {
 		"Title": "Alhambra 4D Cube Puzzle",
@@ -1768,7 +1825,8 @@
 			"Python"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Developed an algorithmic solver for the Alhambra 4D Cube Puzzle in Python, demonstrating combinatorial search techniques and optimization strategies."
 	},
 	"Minesweeper": {
 		"Title": "Mine Sweeper",
@@ -1797,7 +1855,8 @@
 			"GithubLink": "https://github.com/louie-jones-strong/MineSweeper",
 			"WebsiteLink": "https://louie-jones-strong.github.io/MineSweeper/"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Built a browser-based Minesweeper clone using HTML, CSS and JavaScript to learn frontend development fundamentals and publishable web games."
 	},
 	"CalculatorSolver": {
 		"Title": "Calculator: The Game Solver",
@@ -1823,7 +1882,8 @@
 		"Links": {
 			"GithubLink": "https://github.com/louie-jones-strong/CalculatorGame-Solver"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Implemented a solver for the Calculator game in Python, applying search algorithms and heuristics to automate puzzle solving and validate approaches."
 	},
 	"MediaStudio": {
 		"Title": "Media Studio",
@@ -1851,7 +1911,8 @@
 		"Links": {
 			"WebsiteLink": "https://louie-jones-strong.github.io/MediaStudio"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Created a web-based painting application with layer support, webcam overlay and templates using JavaScript, HTML and CSS to demonstrate rich-client UX capabilities."
 	},
 	"HouseFinder": {
 		"Title": "House Finder",
@@ -1879,7 +1940,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Architected and built an aggregator to prioritise property listings by spatial, financial and subjective criteria with an interactive website and server-side processing."
 	},
 	"FoodFinder": {
 		"Title": "Food Finder",
@@ -1907,7 +1969,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Developed a Golang-backed recipe discovery and meal-planning web application to manage ingredients, reduce food costs and support healthy eating."
 	},
 	"MnistDraw": {
 		"Title": "Mnist Draw",
@@ -1935,7 +1998,8 @@
 			"Git"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Trained and integrated an MNIST digit recognition model into a real-time web app, optimising for inference latency and user interactivity."
 	},
 	"MonsterMash": {
 		"Title": "Monster Mash",
@@ -1962,7 +2026,8 @@
 		"Links": {
 			"ItchLink": "https://tatltuae.itch.io/monstermash"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Co-developed a Game Boy-style roguelike in Unity, implementing upgrade systems and procedural encounters as part of a small team."
 	},
 	"looking-for-eden": {
 		"Title": "Looking For Eden",
@@ -1990,7 +2055,8 @@
 		"Links": {
 			"ItchLink": "https://tatltuae.itch.io/looking-for-eden"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Collaborative narrative game developed in Unity combining exploration and storytelling, responsible for gameplay programming and asset integration."
 	},
 	"RougeClicker": {
 		"Title": "Rogue Clicker",
@@ -2018,7 +2084,8 @@
 		"Links": {
 			"ItchLink": "https://louie-js.itch.io/rougeclicker"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Solo-developed an incremental clicker game in Unity with progression and upgrade mechanics, focusing on rapid iteration and player engagement loops."
 	},
 	"DrPlantenstein": {
 		"Title": "Dr. Plantenstein",
@@ -2046,7 +2113,8 @@
 		"Links": {
 			"ItchLink": "https://louie-js.itch.io/dr-plantenstein"
 		},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Designed and built a shop and garden management game for GB Jam 10, contributing gameplay systems, UI and cooperative design with a small team."
 	},
 	"Cards": {
 		"Title": "Cards",
@@ -2068,7 +2136,8 @@
 		"SubProjects": [
 			"LandscapeCards",
 			"XmasCards"
-		]
+		],
+		"FullDescription": "Collection of Blender-made greeting cards demonstrating 3D modelling and composition skills used for personal and commissioned work."
 	},
 	"LandscapeCards": {
 		"Title": "Landscape Cards",
@@ -2087,7 +2156,8 @@
 			"Blender"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Series of landscape greeting cards modelled and rendered in Blender, exhibiting composition, lighting and scene optimisation techniques."
 	},
 	"XmasCards": {
 		"Title": "Christmas Cards",
@@ -2106,6 +2176,7 @@
 			"Blender"
 		],
 		"Links": {},
-		"SubProjects": []
+		"SubProjects": [],
+		"FullDescription": "Seasonal Blender card designs demonstrating creative use of 3D tools and asset workflows for rapid production of themed artwork."
 	}
 }

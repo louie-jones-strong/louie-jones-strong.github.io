@@ -10,7 +10,6 @@
 	<h4>Filters:</h4>
 <%for (const tag in FilterData.Tags)
 {
-	let icon = PageData.Icons[tag];
 	%>
 	<button class="filterButton scaleOnFocus" tag="<%=tag%>" onclick="tagFilter.ToggleTag('<%=tag%>')">
 
@@ -19,16 +18,6 @@
 			<span class="material-icons">filter_alt_off</span>
 			<span class="material-icons">thumb_down</span>
 		</div>
-
-		<%if (icon) {%>
-			<%- include('Picture', {ImgData: {
-				Path:icon.IconPath,
-				ClassList: "icon " + icon.ClassList,
-				Alt: icon.Label + " Logo",
-				IsSvg: true
-			}}); %>
-		<%}%>
-
 
 		<h5><%=tag%></h5>
 	</button>

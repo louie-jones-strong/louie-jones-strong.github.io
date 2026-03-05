@@ -85,7 +85,7 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 	</header>
 
 	<!-- ========== PROFILE SUMMARY ========== -->
-	<p class="cv-summary"><%= profile.QuickDescription %></p>
+	<p class="cv-summary"><%= profile.FullDescription %></p>
 
 	<!-- ========== WORK EXPERIENCE ========== -->
 	<section class="cv-section">
@@ -115,7 +115,7 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
 			<% } %>
 
-			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+			<div class="cv-entry-body"><%= proj.FullDescription %></div>
 		</div>
 		<% } %>
 	</section>
@@ -140,7 +140,7 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
 			<% } %>
 
-			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+			<div class="cv-entry-body"><%= proj.FullDescription %></div>
 		</div>
 		<% } %>
 	</section>
@@ -155,10 +155,10 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		</div>
 	</section>
 
-	<!-- ========== KEY PROJECTS ========== -->
+	<!-- ========== Personal PROJECTS ========== -->
 	<% if (projectEntries.length > 0) { %>
 	<section class="cv-section">
-		<h2>Key Projects</h2>
+		<h2>Personal Projects</h2>
 
 		<% for (var pi = 0; pi < projectEntries.length; pi++) {
 			var pe = projectEntries[pi];
@@ -171,7 +171,7 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 				<span class="cv-entry-title"><%= proj.Title %></span>
 				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
 			</div>
-			<div class="cv-entry-body"><%= proj.QuickDescription %></div>
+			<div class="cv-entry-body"><%= proj.FullDescription %></div>
 		</div>
 		<% } %>
 	</section>
