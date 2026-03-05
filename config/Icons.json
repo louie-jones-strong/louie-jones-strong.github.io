@@ -19,11 +19,6 @@
 		"Label": "Python",
 		"ClassList": ""
 	},
-	"Nodejs": {
-		"IconPath": "Public/Assets/Icons/nodejs",
-		"Label": "node.js",
-		"ClassList": ""
-	},
 	"JavaScript": {
 		"IconPath": "Public/Assets/Icons/js",
 		"Label": "Java Script",

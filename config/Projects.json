@@ -17,7 +17,6 @@
 			"Csharp",
 			"CPlusPlus",
 			"Python",
-			"Nodejs",
 			"JavaScript",
 			"HTML",
 			"CSS",
@@ -90,7 +89,6 @@
 			"Docker",
 			"CPlusPlus",
 			"Python",
-			"Nodejs",
 			"Latex",
 			"Tensorflow",
 			"scikitlearn",
@@ -528,7 +526,6 @@
 			"Docker",
 			"CPlusPlus",
 			"Python",
-			"Nodejs",
 			"Latex",
 			"Tensorflow",
 			"scikitlearn"
@@ -829,7 +826,6 @@
 		"Hide": false,
 		"Tags": "Education Degree",
 		"Skills": [
-			"Nodejs",
 			"JavaScript",
 			"HTML",
 			"CSS",
@@ -860,7 +856,6 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
-			"Nodejs",
 			"JavaScript",
 			"HTML",
 			"CSS",
@@ -990,7 +985,6 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
-			"Nodejs",
 			"JavaScript",
 			"SQL"
 		],
