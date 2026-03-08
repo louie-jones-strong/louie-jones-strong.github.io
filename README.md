@@ -35,21 +35,15 @@ brew install --cask google-chrome
 
 Alternatively, set the `PUPPETEER_EXECUTABLE_PATH` environment variable to the path of your Chrome/Chromium binary if it is installed in a non-standard location.
 
-### Run Pre Build Tests
-```bash
-# run tests with Bun
-bun run PreTests
+
+### Crate
+.npmrc
+```
+@louie-jones-strong:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken= YOUR_GITHUB_PAT
 ```
 
 ### Build
 ```bash
-# build the site
-bun run build
-# or run the runtime directly
-bun src/BuildSite.js compress onlyNew
-```
-
-### Run Post Build Tests
-```bash
-bun run PostTests
+bunx portfolio-builder
 ```

@@ -6,19 +6,14 @@
 	},
 	"tasks": [
 		{
-			"label": "Run Pre Tests",
+			"label": "Update Portfolio Builder",
 			"type": "shell",
-			"command": "npm run PreTests",
+			"command": "bun update @louie-jones-strong/portfolio-builder@latest",
 		},
 		{
-			"label": "Build Content",
+			"label": "Build",
 			"type": "shell",
-			"command": "node src/BuildSite.js compress onlyNew",
-		},
-		{
-			"label": "Run Post Tests",
-			"type": "shell",
-			"command": "npm run PostTests",
+			"command": "bunx portfolio-builder --compress",
 		},
 		{
 			"label": "Spell Check",
@@ -26,21 +21,11 @@
 			"command": "cspell \".\" --no-progress",
 		},
 		{
-			"label": "Build And Test",
-			"type": "shell",
-			"dependsOrder": "sequence",
-			"dependsOn": [
-				"Run Pre Tests",
-				"Build Content",
-				"Run Post Tests"
-			],
-		},
-		{
 			"label": "Run All",
 			"type": "shell",
 			"dependsOrder": "parallel",
 			"dependsOn": [
-				"Build And Test",
+				"Build",
 				"Spell Check"
 			],
 		},

@@ -1,25 +1,5 @@
 {
-	"name": "precompiledpages",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"packageManager": "bun@1.0.0",
-	"scripts": {
-		"test": "mocha",
-		"PreTests": "mocha --grep BuiltTests* -i",
-		"PostTests": "mocha --grep BuiltTests*",
-		"build": "bun src/BuildSite.js compress onlyNew",
-		"start": "bun src/BuildSite.js"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"ejs": "^3.1.10",
-		"ffmpeg-static": "^4.4.0",
-		"fluent-ffmpeg": "^2.1.2",
-		"mocha": "^11.7.5",
-		"puppeteer-core": "^24.37.5",
-		"sass": "^1.55.0",
-		"sharp": "^0.31.0"
-	}
+  "dependencies": {
+    "@louie-jones-strong/portfolio-builder": "^1.0.3"
+  }
 }
