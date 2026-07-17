@@ -37,6 +37,7 @@
 			"BlenderProjects",
 			"EPQProject",
 			"HouseFinder",
+			"Time-Tracker",
 			"CubePuzzleProject",
 			"MediaStudio",
 			"Minesweeper",
@@ -1965,6 +1966,35 @@
 		"Links": {},
 		"SubProjects": [],
 		"FullDescription": "Developed a Golang-backed recipe discovery and meal-planning web application to manage ingredients, reduce food costs and support healthy eating."
+	},
+	"Time-Tracker": {
+		"Title": "Time Tracker",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "May 22, 2026",
+				"EndDate": "July 10, 2026"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "Rust-powered time tracking application.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo",
+		"Skills": [
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Rust",
+			"Git"
+		],
+		"Links": {},
+		"SubProjects": [],
+		"FullDescription": "Built a Rust-powered time tracking application, to monitor and log time spent on tasks, with a GUI for user interaction and data visualization."
 	},
 	"MnistDraw": {
 		"Title": "Mnist Draw",
