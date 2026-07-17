@@ -89,6 +89,11 @@
 		"Label": "Go",
 		"ClassList": ""
 	},
+	"Rust": {
+		"IconPath": "Public/Assets/Icons/rust",
+		"Label": "Rust",
+		"ClassList": ""
+	},
 	"OpenGL": {
 		"IconPath": "Public/Assets/Icons/opengl",
 		"Label": "OpenGL",
