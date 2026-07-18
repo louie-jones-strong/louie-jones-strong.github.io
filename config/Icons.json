@@ -92,7 +92,7 @@
 	"Rust": {
 		"IconPath": "Public/Assets/Icons/rust",
 		"Label": "Rust",
-		"ClassList": ""
+		"ClassList": "greyScale"
 	},
 	"OpenGL": {
 		"IconPath": "Public/Assets/Icons/opengl",
