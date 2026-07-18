@@ -30,7 +30,8 @@
 			"Latex",
 			"Tensorflow",
 			"scikitlearn",
-			"Golang"
+			"Golang",
+			"Rust"
 		],
 		"Links": {},
 		"SubProjects": [
