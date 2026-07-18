@@ -11,9 +11,14 @@
 			"command": "bun update @louie-jones-strong/portfolio-builder@latest",
 		},
 		{
-			"label": "Build",
+			"label": "Build [Dev]",
 			"type": "shell",
 			"command": "bunx portfolio-builder --compress",
+		},
+		{
+			"label": "Build [Release]",
+			"type": "shell",
+			"command": "bunx portfolio-builder --release",
 		},
 		{
 			"label": "Spell Check",
@@ -25,7 +30,7 @@
 			"type": "shell",
 			"dependsOrder": "parallel",
 			"dependsOn": [
-				"Build",
+				"Build [Dev]",
 				"Spell Check"
 			],
 		},
