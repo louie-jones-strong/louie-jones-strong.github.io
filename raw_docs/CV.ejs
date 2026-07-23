@@ -1,37 +1,4 @@
 <%
-/* ---- Helper Functions ---- */
-
-function formatDate(dateStr) {
-	if (!dateStr) return '';
-	if (dateStr === 'Current') return 'Present';
-	var d = new Date(dateStr);
-	if (isNaN(d)) return dateStr;
-	return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
-}
-
-function formatTimelineRange(timeline) {
-	var start = formatDate(timeline.StartDate);
-	var end   = formatDate(timeline.EndDate);
-	if (start && end) return start + ' \u2013 ' + end;
-	if (start) return 'From ' + start;
-	return '';
-}
-
-/* Build date-range string for a project */
-function projectDateRange(project) {
-	var timelines = project.Timelines || [];
-	if (timelines.length > 0) {
-		var first = formatDate(timelines[0].StartDate);
-		var last  = formatDate(timelines[timelines.length - 1].EndDate);
-		if (first && last) return first + ' \u2013 ' + last;
-		if (first) return 'From ' + first;
-	}
-	if (project.StartDate) {
-		return formatDate(project.StartDate) + ' \u2013 ' + formatDate(project.EndDate);
-	}
-	return '';
-}
-
 /* ---- Derived Data ---- */
 
 var profile     = Projects[CVConfig.ProfileKey] || {};
@@ -94,29 +61,11 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		<% for (var wi = 0; wi < workEntries.length; wi++) {
 			var we = workEntries[wi];
 			var proj = we.project;
-			var timelines = proj.Timelines || [];
-			var dateRange = projectDateRange(proj);
 		%>
-		<div class="cv-entry">
-			<div class="cv-entry-header">
-				<span class="cv-entry-title"><%= proj.Title %></span>
-				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
-			</div>
-
-			<% if (timelines.length > 1) {
-				var roles = timelines.filter(function(t){ return t.Name; })
-					.map(function(t){ return t.Name + ': ' + formatTimelineRange(t); });
-				if (roles.length > 0) {
-			%>
-			<div class="cv-entry-roles"><%= roles.join(' \u00a0|\u00a0 ') %></div>
-			<%  } } %>
-
-			<% if (proj.Awards) { %>
-			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
-			<% } %>
-
-			<div class="cv-entry-body"><%= proj.FullDescription %></div>
-		</div>
+		<%- include('Components/cv_role', {
+			proj: proj,
+			showDescription: !(proj.Tags && proj.Tags.split(' ').indexOf('Solo') !== -1)
+		}) %>
 		<% } %>
 	</section>
 
@@ -128,20 +77,11 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 			var ee = educationEntries[ei];
 			var proj = ee.project;
 			var timelines = proj.Timelines || [];
-			var dateRange = timelines.length > 0 ? formatTimelineRange(timelines[0]) : '';
 		%>
-		<div class="cv-entry">
-			<div class="cv-entry-header">
-				<span class="cv-entry-title"><%= proj.Title %></span>
-				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
-			</div>
-
-			<% if (proj.Awards) { %>
-			<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
-			<% } %>
-
-			<div class="cv-entry-body"><%= proj.FullDescription %></div>
-		</div>
+		<%- include('Components/cv_role', {
+			proj: proj,
+			showDescription: true
+		}) %>
 		<% } %>
 	</section>
 
@@ -164,15 +104,11 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 			var pe = projectEntries[pi];
 			var proj = pe.project;
 			var timelines = proj.Timelines || [];
-			var dateRange = timelines.length > 0 ? formatTimelineRange(timelines[0]) : '';
 		%>
-		<div class="cv-entry">
-			<div class="cv-entry-header">
-				<span class="cv-entry-title"><%= proj.Title %></span>
-				<% if (dateRange) { %><span class="cv-entry-date"><%= dateRange %></span><% } %>
-			</div>
-			<div class="cv-entry-body"><%= proj.FullDescription %></div>
-		</div>
+		<%- include('Components/cv_role', {
+			proj: proj,
+			showDescription: true
+		}) %>
 		<% } %>
 	</section>
 	<% } %>

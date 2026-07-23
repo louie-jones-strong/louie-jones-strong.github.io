@@ -1,0 +1,56 @@
+<%
+/* ---- Helper Functions (Local to component) ---- */
+function formatDate(dateStr) {
+	if (!dateStr) return '';
+	if (dateStr === 'Current') return 'Present';
+	var d = new Date(dateStr);
+	if (isNaN(d)) return dateStr;
+	return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+}
+
+function formatTimelineRange(timeline) {
+	var start = formatDate(timeline.StartDate);
+	var end   = formatDate(timeline.EndDate);
+	if (start && end) return start + ' \u2013 ' + end;
+	if (start) return 'From ' + start;
+	return '';
+}
+
+function projectDateRange(project) {
+	var timelines = project.Timelines || [];
+	if (timelines.length > 0) {
+		var first = formatDate(timelines[0].StartDate);
+		var last  = formatDate(timelines[timelines.length - 1].EndDate);
+		if (first && last) return first + ' \u2013 ' + last;
+		if (first) return 'From ' + first;
+	}
+	if (project.StartDate) {
+		return formatDate(project.StartDate) + ' \u2013 ' + formatDate(project.EndDate);
+	}
+	return '';
+}
+%>
+<div class="cv-entry">
+	<div class="cv-entry-header">
+		<span class="cv-entry-title"><%= proj.Title %></span>
+		<span class="cv-entry-date"><%= projectDateRange(proj) %></span>
+	</div>
+
+	<%
+	var timelines = proj.Timelines || [];
+	if (timelines.length > 1) {
+		var roles = timelines.filter(function(t) { return t.Name; })
+			.map(function(t) { return t.Name + ': ' + formatTimelineRange(t); });
+		if (roles.length > 0) {
+	%>
+	<div class="cv-entry-roles"><%= roles.join(' \u00a0|\u00a0 ') %></div>
+	<% } } %>
+
+	<% if (proj.Awards) { %>
+	<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
+	<% } %>
+
+	<% if (showDescription) { %>
+		<div class="cv-entry-body"><%= proj.FullDescription %></div>
+	<% } %>
+</div>
