@@ -64,7 +64,8 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		%>
 		<%- include('Components/cv_role', {
 			proj: proj,
-			showDescription: !(proj.Tags && proj.Tags.split(' ').indexOf('Solo') !== -1)
+			showDescription:  false,
+			showSubProjects: true
 		}) %>
 		<% } %>
 	</section>
@@ -80,7 +81,8 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		%>
 		<%- include('Components/cv_role', {
 			proj: proj,
-			showDescription: true
+			showDescription: true,
+			showSubProjects: false
 		}) %>
 		<% } %>
 	</section>
@@ -107,7 +109,8 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		%>
 		<%- include('Components/cv_role', {
 			proj: proj,
-			showDescription: true
+			showDescription: true,
+			showSubProjects: false
 		}) %>
 		<% } %>
 	</section>

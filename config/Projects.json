@@ -1256,7 +1256,7 @@
 			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
 		},
 		"SubProjects": [],
-		"FullDescription": "Worked on LEGO Star Wars Battles contributing to core gameplay features and engine level scripting using Unity and C#, supporting a commercially released mobile title."
+		"FullDescription": "Contributed holistically across the entire technical stack for a commercially released AAA mobile title. Directed the AI architecture team to design deterministic, high-performance decision-making algorithms under strict real-time constraints. Led cross-functional technical integration for high-profile IP assets, managing memory-optimized data streaming and strict compliance with global licensing guidelines."
 	},
 	"odyssey_GameJams": {
 		"Title": "Next Project Prototyping",
@@ -1281,7 +1281,7 @@
 		"FullDescription": "Rapid prototyping of game concepts and mechanics in small teams, producing playable prototypes and validating ideas using Unity and iterative design."
 	},
 	"odyssey_project1": {
-		"Title": "NDA Project 1",
+		"Title": "Economy Simulation Tools",
 		"Thumbnail": null,
 		"Timelines": [
 			{
@@ -1292,7 +1292,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "Worked on currently unannounced project.",
+		"QuickDescription": "Suite of internal tools for simulating and analyzing economies.",
 		"PagePath": null,
 		"Link": null,
 		"HideLink": false,
@@ -1306,7 +1306,7 @@
 		],
 		"Links": {},
 		"SubProjects": [],
-		"FullDescription": "Contributed to a confidential, unannounced project delivering engineering tasks in Unity and cross-team collaboration under NDA."
+		"FullDescription": "Developed a suite of internal tools for simulating and analyzing economies, enabling data-driven decision-making for game design and monetization strategies."
 	},
 	"got_df": {
 		"Title": "Game Of Thrones: Dragonfire",

@@ -53,4 +53,24 @@ function projectDateRange(project) {
 	<% if (showDescription) { %>
 		<div class="cv-entry-body"><%= proj.FullDescription %></div>
 	<% } %>
+
+	<%
+	if (showSubProjects) {
+	var subProjectKeys = proj.SubProjects || [];
+	if (subProjectKeys.length > 0) {
+		var subProjects = subProjectKeys.map(function(k) { return Projects[k]; }).filter(Boolean);
+		if (subProjects.length > 0) {
+	%>
+	<div class="cv-entry-subs">
+		<ul>
+			<% for (var si = 0; si < subProjects.length; si++) {
+				var sub = subProjects[si];
+			%>
+			<li>
+				<strong><%= sub.Title %></strong>: <%= sub.FullDescription %>
+			</li>
+			<% } %>
+		</ul>
+	</div>
+	<% } } } %>
 </div>
