@@ -502,7 +502,7 @@
 		"FullDescription": "Independent research dissertation investigating multi-technique supervised machine learning, implementing experiments in Python and TensorFlow and producing a formal written report."
 	},
 	"Degree": {
-		"Title": "Degree",
+		"Title": "Bachelor of Science in Machine Learning and Artificial Intelligence",
 		"Thumbnail": null,
 		"Timelines": [
 			{
@@ -558,7 +558,7 @@
 			"DataScience",
 			"FinalProject"
 		],
-		"FullDescription": "Bachelor of Science in Machine Learning and Artificial Intelligence (First Class), combining theoretical coursework with applied projects in ML, data science and software engineering."
+		"FullDescription": "Machine Learning and AI, highlighted by my DECAF project a custom ML framework for game agent creation. The degree combined advanced algorithm design, distributed data techniques, and cloud-native practices with applied projects in NLP, signal processing, and computer vision. Achievements include First Class marks across all core modules in software design, neural networks, and agile project management."
 	},
 	"IntroToProgramming1": {
 		"Title": "Introduction To Programming I",
@@ -1160,7 +1160,7 @@
 			"GithubLink": "https://github.com/louie-jones-strong/DECAF"
 		},
 		"SubProjects": [],
-		"FullDescription": "Dissertation project designing and implementing a machine learning framework for game agent creation, involving end-to-end research, implementation and evaluation."
+		"FullDescription": "Independently designed and implemented the Dynamic Exploration of Curated Agents Framework (DECAF), a Python-based ML framework optimized for game agent research. Developed a custom agent harness architecture for real-time experimentation, allowing for tuning the agents' behaviours to mimic human behaviours or a custom curated behaviour. The project encompassed full-lifecycle development—from requirements gathering and research to rigorous testing and evaluation—earning a First Class grade."
 	},
 	"odyssey": {
 		"Title": "TT Odyssey",
@@ -1226,7 +1226,7 @@
 			"odyssey_GraphicsCourse",
 			"odyssey_product_scrapper"
 		],
-		"FullDescription": "Engineered high-performance gameplay systems and CI/CD pipelines for live titles. Developed microservices and internal tooling in Go and C# to streamline automated data utilities and asset validation. Contributed to cross-platform integrations and real-time backend communication for mobile AAA projects."
+		"FullDescription": "Engineered high performance gameplay systems and CI/CD pipelines for live titles. Developed microservices and internal tooling in Go and C# to streamline automated data utilities and asset validation. Contributed to cross platform integrations and real time backend communication for mobile AAA projects."
 	},
 	"LSWB": {
 		"Title": "LEGO® Star Wars™ Battles",
@@ -1256,7 +1256,7 @@
 			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
 		},
 		"SubProjects": [],
-		"FullDescription": "Worked on LEGO Star Wars Battles contributing to core gameplay features and engine-level scripting using Unity and C#, supporting a commercially released mobile title."
+		"FullDescription": "Worked on LEGO Star Wars Battles contributing to core gameplay features and engine level scripting using Unity and C#, supporting a commercially released mobile title."
 	},
 	"odyssey_GameJams": {
 		"Title": "Next Project Prototyping",
@@ -1403,7 +1403,7 @@
 		],
 		"Links": {},
 		"SubProjects": [],
-		"FullDescription": "Implemented a Golang-based web scraper to extract product data and export CSV reports, improving data collection efficiency for product research."
+		"FullDescription": "Implemented a Golang based web scraper to extract product data and export CSV reports, improving data collection efficiency for product research."
 	},
 	"odyssey_GraphicsCourse": {
 		"Title": "Graphics Course",
@@ -1453,7 +1453,7 @@
 		"Skills": [],
 		"Links": {},
 		"SubProjects": [],
-		"FullDescription": "Provided one-to-one English tuition for non-native speakers focused on IELTS speaking, improving client confidence and exam readiness through tailored lessons."
+		"FullDescription": "Provided one to one English tuition for non native speakers focused on IELTS speaking, improving client confidence and exam readiness through tailored lessons."
 	},
 	"MathsTutor": {
 		"Title": "Maths Tutor",
@@ -1811,7 +1811,7 @@
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
-		"QuickDescription": "My algorithm to discover the solutions to the Alhambra Cube Puzzle.",
+		"QuickDescription": "My algorithm to discover the solutions to the Alhambra Puzzle Cube.",
 		"PagePath": "CubePuzzleProject",
 		"Link": null,
 		"HideLink": false,
@@ -1822,7 +1822,7 @@
 		],
 		"Links": {},
 		"SubProjects": [],
-		"FullDescription": "Developed an algorithmic solver for the Alhambra 4D Cube Puzzle in Python, demonstrating combinatorial search techniques and optimization strategies."
+		"FullDescription": "I was the first person to solve the Alhambra 4D Cube Puzzle and to find all solutions. Used Python to demonstrate combinatorial search techniques and optimization strategies."
 	},
 	"Minesweeper": {
 		"Title": "Mine Sweeper",
