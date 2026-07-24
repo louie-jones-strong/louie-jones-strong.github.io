@@ -28,8 +28,6 @@
 			"Java",
 			"Docker",
 			"Latex",
-			"Tensorflow",
-			"scikitlearn",
 			"Golang",
 			"Rust"
 		],
@@ -92,7 +90,6 @@
 			"CPlusPlus",
 			"Python",
 			"Latex",
-			"Tensorflow",
 			"scikitlearn",
 			"Java"
 		],
@@ -342,8 +339,7 @@
 			"SQL",
 			"Git",
 			"Java",
-			"Python",
-			"Tensorflow"
+			"Python"
 		],
 		"Links": {},
 		"SubProjects": [
@@ -494,12 +490,11 @@
 		"Hide": false,
 		"Tags": "Education Solo",
 		"Skills": [
-			"Python",
-			"Tensorflow"
+			"Python"
 		],
 		"Links": {},
 		"SubProjects": [],
-		"FullDescription": "Independent research dissertation investigating multi-technique supervised machine learning, implementing experiments in Python and TensorFlow and producing a formal written report."
+		"FullDescription": "Independent research dissertation investigating multi-technique supervised machine learning, implementing experiments in Python and producing a formal written report."
 	},
 	"Degree": {
 		"Title": "Bachelor of Science in Machine Learning and Artificial Intelligence",
@@ -529,7 +524,6 @@
 			"CPlusPlus",
 			"Python",
 			"Latex",
-			"Tensorflow",
 			"scikitlearn"
 		],
 		"Links": {},
@@ -1041,7 +1035,6 @@
 		"Tags": "Education Degree Solo",
 		"Skills": [
 			"Python",
-			"Tensorflow",
 			"scikitlearn"
 		],
 		"Links": {},
@@ -1153,7 +1146,6 @@
 			"HTML",
 			"CSS",
 			"Latex",
-			"Tensorflow",
 			"scikitlearn"
 		],
 		"Links": {

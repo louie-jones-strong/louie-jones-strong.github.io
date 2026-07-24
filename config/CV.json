@@ -8,9 +8,11 @@
 		"BusinessConsulting"
 	],
 	"EducationProjects": [
-		"Degree"
+		"Degree",
+		"EPQProject"
 	],
 	"PersonalProjects": [
+		"Time-Tracker",
 		"HouseFinder",
 		"MediaStudio",
 		"CubePuzzleProject"

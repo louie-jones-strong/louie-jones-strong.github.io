@@ -54,9 +54,9 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 	<!-- ========== PROFILE SUMMARY ========== -->
 	<p class="cv-summary"><%= profile.FullDescription %></p>
 
-	<!-- ========== WORK EXPERIENCE ========== -->
+	<!-- ========== Professional Experience ========== -->
 	<section class="cv-section">
-		<h2>Work Experience</h2>
+		<h2>Professional Experience</h2>
 
 		<% for (var wi = 0; wi < workEntries.length; wi++) {
 			var we = workEntries[wi];
@@ -113,6 +113,7 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 			showSubProjects: false
 		}) %>
 		<% } %>
+		<span class="cv-projects-note">See Portfolio for more projects</span>
 	</section>
 	<% } %>
 
