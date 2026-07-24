@@ -135,6 +135,26 @@ a { color: inherit; text-decoration: none; }
 	border-left: 2px solid var(--rule);
 }
 
+.cv-entry-subs {
+	font-size: 0.8em;
+	color: #555;
+	margin-top: 0.25em;
+	padding-left: 1.25em;
+}
+
+.cv-entry-subs ul {
+	list-style-type: disc;
+}
+
+.cv-entry-subs li {
+	margin-bottom: 0.15em;
+}
+
+.cv-entry-subs strong {
+	color: #333;
+	font-weight: 700;
+}
+
 /* --- Skills --- */
 .cv-skills {
 	display: flex;
