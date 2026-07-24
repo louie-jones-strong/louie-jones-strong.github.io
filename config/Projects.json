@@ -31,8 +31,7 @@
 			"Golang",
 			"Rust",
 			"AWS",
-			"gRPC",
-			"Docker"
+			"gRPC"
 		],
 		"Links": {},
 		"SubProjects": [
