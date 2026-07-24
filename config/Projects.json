@@ -1219,7 +1219,7 @@
 		"Links": {},
 		"SubProjects": [
 			"LSWB",
-			"odyssey_GameJams",
+			"odyssey_Prototyping",
 			"economy_sim",
 			"got_df",
 			"got_conquest",
@@ -1258,8 +1258,8 @@
 		"SubProjects": [],
 		"FullDescription": "Contributed holistically across the entire technical stack for a commercially released AAA mobile title. Directed the AI architecture team to design deterministic, high-performance decision-making algorithms under strict real-time constraints. Led cross-functional technical integration for high-profile IP assets, managing memory-optimized data streaming and strict compliance with global licensing guidelines."
 	},
-	"odyssey_GameJams": {
-		"Title": "Next Project Prototyping",
+	"odyssey_Prototyping": {
+		"Title": "Project Prototyping",
 		"Thumbnail": null,
 		"Timelines": [],
 		"TimeSpent": null,
