@@ -1220,7 +1220,7 @@
 		"SubProjects": [
 			"LSWB",
 			"odyssey_GameJams",
-			"odyssey_project1",
+			"economy_sim",
 			"got_df",
 			"got_conquest",
 			"odyssey_GraphicsCourse",
@@ -1280,7 +1280,7 @@
 		"SubProjects": [],
 		"FullDescription": "Rapid prototyping of game concepts and mechanics in small teams, producing playable prototypes and validating ideas using Unity and iterative design."
 	},
-	"odyssey_project1": {
+	"economy_sim": {
 		"Title": "Economy Simulation Tools",
 		"Thumbnail": null,
 		"Timelines": [
