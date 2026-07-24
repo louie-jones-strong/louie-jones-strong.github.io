@@ -29,7 +29,10 @@
 			"Docker",
 			"Latex",
 			"Golang",
-			"Rust"
+			"Rust",
+			"AWS",
+			"gRPC",
+			"Docker"
 		],
 		"Links": {},
 		"SubProjects": [
@@ -521,6 +524,7 @@
 			"SQL",
 			"Git",
 			"Docker",
+			"GoogleCloud",
 			"CPlusPlus",
 			"Python",
 			"Latex",
@@ -1142,6 +1146,7 @@
 		"Skills": [
 			"Python",
 			"Docker",
+			"GoogleCloud",
 			"Git",
 			"HTML",
 			"CSS",
@@ -1152,7 +1157,7 @@
 			"GithubLink": "https://github.com/louie-jones-strong/DECAF"
 		},
 		"SubProjects": [],
-		"FullDescription": "Independently designed and implemented the Dynamic Exploration of Curated Agents Framework (DECAF), a Python-based ML framework optimized for game agent research. Developed a custom agent harness architecture for real-time experimentation, allowing for tuning the agents' behaviours to mimic human behaviours or a custom curated behaviour. The project encompassed full-lifecycle development—from requirements gathering and research to rigorous testing and evaluation—earning a First Class grade."
+		"FullDescription": "Independently designed and implemented the Dynamic Exploration of Curated Agents Framework (DECAF), a Python-based ML framework optimized for game agent research and leveraging Google Cloud for scalable model training. Developed a custom agent harness architecture for real-time experimentation, allowing for tuning the agents' behaviours to mimic human behaviours or a custom curated behaviour. The project encompassed full-lifecycle development—from requirements gathering and research to rigorous testing and evaluation—earning a First Class grade."
 	},
 	"odyssey": {
 		"Title": "TT Odyssey",
@@ -1206,7 +1211,10 @@
 			"Docker",
 			"Golang",
 			"CPlusPlus",
-			"OpenGL"
+			"OpenGL",
+			"AWS",
+			"Docker",
+			"gRPC"
 		],
 		"Links": {},
 		"SubProjects": [
@@ -1239,10 +1247,12 @@
 			"DotNet",
 			"SQL",
 			"Python",
+			"AWS",
 			"Git",
 			"HTML",
 			"ObjectiveC",
-			"Java"
+			"Java",
+			"Docker"
 		],
 		"Links": {
 			"AppleArcadeLink": "https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698"
@@ -1328,6 +1338,8 @@
 			"Unity",
 			"Csharp",
 			"Golang",
+			"gRPC",
+			"AWS",
 			"Git",
 			"SQL",
 			"Docker"
@@ -1336,7 +1348,7 @@
 			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.wb.goog.hotd.socialstrategy&pcampaignid=web_share"
 		},
 		"SubProjects": [],
-		"FullDescription": "Contract engineering for WB Games Boston on Game of Thrones Dragonfire, building microservices and gameplay features using Unity, C# and Golang for live operations."
+		"FullDescription": "Contract engineering for WB Games Boston on Game of Thrones Dragonfire, building microservices and gameplay features using Unity, C#, Golang, gRPC and AWS for live operations."
 	},
 	"got_conquest": {
 		"Title": "Game Of Thrones: Conquest",
@@ -1361,6 +1373,8 @@
 			"Unity",
 			"Csharp",
 			"Golang",
+			"gRPC",
+			"AWS",
 			"Git",
 			"SQL",
 			"Docker"
@@ -1369,7 +1383,7 @@
 			"GooglePlayLink": "https://play.google.com/store/apps/details?id=com.wb.goog.got.conquest&hl=en_GB"
 		},
 		"SubProjects": [],
-		"FullDescription": "Contract work on backend microservices and tooling for Game of Thrones Conquest, focusing on scalable services using Golang, Docker and SQL."
+		"FullDescription": "Contract work on backend microservices and tooling for Game of Thrones Conquest, focusing on scalable services using Golang, gRPC, Docker, SQL and AWS."
 	},
 	"odyssey_product_scrapper": {
 		"Title": "Product Scraper",

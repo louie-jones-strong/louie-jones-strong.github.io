@@ -98,5 +98,20 @@
 		"IconPath": "Public/Assets/Icons/opengl",
 		"Label": "OpenGL",
 		"ClassList": ""
+	},
+	"gRPC": {
+		"IconPath": "Public/Assets/Icons/grpc",
+		"Label": "gRPC",
+		"ClassList": ""
+	},
+	"AWS": {
+		"IconPath": "Public/Assets/Icons/aws",
+		"Label": "AWS",
+		"ClassList": "greyScale"
+	},
+	"GoogleCloud": {
+		"IconPath": "Public/Assets/Icons/gcp",
+		"Label": "Google Cloud",
+		"ClassList": "greyScale"
 	}
 }
