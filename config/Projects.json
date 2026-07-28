@@ -2309,7 +2309,12 @@
 	"PADIEnrichedAirDiver": {
 		"Title": "Enriched Air (Nitrox) Diver",
 		"Thumbnail": null,
-		"Timelines": [],
+		"Timelines": [
+			{
+				"StartDate": "August 15, 2015",
+				"EndDate": "August 15, 2015"
+			}
+		],
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
