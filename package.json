@@ -1,5 +1,5 @@
 {
-  "dependencies": {
-    "@louie-jones-strong/portfolio-builder": "^1.0.3"
-  }
+	"dependencies": {
+		"@louie-jones-strong/portfolio-builder": "github:louie-jones-strong/portfolio-builder"
+	}
 }

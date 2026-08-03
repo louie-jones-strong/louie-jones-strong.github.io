@@ -8,22 +8,22 @@
 		{
 			"label": "Update Portfolio Builder",
 			"type": "shell",
-			"command": "bun update @louie-jones-strong/portfolio-builder@latest",
+			"command": "bun update @louie-jones-strong/portfolio-builder@latest"
 		},
 		{
 			"label": "Build [Dev]",
 			"type": "shell",
-			"command": "bunx portfolio-builder --compress",
+			"command": "bunx portfolio-builder --compress"
 		},
 		{
 			"label": "Build [Release]",
 			"type": "shell",
-			"command": "bunx portfolio-builder --release",
+			"command": "bunx portfolio-builder --release"
 		},
 		{
 			"label": "Spell Check",
 			"type": "shell",
-			"command": "cspell \".\" --no-progress",
+			"command": "cspell \".\" --no-progress"
 		},
 		{
 			"label": "Run All",
@@ -32,7 +32,7 @@
 			"dependsOn": [
 				"Build [Dev]",
 				"Spell Check"
-			],
-		},
+			]
+		}
 	]
 }
