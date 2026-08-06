@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../portfolio-builder"
+		}
+	],
+	"settings": {
+		"liveServer.settings.root": "/docs/",
+		"cSpell.words": [
+			"textlint"
+		],
+		"liveServer.settings.multiRootWorkspaceName": "louie-jones-strong.github.io"
+	}
+}

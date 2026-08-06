@@ -28,7 +28,7 @@
 		{
 			"label": "Run All",
 			"type": "shell",
-			"dependsOrder": "parallel",
+			"dependsOrder": "sequence",
 			"dependsOn": [
 				"Build [Dev]",
 				"Spell Check"
