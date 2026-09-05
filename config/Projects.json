@@ -1294,7 +1294,7 @@
 		"TimeSpent": null,
 		"NumPeople": null,
 		"Awards": null,
-		"QuickDescription": "Suite of internal tools for simulating and analyzing economies.",
+		"QuickDescription": "Suite of internal tools for simulating and analysing economies.",
 		"PagePath": null,
 		"Link": null,
 		"HideLink": false,
@@ -1308,7 +1308,7 @@
 		],
 		"Links": {},
 		"SubProjects": [],
-		"FullDescription": "Developed a suite of internal tools for simulating and analyzing economies, enabling data-driven decision-making for game design and monetization strategies."
+		"FullDescription": "Developed a suite of internal tools for simulating and analysing economies, enabling data-driven decision-making for game design and monetization strategies."
 	},
 	"got_df": {
 		"Title": "Game Of Thrones: Dragonfire",
