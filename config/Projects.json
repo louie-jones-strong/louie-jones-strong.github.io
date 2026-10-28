@@ -1991,15 +1991,15 @@
 		"TimeSpent": null,
 		"NumPeople": 1,
 		"Awards": null,
-		"QuickDescription": "Golang-powered website to discover recipes, plan meals, manage ingredients, and maintain a healthy diet while reducing food costs.",
-		"PagePath": null,
+		"QuickDescription": "Go web app that scrapes 8 UK supermarkets, turns messy product listings into structured data with a rule-based tagging engine, then builds the cheapest shopping list and recipe options from what is already in my kitchen.",
+		"PagePath": "FoodFinder",
 		"Link": null,
 		"HideLink": false,
 		"Hide": false,
 		"Tags": "Solo",
 		"Skills": [
 			"Golang",
-			"Python",
+			"Docker",
 			"JavaScript",
 			"HTML",
 			"CSS",
@@ -2007,7 +2007,7 @@
 		],
 		"Links": {},
 		"SubProjects": [],
-		"FullDescription": "Developed a Golang-backed recipe discovery and meal-planning web application to manage ingredients, reduce food costs and support healthy eating."
+		"FullDescription": "Built Food Finder, a Go web application that scrapes eight UK supermarkets with config-driven selectors and a rate-limited, cached scraper, then normalises around 6,700 listings using NLP stemming, regex unit parsing and a dependency-ordered tagging engine of 400+ composable rules. Calculates the cheapest shopping list per store from inventory and unit prices, generates recipe variants from available ingredients, and maps nearby stores via OpenRouteService. Covered by unit and benchmark tests and shipped as a Docker image through GitHub Actions."
 	},
 	"EnergyFinder": {
 		"Title": "Energy Finder",

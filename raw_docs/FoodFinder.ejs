@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/CardHolder.css">
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+		<div class="centeredFrame">
+			<h1 class="reveal fromBottom center"><%=ProjectData.Title %></h1>
+			<p class="reveal fromBottom center">
+				A Go web app that works out the cheapest way to eat well. It scrapes UK supermarkets, makes sense of the messy product data,
+				then plans my shopping list and recipes around what I already have at home.
+			</p>
+
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+			<h2 class="center reveal fromBottom">Why I Built It</h2>
+			<p class="center reveal fromBottom">
+				Comparing food prices by hand is slow, because every shop lists things differently: "6 x 330ml", "1.5kg", "500g (2 x 250g)".
+				I wanted a tool that could compare a tin of tuna and a multipack of tuna fairly, ignore what I already own,
+				and tell me what to buy and where.
+			</p>
+			<p class="center reveal fromBottom">
+				The repository is private, but I am happy to walk through the code in an interview.
+			</p>
+
+			<h2 class="center reveal fromBottom">How It Works</h2>
+			<div class="cardHolder">
+
+				<div class="card glass reveal">
+					<h3>Store Scraper</h3>
+					<p>
+						Eight supermarkets are described in JSON config, with CSS selectors for the title, price, quantity and image,
+						so adding a shop needs no code change.
+						Requests are rate limited to one a second, cached to disk with an expiry, and de-duplicated before saving.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Quantity Parsing</h3>
+					<p>
+						Listing text like "4 x 125g" or "12% fat" is turned into typed quantities using a table of regex unit matchers,
+						with unit conversion and ratios between quantities.
+						That makes price per kilo, per litre or per item comparable across every shop.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Tagging Engine</h3>
+					<p>
+						Over 400 rules tag products against a hierarchy of 600+ tags.
+						Rules can be n-gram matches on stemmed, accent-stripped names, regexes, quantity checks or other tags,
+						and are combined with and/or logic.
+						Rules that depend on other tags are put in order with a dependency graph, and circular dependencies are rejected.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Shopping List</h3>
+					<p>
+						Each item is a condition plus an amount. The planner subtracts what is already in my inventory,
+						filters matching products, works out how many packs are needed,
+						and picks the cheapest option per store, limited to the shops in my profile.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Recipe Variants</h3>
+					<p>
+						Recipes list ingredients as conditions rather than fixed products.
+						The app builds every permutation of inventory items that fits, including optional ingredients,
+						and pages through them without generating them all up front.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Maps &amp; Admin Tools</h3>
+					<p>
+						Nearby stores are found with the OpenRouteService points-of-interest API and shown on a map.
+						An admin UI lets me create tags and rules from the browser, with validation that stops duplicate tags
+						and unknown references from being saved.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Web App</h3>
+					<p>
+						A Go (chi) server with Jinja-style templates and a JavaScript front end using editable tables for products, inventory and profiles.
+						The data layer sits behind a generic storage interface, with JSON and CSV backends and in-memory caching.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Quality &amp; Delivery</h3>
+					<p>
+						Unit tests cover the unit parsing, tagging, NLP and scraper post-processing,
+						plus data validation tests on the config and a benchmark of the whole pipeline.
+						GitHub Actions checks generated code, runs the tests and publishes a Docker image.
+					</p>
+				</div>
+
+			</div>
+
+			<h2 class="center reveal fromBottom">What It Shows</h2>
+			<p class="center reveal fromBottom">
+				Turning messy real-world data into something reliable, graph and dependency ordering,
+				designing a flexible rule system, clean service-based Go architecture with generics and interfaces,
+				and taking a full-stack product from scraping through to deployment on my own.
+			</p>
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+	</div>
+</body>
+</html>
