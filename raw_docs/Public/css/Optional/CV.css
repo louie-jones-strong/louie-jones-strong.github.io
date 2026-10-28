@@ -172,6 +172,16 @@ a {
 	font-weight: 700;
 }
 
+.cv-projects-link {
+	text-align: center;
+	font-size: 0.82em;
+	line-height: 1.8;
+}
+
+.cv-projects-link a {
+	color: var(--accent);
+}
+
 .cv-projects-note {
 	font-size: 0.78em;
 	color: var(--muted);

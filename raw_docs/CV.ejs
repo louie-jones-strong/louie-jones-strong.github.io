@@ -114,8 +114,9 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		}) %>
 		<% } %>
 		<span class="cv-projects-note">See Portfolio for more projects</span>
-	</section>
-	<% } %>
+		<div class="cv-projects-link"><a href="<%= SiteConfig.HostURL %>"><%= SiteConfig.HostURL.replace(/\/$/, '') %></a></div>
+			</section>
+			<% } %>
 
 </div><!-- /.page -->
 </body>

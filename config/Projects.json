@@ -36,12 +36,11 @@
 		"Links": {},
 		"SubProjects": [
 			"AgentStudio",
+			"HouseFinder",
+			"Time-Tracker",
+			"FoodFinder",
 			"BlenderProjects",
 			"EPQProject",
-			"FoodFinder",
-			"HouseFinder",
-			"EnergyFinder",
-			"Time-Tracker",
 			"CubePuzzleProject",
 			"MediaStudio",
 			"Minesweeper",
@@ -51,7 +50,8 @@
 			"looking-for-eden",
 			"RougeClicker",
 			"DrPlantenstein",
-			"ScubaDiving"
+			"ScubaDiving",
+			"EnergyFinder"
 		],
 		"FullDescription": "Software Engineer focused on distributed systems, Go, and cloud-native practices. Experienced in developing automated data utilities, CI/CD pipelines, and microservices with a strong emphasis on system performance and scalability."
 	},
