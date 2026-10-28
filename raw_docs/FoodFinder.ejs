@@ -11,6 +11,7 @@
 
 	<!-- extra links if needed -->
 	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/ZipperCard.css">
 </head>
 
 
@@ -122,6 +123,35 @@
 
 			</div>
 
+			<h2 class="center reveal fromBottom">Screenshots</h2>
+		</div>
+
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard shaded glass reveal fromRight">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/FoodFinder/products",
+					ClassList: "expandable",
+					Alt:"Food Finder products page showing scraped supermarket listings as cards with tags, prices and unit prices"
+				}}); %>
+				<div>
+					<h3>Products</h3>
+					<p>Scraped listings from every store as cards, each with the tags the rules gave it, the price and a unit price that can be compared across shops.</p>
+				</div>
+			</div>
+			<div class="ZipperCard shaded glass reveal fromLeft">
+				<div>
+					<h3>Shopping List</h3>
+					<p>The cheapest matching product for each item, grouped by shop, with the number of packs needed after subtracting what is already in my inventory.</p>
+				</div>
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/FoodFinder/shopping-list",
+					ClassList: "expandable",
+					Alt:"Food Finder shopping list grouped by shop, showing item, pack size, price and the chosen product"
+				}}); %>
+			</div>
+		</div>
+
+		<div class="centeredFrame">
 			<h2 class="center reveal fromBottom">What It Shows</h2>
 			<p class="center reveal fromBottom">
 				Turning messy real-world data into something reliable, graph and dependency ordering,

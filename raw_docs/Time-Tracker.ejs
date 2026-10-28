@@ -11,6 +11,7 @@
 
 	<!-- extra links if needed -->
 	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/ZipperCard.css">
 </head>
 
 
@@ -119,6 +120,35 @@
 
 			</div>
 
+			<h2 class="center reveal fromBottom">Screenshots</h2>
+		</div>
+
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard shaded glass reveal fromRight">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/Time-Tracker/report",
+					ClassList: "expandable",
+					Alt:"Time Tracker work hours dashboard with a stacked daily chart of tagged, idle and untracked time"
+				}}); %>
+				<div>
+					<h3>Work Hours Report</h3>
+					<p>Thirteen days of real use, with each day split into tagged activity, idle and untracked time, and a table of hours per tag below the chart.</p>
+				</div>
+			</div>
+			<div class="ZipperCard shaded glass reveal fromLeft">
+				<div>
+					<h3>Tagging Rules</h3>
+					<p>Rules match an executable path or window title and apply tags and a colour, which then feed the report columns and chart.</p>
+				</div>
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/Time-Tracker/tagging-rules",
+					ClassList: "expandable",
+					Alt:"Time Tracker tagging rules mapping executables such as Code.exe and Slack.exe to tags and colours"
+				}}); %>
+			</div>
+		</div>
+
+		<div class="centeredFrame">
 			<h2 class="center reveal fromBottom">What It Shows</h2>
 			<p class="center reveal fromBottom">
 				Low-level Windows programming from Rust, designing a compact database schema for high-frequency data,

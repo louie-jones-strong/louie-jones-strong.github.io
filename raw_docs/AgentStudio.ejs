@@ -11,6 +11,7 @@
 
 	<!-- extra links if needed -->
 	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/CardHolder.css">
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/ZipperCard.css">
 </head>
 
 
@@ -118,6 +119,46 @@
 
 			</div>
 
+			<h2 class="center reveal fromBottom">Screenshots</h2>
+		</div>
+
+		<div class="ZipperCardsHolder glass centeredFrame">
+			<div class="ZipperCard shaded glass reveal fromRight">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/AgentStudio/sessions",
+					ClassList: "expandable",
+					Alt:"Agent Studio chat session list with generated titles, dates and message counts"
+				}}); %>
+				<div>
+					<h3>Sessions</h3>
+					<p>Every conversation is saved and can be resumed. Titles are written automatically by a background bot.</p>
+				</div>
+			</div>
+			<div class="ZipperCard shaded glass reveal fromLeft">
+				<div>
+					<h3>Live Tool Calls</h3>
+					<p>The agent explores a codebase with its tools, and each call is shown in the chat as it happens, with a bar for how much of the context window is used.</p>
+				</div>
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/AgentStudio/tool-calls",
+					ClassList: "expandable",
+					Alt:"Agent Studio chat showing the agent running the walk_dir and read-lines-from-file tools"
+				}}); %>
+			</div>
+			<div class="ZipperCard shaded glass reveal fromRight">
+				<%- include(PageData.PathToRoot+'Components/Picture', {ImgData: {
+					Path:"Public/Assets/AgentStudio/chat",
+					ClassList: "expandable",
+					Alt:"Agent Studio chat with a streamed markdown answer discussing how to plan agent prompts"
+				}}); %>
+				<div>
+					<h3>Streaming Chat</h3>
+					<p>Answers stream in as Markdown, with code formatting, and the same chat is used to talk through design ideas for the agent itself.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="centeredFrame">
 			<h2 class="center reveal fromBottom">What It Shows</h2>
 			<p class="center reveal fromBottom">
 				Systems design and concurrency in Go, practical LLM engineering (tool calling, prompt design, retrieval, evaluation),
