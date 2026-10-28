@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata about the page itself for search engines -->
+<head>
+	<!-- shared common Head Logic -->
+	<%- include(PageData.PathToRoot+'Components/Head', {
+		PageData: PageData,
+		ProjectData: ProjectData
+	}); %>
+
+	<!-- extra links if needed -->
+	<link rel="stylesheet" type="text/css" href="<%=PageData.PathToRoot%>Public/css/Optional/CardHolder.css">
+</head>
+
+
+<body class="dark">
+
+	<!-- Shared common loader -->
+	<%- include(PageData.PathToRoot+'Components/Loader'); %>
+	<div class="content background">
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/AccessibilityHelper'); %>
+
+		<!-- shared common header -->
+		<%- include(PageData.PathToRoot+'Components/Header'); %>
+
+		<div class="centeredFrame">
+			<h1 class="reveal fromBottom center"><%=ProjectData.Title %></h1>
+			<p class="reveal fromBottom center">
+				A Windows app written in Rust that quietly records what I am doing on my PC, then turns it into work-hour reports
+				and a replayable timeline, with all the data kept on my own machine.
+			</p>
+
+			<%- include(PageData.PathToRoot+'Components/QuickInfo', {QuickInfoData: ProjectData}); %>
+
+			<h2 class="center reveal fromBottom">Why I Built It</h2>
+			<p class="center reveal fromBottom">
+				Most time trackers rely on starting and stopping a timer, and I always forget.
+				I wanted something that runs on its own, works out when I am actually working and when I am idle,
+				and lets me look back at a day to see where the time went.
+			</p>
+			<p class="center reveal fromBottom">
+				The repository is private, but I am happy to walk through the code in an interview.
+			</p>
+
+			<h2 class="center reveal fromBottom">How It Works</h2>
+			<div class="cardHolder">
+
+				<div class="card glass reveal">
+					<h3>Background Tracker</h3>
+					<p>
+						One executable runs in two modes: a hidden tracker process and a Tauri GUI.
+						The tracker takes a snapshot every 100 ms by default, uses a named Windows mutex so only one copy runs,
+						and retries failed starts and saves with exponential back-off.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>What It Captures</h3>
+					<p>
+						Using the Win32 API it records visible windows and their z-order, the process tree, per-process audio levels,
+						display layout and DPI, mouse position and last input time, network and machine details.
+						Each source has its own settings and cool-down, so slow-changing data is not read every cycle.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Storage</h3>
+					<p>
+						Snapshots go into SQLite, with a snapshot cache so unchanged windows, displays and inputs are stored once and referenced afterwards.
+						Schema changes use versioned migrations that run on startup, and the reporting views are rebuilt each time.
+						A failed save is skipped and the cache reset, so the tracker keeps running.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Tagging Rules</h3>
+					<p>
+						Rules match window titles and executable paths and apply comma-separated tags and colours that I define in the settings tab.
+						A rule can also stop a window counting as idle, so a video call playing audio still counts as active time.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Work Reports</h3>
+					<p>
+						The report tab groups time by hour, day or week and shows total worked, breaks and average workday.
+						Idle time is worked out from the last input, and tracked, idle and untracked time are charted per tag.
+						The grouping runs in SQL and Rust rather than in the browser to keep it fast on large databases.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Session Replay</h3>
+					<p>
+						Any past session can be replayed with a timeline scrubber and playback speeds.
+						The app redraws the displays, windows and mouse cursor as they were,
+						and I can add notes to a point in the session.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Desktop App</h3>
+					<p>
+						The front end is plain JavaScript, HTML and CSS served by Tauri, with Rust commands behind each tab.
+						Settings control run on startup, which writes to the Windows Run registry key, plus snapshot interval and report colours.
+					</p>
+				</div>
+
+				<div class="card glass reveal">
+					<h3>Delivery</h3>
+					<p>
+						A GitHub Actions workflow builds the release executable on Windows for every push to main.
+						Logging uses structured tracing with rotating log files.
+					</p>
+				</div>
+
+			</div>
+
+			<h2 class="center reveal fromBottom">What It Shows</h2>
+			<p class="center reveal fromBottom">
+				Low-level Windows programming from Rust, designing a compact database schema for high-frequency data,
+				keeping a long-running background process reliable, and building a desktop product from capture through to reporting on my own.
+			</p>
+		</div>
+
+		<!-- Shared common footer -->
+		<%- include(PageData.PathToRoot+'Components/Footer'); %>
+	</div>
+</body>
+</html>
