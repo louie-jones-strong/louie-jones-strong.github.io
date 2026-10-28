@@ -35,9 +35,12 @@
 		],
 		"Links": {},
 		"SubProjects": [
+			"AgentStudio",
 			"BlenderProjects",
 			"EPQProject",
+			"FoodFinder",
 			"HouseFinder",
+			"EnergyFinder",
 			"Time-Tracker",
 			"CubePuzzleProject",
 			"MediaStudio",
@@ -1537,6 +1540,37 @@
 		"SubProjects": [],
 		"FullDescription": "Delivered public talks on machine learning and AI using accessible analogies, demonstrating ability to communicate complex technical concepts to general audiences."
 	},
+	"AgentStudio": {
+		"Title": "Agent Studio",
+		"Thumbnail": "Public/Assets/AgentStudio/thumbnail",
+		"Timelines": [
+			{
+				"Name": null,
+				"StartDate": "September 6, 2026",
+				"EndDate": "Current"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "A fully local, privacy-first LLM agent harness built in Go on Ollama, featuring a streaming tool-calling agent loop, hybrid RAG search (BM25 + vector embeddings), file-based skills and memories, and an automated LLM-as-a-judge test suite.",
+		"PagePath": "AgentStudio",
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo",
+		"Skills": [
+			"Golang",
+			"Docker",
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Git"
+		],
+		"Links": {},
+		"SubProjects": [],
+		"FullDescription": "Designed and built Agent Studio, a local-first LLM agent harness in Go that runs entirely on Ollama with no cloud dependencies. Implemented a streaming tool-calling agent loop with 15 permission-grouped tools, hybrid retrieval (BM25 and vector embeddings fused with Reciprocal Rank Fusion, plus AST-aware Go chunking), markdown skill and memory loading, persistent sessions, and an LLM-as-a-judge evaluation harness, served through a web chat UI with server-sent event streaming."
+	},
 	"BlenderProjects": {
 		"Title": "24 Hour Blender Challenge",
 		"Thumbnail": "Public/Assets/BlenderProjects/Images/blender_6",
@@ -1935,10 +1969,10 @@
 		"Hide": false,
 		"Tags": "Solo",
 		"Skills": [
+			"Python",
 			"JavaScript",
 			"HTML",
 			"CSS",
-			"Python",
 			"Git"
 		],
 		"Links": {},
@@ -1951,7 +1985,7 @@
 		"Timelines": [
 			{
 				"StartDate": "August 25, 2024",
-				"EndDate": "Current"
+				"EndDate": "February 21, 2026"
 			}
 		],
 		"TimeSpent": null,
@@ -1964,15 +1998,46 @@
 		"Hide": false,
 		"Tags": "Solo",
 		"Skills": [
+			"Golang",
+			"Python",
 			"JavaScript",
 			"HTML",
 			"CSS",
-			"Python",
 			"Git"
 		],
 		"Links": {},
 		"SubProjects": [],
 		"FullDescription": "Developed a Golang-backed recipe discovery and meal-planning web application to manage ingredients, reduce food costs and support healthy eating."
+	},
+	"EnergyFinder": {
+		"Title": "Energy Finder",
+		"Thumbnail": null,
+		"Timelines": [
+			{
+				"StartDate": "June 18, 2025",
+				"EndDate": "September 23, 2025"
+			}
+		],
+		"TimeSpent": null,
+		"NumPeople": 1,
+		"Awards": null,
+		"QuickDescription": "Golang-powered website to discover and compare energy providers, manage energy consumption, and reduce costs.",
+		"PagePath": null,
+		"Link": null,
+		"HideLink": false,
+		"Hide": false,
+		"Tags": "Solo",
+		"Skills": [
+			"Golang",
+			"Python",
+			"JavaScript",
+			"HTML",
+			"CSS",
+			"Git"
+		],
+		"Links": {},
+		"SubProjects": [],
+		"FullDescription": "Developed a Golang-backed web application to discover and compare energy providers, manage energy consumption, and reduce costs."
 	},
 	"Time-Tracker": {
 		"Title": "Time Tracker",
@@ -1993,10 +2058,10 @@
 		"Hide": false,
 		"Tags": "Solo",
 		"Skills": [
+			"Rust",
 			"JavaScript",
 			"HTML",
 			"CSS",
-			"Rust",
 			"Git"
 		],
 		"Links": {},
@@ -2022,10 +2087,10 @@
 		"Hide": false,
 		"Tags": "Solo",
 		"Skills": [
+			"Python",
 			"JavaScript",
 			"HTML",
 			"CSS",
-			"Python",
 			"Git"
 		],
 		"Links": {},
