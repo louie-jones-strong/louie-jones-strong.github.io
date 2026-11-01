@@ -54,6 +54,16 @@
 		"Label": "Git",
 		"ClassList": ""
 	},
+	"Perforce": {
+		"IconPath": "Public/Assets/Icons/perforce",
+		"Label": "Perforce",
+		"ClassList": ""
+	},
+	"UEFN": {
+		"IconPath": "Public/Assets/Icons/unreal",
+		"Label": "Unreal Engine For Fortnite",
+		"ClassList": "greyScale"
+	},
 	"ObjectiveC": {
 		"IconPath": "Public/Assets/Icons/Objective-C",
 		"Label": "Objective C",

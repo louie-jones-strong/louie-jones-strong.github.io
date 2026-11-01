@@ -64,8 +64,10 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		%>
 		<%- include('Components/cv_role', {
 			proj: proj,
+			Icons: Icons,
 			showDescription:  false,
-			showSubProjects: true
+			showSubProjects: true,
+			showSkills: true
 		}) %>
 		<% } %>
 	</section>
@@ -81,21 +83,23 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		%>
 		<%- include('Components/cv_role', {
 			proj: proj,
+			Icons: Icons,
 			showDescription: true,
-			showSubProjects: false
+			showSubProjects: false,
+			showSkills: true
 		}) %>
 		<% } %>
 	</section>
 
 	<!-- ========== TECHNICAL SKILLS ========== -->
-	<section class="cv-section">
+	<!-- <section class="cv-section">
 		<h2>Technical Skills</h2>
 		<div class="cv-skills">
 			<% for (var si = 0; si < allSkills.length; si++) { %>
 			<span class="cv-skill"><%= allSkills[si] %></span>
 			<% } %>
 		</div>
-	</section>
+	</section> -->
 
 	<!-- ========== Personal PROJECTS ========== -->
 	<% if (projectEntries.length > 0) { %>
@@ -110,7 +114,9 @@ var projectEntries = CVConfig.PersonalProjects.map(function(k) {
 		<%- include('Components/cv_role', {
 			proj: proj,
 			showDescription: true,
-			showSubProjects: false
+			Icons: Icons,
+			showSubProjects: false,
+			showSkills: true
 		}) %>
 		<% } %>
 		<span class="cv-projects-note">See Portfolio for more projects</span>

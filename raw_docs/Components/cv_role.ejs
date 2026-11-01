@@ -46,6 +46,18 @@ function projectDateRange(project) {
 	<div class="cv-entry-roles"><%= roles.join(' \u00a0|\u00a0 ') %></div>
 	<% } } %>
 
+	<%
+	var subProjectKeys = proj.SubProjects || [];
+	%>
+
+	<!-- skills -->
+	<% if (proj.Skills && proj.Skills.length > 0 && (!showSubProjects || subProjectKeys.length === 0)) { %>
+	<div class="cv-entry-skills">
+		<span class="cv-entry-skills-label">Skills</span>
+		<% proj.Skills.forEach(function(s) { %><span class="cv-entry-skill"><%= Icons[s].Label %></span><% }); %>
+	</div>
+	<% } %>
+
 	<% if (proj.Awards) { %>
 	<div class="cv-entry-award">&#127942; <%= proj.Awards %></div>
 	<% } %>
@@ -56,7 +68,6 @@ function projectDateRange(project) {
 
 	<%
 	if (showSubProjects) {
-	var subProjectKeys = proj.SubProjects || [];
 	if (subProjectKeys.length > 0) {
 		var subProjects = subProjectKeys.map(function(k) { return Projects[k]; }).filter(Boolean);
 		if (subProjects.length > 0) {
@@ -67,7 +78,13 @@ function projectDateRange(project) {
 				var sub = subProjects[si];
 			%>
 			<li>
-				<strong><%= sub.Title %></strong>: <%= sub.FullDescription %>
+				<strong><%= sub.Title %></strong>:
+				<% if (sub.Skills && sub.Skills.length > 0) { %>
+					<% sub.Skills.forEach(function(s) { %><span class="cv-entry-skill"><%= Icons[s].Label %></span><% }); %>
+				<% } %>
+				<br>
+
+				<%= sub.FullDescription %>
 			</li>
 			<% } %>
 		</ul>
